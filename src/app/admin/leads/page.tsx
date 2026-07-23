@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Users, Search, Filter, Eye, ChevronRight, FileText, CheckCircle, RefreshCw, X } from "lucide-react";
+import { Users, Search, Filter, Eye, ChevronRight, FileText, CheckCircle, RefreshCw, X, Trash2 } from "lucide-react";
 import { apiFetch } from "../../../lib/api";
 import { LeadItem } from "../../../types/crm";
 
@@ -80,6 +80,27 @@ export default function AdminLeadsPage() {
       alert("Cập nhật trạng thái thất bại.");
     } finally {
       setUpdating(false);
+    }
+  };
+
+  const handleDeleteLead = async (id: string) => {
+    if (!window.confirm("Bạn có chắc chắn muốn xóa khách hàng (lead) này không?")) {
+      return;
+    }
+    try {
+      const res = await apiFetch(`/leads/${id}`, {
+        method: "DELETE",
+      });
+      if (res.success) {
+        setLeads((prev) => prev.filter((l) => l.id !== id));
+        if (selectedLead && selectedLead.id === id) {
+          setSelectedLead(null);
+        }
+        alert("Xóa khách hàng thành công!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Xóa khách hàng thất bại.");
     }
   };
 
@@ -206,12 +227,20 @@ export default function AdminLeadsPage() {
                           {lead.status}
                         </span>
                       </td>
-                      <td className="py-4 px-6 text-right" onClick={(e) => e.stopPropagation()}>
+                      <td className="py-4 px-6 text-right flex justify-end gap-2" onClick={(e) => e.stopPropagation()}>
                         <button
                           onClick={() => setSelectedLead(lead)}
                           className="p-2 bg-slate-100 text-slate-600 hover:bg-teal-brand hover:text-white rounded-lg transition-colors cursor-pointer"
+                          title="Xem chi tiết"
                         >
                           <Eye className="w-4 h-4" />
+                        </button>
+                        <button
+                          onClick={() => handleDeleteLead(lead.id)}
+                          className="p-2 bg-slate-100 text-red-600 hover:bg-red-600 hover:text-white rounded-lg transition-colors cursor-pointer"
+                          title="Xóa Lead"
+                        >
+                          <Trash2 className="w-4 h-4" />
                         </button>
                       </td>
                     </tr>
@@ -296,7 +325,7 @@ export default function AdminLeadsPage() {
 
               {/* Status Update Control */}
               <div className="space-y-2">
-                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Cập nhật trạng thái</span>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block">Cập nhật trạng thái / Hành động</span>
                 <div className="flex gap-2">
                   <select
                     value={selectedLead.status}
@@ -308,6 +337,13 @@ export default function AdminLeadsPage() {
                     <option value="CONTACTED">ĐÃ LIÊN HỆ (CONTACTED)</option>
                     <option value="CONVERTED">ĐÃ CHỐT (CONVERTED)</option>
                   </select>
+                  <button
+                    onClick={() => handleDeleteLead(selectedLead.id)}
+                    className="p-2 bg-red-50 text-red-600 hover:bg-red-600 hover:text-white rounded-xl transition-colors cursor-pointer shrink-0 flex items-center justify-center w-10 h-10"
+                    title="Xóa Lead"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
 
