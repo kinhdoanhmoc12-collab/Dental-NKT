@@ -67,6 +67,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Custom underline animation for nav links */
 .nav-link-hover {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap !important;
 }
 
 .nav-link-hover::after {
@@ -79,11 +82,31 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   background-color: var(--primary-teal);
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-link-hover:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.nav-link-active::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

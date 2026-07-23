@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
@@ -16,11 +16,40 @@ import {
   X
 } from "lucide-react";
 
+const servicesList = [
+  { nameVN: "Mặt dán sứ Veneers", nameAU: "Veneers", href: "/services/veneers" },
+  { nameVN: "Cấy ghép răng Implant", nameAU: "Dental Implants", href: "/services/implants" },
+  { nameVN: "Hàm All-on-4", nameAU: "All-on-4", href: "/services/allon4" },
+  { nameVN: "Hàm All-on-6", nameAU: "All-on-6", href: "/services/allon6" },
+  { nameVN: "Mão răng sứ (Crowns)", nameAU: "Crowns", href: "/services/crowns" },
+  { nameVN: "Cầu răng sứ (Bridges)", nameAU: "Bridges", href: "/services/bridges" },
+  { nameVN: "Thiết kế nụ cười (Smile Makeover)", nameAU: "Smile Makeover", href: "/services/smile-makeover" },
+  { nameVN: "Phục hồi toàn hàm", nameAU: "Full Mouth Reconstruction", href: "/services/full-mouth-reconstruction" },
+  { nameVN: "Tẩy trắng răng", nameAU: "Teeth Whitening", href: "/services/teeth-whitening" },
+  { nameVN: "Điều trị tủy (Root Canal)", nameAU: "Root Canal", href: "/services/root-canal" },
+  { nameVN: "Niềng răng Invisalign", nameAU: "Invisalign", href: "/services/invisalign" },
+  { nameVN: "Hàm giả tháo lắp", nameAU: "Dentures", href: "/services/dentures" }
+];
+
 export default function Header() {
   const { lang, setLang, t } = useLanguage();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleLinkClick = (href: string, e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === href) {
@@ -54,7 +83,9 @@ export default function Header() {
       {/* ========================================================
           TOPBAR
           ======================================================== */}
-      <div className="bg-[#0b1e2c] text-slate-300 py-2.5 px-4 sm:px-6 lg:px-8 border-b border-slate-800 text-xs transition-luxury">
+      <div className={`bg-[#0b1e2c] text-slate-300 px-4 sm:px-6 lg:px-8 border-slate-800 text-xs transition-all duration-300 ease-in-out overflow-hidden ${
+        isScrolled ? "max-h-0 py-0 opacity-0 border-none" : "max-h-[80px] py-2.5 border-b"
+      }`}>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
             <a href="tel:+84963333844" className="flex items-center gap-1.5 hover:text-teal-brand transition-colors">
@@ -109,8 +140,12 @@ export default function Header() {
       {/* ========================================================
           NAVBAR / HEADER
           ======================================================== */}
-      <div className="bg-white/95 backdrop-blur-md border-b border-slate-100">
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20 pr-4 sm:pr-6 lg:pr-8">
+      <div className={`bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300 ${
+        isScrolled ? "shadow-md" : ""
+      }`}>
+        <div className={`max-w-7xl mx-auto flex items-center justify-between transition-all duration-300 pr-4 sm:pr-6 lg:pr-8 ${
+          isScrolled ? "h-16" : "h-20"
+        }`}>
           
           {/* Logo Slanted Accent */}
           <div className="h-full flex items-center">
@@ -119,7 +154,9 @@ export default function Header() {
               onClick={(e) => handleLinkClick("/", e)}
               className="h-full flex items-center"
             >
-              <div className="bg-teal-brand text-white h-20 px-8 lg:px-12 flex items-center relative [clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] select-none">
+              <div className={`bg-teal-brand text-white px-6 xl:px-10 flex items-center relative [clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] select-none transition-all duration-300 ${
+                isScrolled ? "h-16" : "h-20"
+              }`}>
                 <div className="flex items-center gap-2 pr-6">
                   <Sparkles className="w-6 h-6 text-white animate-pulse" />
                   <span className="font-serif text-3xl font-extrabold tracking-tight">DentalNTK</span>
@@ -129,7 +166,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden xl:flex items-center gap-5 2xl:gap-8">
             {navLinks.map((link) => {
               if (link.href === "/services") {
                 const isServicesActive = pathname.startsWith("/services");
@@ -141,9 +178,9 @@ export default function Header() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button
-                      className={`font-bold text-[0.92rem] transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none ${
+                      className={`font-bold text-[0.88rem] 2xl:text-[0.92rem] transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none whitespace-nowrap nav-link-hover ${
                         isServicesActive
-                          ? "text-teal-brand font-black"
+                          ? "text-teal-brand nav-link-active font-black"
                           : "text-[#0b1e2c] hover:text-teal-brand"
                       }`}
                     >
@@ -152,127 +189,20 @@ export default function Header() {
                     </button>
                     
                     {/* Hover Dropdown Panel */}
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl border border-slate-100 rounded-2xl py-3 w-64 mt-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
-                      <Link 
-                        href="/services/veneers" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/veneers", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Mặt dán sứ Veneers" : "Veneers"}
-                      </Link>
-                      <Link 
-                        href="/services/implants" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/implants", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Cấy ghép răng Implant" : "Dental Implants"}
-                      </Link>
-                      <Link 
-                        href="/services/allon4" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/allon4", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Hàm All-on-4" : "All-on-4"}
-                      </Link>
-                      <Link 
-                        href="/services/allon6" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/allon6", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Hàm All-on-6" : "All-on-6"}
-                      </Link>
-                      <Link 
-                        href="/services/crowns" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/crowns", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Mão răng sứ (Crowns)" : "Crowns"}
-                      </Link>
-                      <Link 
-                        href="/services/bridges" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/bridges", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Cầu răng sứ (Bridges)" : "Bridges"}
-                      </Link>
-                      <Link 
-                        href="/services/smile-makeover" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/smile-makeover", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Thiết kế nụ cười (Smile Makeover)" : "Smile Makeover"}
-                      </Link>
-                      <Link 
-                        href="/services/full-mouth-reconstruction" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/full-mouth-reconstruction", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Phục hồi toàn hàm" : "Full Mouth Reconstruction"}
-                      </Link>
-                      <Link 
-                        href="/services/teeth-whitening" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/teeth-whitening", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Tẩy trắng răng" : "Teeth Whitening"}
-                      </Link>
-                      <Link 
-                        href="/services/root-canal" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/root-canal", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Điều trị tủy (Root Canal)" : "Root Canal"}
-                      </Link>
-                      <Link 
-                        href="/services/invisalign" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/invisalign", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Niềng răng Invisalign" : "Invisalign"}
-                      </Link>
-                      <Link 
-                        href="/services/dentures" 
-                        className="block px-5 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand"
-                        onClick={(e) => {
-                          setActiveDropdown(null);
-                          handleLinkClick("/services/dentures", e);
-                        }}
-                      >
-                        {lang === "VN" ? "Hàm giả tháo lắp" : "Dentures"}
-                      </Link>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl border border-slate-100 rounded-2xl py-2 w-72 mt-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+                      {servicesList.map((service) => (
+                        <Link 
+                          key={service.href}
+                          href={service.href}
+                          className="block px-5 py-2 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-7 transition-all duration-200 rounded-lg mx-2 whitespace-nowrap"
+                          onClick={(e) => {
+                            setActiveDropdown(null);
+                            handleLinkClick(service.href, e);
+                          }}
+                        >
+                          {lang === "VN" ? service.nameVN : service.nameAU}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 );
@@ -284,9 +214,9 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(link.href, e)}
-                  className={`font-bold text-[0.92rem] transition-colors py-2 ${
+                  className={`font-bold text-[0.88rem] 2xl:text-[0.92rem] transition-colors py-2 whitespace-nowrap nav-link-hover ${
                     isActive 
-                      ? "text-teal-brand font-black" 
+                      ? "text-teal-brand nav-link-active font-black" 
                       : "text-[#0b1e2c] hover:text-teal-brand"
                   }`}
                 >
@@ -296,30 +226,29 @@ export default function Header() {
             })}
 
             {/* Language Dropdown Selector (Desktop) */}
-            <div className="relative">
+            <div className="relative group py-2">
               <button 
-                onClick={() => toggleDropdown("lang")} 
-                className="flex items-center justify-center hover:scale-105 active:scale-95 transition-all select-none cursor-pointer p-1"
+                className="flex items-center justify-center hover:scale-105 active:scale-95 transition-all select-none cursor-pointer p-1 bg-transparent border-none outline-none"
                 title="Select Country / Language"
               >
                 <img src={currentFlag} alt={lang} className="w-8 h-5.5 object-cover rounded shadow-sm border border-slate-200/60" />
               </button>
-              {activeDropdown === "lang" && (
-                <div className="absolute top-full right-0 bg-white shadow-lg border border-slate-100 rounded-xl py-1.5 w-44 mt-2 z-50">
-                  <button 
-                    onClick={() => selectLanguage("AU")} 
-                    className="w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand flex items-center gap-2 cursor-pointer"
-                  >
-                    <img src="https://flagcdn.com/h40/au.png" alt="Australia" className="w-6 h-4 object-cover rounded-sm" /> Australia (AUD)
-                  </button>
-                  <button 
-                    onClick={() => selectLanguage("VN")} 
-                    className="w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-slate-50 hover:text-teal-brand flex items-center gap-2 cursor-pointer"
-                  >
-                    <img src="https://flagcdn.com/h40/vn.png" alt="Vietnam" className="w-6 h-4 object-cover rounded-sm" /> Việt Nam (VND)
-                  </button>
-                </div>
-              )}
+              
+              {/* Dropdown Panel */}
+              <div className="absolute top-full right-0 bg-white shadow-xl border border-slate-100 rounded-2xl py-2 w-48 mt-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+                <button 
+                  onClick={() => selectLanguage("AU")} 
+                  className="w-[calc(100%-16px)] mx-2 text-left px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-5 transition-all duration-200 rounded-lg flex items-center gap-2 cursor-pointer border-none outline-none"
+                >
+                  <img src="https://flagcdn.com/h40/au.png" alt="Australia" className="w-6 h-4 object-cover rounded-sm" /> Australia (AUD)
+                </button>
+                <button 
+                  onClick={() => selectLanguage("VN")} 
+                  className="w-[calc(100%-16px)] mx-2 text-left px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-5 transition-all duration-200 rounded-lg flex items-center gap-2 cursor-pointer border-none outline-none"
+                >
+                  <img src="https://flagcdn.com/h40/vn.png" alt="Vietnam" className="w-6 h-4 object-cover rounded-sm" /> Việt Nam (VND)
+                </button>
+              </div>
             </div>
           </nav>
 
@@ -327,7 +256,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link 
               href="/contact" 
-              className="hidden sm:inline-flex items-center gap-2 bg-teal-brand hover:bg-teal-brand-hover text-white px-6 py-3 font-semibold text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0"
+              className="hidden sm:inline-flex items-center gap-2 bg-teal-brand hover:bg-teal-brand-hover text-white px-5 py-2.5 xl:px-6 xl:py-3 font-semibold text-xs xl:text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             >
               <Calendar className="w-4 h-4" />
               <span>{t.navBook}</span>
@@ -336,7 +265,7 @@ export default function Header() {
             {/* Hamburger menu for mobile */}
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} 
-              className="lg:hidden p-2 text-[#0b1e2c] hover:text-teal-brand focus:outline-none"
+              className="xl:hidden p-2 text-[#0b1e2c] hover:text-teal-brand focus:outline-none"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -346,7 +275,7 @@ export default function Header() {
 
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-100 px-6 py-6 space-y-4 animate-fade-in absolute w-full left-0 top-full shadow-xl z-50">
+          <div className="xl:hidden bg-white border-t border-slate-100 px-6 py-6 space-y-4 animate-fade-in absolute w-full left-0 top-full shadow-xl z-50">
             {navLinks.map((link) => {
               if (link.href === "/services") {
                 const isServicesActive = pathname.startsWith("/services");
@@ -364,139 +293,21 @@ export default function Header() {
                     </button>
                     
                     {isServicesOpen && (
-                      <div className="pl-4 pb-2 pt-1 space-y-2 text-sm bg-slate-50/50 rounded-lg mt-1">
-                        <Link
-                          href="/services/veneers"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/veneers", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Mặt dán sứ Veneers" : "• Veneers"}
-                        </Link>
-                        <Link
-                          href="/services/implants"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/implants", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Cấy ghép răng Implant" : "• Dental Implants"}
-                        </Link>
-                        <Link
-                          href="/services/allon4"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/allon4", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Hàm All-on-4" : "• All-on-4"}
-                        </Link>
-                        <Link
-                          href="/services/allon6"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/allon6", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Hàm All-on-6" : "• All-on-6"}
-                        </Link>
-                        <Link
-                          href="/services/crowns"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/crowns", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Mão răng sứ (Crowns)" : "• Crowns"}
-                        </Link>
-                        <Link
-                          href="/services/bridges"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/bridges", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Cầu răng sứ (Bridges)" : "• Bridges"}
-                        </Link>
-                        <Link
-                          href="/services/smile-makeover"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/smile-makeover", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Thiết kế nụ cười (Smile Makeover)" : "• Smile Makeover"}
-                        </Link>
-                        <Link
-                          href="/services/full-mouth-reconstruction"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/full-mouth-reconstruction", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Phục hồi toàn hàm" : "• Full Mouth Reconstruction"}
-                        </Link>
-                        <Link
-                          href="/services/teeth-whitening"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/teeth-whitening", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Tẩy trắng răng" : "• Teeth Whitening"}
-                        </Link>
-                        <Link
-                          href="/services/root-canal"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/root-canal", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Điều trị tủy (Root Canal)" : "• Root Canal"}
-                        </Link>
-                        <Link
-                          href="/services/invisalign"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/invisalign", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Niềng răng Invisalign" : "• Invisalign"}
-                        </Link>
-                        <Link
-                          href="/services/dentures"
-                          onClick={(e) => { 
-                            setIsMobileMenuOpen(false); 
-                            setActiveDropdown(null); 
-                            handleLinkClick("/services/dentures", e);
-                          }}
-                          className="block py-1.5 text-xs text-slate-600 hover:text-teal-brand font-semibold"
-                        >
-                          {lang === "VN" ? "• Hàm giả tháo lắp" : "• Dentures"}
-                        </Link>
+                      <div className="pl-2 pb-2 pt-1.5 space-y-1.5 text-sm bg-slate-50/50 rounded-xl mt-1.5 px-2">
+                        {servicesList.map((service) => (
+                          <Link
+                            key={service.href}
+                            href={service.href}
+                            onClick={(e) => { 
+                              setIsMobileMenuOpen(false); 
+                              setActiveDropdown(null); 
+                              handleLinkClick(service.href, e);
+                            }}
+                            className="block py-2 px-3 text-xs font-bold text-slate-600 hover:text-teal-brand hover:bg-teal-brand/5 rounded-lg transition-all"
+                          >
+                            {lang === "VN" ? service.nameVN : service.nameAU}
+                          </Link>
+                        ))}
                       </div>
                     )}
                   </div>
@@ -529,7 +340,7 @@ export default function Header() {
               <div className="grid grid-cols-2 gap-2">
                 <button 
                   onClick={() => { selectLanguage("AU"); setIsMobileMenuOpen(false); }}
-                  className={`flex items-center justify-center gap-2 p-3.5 border rounded-xl text-xs font-bold transition-all ${
+                  className={`flex items-center justify-center gap-2 p-3.5 border rounded-xl text-xs font-bold transition-all border-none outline-none cursor-pointer ${
                     lang === "AU" 
                       ? "border-teal-brand bg-teal-brand/5 text-teal-brand font-extrabold" 
                       : "border-slate-200 text-slate-600 hover:bg-slate-50"
@@ -540,7 +351,7 @@ export default function Header() {
                 </button>
                 <button 
                   onClick={() => { selectLanguage("VN"); setIsMobileMenuOpen(false); }}
-                  className={`flex items-center justify-center gap-2 p-3.5 border rounded-xl text-xs font-bold transition-all ${
+                  className={`flex items-center justify-center gap-2 p-3.5 border rounded-xl text-xs font-bold transition-all border-none outline-none cursor-pointer ${
                     lang === "VN" 
                       ? "border-teal-brand bg-teal-brand/5 text-teal-brand font-extrabold" 
                       : "border-slate-200 text-slate-600 hover:bg-slate-50"
