@@ -249,7 +249,7 @@ export default function HomePage() {
 
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2 pb-1">
               <a 
-                href="#homepage-inquiry" 
+                href="#inquiry-form-card" 
                 className="bg-teal-brand hover:bg-teal-brand-hover text-[#0b1e2c] px-8 py-3.5 font-extrabold text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 text-center flex items-center justify-center gap-2 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
@@ -470,7 +470,7 @@ export default function HomePage() {
 
                 <div className="text-center pt-2">
                   <a 
-                    href={`#homepage-inquiry`}
+                    href={`#inquiry-form-card`}
                     className="inline-flex w-full items-center justify-center gap-2 bg-[#0b1e2c] hover:bg-teal-brand text-white px-6 py-3 font-semibold text-sm rounded-xl transition-all text-center"
                   >
                     <span>{lang === "VN" ? "Nhận Báo Giá Văn Bản Cho Dịch Vụ Này" : "Get Written Quote for This Treatment"}</span>
@@ -1033,7 +1033,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Column: Form inquiry wrapper */}
-            <div className="bg-[#0b1e2c] text-white rounded-3xl p-6 sm:p-12 shadow-2xl relative overflow-hidden w-full">
+            <div id="inquiry-form-card" className="bg-[#0b1e2c] text-white rounded-3xl p-6 sm:p-12 shadow-2xl relative overflow-hidden w-full">
               <div className="absolute top-0 right-0 w-96 h-96 bg-teal-brand/5 rounded-full blur-3xl" />
               
               {formSubmitted ? (
@@ -1248,7 +1248,7 @@ export default function HomePage() {
           <span>{lang === "VN" ? "Chat WhatsApp" : "WhatsApp Chat"}</span>
         </a>
         <a 
-          href="#homepage-inquiry" 
+          href="#inquiry-form-card" 
           className="flex-1 bg-teal-brand hover:bg-teal-brand-hover text-[#0b1e2c] py-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer shadow-md shadow-teal-brand/10"
         >
           <Calendar className="w-4 h-4" />
