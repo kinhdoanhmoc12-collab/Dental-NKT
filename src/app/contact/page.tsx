@@ -128,26 +128,7 @@ export default function ContactPage() {
 
 
 
-              {/* Google Maps Component */}
-              <div className="pt-6 border-t border-slate-100 space-y-4">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
-                  {lang === "VN" ? "Bản đồ đường đi" : "Interactive Clinic Location Map"}
-                </span>
 
-                {/* Map Display */}
-                <div className="w-full h-64 rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-50 relative">
-                  <iframe
-                    src="https://maps.google.com/maps?q=Nha%20Khoa%20Tr%E1%BA%BB%2038%20Nguy%20Nhu%20Kon%20Tum,%20Nhan%20Chinh,%20Thanh%20Xuan,%20Hanoi&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Nha Khoa Trẻ - 38 Ngụy Như Kon Tum"
-                  />
-                </div>
-              </div>
             </div>
 
             {/* Interactive Form Card (Right Column) */}
