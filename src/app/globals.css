@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  text-shadow: none !important;
+}
+
 html {
   font-size: 125%; /* Increase all text and relative dimensions by 25% */
 }
