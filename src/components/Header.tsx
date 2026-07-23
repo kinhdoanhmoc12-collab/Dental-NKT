@@ -141,9 +141,9 @@ export default function Header() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button
-                      className={`font-medium text-sm transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none ${
+                      className={`font-bold text-[0.92rem] transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none ${
                         isServicesActive
-                          ? "text-teal-brand font-bold"
+                          ? "text-teal-brand font-black"
                           : "text-[#0b1e2c] hover:text-teal-brand"
                       }`}
                     >
@@ -284,9 +284,9 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(link.href, e)}
-                  className={`font-medium text-sm transition-colors py-2 ${
+                  className={`font-bold text-[0.92rem] transition-colors py-2 ${
                     isActive 
-                      ? "text-teal-brand font-bold" 
+                      ? "text-teal-brand font-black" 
                       : "text-[#0b1e2c] hover:text-teal-brand"
                   }`}
                 >
