@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+html {
+  font-size: 125%; /* Increase all text and relative dimensions by 25% */
+}
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #0f172a;
+  
+  --primary-teal: #00afc7;
+  --primary-teal-hover: #0093a8;
+  --primary-teal-light: #e6f7fa;
+  
+  --dark-slate: #0b1e2c;
+  --dark-slate-hover: #152d3f;
+  
+  --gold-accent: #ffb300;
+  --gold-accent-light: #fffdf5;
+  
+  --card-shadow: 0 10px 30px -10px rgba(11, 30, 44, 0.08);
+  --card-shadow-hover: 0 20px 40px -15px rgba(11, 30, 44, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-teal-brand: var(--primary-teal);
+  --color-teal-brand-hover: var(--primary-teal-hover);
+  --color-teal-brand-light: var(--primary-teal-light);
+  
+  --color-dark-brand: var(--dark-slate);
+  --color-dark-brand-hover: var(--dark-slate-hover);
+  
+  --color-gold-brand: var(--gold-accent);
+  --color-gold-brand-light: var(--gold-accent-light);
+  
+  --font-serif: Georgia, Garamond, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  
+  --shadow-premium: var(--card-shadow);
+  --shadow-premium-hover: var(--card-shadow-hover);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Custom premium transitions */
+.transition-luxury {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom underline animation for nav links */
+.nav-link-hover {
+  position: relative;
+}
+
+.nav-link-hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--primary-teal);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link-hover:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+

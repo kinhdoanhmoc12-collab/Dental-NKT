@@ -1,0 +1,70 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  CONVERTED
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+model Lead {
+  id                 String     @id @default(uuid())
+  name               String
+  email              String
+  phone              String
+  country            String
+  treatment_interest String
+  x_ray_file_url     String?
+  message            String?
+  status             LeadStatus @default(NEW)
+  createdAt          DateTime   @default(now())
+}
+
+model Appointment {
+  id           String            @id @default(uuid())
+  patient_name String
+  email        String
+  phone        String
+  date_time    DateTime
+  service_id   String
+  status       AppointmentStatus @default(PENDING)
+  createdAt    DateTime          @default(now())
+}
+
+model Review {
+  id           String   @id @default(uuid())
+  patient_name String
+  rating       Int
+  content      String
+  is_published Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
+
+model Dentist {
+  id             String   @id @default(uuid())
+  name           String
+  specialization String
+  bio            String
+  image_url      String
+  createdAt      DateTime @default(now())
+}
+
+model AdminUser {
+  id            String   @id @default(uuid())
+  email         String   @unique
+  password_hash String
+  role          String   @default("STAFF")
+  createdAt     DateTime @default(now())
+}

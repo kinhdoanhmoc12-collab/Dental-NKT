@@ -1,0 +1,128 @@
+{
+  "leads": [
+    {
+      "id": "lead_1784781939781",
+      "name": "Quảng Đào Xuân",
+      "email": "daoxuanquang21@gmail.com",
+      "phone": "0702286928",
+      "country": "AU",
+      "treatment_interest": "full-reconstruction",
+      "message": "Tôi muốn chỉnh nha \r\n",
+      "status": "NEW",
+      "createdAt": "2026-07-23T04:45:39.781Z"
+    },
+    {
+      "id": "lead_1784781939813",
+      "name": "Quảng Đào Xuân",
+      "email": "daoxuanquang21@gmail.com",
+      "phone": "0702286928",
+      "country": "AU",
+      "treatment_interest": "full-reconstruction",
+      "message": "Tôi muốn chỉnh nha \r\n",
+      "status": "NEW",
+      "createdAt": "2026-07-23T04:45:39.813Z"
+    },
+    {
+      "id": "lead_1784781939847",
+      "name": "Quảng Đào Xuân",
+      "email": "daoxuanquang21@gmail.com",
+      "phone": "0702286928",
+      "country": "AU",
+      "treatment_interest": "full-reconstruction",
+      "message": "Tôi muốn chỉnh nha \r\n",
+      "status": "NEW",
+      "createdAt": "2026-07-23T04:45:39.847Z"
+    },
+    {
+      "id": "lead_1784781939880",
+      "name": "Quảng Đào Xuân",
+      "email": "daoxuanquang21@gmail.com",
+      "phone": "0702286928",
+      "country": "AU",
+      "treatment_interest": "full-reconstruction",
+      "message": "Tôi muốn chỉnh nha \r\n",
+      "status": "NEW",
+      "createdAt": "2026-07-23T04:45:39.880Z"
+    },
+    {
+      "id": "lead_1784782331666",
+      "name": "Quảng Đào Xuân",
+      "email": "daoxuanquang21@gmail.com",
+      "phone": "0702286928",
+      "country": "AU",
+      "treatment_interest": "veneers",
+      "message": "Tôi muốn chỉnh nha",
+      "status": "NEW",
+      "createdAt": "2026-07-23T04:52:11.666Z"
+    }
+  ],
+  "appointments": [],
+  "reviews": [
+    {
+      "id": "r1",
+      "patient_name": "Sarah Jenkins",
+      "rating": 5,
+      "content": "I was quoted over $35,000 AUD in Melbourne. Coming to DentalNTK was the best decision of my life. I saved over $20,000, and the quality of their care was superior to any clinic back home.",
+      "is_published": true
+    },
+    {
+      "id": "r2",
+      "patient_name": "David Mitchell",
+      "rating": 5,
+      "content": "The cosmetic precision at DentalNTK is outstanding. They used 3D imaging to show me my exact smile layout beforehand. I got 16 E.max Veneers done in 6 days, and they look completely natural.",
+      "is_published": true
+    },
+    {
+      "id": "r3",
+      "patient_name": "Mark Thompson",
+      "rating": 5,
+      "content": "I needed two implants. The clinic layout is modern, clean, and has a spa-like vibe that removes all dental anxiety. Their pricing was highly transparent and they helped directly with insurance paperwork.",
+      "is_published": true
+    }
+  ],
+  "dentists": [
+    {
+      "id": "d1",
+      "name": "Dr. Nguyen Thi Thuy Hang",
+      "specialization": "Cosmetic Dentistry & Implant Specialist",
+      "bio": "Extensive expertise in Implants, wisdom tooth extraction, gum recession treatment, gummy smile correction, severe periodontitis, and prosthetics. Applying digital dentistry since 2020.",
+      "image_url": "/dr_emily.png"
+    },
+    {
+      "id": "d2",
+      "name": "Dr. Nguyen Huy Hoang",
+      "specialization": "Head of Implantology",
+      "bio": "Orthodontic training at Cologne University (Germany). Specialist in Orthodontics, Implants, Aesthetic Dentistry, and TMJ Disorders. Pioneer in digital dentistry applications and International Invisalign Specialist.",
+      "image_url": "/dr_phong.png"
+    },
+    {
+      "id": "d3",
+      "name": "Dr. Pham Xuan Dang",
+      "specialization": "Orthodontics & Endodontics Specialist",
+      "bio": "Orthodontic training at Hanoi Medical University. Specialist in adult & early pediatric orthodontics, endodontic therapy, and digital dentistry applications.",
+      "image_url": "/dr_hung.png"
+    }
+  ],
+  "warrantyClaims": [
+    {
+      "id": "claim_1784791772791",
+      "full_name": "Quảng Đào Xuân",
+      "phone": "0702283968",
+      "email": "daoxuanquang21@gmail.com",
+      "serial": "NKT34567",
+      "description": "okk",
+      "status": "PENDING",
+      "createdAt": "2026-07-23T07:29:32.791Z"
+    },
+    {
+      "id": "claim_1784791813991",
+      "full_name": " Xuân",
+      "phone": "07022839652",
+      "email": "daoxua27@gmail.com",
+      "serial": "EMAX234",
+      "description": "oklijhhh ",
+      "status": "REJECTED",
+      "createdAt": "2026-07-23T07:30:13.991Z"
+    }
+  ]
+}
