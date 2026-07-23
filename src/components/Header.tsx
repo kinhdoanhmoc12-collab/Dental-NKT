@@ -74,7 +74,6 @@ export default function Header() {
           </div>
           
           <div className="flex items-center gap-4">
-            <span className="text-slate-400 hidden lg:inline">{t.topbarSupport}</span>
             <div className="flex items-center gap-3">
               {/* Facebook */}
               <a 
