@@ -243,7 +243,7 @@ export default function HomePage() {
             
             <p className="text-sm sm:text-base lg:text-lg text-slate-200 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               {lang === "VN"
-                ? "Nhận hồ sơ phác đồ điều trị răng chi tiết bằng tiền tệ VND / AUD rõ ràng trước khi đặt vé máy bay. Mọi báo giá đều bao gồm tên bác sĩ điều trị, nhãn hiệu vật liệu chính hãng và bảo hành lên tới 10 năm."
+                ? "Nhận phác đồ điều trị chi tiết từng răng, báo giá bằng VND / AUD rõ ràng trước khi đặt vé máy bay. Mọi báo giá đều ghi rõ tên bác sĩ điều trị, nhãn hiệu vật liệu chính hãng và chính sách bảo hành lên tới 10 năm."
                 : "Australian patients receive a written tooth-by-tooth AUD treatment plan before booking flights. Every quote includes named clinicians, certified brand documentation, and a global warranty — not a price on arrival."}
             </p>
 
