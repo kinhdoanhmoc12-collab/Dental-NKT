@@ -1239,11 +1239,13 @@ export default function HomePage() {
       {/* Mobile Sticky Floating CTA Bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-100 px-4 py-3 md:hidden shadow-[0_-4px_12px_rgba(0,0,0,0.05)] flex gap-3">
         <a 
-          href="tel:+84963333844" 
+          href="https://wa.me/84963333844" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex-1 bg-slate-100 hover:bg-slate-200 text-[#0b1e2c] py-3 rounded-xl text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-all active:scale-95 cursor-pointer"
         >
           <Phone className="w-4 h-4 text-teal-brand" />
-          <span>{lang === "VN" ? "Gọi Hotline" : "Call Hotline"}</span>
+          <span>{lang === "VN" ? "Chat WhatsApp" : "WhatsApp Chat"}</span>
         </a>
         <a 
           href="#homepage-inquiry" 
