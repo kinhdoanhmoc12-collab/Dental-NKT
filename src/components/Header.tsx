@@ -79,13 +79,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full shadow-md transition-all">
+    <header className="sticky top-0 z-50 w-full shadow-md">
       {/* ========================================================
           TOPBAR
           ======================================================== */}
-      <div className={`bg-[#0b1e2c] text-slate-300 px-4 sm:px-6 lg:px-8 border-slate-800 text-xs transition-all duration-300 ease-in-out overflow-hidden ${
-        isScrolled ? "max-h-0 py-0 opacity-0 border-none" : "max-h-[80px] py-2.5 border-b"
-      }`}>
+      <div className="bg-[#0b1e2c] text-slate-300 px-4 sm:px-6 lg:px-8 border-b border-slate-800 text-xs py-2.5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
             <a href="tel:+84963333844" className="flex items-center gap-1.5 hover:text-teal-brand transition-colors">
@@ -140,12 +138,8 @@ export default function Header() {
       {/* ========================================================
           NAVBAR / HEADER
           ======================================================== */}
-      <div className={`bg-white/95 backdrop-blur-md border-b border-slate-100 transition-all duration-300 ${
-        isScrolled ? "shadow-md" : ""
-      }`}>
-        <div className={`max-w-7xl mx-auto flex items-center justify-between transition-all duration-300 pr-4 sm:pr-6 lg:pr-8 ${
-          isScrolled ? "h-16" : "h-20"
-        }`}>
+      <div className="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-md">
+        <div className="max-w-7xl mx-auto flex items-center justify-between pr-4 sm:pr-6 lg:pr-8 h-20">
           
           {/* Logo Slanted Accent */}
           <div className="h-full flex items-center">
@@ -154,9 +148,7 @@ export default function Header() {
               onClick={(e) => handleLinkClick("/", e)}
               className="h-full flex items-center"
             >
-              <div className={`bg-teal-brand text-white px-6 xl:px-10 flex items-center relative [clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] select-none transition-all duration-300 ${
-                isScrolled ? "h-16" : "h-20"
-              }`}>
+              <div className="bg-teal-brand text-white px-6 xl:px-10 flex items-center relative [clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] select-none h-20">
                 <div className="flex items-center gap-2 pr-6">
                   <Sparkles className="w-6 h-6 text-white animate-pulse" />
                   <span className="font-serif text-3xl font-extrabold tracking-tight">DentalNTK</span>
