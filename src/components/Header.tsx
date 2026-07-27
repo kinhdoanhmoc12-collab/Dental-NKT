@@ -72,6 +72,7 @@ export default function Header() {
   const navLinks = [
     { name: t.navHome, href: "/" },
     { name: lang === "VN" ? "Điều trị" : "Treatments", href: "/services" },
+    { name: lang === "VN" ? "3D Scan" : "3D Scan", href: "/3d-scan" },
     { name: t.navCost, href: "/cost" },
     { name: lang === "VN" ? "Cẩm nang" : "Blog", href: "/blog" },
     { name: lang === "VN" ? "Đánh giá" : "Reviews", href: "/reviews" },

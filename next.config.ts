@@ -6,6 +6,21 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
+        // Allow exocad HTML files to be loaded in iframes (same-origin)
+        source: "/scans/:path*",
+        headers: [
+          {
+            key: "X-DNS-Prefetch-Control",
+            value: "on"
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff"
+          }
+          // Note: No X-Frame-Options here so iframes work
+        ]
+      },
+      {
         source: "/:path*",
         headers: [
           {
