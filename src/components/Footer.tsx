@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="pt-2 text-xs text-slate-400 border-t border-slate-800/85">
             {lang === "VN" ? (
               <>
-                Dental NTK (dentalntk.com) là thương hiệu quốc tế chính thức của{" "}
+                Dental NTK là thương hiệu quốc tế chính thức của{" "}
                 <a href="https://nhakhoatre.com" target="_blank" rel="noopener noreferrer" className="text-teal-brand font-semibold hover:underline">
                   Nha Khoa Trẻ (nhakhoatre.com)
                 </a>{" "}
@@ -32,7 +32,7 @@ export default function Footer() {
               </>
             ) : (
               <>
-                Dental NTK (dentalntk.com) is the registered international division of{" "}
+                Dental NTK is the registered international division of{" "}
                 <a href="https://nhakhoatre.com" target="_blank" rel="noopener noreferrer" className="text-teal-brand font-semibold hover:underline">
                   Nha Khoa Tre Clinic (nhakhoatre.com)
                 </a>{" "}
