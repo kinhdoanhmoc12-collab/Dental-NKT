@@ -331,7 +331,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Phục hình nha khoa đẳng cấp quốc tế" : "World-Class Dental Restorations"}
             </h2>
