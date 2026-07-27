@@ -40,7 +40,7 @@ const cases = [
     nameVN: "Hoàng Thị Hồng — Phục hình toàn hàm",
     nameEN: "Hoang Thi Hong — Full Arch Restoration",
     descVN:
-      "Phục hình toàn diện toàn bộ hàm răng bị mất và suy yếu bằng hàm lai kim loại Titan và cầu răng sứ cao cấp.",
+      "Phục hình toàn diện hàm răng bị mất và suy yếu bằng hàm lai kim loại Titan và cầu răng sứ cao cấp.",
     descEN:
       "Comprehensive full-arch rehabilitation for missing and failing dentition using Titanium-acrylic hybrid bridge.",
     tagVN: "Phục hình toàn hàm",
@@ -119,9 +119,8 @@ export default function Scan3DPage() {
         }
       }
 
-      // Kiểm tra sơ bộ xem file tải về có phải là code HTML exocad thật hay là trang web chính
       const text = new TextDecoder().decode(chunks[0]?.slice(0, 500));
-      if (text.includes("<!DOCTYPE html>") && text.includes("Dental NTK")) {
+      if (text.includes("<!DOCTYPE html>") && (text.includes("Dental NTK") || text.includes("DentalNTK"))) {
         // Đây là trang web chính bị load nhầm do 404
         throw new Error("404 page loaded instead of 3D file");
       }
@@ -193,7 +192,7 @@ export default function Scan3DPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-4">
                 <Box className="w-3.5 h-3.5 text-teal-brand" />
                 <span className="text-xs font-medium text-teal-brand/90">
-                  {isVN ? "Exocad Smile Design" : "Exocad Smile Design"}
+                  {isVN ? "Thiết kế nụ cười 3D Exocad" : "Exocad Smile Design"}
                 </span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">

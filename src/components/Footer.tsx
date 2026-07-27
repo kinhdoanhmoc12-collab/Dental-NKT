@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="space-y-4 md:col-span-3">
           <div className="flex items-center gap-2 text-white">
             <Sparkles className="w-6 h-6 text-teal-brand" />
-            <span className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight">DentalNTK</span>
+            <span className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight">Dental NTK</span>
           </div>
           <p className="text-sm leading-relaxed text-slate-300 font-light">
             {t.footDesc}
@@ -80,7 +80,7 @@ export default function Footer() {
                     {lang === "VN" ? "Cơ sở 2 (Smart City):" : "Branch 2 (Smart City):"}
                   </span>
                   <span className="leading-relaxed text-sm text-slate-300 block">
-                    {lang === "VN" ? "Parking Zone 4, Vinhome Smart City, Hà Nội" : "Parking Zone 4, Vinhome Smart City, Hanoi"}
+                    {lang === "VN" ? "Parking Zone 4, Vinhomes Smart City, Hà Nội" : "Parking Zone 4, Vinhomes Smart City, Hanoi"}
                   </span>
                 </div>
               </div>

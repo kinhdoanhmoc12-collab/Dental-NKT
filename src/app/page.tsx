@@ -152,28 +152,28 @@ export default function HomePage() {
 
   const faqItems = [
     {
-      q: lang === "VN" ? "Chi phí dán sứ veneer tại Nha khoa DentalNTK cho bệnh nhân Úc là bao nhiêu?" : "How much do porcelain veneers cost at DentalNTK Clinic for Australian patients?",
+      q: lang === "VN" ? "Chi phí dán sứ veneer tại Nha khoa Dental NTK cho bệnh nhân Úc là bao nhiêu?" : "How much do porcelain veneers cost at Dental NTK Clinic for Australian patients?",
       a: lang === "VN"
-        ? "Mặt dán sứ Emax Zico tại Nha khoa DentalNTK có giá AUD $650 (12.000.000 VNĐ) mỗi răng. Một bộ veneer 10 răng tiêu chuẩn có giá khoảng AUD $6,512 (120.000.000 VNĐ), so với mức AUD $1,500-$2,500 mỗi răng tại các phòng khám tư nhân ở Úc - giúp tiết kiệm 60-75%. Tất cả giá veneer đã bao gồm bảo hành chất liệu 10 năm và tài liệu lô sản xuất chính hãng Ivoclar Vivadent."
-        : "A single Emax Zico veneer at DentalNTK Clinic costs AUD $650 (12,000,000 VND) per tooth. A standard 10-tooth veneer set costs approximately AUD $6,512 (120,000,000 VND), compared to AUD $1,500-$2,500 per tooth at Australian private practices - a saving of 60-75%. All veneer prices include a 10-year material warranty and certified Ivoclar Vivadent batch documentation."
+        ? "Mặt dán sứ Emax Zico tại Nha khoa Dental NTK có giá AUD $650 (12.000.000 VNĐ) mỗi răng. Một bộ veneer 10 răng tiêu chuẩn có giá khoảng AUD $6,500 (120.000.000 VNĐ), so với mức AUD $1,500-$2,500 mỗi răng tại các phòng khám tư nhân ở Úc - giúp tiết kiệm 60-75%. Tất cả giá veneer đã bao gồm bảo hành chất liệu 10 năm và tài liệu lô sản xuất chính hãng Ivoclar Vivadent."
+        : "A single Emax Zico veneer at Dental NTK Clinic costs AUD $650 (12,000,000 VND) per tooth. A standard 10-tooth veneer set costs approximately AUD $6,500 (120,000,000 VND), compared to AUD $1,500-$2,500 per tooth at Australian private practices - a saving of 60-75%. All veneer prices include a 10-year material warranty and certified Ivoclar Vivadent batch documentation."
     },
     {
       q: lang === "VN" ? "Chi phí cấy ghép implant ở Việt Nam so với Úc thế nào?" : "How much does a dental implant cost in Vietnam compared to Australia?",
       a: lang === "VN"
-        ? "Một ca implant Hiossen Mỹ đơn lẻ tại DentalNTK - bao gồm trụ implant và mão răng sứ Everes - có giá AUD $1,368 (25.200.000 VNĐ). Trụ Straumann Thụy Sỹ có giá AUD $3,582 (66.000.000 VNĐ). Tại các phòng khám tư nhân ở Úc, chi phí tương đương thường từ AUD $5,000-$8,000, giúp tiết kiệm 55-73%. Tất cả các thương hiệu đều được sản xuất quốc tế và đi kèm tài liệu số sê-ri chính thức."
-        : "A single Hiossen US implant at DentalNTK - fixture and Everes crown combined - costs AUD $1,368 (25,200,000 VND). A premium Swiss Straumann implant costs AUD $3,582 (66,000,000 VND). At Australian private practices, the equivalent typically costs AUD $5,000-$8,000, a saving of 55-73%. All brands are internationally manufactured and supplied with official serial number documentation."
+        ? "Một ca implant Hiossen Mỹ đơn lẻ tại Dental NTK - bao gồm trụ implant và mão răng sứ Everes - có giá AUD $1,368 (25.200.000 VNĐ). Trụ Straumann Thụy Sỹ có giá AUD $3,582 (66.000.000 VNĐ). Tại các phòng khám tư nhân ở Úc, chi phí tương đương thường từ AUD $5,000-$8,000, giúp tiết kiệm 55-73%. Tất cả các thương hiệu đều được sản xuất quốc tế và đi kèm tài liệu số sê-ri chính thức."
+        : "A single Hiossen US implant at Dental NTK - fixture and Everes crown combined - costs AUD $1,368 (25,200,000 VND). A premium Swiss Straumann implant costs AUD $3,582 (66,000,000 VND). At Australian private practices, the equivalent typically costs AUD $5,000-$8,000, a saving of 55-73%. All brands are internationally manufactured and supplied with official serial number documentation."
     },
     {
-      q: lang === "VN" ? "Chi phí phục hình toàn hàm tại Nha khoa DentalNTK cho bệnh nhân Úc là bao nhiêu?" : "What is the full-arch restoration cost at DentalNTK Clinic for Australian patients?",
+      q: lang === "VN" ? "Chi chi phí phục hình toàn hàm tại Nha khoa Dental NTK cho bệnh nhân Úc là bao nhiêu?" : "What is the full-arch restoration cost at Dental NTK Clinic for Australian patients?",
       a: lang === "VN"
-        ? "Điều trị phục hình toàn hàm (Thanh 3 Titan + 4 Implant Hiossen) tại Nha khoa DentalNTK có giá AUD $7,425 (136.800.000 VNĐ) mỗi hàm. Phục hình toàn hàm tương đương tại Úc thường có giá AUD $20,000-$35,000 mỗi hàm. Giá của DentalNTK đã bao gồm trọn gói phẫu thuật, trụ implant, thanh Titan và mão phục hình sau cùng. Điều trị hai hàm (toàn miệng) có giá AUD $14,850 (273.600.000 VNĐ)."
-        : "Full-arch restoration (Titanium 3-Bar + 4 Hiossen Implants) at DentalNTK Clinic costs AUD $7,425 (136,800,000 VND) per arch. Australian equivalent full-arch treatments typically cost AUD $20,000-$35,000 per arch. DentalNTK prices include surgeries, implant fixtures, titanium bar, and final crowns. Two-arch (full mouth) treatment costs AUD $14,850 (273,600,000 VND)."
+        ? "Điều trị phục hình toàn hàm (Thanh 3 Titan + 4 Implant Hiossen) tại Nha khoa Dental NTK có giá AUD $7,425 (136.800.000 VNĐ) mỗi hàm. Phục hình toàn hàm tương đương tại Úc thường có giá AUD $20,000-$35,000 mỗi hàm. Giá của Dental NTK đã bao gồm trọn gói phẫu thuật, trụ implant, thanh Titan và mão phục hình sau cùng. Điều trị hai hàm (toàn miệng) có giá AUD $14,850 (273.600.000 VNĐ)."
+        : "Full-arch restoration (Titanium 3-Bar + 4 Hiossen Implants) at Dental NTK Clinic costs AUD $7,425 (136,800,000 VND) per arch. Australian equivalent full-arch treatments typically cost AUD $20,000-$35,000 per arch. Dental NTK prices include surgeries, implant fixtures, titanium bar, and final crowns. Two-arch (full mouth) treatment costs AUD $14,850 (273,600,000 VND)."
     },
     {
       q: lang === "VN" ? "Điều trị nha khoa tại Việt Nam có an toàn không?" : "Is it safe to have dental treatment in Vietnam?",
       a: lang === "VN"
-        ? "Nha khoa DentalNTK đã điều trị cho hơn 18,000 bệnh nhân từ 26 quốc gia kể từ năm 2017. Phòng khám sử dụng các vật liệu implant và phục hình được chứng nhận quốc tế - Straumann, Nobel Biocare, Ivoclar Emax, Osstem - giống hệt với các dòng thương hiệu được sử dụng tại các phòng khám tư nhân được cấp phép của Úc. Chẩn đoán nội bộ bao gồm chụp X-quang toàn cảnh OPG, quét xương 3D CBCT và quét dấu răng kỹ thuật số iTero. Đội ngũ cấy ghép implant được dẫn dắt bởi Giám đốc chuyên môn, người đã được đào tạo chuyên sâu tại Loma Linda ở Hoa Kỳ."
-        : "DentalNTK Clinic has treated 18,000+ patients from 26 countries since 2017. The clinic uses internationally certified implant and prosthetic materials - Straumann, Nobel Biocare, Ivoclar Emax, Osstem - identical to the brand range used in registered Australian private practices. In-house diagnostics include OPG panoramic X-ray, CBCT 3D bone scanning, and iTero digital impressions. The implantology team is led by our Chief Clinical Director, who trained at Loma Linda University in the United States."
+        ? "Nha khoa Dental NTK đã điều trị cho hơn 18,000 bệnh nhân từ 26 quốc gia kể từ năm 2017. Phòng khám sử dụng các vật liệu implant và phục hình được chứng nhận quốc tế - Straumann, Nobel Biocare, Ivoclar Emax, Osstem - giống hệt với các dòng thương hiệu được sử dụng tại các phòng khám tư nhân được cấp phép của Úc. Chẩn đoán nội bộ bao gồm chụp X-quang toàn cảnh OPG, quét xương 3D CBCT và quét dấu răng kỹ thuật số iTero. Đội ngũ cấy ghép implant được dẫn dắt bởi Giám đốc chuyên môn, người đã được đào tạo chuyên sâu tại Loma Linda ở Hoa Kỳ."
+        : "Dental NTK Clinic has treated 18,000+ patients from 26 countries since 2017. The clinic uses internationally certified implant and prosthetic materials - Straumann, Nobel Biocare, Ivoclar Emax, Osstem - identical to the brand range used in registered Australian private practices. In-house diagnostics include OPG panoramic X-ray, CBCT 3D bone scanning, and iTero digital impressions. The implantology team is led by our Chief Clinical Director, who trained at Loma Linda University in the United States."
     },
     {
       q: lang === "VN" ? "Điều trị nha khoa tại Việt Nam so với Thái Lan hay Bali cho bệnh nhân Úc thế nào?" : "How does Vietnam dental treatment compare to Thailand or Bali for Australian patients?",
@@ -188,13 +188,13 @@ export default function HomePage() {
         : "Treatment duration depends on the procedure. Emax veneers (10 units) typically require 5-7 treatment days. A single dental implant placement requires 3-5 days. All-on-4 full-arch restorations require a minimum of 7-10 days for the placement phase. Direct flights from Sydney or Melbourne to Vietnam take approximately 8-9 hours. Perth is approximately 7 hours. Your free AUD quote includes a personalised trip-length estimate based on your specific tooth chart."
     },
     {
-      q: lang === "VN" ? "Nha khoa DentalNTK cung cấp những chính sách bảo hành gì cho bệnh nhân Úc?" : "What warranty does DentalNTK Clinic offer to Australian patients?",
+      q: lang === "VN" ? "Nha khoa Dental NTK cung cấp những chính sách bảo hành gì cho bệnh nhân Úc?" : "What warranty does Dental NTK Clinic offer to Australian patients?",
       a: lang === "VN"
-        ? "Bảo hành Toàn cầu của DentalNTK cung cấp một quy trình được văn bản hóa rõ ràng cho bệnh nhân Úc. Mặt dán sứ Emax Zico được bảo hành chất liệu 10 năm. Mão sứ Lava và Lava Plus được bảo hành 10 năm. Thân răng của hệ thống implant Nobel Biocare và Straumann được bảo hành 10 năm; implant Hiossen và Osstem được bảo hành 10 năm. Bảo hành bao gồm đánh giá lâm sàng từ xa qua ảnh chụp gửi bảo mật, điều trị khắc phục được phê duyệt và hỗ trợ chi phí vé máy bay khứ hồi khi chuyến thăm bảo hành được xác nhận. Không có thương hiệu nào bảo hành trọn đời - các phòng khám quảng cáo điều này cần được cân nhắc kỹ."
-        : "DentalNTK's Global Warranty provides a written, documented process for Australian patients. Emax Zico veneers carry a 10-year material warranty. Lava and Lava Plus crowns carry a 10-year warranty. Nobel Biocare and Straumann implant system crowns are warranted for 10 years; Hiossen and Osstem implants for 10 years. The warranty covers remote clinical review via secure photo submission, approved remedial treatment, and return-flight travel support when a warranty visit is confirmed. No brand carries a lifetime warranty - any clinic claiming this should be avoided."
+        ? "Bảo hành Toàn cầu của Dental NTK cung cấp một quy trình được văn bản hóa rõ ràng cho bệnh nhân Úc. Mặt dán sứ Emax Zico được bảo hành chất liệu 10 năm. Mão sứ Lava và Lava Plus được bảo hành 10 năm. Thân răng của hệ thống implant Nobel Biocare và Straumann được bảo hành 10 năm; implant Hiossen và Osstem được bảo hành 10 năm. Bảo hành bao gồm đánh giá lâm sàng từ xa qua ảnh chụp gửi bảo mật, điều trị khắc phục được phê duyệt và hỗ trợ chi phí vé máy bay khứ hồi khi chuyến thăm bảo hành được xác nhận. Không có thương hiệu nào bảo hành trọn đời - các phòng khám quảng cáo điều này cần được cân nhắc kỹ."
+        : "Dental NTK's Global Warranty provides a written, documented process for Australian patients. Emax Zico veneers carry a 10-year material warranty. Lava and Lava Plus crowns carry a 10-year warranty. Nobel Biocare and Straumann implant system crowns are warranted for 10 years; Hiossen and Osstem implants for 10 years. The warranty covers remote clinical review via secure photo submission, approved remedial treatment, and return-flight travel support when a warranty visit is confirmed. No brand carries a lifetime warranty - any clinic claiming this should be avoided."
     },
     {
-      q: lang === "VN" ? "Nha khoa DentalNTK sử dụng những vật liệu gì cho mặt sứ và cấy ghép implant?" : "What materials does DentalNTK Clinic use for veneers and implants?",
+      q: lang === "VN" ? "Nha khoa Dental NTK sử dụng những vật liệu gì cho mặt sứ và cấy ghép implant?" : "What materials does Dental NTK Clinic use for veneers and implants?",
       a: lang === "VN"
         ? "Đối với veneer và mão răng sứ: Ivoclar Vivadent Emax Press (sứ lithium disilicate), Lava Plus zirconia và sứ VITA. Đối với implant: Straumann SLActive (Thụy Sĩ), Nobel Biocare TiUltra (Mỹ/Thụy Điển), Osstem (Hàn Quốc) và Neodent (Brazil). Tất cả các vật liệu đều được cung cấp thẻ lô của nhà sản xuất, đăng ký số sê-ri và tài liệu bảo hành chính thức - cùng tiêu chuẩn truy xuất nguồn gốc như các phòng khám tư nhân được cấp phép của Úc."
         : "For veneers and crowns: Ivoclar Vivadent Emax Press (lithium disilicate), Lava Plus zirconia, and VITA ceramic. For implants: Straumann SLActive (Switzerland), Nobel Biocare TiUltra (US/Sweden), Osstem (South Korea), and Neodent (Brazil). All materials are supplied with manufacturer batch cards, serial number registration, and official warranty documentation - the same traceability standard as registered Australian private practices."
@@ -202,14 +202,14 @@ export default function HomePage() {
     {
       q: lang === "VN" ? "Tôi có thể nhận phác đồ điều trị trước khi đặt vé máy bay sang Việt Nam không?" : "Can I get a treatment plan before booking flights to Vietnam?",
       a: lang === "VN"
-        ? "Có. Quy trình Chẩn đoán Tiền hành trình của DentalNTK hỗ trợ lập phác đồ tư vấn và báo giá AUD bằng văn bản rõ ràng trước khi đặt bất kỳ chuyến bay nào. Báo giá ghi rõ từng răng, thương hiệu vật liệu dự kiến, bác sĩ điều trị, thời gian điều trị và các điều khoản bảo hành. Hồ sơ bệnh án này được cấp trước khi bạn có bất kỳ cam kết tài chính nào."
-        : "Yes. DentalNTK's Pre-Travel Diagnostic Protocol provides a written AUD quote itemising each tooth, planned material brands, treating clinicians, treatment duration, and warranty terms before booking any flights. This case file is issued before any financial commitment."
+        ? "Có. Quy trình Chẩn đoán Tiền hành trình của Dental NTK hỗ trợ lập phác đồ tư vấn và báo giá AUD bằng văn bản rõ ràng trước khi đặt bất kỳ chuyến bay nào. Báo giá ghi rõ từng răng, thương hiệu vật liệu dự kiến, bác sĩ điều trị, thời gian điều trị và các điều khoản bảo hành. Hồ sơ bệnh án này được cấp trước khi bạn có bất kỳ cam kết tài chính nào."
+        : "Yes. Dental NTK's Pre-Travel Diagnostic Protocol provides a written AUD quote itemising each tooth, planned material brands, treating clinicians, treatment duration, and warranty terms before booking any flights. This case file is issued before any financial commitment."
     },
     {
       q: lang === "VN" ? "Quỹ bảo hiểm y tế tư nhân của Úc có chi trả cho việc điều trị tại Việt Nam không?" : "Will my Australian private health fund cover dental in Vietnam?",
       a: lang === "VN"
-        ? "Hầu hết các quỹ bảo hiểm y tế tư nhân của Úc (như Bupa, Medibank, HCF) và hệ thống Medicare đều KHÔNG chi trả cho các dịch vụ nha khoa thẩm mỹ và điều trị tại nước ngoài. Chi phí niêm yết tại Nha khoa DentalNTK đã được tối ưu hóa trực tiếp cho bệnh nhân tự chi trả (giúp tiết kiệm từ 60–75% so với giá tại Úc), mang lại lợi ích tài chính tối đa mà không cần phụ thuộc vào chính sách bảo hiểm."
-        : "Most Australian private health funds and Medicare do NOT cover elective or cosmetic dental treatments performed overseas. DentalNTK's published rates are already directly optimized for self-paying patients (saving 60–75% compared to Australian private clinic rates), delivering maximum value without reliance on insurance rebates."
+        ? "Hầu hết các quỹ bảo hiểm y tế tư nhân của Úc (như Bupa, Medibank, HCF) và hệ thống Medicare đều KHÔNG chi trả cho các dịch vụ nha khoa thẩm mỹ và điều trị tại nước ngoài. Chi phí niêm yết tại Nha khoa Dental NTK đã được tối ưu hóa trực tiếp cho bệnh nhân tự chi trả (giúp tiết kiệm từ 60–75% so với giá tại Úc), mang lại lợi ích tài chính tối đa mà không cần phụ thuộc vào chính sách bảo hiểm."
+        : "Most Australian private health funds and Medicare do NOT cover elective or cosmetic dental treatments performed overseas. Dental NTK's published rates are already directly optimized for self-paying patients (saving 60–75% compared to Australian private clinic rates), delivering maximum value without reliance on insurance rebates."
     }
   ];
 
@@ -333,10 +333,10 @@ export default function HomePage() {
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
-              World-Class Dental Restorations
+              {lang === "VN" ? "Phục hình nha khoa đẳng cấp quốc tế" : "World-Class Dental Restorations"}
             </h2>
             <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
-              We specialize in surgical implants and aesthetic design under German medical standards.
+              {lang === "VN" ? "Chúng tôi chuyên sâu về cấy ghép phẫu thuật và thiết kế nụ cười theo tiêu chuẩn y khoa Đức." : "We specialize in surgical implants and aesthetic design under German medical standards."}
             </p>
           </div>
 
@@ -350,7 +350,7 @@ export default function HomePage() {
                 <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat1Desc}</p>
               </div>
               <Link href="/services/implants" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
-                <span>Learn details</span> <ArrowRight className="w-3.5 h-3.5" />
+                <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
@@ -363,7 +363,7 @@ export default function HomePage() {
                 <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat2Desc}</p>
               </div>
               <Link href="/services/veneers" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
-                <span>Learn details</span> <ArrowRight className="w-3.5 h-3.5" />
+                <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
@@ -376,7 +376,7 @@ export default function HomePage() {
                 <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat3Desc}</p>
               </div>
               <Link href="/services/allon4" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
-                <span>Learn details</span> <ArrowRight className="w-3.5 h-3.5" />
+                <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
           </div>
@@ -595,12 +595,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Card: DentalNTK Clinical Standards */}
+            {/* Right Card: Dental NTK Clinical Standards */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 border border-teal-brand/30 shadow-md space-y-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-teal-brand text-[#0b1e2c] text-xs font-bold py-1 px-4 uppercase tracking-widest rounded-bl-xl">Standard</div>
+              <div className="absolute top-0 right-0 bg-teal-brand text-[#0b1e2c] text-xs font-bold py-1 px-4 uppercase tracking-widest rounded-bl-xl">{lang === "VN" ? "Tiêu chuẩn" : "Standard"}</div>
               <div className="flex items-center gap-2 text-teal-brand">
                 <div className="w-2.5 h-2.5 bg-teal-brand rounded-full shrink-0" />
-                <h3 className="font-serif text-base font-bold">{lang === "VN" ? "Tiêu chuẩn y khoa DentalNTK" : "DentalNTK Clinical Standards"}</h3>
+                <h3 className="font-serif text-base font-bold">{lang === "VN" ? "Tiêu chuẩn y khoa Dental NTK" : "Dental NTK Clinical Standards"}</h3>
               </div>
 
               <div className="space-y-4 text-sm font-normal">
@@ -861,8 +861,8 @@ export default function HomePage() {
                   <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Răng xỉn màu trung bình, răng xô lệch nhẹ cung thẩm mỹ. Điều trị thẩm mỹ không phẫu thuật." : "Diagnosis: Moderate discolouration, minor crowding in the aesthetic zone. Non-surgical cosmetic case."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">16 Emax Zico Veneers</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">8 Days (2 Visits)</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "16 mặt dán sứ Emax Zico" : "16 Emax Zico Veneers"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn)" : "8 Days (2 Visits)"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Thi Thuy Hang</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "192.000.000đ" : "$10,400 AUD"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "545.000.000đ" : "~$29,600 AUD"}</strong></li>
@@ -885,8 +885,8 @@ export default function HomePage() {
                   <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Cầu răng hàm trên cũ hỏng hóc nặng, tiêu xương ổ răng phức tạp. Cần phẫu thuật All-on-4." : "Diagnosis: Failing upper bridges, periodontal bone deterioration. Required full-arch fixed reconstruction."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">Upper All-on-4 Nobel Biocare</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">10 Days (Phase 1 Placement)</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "All-on-4 Hàm trên Nobel Biocare" : "Upper All-on-4 Nobel Biocare"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "10 Ngày (Giai đoạn 1)" : "10 Days (Phase 1 Placement)"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Huy Hoang</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "160.000.000đ" : "$8,675 AUD"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "645.000.000đ" : "~$35,000 AUD"}</strong></li>
@@ -909,8 +909,8 @@ export default function HomePage() {
                   <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Mất răng cối lớn hàm dưới, nướu co lại nhẹ. Xương hàm đủ điều kiện đặt trụ thẳng không ghép." : "Diagnosis: Missing single lower molar following extraction. Bone height sufficient without grafting."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">Straumann® SLActive + Crown</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">5 Days</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "Straumann® SLActive + Mão răng" : "Straumann® SLActive + Crown"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày" : "5 Days"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Pham Xuan Dang</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "75.600.000đ" : "$4,100 AUD"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "129.000.000đ" : "~$7,000 AUD"}</strong></li>
@@ -1168,12 +1168,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
-              {lang === "VN" ? "Frequently asked questions" : "Frequently asked questions"}
+              {lang === "VN" ? "Câu hỏi thường gặp" : "Frequently asked questions"}
             </h2>
             <p className="text-sm sm:text-base text-slate-500 font-normal">
               {lang === "VN"
-                ? "Tất cả những gì bạn cần biết trước khi bắt đầu hành trình kiến tạo nụ cười tại DentalNTK."
-                : "Everything you need to know about planning, warranties, and travel arrangements with DentalNTK."}
+                ? "Tất cả những gì bạn cần biết trước khi bắt đầu hành trình kiến tạo nụ cười tại Dental NTK."
+                : "Everything you need to know about planning, warranties, and travel arrangements with Dental NTK."}
             </p>
           </div>
 

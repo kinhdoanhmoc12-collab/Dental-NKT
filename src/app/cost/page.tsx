@@ -240,7 +240,7 @@ export default function CostPage() {
               categoryVN: "01. NIỀNG RĂNG - CHỈNH NHA",
               items: [
                 { nameEN: "Pediatric Orthodontics Level 1 - Level 3", nameVN: "Chỉnh nha trẻ em Mức 1 - Mức 3", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$975 – $2,930 AUD", usd: "$685 – $2,055 USD" },
-                { nameEN: "US Damon Self-Ligating Metal Braces Level 1 / Level 2", nameVN: "Chỉnh nha mắc cài kim loại tự động Damond Mỹ Mức 1 / Mức 2", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$2,930 – $3,580 AUD", usd: "$2,055 – $2,510 USD" },
+                { nameEN: "US Damon Self-Ligating Metal Braces Level 1 / Level 2", nameVN: "Chỉnh nha mắc cài kim loại tự động Damon Mỹ Mức 1 / Mức 2", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$2,930 – $3,580 AUD", usd: "$2,055 – $2,510 USD" },
                 { nameEN: "US Ceramic Braces", nameVN: "Chỉnh nha mắc cài Sứ Mỹ", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$3,580 AUD", usd: "$2,510 USD" },
                 { nameEN: "3M US Self-Ligating Ceramic Braces", nameVN: "Mắc cài sứ tự động 3M Mỹ", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$3,905 AUD", usd: "$2,740 USD" },
                 { nameEN: "Invisalign US Clear Aligners Level 1 - Essential Aligners", nameVN: "Máng trong suốt Invisalign Mỹ Mức 1 - Máng Essential", unitEN: "Both Arches Package", unitVN: "Trọn gói 2 hàm", aud: "$3,905 AUD", usd: "$2,740 USD" },
@@ -283,11 +283,11 @@ export default function CostPage() {
                 { nameEN: "All-Ceramic Ceramil Crown / Inlay / Overlay (Germany Molar) - 7-Yr Warranty", nameVN: "Chụp toàn sứ / Inlay / Overlay Ceramil (Đức) răng hàm - Bảo hành 7 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$390 AUD", usd: "$274 USD" },
                 { nameEN: "Aesthetic Ceramil Porcelain Crown (Anterior / Canine)", nameVN: "Chụp sứ Ceramil thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$455 AUD", usd: "$320 USD" },
                 { nameEN: "Aesthetic Ceramil Porcelain Veneer (Anterior / Canine)", nameVN: "Dán Veneer răng sứ Ceramil thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
-                { nameEN: "Glass-Ceramic Upcera Crown / Veneer / Inlay / Overlay (Anterior / Canine) - 10-Yr Warranty", nameVN: "Chụp sứ / Veneer / Inlay / Overlay Upcera Thuỷ tinh răng cửa / nanh - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$585 AUD", usd: "$411 USD" },
+                { nameEN: "Glass-Ceramic Upcera Crown / Veneer / Inlay / Overlay (Anterior / Canine) - 10-Yr Warranty", nameVN: "Chụp sứ / Veneer / Inlay / Overlay Upcera Thủy tinh răng cửa / nanh - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$585 AUD", usd: "$411 USD" },
                 { nameEN: "All-Ceramic Emax Zico Crown (Germany Molar) - 10-Yr Warranty", nameVN: "Chụp toàn sứ Emax Zico (Đức) răng hàm - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
                 { nameEN: "Emax Zico Porcelain Crown (Anterior / Canine)", nameVN: "Chụp sứ Emax Zico răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$585 AUD", usd: "$411 USD" },
                 { nameEN: "Emax Zico Porcelain Veneer (Anterior / Canine)", nameVN: "Dán Veneer răng sứ Emax Zico răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$650 AUD", usd: "$456 USD" },
-                { nameEN: "Glass-Ceramic Emax Crown / Veneer / Inlay - 10-Yr Warranty", nameVN: "Chụp sứ / Veneer / Inlay Emax Thuỷ Tinh - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$780 AUD", usd: "$548 USD" }
+                { nameEN: "Glass-Ceramic Emax Crown / Veneer / Inlay - 10-Yr Warranty", nameVN: "Chụp sứ / Veneer / Inlay Emax Thủy tinh - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$780 AUD", usd: "$548 USD" }
               ]
             },
             {
@@ -314,7 +314,7 @@ export default function CostPage() {
                 { nameEN: "TMJ Therapy: Neuromuscular Movement Disorder", nameVN: "Máng điều trị khớp TDH: Điều rối loạn vận động cơ", unitEN: "Treatment Course", unitVN: "Đợt điều trị", aud: "$1,950 AUD", usd: "$1,370 USD" },
                 { nameEN: "TMJ Therapy: Condylar Positioning & Muscle Relaxation Splint", nameVN: "Máng điều trị khớp TDH: Định vị vị trí lồi cầu và thư giãn cơ", unitEN: "Treatment Course", unitVN: "Đợt điều trị", aud: "$2,600 AUD", usd: "$1,825 USD" },
                 { nameEN: "Post-TMJ Occlusal Adjustment", nameVN: "Mài chỉnh khớp cắn sau điều trị khớp thái dương hàm", unitEN: "Treatment Course", unitVN: "Đợt điều trị", aud: "$195 AUD", usd: "$137 USD" },
-                { nameEN: "Composite Restoration Guided by SAM Articulator", nameVN: "Hàn phục hồi bằng Composite dưới hướng dẫn của Giá khớp Sam", unitEN: "Treatment Course", unitVN: "Đợt điều trị", aud: "$325 AUD", usd: "$228 USD" }
+                { nameEN: "Composite Restoration Guided by SAM Articulator", nameVN: "Hàn phục hồi bằng Composite dưới hướng dẫn của Giá khớp SAM", unitEN: "Treatment Course", unitVN: "Đợt điều trị", aud: "$325 AUD", usd: "$228 USD" }
               ]
             },
             {
@@ -355,8 +355,8 @@ export default function CostPage() {
                 { nameEN: "Flexible Valplast Partial Denture", nameVN: "Nền hàm nhựa dẻo bán phần", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$195 AUD", usd: "$137 USD" },
                 { nameEN: "Flexible Valplast Full Denture", nameVN: "Nền hàm nhựa dẻo toàn phần", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$325 AUD", usd: "$228 USD" },
                 { nameEN: "Titanium Metal Framework Denture", nameVN: "Hàm khung kim loại Titan", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$520 AUD", usd: "$365 USD" },
-                { nameEN: "Titanium Framework Denture with Mocbi Attachments", nameVN: "Hàm Khung kim loại Titan có Mocbi", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$780 AUD", usd: "$548 USD" },
-                { nameEN: "Mocbi Precision Attachment Rubber Gaskets", nameVN: "Gioăng cao su Mocbi", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$65 AUD", usd: "$46 USD" },
+                { nameEN: "Titanium Framework Denture with Precision Attachments", nameVN: "Hàm khung kim loại Titan có móc bi", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$780 AUD", usd: "$548 USD" },
+                { nameEN: "Precision Attachment Rubber Gaskets", nameVN: "Gioăng cao su móc bi", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$65 AUD", usd: "$46 USD" },
                 { nameEN: "Denture Relining", nameVN: "Đệm hàm", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$65 AUD", usd: "$46 USD" }
               ]
             },

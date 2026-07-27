@@ -107,7 +107,7 @@ const materials = [
     nameVN: "Sứ E.max (Thụy Sĩ)",
     nameEN: "E.max Ceramic (Switzerland)",
     descVN:
-      "Sứ ép thủy tinh Lithium Disilicate từ Ivoclar Vivadent — trong suốt, thẩm mỹ vượt trội, lý tưởng cho Veneers và Crowns vùng thẩm mỹ.",
+      "Sứ ép thủy tinh Lithium disilicate từ Ivoclar Vivadent — trong suốt, thẩm mỹ vượt trội, lý tưởng cho Veneers và Crowns vùng thẩm mỹ.",
     descEN:
       "Lithium Disilicate glass ceramic by Ivoclar Vivadent — translucent, aesthetically superior, ideal for Veneers and anterior Crowns.",
     badge: "Ivoclar",

@@ -87,7 +87,7 @@ export default function WarrantyPage() {
     "telephone": "+84963333844",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "38 Nguỵ Như Kon Tum",
+      "streetAddress": "38 Ngụy Như Kon Tum",
       "addressLocality": "Thanh Xuân",
       "addressRegion": "Hà Nội",
       "addressCountry": "VN"
