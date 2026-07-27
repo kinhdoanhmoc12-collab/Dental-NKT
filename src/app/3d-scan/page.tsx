@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import {
@@ -70,16 +70,83 @@ export default function Scan3DPage() {
   const { lang } = useLanguage();
   const isVN = lang === "VN";
   const [activeCase, setActiveCase] = useState<number | null>(null);
-  const [iframeLoaded, setIframeLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [blobUrl, setBlobUrl] = useState<string | null>(null);
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [iframeReady, setIframeReady] = useState(false);
+  const [downloadedMB, setDownloadedMB] = useState(0);
+  const [totalMB, setTotalMB] = useState(0);
+  const abortRef = useRef<AbortController | null>(null);
+
+  const downloadFile = useCallback(async (url: string) => {
+    setIsDownloading(true);
+    setProgress(0);
+    setBlobUrl(null);
+    setIframeReady(false);
+    setDownloadedMB(0);
+    setTotalMB(0);
+
+    const controller = new AbortController();
+    abortRef.current = controller;
+
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      const contentLength = response.headers.get("content-length");
+      const total = contentLength ? parseInt(contentLength, 10) : 0;
+      setTotalMB(+(total / 1024 / 1024).toFixed(1));
+
+      const reader = response.body?.getReader();
+      if (!reader) return;
+
+      const chunks: Uint8Array[] = [];
+      let received = 0;
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        chunks.push(value);
+        received += value.length;
+        setDownloadedMB(+(received / 1024 / 1024).toFixed(1));
+        if (total > 0) {
+          setProgress(Math.round((received / total) * 100));
+        }
+      }
+
+      const blob = new Blob(chunks, { type: "text/html" });
+      const url2 = URL.createObjectURL(blob);
+      setBlobUrl(url2);
+      setProgress(100);
+    } catch (e) {
+      if ((e as Error).name !== "AbortError") {
+        console.error("Download error:", e);
+      }
+    } finally {
+      setIsDownloading(false);
+    }
+  }, []);
 
   const openViewer = (id: number) => {
-    setIframeLoaded(false);
     setActiveCase(id);
+    const c = cases.find((c) => c.id === id);
+    if (c) downloadFile(c.file);
   };
+
   const closeViewer = () => {
+    if (abortRef.current) abortRef.current.abort();
+    if (blobUrl) URL.revokeObjectURL(blobUrl);
     setActiveCase(null);
-    setIframeLoaded(false);
+    setBlobUrl(null);
+    setProgress(0);
+    setIsDownloading(false);
+    setIframeReady(false);
   };
+
+  // Cleanup blob URL on unmount
+  useEffect(() => {
+    return () => {
+      if (blobUrl) URL.revokeObjectURL(blobUrl);
+    };
+  }, [blobUrl]);
 
   const activeCaseData = cases.find((c) => c.id === activeCase);
 
@@ -355,30 +422,66 @@ export default function Scan3DPage() {
 
           {/* Iframe container */}
           <div className="flex-1 relative bg-[#1a1a2e]">
-            {/* Loading spinner */}
-            {!iframeLoaded && (
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4">
-                <Loader2 className="w-12 h-12 text-teal-brand animate-spin" />
+            {/* Progress bar overlay */}
+            {!iframeReady && (
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6">
+                {/* Circular progress */}
+                <div className="relative w-28 h-28">
+                  <svg className="w-28 h-28 -rotate-90" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="8" />
+                    <circle
+                      cx="60" cy="60" r="52" fill="none"
+                      stroke="url(#progressGradient)" strokeWidth="8"
+                      strokeLinecap="round"
+                      strokeDasharray={`${2 * Math.PI * 52}`}
+                      strokeDashoffset={`${2 * Math.PI * 52 * (1 - progress / 100)}`}
+                      style={{ transition: "stroke-dashoffset 0.3s ease" }}
+                    />
+                    <defs>
+                      <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#00afc7" />
+                        <stop offset="100%" stopColor="#06b6d4" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-white font-bold text-2xl">{progress}%</span>
+                  </div>
+                </div>
+
                 <div className="text-center">
                   <p className="text-white font-semibold text-lg">
-                    {isVN ? "Đang tải mô hình 3D..." : "Loading 3D model..."}
+                    {progress < 100
+                      ? (isVN ? "Đang tải mô hình 3D..." : "Loading 3D model...")
+                      : (isVN ? "Đang khởi tạo viewer..." : "Initializing viewer...")}
                   </p>
-                  <p className="text-slate-400 text-sm mt-1">
-                    {isVN
-                      ? "File lớn, vui lòng đợi trong giây lát"
-                      : "Large file, please wait a moment"}
-                  </p>
+                  {totalMB > 0 && (
+                    <p className="text-slate-400 text-sm mt-1">
+                      {downloadedMB} / {totalMB} MB
+                    </p>
+                  )}
+                </div>
+
+                {/* Progress bar */}
+                <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-teal-brand to-cyan-400 rounded-full"
+                    style={{ width: `${progress}%`, transition: "width 0.3s ease" }}
+                  />
                 </div>
               </div>
             )}
-            <iframe
-              src={activeCaseData.file}
-              className={`absolute inset-0 w-full h-full border-0 transition-opacity duration-500 ${iframeLoaded ? 'opacity-100' : 'opacity-0'}`}
-              title={isVN ? activeCaseData.nameVN : activeCaseData.nameEN}
-              allow="fullscreen"
-              sandbox="allow-scripts allow-same-origin"
-              onLoad={() => setIframeLoaded(true)}
-            />
+
+            {blobUrl && (
+              <iframe
+                src={blobUrl}
+                className={`absolute inset-0 w-full h-full border-0 transition-opacity duration-500 ${iframeReady ? 'opacity-100' : 'opacity-0'}`}
+                title={isVN ? activeCaseData.nameVN : activeCaseData.nameEN}
+                allow="fullscreen"
+                sandbox="allow-scripts allow-same-origin"
+                onLoad={() => setIframeReady(true)}
+              />
+            )}
           </div>
 
           {/* Mobile hint bar */}
