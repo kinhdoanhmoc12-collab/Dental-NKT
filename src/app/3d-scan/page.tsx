@@ -91,6 +91,13 @@ export default function Scan3DPage() {
 
     try {
       const response = await fetch(url, { signal: controller.signal });
+      
+      // Nếu file không tồn tại (trả về 404 hoặc bị redirect về trang chủ)
+      const contentType = response.headers.get("content-type");
+      if (!response.ok || (contentType && !contentType.includes("text/html")) || response.redirected) {
+        throw new Error("File not found or invalid format");
+      }
+
       const contentLength = response.headers.get("content-length");
       const total = contentLength ? parseInt(contentLength, 10) : 0;
       setTotalMB(+(total / 1024 / 1024).toFixed(1));
@@ -112,6 +119,13 @@ export default function Scan3DPage() {
         }
       }
 
+      // Kiểm tra sơ bộ xem file tải về có phải là code HTML exocad thật hay là trang web chính
+      const text = new TextDecoder().decode(chunks[0]?.slice(0, 500));
+      if (text.includes("<!DOCTYPE html>") && text.includes("Dental NTK")) {
+        // Đây là trang web chính bị load nhầm do 404
+        throw new Error("404 page loaded instead of 3D file");
+      }
+
       const blob = new Blob(chunks as unknown as BlobPart[], { type: "text/html" });
       const url2 = URL.createObjectURL(blob);
       setBlobUrl(url2);
@@ -119,6 +133,18 @@ export default function Scan3DPage() {
     } catch (e) {
       if ((e as Error).name !== "AbortError") {
         console.error("Download error:", e);
+        // Set một Blob báo lỗi thay vì load trang 404
+        const errorHtml = `
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;color:#64748b;background:#0f172a;text-align:center;padding:20px;">
+            <svg style="width:64px;height:64px;color:#f43f5e;margin-bottom:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <h3 style="color:#f8fafc;margin:0 0 8px 0;font-size:18px;">Mô hình 3D chưa sẵn sàng</h3>
+            <p style="margin:0;font-size:14px;max-width:320px;line-height:1.5;">Bác sĩ đang xử lý và tải lên mô hình 3D cho ca điều trị này. Vui lòng thử lại sau.</p>
+          </div>
+        `;
+        const errorBlob = new Blob([errorHtml], { type: "text/html" });
+        setBlobUrl(URL.createObjectURL(errorBlob));
       }
     } finally {
       setIsDownloading(false);
