@@ -499,7 +499,7 @@ export default function HomePage() {
             {/* Visual side */}
             <div className="relative h-[300px] sm:h-[450px] w-full rounded-2xl overflow-hidden shadow-lg border border-slate-100">
               <Image 
-                src="/anhso1.jpg" 
+                src="/hero_dentist.jpg" 
                 alt="Clinic diagnostics lounge" 
                 fill 
                 className="object-cover" 
