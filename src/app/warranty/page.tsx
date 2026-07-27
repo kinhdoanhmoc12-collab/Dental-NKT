@@ -787,7 +787,7 @@ export default function WarrantyPage() {
           <div className="bg-white p-5 rounded-2xl border border-slate-200/80 space-y-1">
             <Phone className="w-5 h-5 text-teal-brand mb-2" />
             <strong className="block text-[#0b1e2c]">Hotline / WhatsApp</strong>
-            <a href="tel:+84963333844" className="text-teal-brand hover:underline font-mono font-bold">+84 963 333 844</a>
+            <a href="https://wa.me/84963333844" target="_blank" rel="noopener noreferrer" className="text-teal-brand hover:underline font-mono font-bold">+84 963 333 844</a>
           </div>
 
           <div className="bg-white p-5 rounded-2xl border border-slate-200/80 space-y-1">

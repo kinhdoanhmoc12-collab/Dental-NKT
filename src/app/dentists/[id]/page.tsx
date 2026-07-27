@@ -653,7 +653,9 @@ export default function DoctorDetailPage() {
               <span>{lang === "VN" ? "Đặt lịch khám trực tiếp" : "Book Consultation"}</span>
             </Link>
             <a 
-              href="tel:+84963333844" 
+              href="https://wa.me/84963333844" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-slate-100 hover:bg-slate-200 text-slate-800 px-5 py-3.5 font-bold text-xs sm:text-sm rounded-full transition-all inline-flex items-center gap-2"
             >
               <Phone className="w-4 h-4 text-teal-brand" />
