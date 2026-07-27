@@ -1025,7 +1025,7 @@ export default function HomePage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Nha Khoa Trẻ - 38 Ngụy Như Kon Tum"
+                    title="Dental NTK - 38 Ngụy Như Kon Tum"
                   />
                 </div>
               </div>

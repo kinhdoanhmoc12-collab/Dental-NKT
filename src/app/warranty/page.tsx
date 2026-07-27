@@ -80,7 +80,7 @@ export default function WarrantyPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "DentalNTK - Nha Khoa Trẻ Hanoi",
+    "name": "Dental NTK Hanoi",
     "url": "https://dentalntk.com/warranty",
     "logo": "https://dentalntk.com/logo.png",
     "description": "Official 11-section Dental Warranty Policy for Australian patients. Up to 10-year warranty on Emax Veneers & Implants with 100% round-trip flight ticket coverage.",
