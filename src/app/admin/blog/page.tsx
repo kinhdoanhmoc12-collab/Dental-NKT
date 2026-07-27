@@ -13,7 +13,7 @@ export default function AdminBlogPage() {
 
   // Form Fields
   const [slug, setSlug] = useState("");
-  const [category, setCategory] = useState("guide");
+  const [category, setCategory] = useState("handbook");
   const [readTime, setReadTime] = useState("5 min");
   const [titleEN, setTitleEN] = useState("");
   const [titleVN, setTitleVN] = useState("");
@@ -588,10 +588,9 @@ export default function AdminBlogPage() {
                 onChange={(e) => setCategory(e.target.value)}
                 className="w-full bg-slate-50 border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-2.5 px-4 text-xs transition-colors cursor-pointer"
               >
-                <option value="guide">Travel Guide (Du lịch)</option>
-                <option value="implants">Implant (Cấy ghép)</option>
-                <option value="veneers">Veneers (Răng sứ)</option>
-                <option value="warranty">Warranty (Bảo hành)</option>
+                <option value="handbook">Dental Handbook (Cẩm nang nha khoa)</option>
+                <option value="guide">Travel Guide (Hướng dẫn du lịch)</option>
+                <option value="warranty">Warranty Policy (Bảo hành)</option>
               </select>
             </div>
           </div>
@@ -835,7 +834,11 @@ export default function AdminBlogPage() {
                       </td>
                       <td className="py-4 px-6">
                         <span className="bg-slate-100 text-slate-600 px-2 py-1 rounded text-[10px] uppercase font-bold tracking-wider">
-                          {post.category}
+                          {post.category === "handbook" || post.category === "implants" || post.category === "veneers"
+                            ? "Cẩm nang nha khoa"
+                            : post.category === "guide"
+                            ? "Du lịch (Guide)"
+                            : "Bảo hành"}
                         </span>
                       </td>
                       <td className="py-4 px-6 text-right" onClick={(e) => e.stopPropagation()}>
