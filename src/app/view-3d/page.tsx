@@ -22,7 +22,7 @@ const cases = [
   {
     id: 1,
     file: "/scans/case-1.html",
-    avatar: "/scans/case-1-avatar.jpg",
+    avatar: "/images/cases/case_veneers.jpg",
     nameVN: "Tạ Vân Anh — Răng sứ thẩm mỹ",
     nameEN: "Ta Van Anh — Aesthetic Porcelain Teeth",
     descVN:
@@ -36,7 +36,7 @@ const cases = [
   {
     id: 2,
     file: "/scans/case-2.html",
-    avatar: "/scans/case-2-avatar.jpg",
+    avatar: "/images/cases/case_implant.jpg",
     nameVN: "Hoàng Thị Hồng — Phục hình toàn hàm",
     nameEN: "Hoang Thi Hong — Full Arch Restoration",
     descVN:
