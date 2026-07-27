@@ -1,264 +1,357 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
-import { Star, MessageSquare, Quote, Heart, Sparkles } from "lucide-react";
+import {
+  Scan,
+  CircuitBoard,
+  ShieldCheck,
+  Microscope,
+  Gem,
+  Factory,
+  Award,
+  Globe,
+  Zap,
+  Heart,
+  CheckCircle2,
+} from "lucide-react";
 
-export default function ReviewsPage() {
-  const { lang, t } = useLanguage();
-  const [isPlaying, setIsPlaying] = React.useState(false);
-  const [reviewsList, setReviewsList] = useState<any[]>([]);
+/* ────────────────────────────────────────────────────────────────────────
+   DATA
+   ──────────────────────────────────────────────────────────────────────── */
 
-  // THAY MÃ ID VIDEO YOUTUBE CỦA ANH VÀO ĐÂY (Ví dụ link là https://www.youtube.com/watch?v=dQw4w9WgXcQ thì ID là dQw4w9WgXcQ)
-  const YOUTUBE_VIDEO_ID = "ZnTi3T4oFtE";
+const equipment = [
+  {
+    icon: Scan,
+    nameVN: "Máy quét 3D Exocad",
+    nameEN: "Exocad 3D Scanner",
+    descVN:
+      "Quét hàm kỹ thuật số chính xác đến 7 micron, tạo mô hình 3D chi tiết giúp thiết kế nụ cười và lên kế hoạch điều trị chính xác tuyệt đối.",
+    descEN:
+      "Digital impression scanning with 7-micron accuracy, creating detailed 3D models for precise smile design and treatment planning.",
+    origin: "Germany",
+  },
+  {
+    icon: CircuitBoard,
+    nameVN: "Hệ thống CAD/CAM",
+    nameEN: "CAD/CAM Milling System",
+    descVN:
+      "Phay răng sứ tự động bằng công nghệ CAD/CAM, đảm bảo phục hình chính xác khít sát, thẩm mỹ tự nhiên trong thời gian ngắn nhất.",
+    descEN:
+      "Automated ceramic milling with CAD/CAM technology, ensuring precise-fit restorations with natural aesthetics in minimal time.",
+    origin: "Germany",
+  },
+  {
+    icon: Microscope,
+    nameVN: "Máy X-quang CBCT 3D",
+    nameEN: "3D CBCT X-Ray",
+    descVN:
+      "Chụp cắt lớp 3D toàn hàm, hiển thị xương hàm, dây thần kinh và xoang hàm giúp đặt Implant an toàn và chính xác tối đa.",
+    descEN:
+      "Full-jaw 3D cone beam CT scan, visualizing bone structure, nerves, and sinuses for maximally safe and precise implant placement.",
+    origin: "Japan",
+  },
+  {
+    icon: Zap,
+    nameVN: "Laser Diode nha khoa",
+    nameEN: "Dental Diode Laser",
+    descVN:
+      "Laser công suất cao cho phẫu thuật mô mềm không chảy máu, giảm đau, kháng khuẩn và rút ngắn thời gian lành thương đáng kể.",
+    descEN:
+      "High-power laser for bloodless soft tissue surgery, reducing pain, sterilizing bacteria, and significantly accelerating healing.",
+    origin: "USA",
+  },
+  {
+    icon: ShieldCheck,
+    nameVN: "Hệ thống khử trùng Autoclave",
+    nameEN: "Class B Autoclave Sterilization",
+    descVN:
+      "Hệ thống tiệt trùng Class B tiêu chuẩn châu Âu, đảm bảo mọi dụng cụ đạt vô trùng 100% trước mỗi ca điều trị.",
+    descEN:
+      "European-standard Class B sterilization system, ensuring 100% sterile instruments before every treatment procedure.",
+    origin: "Italy",
+  },
+  {
+    icon: Heart,
+    nameVN: "Ghế nha khoa cao cấp",
+    nameEN: "Premium Dental Chairs",
+    descVN:
+      "Ghế điều trị thế hệ mới tích hợp đèn LED, hệ thống hút chân không và cảm biến tự động, mang lại trải nghiệm thoải mái nhất cho bệnh nhân.",
+    descEN:
+      "Next-generation treatment chairs with integrated LED lighting, vacuum system, and auto sensors for maximum patient comfort.",
+    origin: "Germany",
+  },
+];
 
-  const staticReviews = [
-    {
-      name: "Sarah Jenkins",
-      from: lang === "VN" ? "Melbourne, Úc" : "Melbourne, Australia",
-      treatment: lang === "VN" ? "Cấy ghép All-on-4" : "All-on-4 Implants",
-      text: t.review1Text,
-      rating: 5
-    },
-    {
-      name: "David Mitchell",
-      from: lang === "VN" ? "Sydney, Úc" : "Sydney, Australia",
-      treatment: lang === "VN" ? "16 Răng sứ E.max" : "16 E.max Veneers",
-      text: t.review2Text,
-      rating: 5
-    },
-    {
-      name: "Mark Thompson",
-      from: lang === "VN" ? "Auckland, New Zealand" : "Auckland, New Zealand",
-      treatment: lang === "VN" ? "Cấy ghép Implant" : "Dental Implants",
-      text: t.review3Text,
-      rating: 5
-    }
-  ];
+const materials = [
+  {
+    icon: Gem,
+    nameVN: "Sứ Zirconia (Đức)",
+    nameEN: "Zirconia Ceramic (Germany)",
+    descVN:
+      "Sứ nguyên khối Zirconia siêu bền, chống mài mòn, màu sắc tự nhiên như răng thật. Thương hiệu hàng đầu từ Đức, đạt chuẩn CE & FDA.",
+    descEN:
+      "Ultra-durable monolithic Zirconia ceramic, wear-resistant with natural tooth-like color. Top German brand, CE & FDA certified.",
+    badge: "CE & FDA",
+  },
+  {
+    icon: Gem,
+    nameVN: "Sứ E.max (Thụy Sĩ)",
+    nameEN: "E.max Ceramic (Switzerland)",
+    descVN:
+      "Sứ ép thủy tinh Lithium Disilicate từ Ivoclar Vivadent — trong suốt, thẩm mỹ vượt trội, lý tưởng cho Veneers và Crowns vùng thẩm mỹ.",
+    descEN:
+      "Lithium Disilicate glass ceramic by Ivoclar Vivadent — translucent, aesthetically superior, ideal for Veneers and anterior Crowns.",
+    badge: "Ivoclar",
+  },
+  {
+    icon: Factory,
+    nameVN: "Implant Straumann (Thụy Sĩ)",
+    nameEN: "Straumann Implants (Switzerland)",
+    descVN:
+      "Thương hiệu Implant số 1 thế giới với bề mặt SLActive® giúp tích hợp xương nhanh gấp đôi, tỷ lệ thành công trên 98.8%.",
+    descEN:
+      "World's #1 implant brand with SLActive® surface for 2x faster osseointegration, achieving 98.8%+ success rate.",
+    badge: "#1 Global",
+  },
+  {
+    icon: Factory,
+    nameVN: "Implant Nobel Biocare (Thụy Điển)",
+    nameEN: "Nobel Biocare Implants (Sweden)",
+    descVN:
+      "Hệ thống Implant tiên phong với công nghệ TiUnite™, thiết kế sinh học tối ưu cho các ca All-on-4 và phục hình toàn hàm.",
+    descEN:
+      "Pioneering implant system with TiUnite™ technology, biologically optimized design for All-on-4 and full-arch restorations.",
+    badge: "All-on-4",
+  },
+  {
+    icon: Globe,
+    nameVN: "Composite Nano (Nhật Bản)",
+    nameEN: "Nano Composite (Japan)",
+    descVN:
+      "Composite thẩm mỹ công nghệ nano từ Tokuyama, độ bóng và bền màu vượt trội, dùng cho trám và chỉnh sửa thẩm mỹ.",
+    descEN:
+      "Aesthetic nano-technology composite by Tokuyama, superior gloss and color stability for fillings and cosmetic corrections.",
+    badge: "Nano",
+  },
+  {
+    icon: ShieldCheck,
+    nameVN: "Vật liệu gây tê & thuốc",
+    nameEN: "Anesthetics & Medications",
+    descVN:
+      "Thuốc tê và dược phẩm nhập khẩu chính hãng từ Pháp & Đức, đảm bảo an toàn tuyệt đối và hiệu quả giảm đau tối ưu.",
+    descEN:
+      "Genuine imported anesthetics and pharmaceuticals from France & Germany, ensuring absolute safety and optimal pain management.",
+    badge: "Imported",
+  },
+];
 
-  useEffect(() => {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
-    fetch(`${baseUrl}/reviews`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success && data.data && data.data.length > 0) {
-          const mapped = data.data.map((item: any) => ({
-            name: item.patient_name,
-            from: lang === "VN" ? "Khách quốc tế" : "International Patient",
-            treatment: lang === "VN" ? "Nha khoa Thẩm mỹ" : "Cosmetic Dentistry",
-            text: item.content,
-            rating: item.rating
-          }));
-          setReviewsList(mapped);
-        } else {
-          setReviewsList(staticReviews);
-        }
-      })
-      .catch((err) => {
-        console.error("Error fetching reviews:", err);
-        setReviewsList(staticReviews);
-      });
-  }, [lang]);
+const certifications = [
+  {
+    titleVN: "Tiêu chuẩn quốc tế",
+    titleEN: "International Standards",
+    descVN: "Quy trình điều trị đạt chuẩn ISO 9001 & tiêu chuẩn y tế châu Âu",
+    descEN: "Treatment procedures meeting ISO 9001 & European medical standards",
+  },
+  {
+    titleVN: "Vật liệu chính hãng 100%",
+    titleEN: "100% Genuine Materials",
+    descVN: "Cam kết sử dụng vật liệu nhập khẩu chính hãng, có tem chống hàng giả",
+    descEN: "Commitment to genuine imported materials with anti-counterfeit labels",
+  },
+  {
+    titleVN: "Bảo hành dài hạn",
+    titleEN: "Long-term Warranty",
+    descVN: "Bảo hành lên đến 15 năm cho Implant và 10 năm cho răng sứ",
+    descEN: "Warranty up to 15 years for Implants and 10 years for porcelain",
+  },
+];
+
+/* ────────────────────────────────────────────────────────────────────────
+   PAGE COMPONENT
+   ──────────────────────────────────────────────────────────────────────── */
+export default function EquipmentPage() {
+  const { lang } = useLanguage();
+  const isVN = lang === "VN";
 
   return (
     <div className="relative min-h-screen bg-white">
-      {/* Decorative Radial Background Blobs */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-[120px] pointer-events-none -z-10" />
-      <div className="absolute top-40 right-1/4 w-[600px] h-[600px] bg-sky-500/5 rounded-full blur-[140px] pointer-events-none -z-10" />
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3d] to-[#0b1e2c] text-white">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-teal-brand/10 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] rounded-full bg-cyan-500/8 blur-3xl" />
+        </div>
 
-      {/* ========================================================
-          HERO & FEATURED VIDEO
-          ======================================================== */}
-      <section className="py-16 md:py-24 border-b border-slate-100 bg-gradient-to-b from-slate-50/80 via-white to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            {/* Left Column: Rich Context and Title */}
-            <div className="lg:col-span-5 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 bg-teal-brand/10 text-teal-brand px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
-                <Star className="w-3.5 h-3.5 fill-current" />
-                <span>{lang === "VN" ? "Câu chuyện thành công" : "Patient Success Stories"}</span>
-              </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#0b1e2c] font-serif font-extrabold leading-tight">
-                {t.reviewTitle}
-              </h1>
-              <p className="text-sm sm:text-base text-slate-600 font-light leading-relaxed">
-                {t.reviewDesc}
-              </p>
-
-              {/* Trust Indicators List */}
-              <ul className="space-y-3.5 pt-2 text-slate-700 text-xs sm:text-sm font-medium">
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                    ✓
-                  </div>
-                  <span>{lang === "VN" ? "Hơn 1.200 bệnh nhân Úc & New Zealand tin tưởng" : "1,200+ Australia & NZ patients treated"}</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                    ✓
-                  </div>
-                  <span>{lang === "VN" ? "Dịch vụ đưa đón sân bay & khách sạn trọn gói" : "Full-service concierge, transfers & hotel booking"}</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0">
-                    ✓
-                  </div>
-                  <span>{lang === "VN" ? "Đánh giá 5.0 Sao tuyệt đối trên Google Reviews" : "Averaging 5.0 Star verified Google Rating"}</span>
-                </li>
-              </ul>
-
-              <div className="pt-4">
-                <Link 
-                  href="/contact" 
-                  className="inline-flex items-center gap-2 bg-teal-brand hover:bg-teal-brand-hover text-white px-7 py-3 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all"
-                >
-                  {lang === "VN" ? "Đặt lịch tư vấn miễn phí" : "Schedule Free Assessment"}
-                </Link>
-              </div>
+        <div className="relative max-w-7xl mx-auto px-6 py-12 lg:py-16">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-5">
+              <Award className="w-3.5 h-3.5 text-teal-brand" />
+              <span className="text-xs font-medium text-teal-brand/90">
+                {isVN ? "Chuẩn quốc tế" : "International Standards"}
+              </span>
             </div>
-
-            {/* Right Column: Featured Video Player */}
-            <div className="lg:col-span-7 w-full">
-              <div className="relative w-full aspect-video bg-[#0b1e2c] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/60 ring-1 ring-slate-100/80 group">
-                {!isPlaying ? (
-                  <div 
-                    onClick={() => setIsPlaying(true)}
-                    className="absolute inset-0 w-full h-full cursor-pointer flex items-center justify-center"
-                  >
-                    {/* Poster Overlay */}
-                    <div className="absolute inset-0 w-full h-full bg-slate-900/30 z-10 transition-colors group-hover:bg-slate-900/15" />
-                    <img 
-                      src="/video_poster.jpg" 
-                      alt="Featured patient video journey" 
-                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
-                    />
-                    
-                    {/* Glowing Pulse Play Button */}
-                    <div className="relative z-20 w-20 h-20 bg-teal-brand text-white rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-8 h-8 fill-current ml-1" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                      {/* Ripple animation rings */}
-                      <div className="absolute -inset-4 bg-teal-brand/30 rounded-full animate-ping -z-10" />
-                    </div>
-                  </div>
-                ) : (
-                  <iframe 
-                    className="w-full h-full relative z-10"
-                    src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1`}
-                    title="Patient Review Video" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen
-                  ></iframe>
-                )}
-              </div>
-            </div>
-
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+              {isVN ? (
+                <>
+                  Thiết bị{" "}
+                  <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
+                    máy móc & vật liệu
+                  </span>
+                </>
+              ) : (
+                <>
+                  Equipment{" "}
+                  <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
+                    & Materials
+                  </span>
+                </>
+              )}
+            </h1>
+            <p className="mt-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              {isVN
+                ? "Nha Khoa Trẻ đầu tư hệ thống thiết bị hiện đại và sử dụng vật liệu nhập khẩu chính hãng từ các thương hiệu hàng đầu thế giới — vì nụ cười của bạn xứng đáng được chăm sóc bằng những điều tốt nhất."
+                : "Nha Khoa Trẻ invests in state-of-the-art equipment and genuine imported materials from world-leading brands — because your smile deserves nothing but the best."}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ========================================================
-          WRITTEN TESTIMONIALS GRID
-          ======================================================== */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-          
-          <div className="text-center max-w-2xl mx-auto space-y-3">
-            <h2 className="text-2xl sm:text-3xl text-[#0b1e2c] font-serif font-extrabold">
-              {lang === "VN" ? "Ý kiến đánh giá từ bệnh nhân" : "Patient Letters & Feedback"}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
-              {lang === "VN" 
-                ? "Dưới đây là một số chia sẻ chi tiết được gửi trực tiếp bởi các khách hàng quốc tế sau khi hoàn thành quy trình điều trị:"
-                : "Read the handwritten or documented letters and testimonials sent by our international patients."}
-            </p>
+      {/* ── EQUIPMENT SECTION ── */}
+      <section className="py-12 lg:py-16 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-xl bg-teal-brand/10 flex items-center justify-center">
+              <CircuitBoard className="w-5 h-5 text-teal-brand" />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0b1e2c]">
+                {isVN ? "Thiết bị & Máy móc" : "Equipment & Technology"}
+              </h2>
+              <p className="text-sm text-slate-500">
+                {isVN ? "Công nghệ tiên tiến nhập khẩu từ Đức, Nhật, Mỹ" : "Advanced technology imported from Germany, Japan, USA"}
+              </p>
+            </div>
           </div>
 
-          {/* Reviews Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {reviewsList.map((rev, idx) => (
-              <div 
-                key={idx}
-                className="bg-white rounded-2xl p-8 border border-slate-200 shadow-premium hover:shadow-premium-hover transition-luxury flex flex-col justify-between relative group"
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {equipment.map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-teal-brand/20 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
+                style={{
+                  animationDelay: `${i * 80}ms`,
+                  animation: "fadeIn 0.5s ease-out forwards",
+                  opacity: 0,
+                }}
               >
-                <div className="space-y-6">
-                  {/* Decorative Quote Icon */}
-                  <Quote className="w-10 h-10 text-teal-brand/10 absolute top-6 right-6" />
-
-                  {/* Stars Rating */}
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className={`w-4 h-4 ${i < (rev.rating || 5) ? 'fill-gold-brand text-gold-brand' : 'text-slate-200'}`} />
-                    ))}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-brand/10 to-cyan-500/10 flex items-center justify-center shrink-0 group-hover:from-teal-brand/20 group-hover:to-cyan-500/20 transition-colors">
+                    <item.icon className="w-6 h-6 text-teal-brand" />
                   </div>
-
-                  <p className="text-sm sm:text-base text-slate-800 font-semibold leading-relaxed relative z-10 not-italic">
-                    "{rev.text}"
-                  </p>
-                </div>
-
-                <div className="mt-8 pt-5 border-t border-slate-200 flex items-center gap-3">
-                  <div className="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-sm font-bold text-teal-brand uppercase tracking-wider">
-                    {rev.name.slice(0, 2)}
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="text-sm font-extrabold text-slate-900 leading-none">{rev.name}</h4>
-                    <p className="text-xs text-slate-700 font-medium">
-                      {rev.from} • <span className="text-teal-brand font-extrabold">{rev.treatment}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <h3 className="font-bold text-[#0b1e2c] text-base leading-snug">
+                        {isVN ? item.nameVN : item.nameEN}
+                      </h3>
+                    </div>
+                    <span className="inline-block text-[10px] font-bold text-white bg-slate-700 px-2 py-0.5 rounded-full mb-2">
+                      {item.origin}
+                    </span>
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                      {isVN ? item.descVN : item.descEN}
                     </p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Review Platform Badges */}
-          <div className="pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-4xl mx-auto">
-            <div className="space-y-1">
-              <div className="flex justify-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-gold-brand text-gold-brand" />
-                ))}
-              </div>
-              <p className="text-xs font-bold text-slate-800">5.0 Star Google Rating</p>
-              <p className="text-[10px] text-slate-400 font-light">Based on verified international reviews</p>
+      {/* ── MATERIALS SECTION ── */}
+      <section className="py-12 lg:py-16 bg-white border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center">
+              <Gem className="w-5 h-5 text-amber-600" />
             </div>
-            
-            <div className="space-y-1">
-              <div className="flex justify-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-[#12b76a] text-[#12b76a]" />
-                ))}
-              </div>
-              <p className="text-xs font-bold text-slate-800">100% Patient Satisfaction</p>
-              <p className="text-[10px] text-slate-400 font-light">Follow-up surveys for international cases</p>
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex justify-center gap-1 text-teal-brand font-bold text-sm">
-                <Heart className="w-4 h-4 fill-teal-brand" /> VIP Care
-              </div>
-              <p className="text-xs font-bold text-slate-800">Elite Concierge Hosting</p>
-              <p className="text-[10px] text-slate-400 font-light">Assisting patients from AU & NZ since 2016</p>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0b1e2c]">
+                {isVN ? "Vật liệu nha khoa" : "Dental Materials"}
+              </h2>
+              <p className="text-sm text-slate-500">
+                {isVN ? "100% chính hãng từ Thụy Sĩ, Đức, Nhật Bản" : "100% genuine from Switzerland, Germany, Japan"}
+              </p>
             </div>
           </div>
 
-          <div className="text-center pt-4">
-            <Link 
-              href="/services/smile-makeover" 
-              className="inline-flex items-center gap-2 bg-[#0b1e2c] hover:bg-teal-brand text-white px-8 py-3.5 font-semibold text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <Sparkles className="w-4 h-4 text-teal-brand" />
-              <span>{lang === "VN" ? "Thiết Kế Nụ Cười Mơ Ước Của Bạn" : "Design Your Dream Smile"}</span>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {materials.map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-amber-200 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(217,119,6,0.1)]"
+                style={{
+                  animationDelay: `${i * 80}ms`,
+                  animation: "fadeIn 0.5s ease-out forwards",
+                  opacity: 0,
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center shrink-0 group-hover:from-amber-100 group-hover:to-orange-100 transition-colors">
+                    <item.icon className="w-6 h-6 text-amber-600" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <h3 className="font-bold text-[#0b1e2c] text-base leading-snug">
+                        {isVN ? item.nameVN : item.nameEN}
+                      </h3>
+                    </div>
+                    <span className="inline-block text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full mb-2">
+                      {item.badge}
+                    </span>
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                      {isVN ? item.descVN : item.descEN}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* ── CERTIFICATIONS ── */}
+      <section className="py-10 lg:py-12 bg-gradient-to-b from-slate-50 to-white border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid sm:grid-cols-3 gap-5">
+            {certifications.map((cert, i) => (
+              <div
+                key={i}
+                className="flex items-start gap-3 bg-white rounded-xl p-5 border border-slate-100"
+              >
+                <CheckCircle2 className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
+                <div>
+                  <h3 className="font-bold text-[#0b1e2c] text-sm mb-1">
+                    {isVN ? cert.titleVN : cert.titleEN}
+                  </h3>
+                  <p className="text-xs text-slate-500 leading-relaxed">
+                    {isVN ? cert.descVN : cert.descEN}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* fadeIn keyframes */}
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
