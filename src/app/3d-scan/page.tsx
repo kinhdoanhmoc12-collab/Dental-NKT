@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import {
   RotateCcw,
@@ -20,6 +21,7 @@ const cases = [
   {
     id: 1,
     file: "/scans/case-1.html",
+    avatar: "/scans/case-1-avatar.jpg",
     nameVN: "Case 1 — Răng sứ thẩm mỹ",
     nameEN: "Case 1 — Aesthetic Porcelain Teeth",
     descVN:
@@ -33,6 +35,7 @@ const cases = [
   {
     id: 2,
     file: "/scans/case-2.html",
+    avatar: "/scans/case-2-avatar.jpg",
     nameVN: "Case 2 — Phục hình toàn hàm",
     nameEN: "Case 2 — Full Arch Restoration",
     descVN:
@@ -46,6 +49,7 @@ const cases = [
   {
     id: 3,
     file: "/scans/case-3.html",
+    avatar: "/scans/case-3-avatar.jpg",
     nameVN: "Case 3 — Smile Makeover toàn diện",
     nameEN: "Case 3 — Full Smile Makeover",
     descVN:
@@ -204,23 +208,19 @@ export default function Scan3DPage() {
                   opacity: 0,
                 }}
               >
-                {/* Gradient header */}
+                {/* Avatar image header */}
                 <div
-                  className={`relative h-44 bg-gradient-to-br ${c.color} flex items-center justify-center overflow-hidden`}
+                  className={`relative h-52 bg-gradient-to-br ${c.color} overflow-hidden`}
                 >
-                  {/* 3D icon */}
-                  <div className="relative z-10 flex flex-col items-center gap-3">
-                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500">
-                      <Box className="w-8 h-8 text-white" />
-                    </div>
-                    <span className="text-xs font-semibold text-white/80 uppercase tracking-wider">
-                      3D Scan
-                    </span>
-                  </div>
-
-                  {/* Decorative circles */}
-                  <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/10" />
-                  <div className="absolute -bottom-8 -left-8 w-24 h-24 rounded-full bg-white/10" />
+                  <Image
+                    src={c.avatar}
+                    alt={isVN ? c.nameVN : c.nameEN}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/30 to-transparent" />
 
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500 flex items-center justify-center">
