@@ -175,7 +175,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Head of Implantology & Orthodontics",
     badgeVN: "Cấy ghép 15,000+ Implant",
     badgeEN: "15,000+ Implants Placed",
-    image: "/dr_phong.png",
+    image: "/dr_hoang.jpg",
     experienceYears: 15,
     patientsTreated: "8,000+ Ca",
     bioVN: [

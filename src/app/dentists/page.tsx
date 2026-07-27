@@ -32,7 +32,7 @@ export default function DentistsPage() {
       roleEN: "Head of Implantology & Orthodontics",
       descVN: "Đào tạo Chỉnh nha tại Đại học Cologne - Đức. Chuyên môn cao về Chỉnh nha, Implant, Răng thẩm mỹ & Khớp thái dương hàm. Phẫu thuật nụ cười với Operation Smile.",
       descEN: "Orthodontics training at Cologne University – Germany. Specialist in Orthodontics, Implants & TMJ Disorders. Operation Smile volunteer surgeon.",
-      image: "/dr_phong.png"
+      image: "/dr_hoang.jpg"
     },
     {
       id: "d3",
