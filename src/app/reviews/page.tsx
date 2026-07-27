@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "../../context/LanguageContext";
 import {
   Scan,
@@ -30,6 +31,7 @@ const equipment = [
     descEN:
       "Digital impression scanning with 7-micron accuracy, creating detailed 3D models for precise smile design and treatment planning.",
     origin: "Germany",
+    image: "/images/equipment/exocad_scanner.jpg",
   },
   {
     icon: CircuitBoard,
@@ -40,6 +42,7 @@ const equipment = [
     descEN:
       "Automated ceramic milling with CAD/CAM technology, ensuring precise-fit restorations with natural aesthetics in minimal time.",
     origin: "Germany",
+    image: "/images/equipment/cadcam_system.jpg",
   },
   {
     icon: Microscope,
@@ -50,6 +53,7 @@ const equipment = [
     descEN:
       "Full-jaw 3D cone beam CT scan, visualizing bone structure, nerves, and sinuses for maximally safe and precise implant placement.",
     origin: "Japan",
+    image: "/images/equipment/cbct_xray.jpg",
   },
   {
     icon: Zap,
@@ -60,6 +64,7 @@ const equipment = [
     descEN:
       "High-power laser for bloodless soft tissue surgery, reducing pain, sterilizing bacteria, and significantly accelerating healing.",
     origin: "USA",
+    image: "/images/equipment/dental_laser.jpg",
   },
   {
     icon: ShieldCheck,
@@ -70,6 +75,7 @@ const equipment = [
     descEN:
       "European-standard Class B sterilization system, ensuring 100% sterile instruments before every treatment procedure.",
     origin: "Italy",
+    image: "/images/equipment/autoclave.jpg",
   },
   {
     icon: Heart,
@@ -80,6 +86,7 @@ const equipment = [
     descEN:
       "Next-generation treatment chairs with integrated LED lighting, vacuum system, and auto sensors for maximum patient comfort.",
     origin: "Germany",
+    image: "/images/equipment/dental_chair.jpg",
   },
 ];
 
@@ -93,6 +100,7 @@ const materials = [
     descEN:
       "Ultra-durable monolithic Zirconia ceramic, wear-resistant with natural tooth-like color. Top German brand, CE & FDA certified.",
     badge: "CE & FDA",
+    image: "/images/equipment/zirconia.jpg",
   },
   {
     icon: Gem,
@@ -103,6 +111,7 @@ const materials = [
     descEN:
       "Lithium Disilicate glass ceramic by Ivoclar Vivadent — translucent, aesthetically superior, ideal for Veneers and anterior Crowns.",
     badge: "Ivoclar",
+    image: "/images/equipment/emax.jpg",
   },
   {
     icon: Factory,
@@ -113,6 +122,7 @@ const materials = [
     descEN:
       "World's #1 implant brand with SLActive® surface for 2x faster osseointegration, achieving 98.8%+ success rate.",
     badge: "#1 Global",
+    image: "/images/equipment/straumann.jpg",
   },
   {
     icon: Factory,
@@ -123,6 +133,7 @@ const materials = [
     descEN:
       "Pioneering implant system with TiUnite™ technology, biologically optimized design for All-on-4 and full-arch restorations.",
     badge: "All-on-4",
+    image: "/images/equipment/nobel_biocare.jpg",
   },
   {
     icon: Globe,
@@ -133,6 +144,7 @@ const materials = [
     descEN:
       "Aesthetic nano-technology composite by Tokuyama, superior gloss and color stability for fillings and cosmetic corrections.",
     badge: "Nano",
+    image: "/images/equipment/nano_composite.jpg",
   },
   {
     icon: ShieldCheck,
@@ -143,6 +155,7 @@ const materials = [
     descEN:
       "Genuine imported anesthetics and pharmaceuticals from France & Germany, ensuring absolute safety and optimal pain management.",
     badge: "Imported",
+    image: "/images/equipment/anesthetics.jpg",
   },
 ];
 
@@ -238,30 +251,34 @@ export default function EquipmentPage() {
             {equipment.map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-teal-brand/20 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-teal-brand/20 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
                 style={{
                   animationDelay: `${i * 80}ms`,
                   animation: "fadeIn 0.5s ease-out forwards",
                   opacity: 0,
                 }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-brand/10 to-cyan-500/10 flex items-center justify-center shrink-0 group-hover:from-teal-brand/20 group-hover:to-cyan-500/20 transition-colors">
-                    <item.icon className="w-6 h-6 text-teal-brand" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <h3 className="font-bold text-[#0b1e2c] text-base leading-snug">
-                        {isVN ? item.nameVN : item.nameEN}
-                      </h3>
-                    </div>
-                    <span className="inline-block text-[10px] font-bold text-white bg-slate-700 px-2 py-0.5 rounded-full mb-2">
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={isVN ? item.nameVN : item.nameEN}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[10px] font-bold text-white bg-slate-800/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
                       {item.origin}
                     </span>
-                    <p className="text-sm text-slate-500 leading-relaxed">
-                      {isVN ? item.descVN : item.descEN}
-                    </p>
                   </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-[#0b1e2c] text-base leading-snug mb-2">
+                    {isVN ? item.nameVN : item.nameEN}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {isVN ? item.descVN : item.descEN}
+                  </p>
                 </div>
               </div>
             ))}
@@ -290,30 +307,34 @@ export default function EquipmentPage() {
             {materials.map((item, i) => (
               <div
                 key={i}
-                className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-amber-200 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(217,119,6,0.1)]"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-amber-200 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(217,119,6,0.1)]"
                 style={{
                   animationDelay: `${i * 80}ms`,
                   animation: "fadeIn 0.5s ease-out forwards",
                   opacity: 0,
                 }}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-50 to-orange-50 flex items-center justify-center shrink-0 group-hover:from-amber-100 group-hover:to-orange-100 transition-colors">
-                    <item.icon className="w-6 h-6 text-amber-600" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1.5">
-                      <h3 className="font-bold text-[#0b1e2c] text-base leading-snug">
-                        {isVN ? item.nameVN : item.nameEN}
-                      </h3>
-                    </div>
-                    <span className="inline-block text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full mb-2">
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={isVN ? item.nameVN : item.nameEN}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[10px] font-bold text-amber-700 bg-amber-50/90 backdrop-blur-sm border border-amber-200 px-2.5 py-1 rounded-full">
                       {item.badge}
                     </span>
-                    <p className="text-sm text-slate-500 leading-relaxed">
-                      {isVN ? item.descVN : item.descEN}
-                    </p>
                   </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-bold text-[#0b1e2c] text-base leading-snug mb-2">
+                    {isVN ? item.nameVN : item.nameEN}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {isVN ? item.descVN : item.descEN}
+                  </p>
                 </div>
               </div>
             ))}
