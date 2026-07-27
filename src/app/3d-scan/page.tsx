@@ -112,7 +112,7 @@ export default function Scan3DPage() {
         }
       }
 
-      const blob = new Blob(chunks, { type: "text/html" });
+      const blob = new Blob(chunks as unknown as BlobPart[], { type: "text/html" });
       const url2 = URL.createObjectURL(blob);
       setBlobUrl(url2);
       setProgress(100);
