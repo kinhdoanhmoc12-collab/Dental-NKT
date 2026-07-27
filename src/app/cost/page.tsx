@@ -34,8 +34,8 @@ export default function CostPage() {
   const proceduresData = [
     { id: 1, name: lang === "VN" ? "Dán Veneer răng sứ Emax Zico" : "Emax Zico porcelain veneer", au: "1,200–2,500", ntk: lang === "VN" ? "12.000.000 VNĐ" : "650", save: lang === "VN" ? "Tiết kiệm 60–65%" : "$550–1,850 AUD (~60–65%)" },
     { id: 2, name: lang === "VN" ? "Trụ HIOSSEN Mỹ" : "HIOSSEN US implant fixture", au: "2,000–4,000", ntk: lang === "VN" ? "18.000.000 VNĐ" : "975", save: lang === "VN" ? "Tiết kiệm 55–65%" : "$1,025–3,025 AUD (~55–65%)" },
-    { id: 3, name: lang === "VN" ? "Thanh 3 kim loại Titan" : "Titanium 3-unit bar restoration", au: "4,000–8,000", ntk: lang === "VN" ? "36.000.000 VNĐ" : "1,950", save: lang === "VN" ? "Tiết kiệm 60–70%" : "$2,050–6,050 AUD (~60–70%)" },
-    { id: 4, name: lang === "VN" ? "Phục hình trên Implant sứ Ceramil" : "Ceramil porcelain crown on implant", au: "1,500–3,000", ntk: lang === "VN" ? "9.600.000 VNĐ" : "520", save: lang === "VN" ? "Tiết kiệm 60–65%" : "$980–2,480 AUD (~60–65%)" },
+    { id: 3, name: lang === "VN" ? "Khung phục hình toàn hàm Titan" : "Titanium full-arch framework", au: "4,000–8,000", ntk: lang === "VN" ? "36.000.000 VNĐ" : "1,950", save: lang === "VN" ? "Tiết kiệm 60–70%" : "$2,050–6,050 AUD (~60–70%)" },
+    { id: 4, name: lang === "VN" ? "Phục hình trên Implant sứ Ceramill" : "Ceramill porcelain crown on implant", au: "1,500–3,000", ntk: lang === "VN" ? "9.600.000 VNĐ" : "520", save: lang === "VN" ? "Tiết kiệm 60–65%" : "$980–2,480 AUD (~60–65%)" },
     { id: 5, name: lang === "VN" ? "Chụp toàn sứ Emax Zico (Đức) răng hàm" : "Emax Zico all-ceramic molar crown", au: "1,200–2,500", ntk: lang === "VN" ? "9.600.000 VNĐ" : "520", save: lang === "VN" ? "Tiết kiệm 60–70%" : "$680–1,980 AUD (~60–70%)" },
     { id: 6, name: lang === "VN" ? "Máng trong suốt Invisalign Mỹ Mức 1 - Mức 3" : "Invisalign US clear aligners Level 1-3", au: "6,000–10,000", ntk: lang === "VN" ? "72.000.000–126.000.000 VNĐ" : "3,905–6,835", save: lang === "VN" ? "Tiết kiệm 50–75%" : "$2,095–3,165+ AUD (~50–75%)" },
     { id: 7, name: lang === "VN" ? "Tẩy trắng răng Laser Whitening (Thuốc Đức)" : "In-office Laser Whitening (German gel)", au: "500–1,500", ntk: lang === "VN" ? "3.000.000 VNĐ" : "160", save: lang === "VN" ? "Tiết kiệm 65–88%" : "$340–1,340 AUD (~65–88%)" },
@@ -47,10 +47,10 @@ export default function CostPage() {
   const affordabilityData = [
     { name: lang === "VN" ? "Trụ HIOSSEN Mỹ + Phục hình Everes" : "HIOSSEN implant fixture + Everes crown", au: "5,000", pctAu: "8.6%", weeksAu: "2.4 weeks", ntk: lang === "VN" ? "25.200.000 VNĐ" : "1,368", pctNtk: "2.3%" },
     { name: lang === "VN" ? "10 Dán Veneer răng sứ Emax Zico" : "10 Emax Zico porcelain veneers", au: "18,500", pctAu: "31.8%", weeksAu: "8.7 weeks", ntk: lang === "VN" ? "120.000.000 VNĐ" : "6,512", pctNtk: "11.2%" },
-    { name: lang === "VN" ? "Thanh 3 kim loại Titan" : "Titanium 3-unit bar restoration", au: "8,000", pctAu: "13.7%", weeksAu: "3.8 weeks", ntk: lang === "VN" ? "36.000.000 VNĐ" : "1,954", pctNtk: "3.4%" },
+    { name: lang === "VN" ? "Khung phục hình toàn hàm Titan" : "Titanium full-arch framework", au: "8,000", pctAu: "13.7%", weeksAu: "3.8 weeks", ntk: lang === "VN" ? "36.000.000 VNĐ" : "1,954", pctNtk: "3.4%" },
     { name: lang === "VN" ? "Trụ Implant STRAUMANN Thụy Sỹ" : "STRAUMANN Swiss implant fixture", au: "7,000", pctAu: "12.0%", weeksAu: "3.3 weeks", ntk: lang === "VN" ? "66.000.000 VNĐ" : "3,582", pctNtk: "6.2%" },
-    { name: lang === "VN" ? "Chụp toàn sứ Ceramil (mỗi răng)" : "Ceramil all-ceramic crown (per tooth)", au: "1,850", pctAu: "3.2%", weeksAu: "0.9 weeks", ntk: lang === "VN" ? "7.200.000 VNĐ" : "390", pctNtk: "0.7%" },
-    { name: lang === "VN" ? "Điều trị tuỷ + Chụp sứ Ceramil (răng hàm)" : "Molar root canal + Ceramil crown", au: "4,000", pctAu: "6.9%", weeksAu: "1.9 weeks", ntk: lang === "VN" ? "10.200.000 VNĐ" : "553", pctNtk: "1.0%" },
+    { name: lang === "VN" ? "Chụp toàn sứ Ceramill (mỗi răng)" : "Ceramill all-ceramic crown (per tooth)", au: "1,850", pctAu: "3.2%", weeksAu: "0.9 weeks", ntk: lang === "VN" ? "9.600.000 VNĐ" : "520", pctNtk: "0.9%" },
+    { name: lang === "VN" ? "Điều trị tuỷ + Chụp sứ Ceramill (răng hàm)" : "Molar root canal + Ceramill crown", au: "4,000", pctAu: "6.9%", weeksAu: "1.9 weeks", ntk: lang === "VN" ? "12.600.000 VNĐ" : "683", pctNtk: "1.2%" },
     { name: lang === "VN" ? "Máng trong suốt Invisalign Mỹ Mức 1" : "Invisalign US clear aligners Level 1", au: "8,000", pctAu: "13.7%", weeksAu: "3.8 weeks", ntk: lang === "VN" ? "72.000.000 VNĐ" : "3,908", pctNtk: "6.7%" },
     { name: lang === "VN" ? "Nền hàm nhựa dẻo toàn phần" : "Full flexible resin denture base", au: "2,500", pctAu: "4.3%", weeksAu: "1.2 weeks", ntk: lang === "VN" ? "6.000.000 VNĐ" : "325", pctNtk: "0.6%" }
   ];
@@ -280,9 +280,9 @@ export default function CostPage() {
               categoryVN: "04. PHỤC HÌNH RĂNG CÔNG NGHỆ KỸ THUẬT SỐ",
               items: [
                 { nameEN: "Crown Recementation", nameVN: "Gắn lại chụp răng", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$65 AUD", usd: "$46 USD" },
-                { nameEN: "All-Ceramic Ceramil Crown / Inlay / Overlay (Germany Molar) - 7-Yr Warranty", nameVN: "Chụp toàn sứ / Inlay / Overlay Ceramil (Đức) răng hàm - Bảo hành 7 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$390 AUD", usd: "$274 USD" },
-                { nameEN: "Aesthetic Ceramil Porcelain Crown (Anterior / Canine)", nameVN: "Chụp sứ Ceramil thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$455 AUD", usd: "$320 USD" },
-                { nameEN: "Aesthetic Ceramil Porcelain Veneer (Anterior / Canine)", nameVN: "Dán Veneer răng sứ Ceramil thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
+                { nameEN: "All-Ceramic Ceramill Crown / Inlay / Overlay (Germany Molar) - 10-Yr Warranty", nameVN: "Chụp toàn sứ / Inlay / Overlay Ceramill (Đức) răng hàm - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
+                { nameEN: "Aesthetic Ceramill Porcelain Crown (Anterior / Canine)", nameVN: "Chụp sứ Ceramill thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
+                { nameEN: "Aesthetic Ceramill Porcelain Veneer (Anterior / Canine)", nameVN: "Dán Veneer răng sứ Ceramill thẩm mỹ răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
                 { nameEN: "Glass-Ceramic Upcera Crown / Veneer / Inlay / Overlay (Anterior / Canine) - 10-Yr Warranty", nameVN: "Chụp sứ / Veneer / Inlay / Overlay Upcera Thủy tinh răng cửa / nanh - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$585 AUD", usd: "$411 USD" },
                 { nameEN: "All-Ceramic Emax Zico Crown (Germany Molar) - 10-Yr Warranty", nameVN: "Chụp toàn sứ Emax Zico (Đức) răng hàm - Bảo hành 10 năm", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
                 { nameEN: "Emax Zico Porcelain Crown (Anterior / Canine)", nameVN: "Chụp sứ Emax Zico răng cửa / răng nanh", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$585 AUD", usd: "$411 USD" },
@@ -337,9 +337,9 @@ export default function CostPage() {
                 { nameEN: "SIC Implant Fixture (Germany)", nameVN: "Trụ SIC Đức", unitEN: "1 Fixture", unitVN: "1 trụ", aud: "$1,630 AUD", usd: "$1,141 USD" },
                 { nameEN: "STRAUMANN Implant Fixture (Switzerland)", nameVN: "Trụ STRAUMANN Thuỵ Sỹ", unitEN: "1 Fixture", unitVN: "1 trụ", aud: "$3,580 AUD", usd: "$2,510 USD" },
                 { nameEN: "Implant Crown - Everes Porcelain", nameVN: "Phục hình trên Implant sứ Everes", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$390 AUD", usd: "$274 USD" },
-                { nameEN: "Implant Crown - Ceramil Porcelain", nameVN: "Phục hình trên Implant sứ Ceramil", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
+                { nameEN: "Implant Crown - Ceramill Porcelain", nameVN: "Phục hình trên Implant sứ Ceramill", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$520 AUD", usd: "$365 USD" },
                 { nameEN: "Implant Crown - Emax Porcelain", nameVN: "Phục hình trên Implant sứ Emax", unitEN: "1 Tooth", unitVN: "1 răng", aud: "$650 AUD", usd: "$456 USD" },
-                { nameEN: "Titanium 3-Unit Bar Restoration", nameVN: "Thanh 3 kim loại Titan", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$1,950 AUD", usd: "$1,370 USD" },
+                { nameEN: "Titanium Full-Arch Framework", nameVN: "Khung phục hình toàn hàm Titan", unitEN: "1 Arch", unitVN: "1 hàm", aud: "$1,950 AUD", usd: "$1,370 USD" },
                 { nameEN: "Ball Attachment Abutment", nameVN: "Khớp kết nối ball", unitEN: "1 Unit", unitVN: "1 cái", aud: "$325 AUD", usd: "$228 USD" },
                 { nameEN: "Bone Grafting for Implant", nameVN: "Ghép xương cho Implant", unitEN: "1 Site", unitVN: "1 đơn vị", aud: "$390 AUD", usd: "$274 USD" }
               ]

@@ -276,7 +276,7 @@ export default function WarrantyPage() {
                   {lang === "VN" ? "Veneer sứ Emax / sứ ép cao cấp" : "Emax Porcelain Veneers / Pressed Ceramic"}
                 </td>
                 <td className="p-4 font-bold text-teal-brand">
-                  {lang === "VN" ? "7 năm" : "7 Years"}
+                  {lang === "VN" ? "10 năm" : "10 Years"}
                 </td>
                 <td className="p-4 text-slate-500">
                   {lang === "VN" ? "Áp dụng cho dòng sứ ép (Emax Press và tương đương)" : "Applies to Ivoclar Vivadent Emax Press or equivalent premium ceramic"}
@@ -287,7 +287,7 @@ export default function WarrantyPage() {
                   {lang === "VN" ? "Veneer / Mão sứ Zirconia" : "Zirconia Veneers & Porcelain Crowns"}
                 </td>
                 <td className="p-4 font-bold text-teal-brand">
-                  {lang === "VN" ? "5 năm" : "5 Years"}
+                  {lang === "VN" ? "10 năm" : "10 Years"}
                 </td>
                 <td className="p-4 text-slate-500">
                   {lang === "VN" ? "Đảm bảo thẩm mỹ và chịu lực cao, bảo hành nứt vỡ sứ tự nhiên" : "High aesthetic translucency, covers natural porcelain chipping or fracture"}
@@ -353,7 +353,7 @@ export default function WarrantyPage() {
                   {lang === "VN" ? "Mão / Phục hình trên Implant" : "Implant Abutment & Crown Restoration"}
                 </td>
                 <td className="p-4 font-bold text-teal-brand">
-                  {lang === "VN" ? "5 năm" : "5 Years"}
+                  {lang === "VN" ? "10 năm" : "10 Years"}
                 </td>
                 <td className="p-4 text-slate-500">
                   {lang === "VN" ? "Riêng biệt với bảo hành trụ, không cộng dồn thời hạn" : "Independent from fixture warranty; non-cumulative"}

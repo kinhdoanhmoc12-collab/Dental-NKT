@@ -641,7 +641,7 @@ export default function HomePage() {
             <p className="text-sm sm:text-base text-slate-500 font-normal leading-relaxed">
               {lang === "VN"
                 ? "Đội ngũ bác sĩ được đào tạo chính quy chuyên khoa Răng Hàm Mặt Đại học Y Hà Nội và các trường đại học hàng đầu thế giới."
-                : "Our board leads hold credentials from elite Western institutions and bring over 15+ years of clinical implantology and veneer restoration expertise."}
+                : "Our clinical leads bring over 15+ years of experience, supported by university-trained dental specialists."}
             </p>
             <div className="pt-2">
               <Link 
@@ -862,7 +862,7 @@ export default function HomePage() {
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
                   <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "16 mặt dán sứ Emax Zico" : "16 Emax Zico Veneers"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn)" : "8 Days (2 Visits)"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn lâm sàng)" : "8 Days (2 Clinic Appointments)"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Thi Thuy Hang</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "192.000.000đ" : "$10,400 AUD"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "545.000.000đ" : "~$29,600 AUD"}</strong></li>
@@ -910,7 +910,7 @@ export default function HomePage() {
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
                   <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "Straumann® SLActive + Mão răng" : "Straumann® SLActive + Crown"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày" : "5 Days"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày (Lần 1 cấy trụ)" : "5 Days (Visit 1 Placement)"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Pham Xuan Dang</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "75.600.000đ" : "$4,100 AUD"}</strong></li>
                   <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "129.000.000đ" : "~$7,000 AUD"}</strong></li>
