@@ -73,7 +73,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Cosmetic Smile Lead & Oral Surgery Specialist",
     badgeVN: "Chuyên gia Phẫu thuật Trong miệng & Nha chu",
     badgeEN: "Oral Surgery & Periodontal Specialist",
-    image: "/dr_hang.jpg",
+    image: "/images/dentists/bacsihang.jpg",
     experienceYears: 8,
     bioVN: [
       "Tốt nghiệp Đại học Y Hà Nội năm 2018.",
@@ -175,7 +175,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Head of Implantology & Orthodontics",
     badgeVN: "Cấy ghép 15,000+ Implant",
     badgeEN: "15,000+ Implants Placed",
-    image: "/dr_hoang.jpg",
+    image: "/images/dentists/bacsihoang.jpg",
     experienceYears: 15,
     patientsTreated: "8,000+ Ca",
     bioVN: [
@@ -292,7 +292,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Orthodontic & Endodontic Specialist",
     badgeVN: "Chuyên gia Chỉnh nha & Nội nha",
     badgeEN: "Orthodontic & Endodontic Specialist",
-    image: "/dr_dang.jpg",
+    image: "/images/dentists/bacsidang.jpg",
     experienceYears: 8,
     bioVN: [
       "Đào tạo chỉnh nha tại Đại học Y HÀ NỘI.",
@@ -380,7 +380,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Orthodontic & Aesthetic Braces Specialist",
     badgeVN: "Chuyên gia Chỉnh nha ĐH Y Hà Nội",
     badgeEN: "Orthodontic Specialist (HMU)",
-    image: "/dr_minh.jpg",
+    image: "/images/dentists/bacsiminh.jpg",
     experienceYears: 7,
     patientsTreated: "1,000+ Ca",
     bioVN: [
@@ -455,7 +455,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Orthodontic & Aesthetic Restoration Specialist",
     badgeVN: "Chuyên gia Chỉnh nha ĐH Y Hà Nội",
     badgeEN: "Orthodontic Specialist (HMU)",
-    image: "/dr_hoai.jpg",
+    image: "/images/dentists/bacsihoai.jpg",
     experienceYears: 6,
     patientsTreated: "1,000+ Ca",
     bioVN: [

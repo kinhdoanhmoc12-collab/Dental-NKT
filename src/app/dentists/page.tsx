@@ -21,7 +21,7 @@ export default function DentistsPage() {
       roleEN: "Cosmetic Smile Lead & Oral Surgery Specialist",
       descVN: "Tốt nghiệp ĐH Y Hà Nội 2018. Chuyên môn cao về Implant, nhổ răng khôn, điều trị tụt lợi, cười lộ nướu, các ca viêm quanh răng nặng. Ứng dụng kỹ thuật số từ 2020.",
       descEN: "Extensive expertise in Implants, wisdom teeth, gum recession, gummy smile & severe periodontitis. Digital dentistry pioneer since 2020.",
-      image: "/dr_hang.jpg"
+      image: "/images/dentists/bacsihang.jpg"
     },
     {
       id: "d2",
@@ -32,7 +32,7 @@ export default function DentistsPage() {
       roleEN: "Head of Implantology & Orthodontics",
       descVN: "Đào tạo Chỉnh nha tại Đại học Cologne - Đức. Chuyên môn cao về Chỉnh nha, Implant, Răng thẩm mỹ & Khớp thái dương hàm. Phẫu thuật nụ cười với Operation Smile.",
       descEN: "Orthodontics training at Cologne University – Germany. Specialist in Orthodontics, Implants & TMJ Disorders. Operation Smile volunteer surgeon.",
-      image: "/dr_hoang.jpg"
+      image: "/images/dentists/bacsihoang.jpg"
     },
     {
       id: "d3",
@@ -43,7 +43,7 @@ export default function DentistsPage() {
       roleEN: "Orthodontic & Endodontic Specialist",
       descVN: "Đào tạo Chỉnh nha tại Đại học Y Hà Nội. Chuyên môn cao về chỉnh nha người lớn, chỉnh nha sớm trẻ em, điều trị nội nha vi phẫu & tiểu phẫu.",
       descEN: "Orthodontic post-graduate training at Hanoi Medical University. Expert in adult orthodontics, early pediatric alignment & microscopic endodontics.",
-      image: "/dr_dang.jpg"
+      image: "/images/dentists/bacsidang.jpg"
     },
     {
       id: "d4",
@@ -54,7 +54,7 @@ export default function DentistsPage() {
       roleEN: "Orthodontic & Aesthetic Braces Specialist",
       descVN: "Bác sĩ được đào tạo chuyên sâu về chỉnh nha tại Đại học Y Hà Nội. Chuyên môn cao về chỉnh nha mắc cài, khay trong suốt Invisalign & niềng răng trẻ em.",
       descEN: "Specialized postgraduate orthodontic training at Hanoi Medical University. Expert in aesthetic braces, Invisalign aligners & pediatric orthodontics.",
-      image: "/dr_minh.jpg"
+      image: "/images/dentists/bacsiminh.jpg"
     },
     {
       id: "d5",
@@ -65,7 +65,7 @@ export default function DentistsPage() {
       roleEN: "Pediatric Orthodontics & Invisalign Specialist",
       descVN: "Tốt nghiệp Đại học Y Hà Nội năm 2020. Bác sĩ chuyên sâu về chỉnh nha trẻ em, chỉnh nha người lớn, hệ thống Invisalign, nha khoa tổng quát & hàn thẩm mỹ.",
       descEN: "Graduated Hanoi Medical University 2020. Specialist in pediatric orthodontics, adult Invisalign aligners, general care & aesthetic restorations.",
-      image: "/dr_hoai.jpg"
+      image: "/images/dentists/bacsihoai.jpg"
     }
   ];
 
