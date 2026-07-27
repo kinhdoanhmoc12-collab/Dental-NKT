@@ -668,8 +668,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      </section>
-
       {/* ========================================================
           SECTION 5.6: SAMPLE TRAVEL & TREATMENT ITINERARY (9 DAYS)
           ======================================================== */}
