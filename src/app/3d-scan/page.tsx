@@ -12,6 +12,7 @@ import {
   Sparkles,
   ChevronRight,
   Box,
+  Loader2,
 } from "lucide-react";
 
 /* ────────────────────────────────────────────────────────────────────────
@@ -69,9 +70,16 @@ export default function Scan3DPage() {
   const { lang } = useLanguage();
   const isVN = lang === "VN";
   const [activeCase, setActiveCase] = useState<number | null>(null);
+  const [iframeLoaded, setIframeLoaded] = useState(false);
 
-  const openViewer = (id: number) => setActiveCase(id);
-  const closeViewer = () => setActiveCase(null);
+  const openViewer = (id: number) => {
+    setIframeLoaded(false);
+    setActiveCase(id);
+  };
+  const closeViewer = () => {
+    setActiveCase(null);
+    setIframeLoaded(false);
+  };
 
   const activeCaseData = cases.find((c) => c.id === activeCase);
 
@@ -347,12 +355,29 @@ export default function Scan3DPage() {
 
           {/* Iframe container */}
           <div className="flex-1 relative bg-[#1a1a2e]">
+            {/* Loading spinner */}
+            {!iframeLoaded && (
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4">
+                <Loader2 className="w-12 h-12 text-teal-brand animate-spin" />
+                <div className="text-center">
+                  <p className="text-white font-semibold text-lg">
+                    {isVN ? "Đang tải mô hình 3D..." : "Loading 3D model..."}
+                  </p>
+                  <p className="text-slate-400 text-sm mt-1">
+                    {isVN
+                      ? "File lớn, vui lòng đợi trong giây lát"
+                      : "Large file, please wait a moment"}
+                  </p>
+                </div>
+              </div>
+            )}
             <iframe
               src={activeCaseData.file}
-              className="absolute inset-0 w-full h-full border-0"
+              className={`absolute inset-0 w-full h-full border-0 transition-opacity duration-500 ${iframeLoaded ? 'opacity-100' : 'opacity-0'}`}
               title={isVN ? activeCaseData.nameVN : activeCaseData.nameEN}
               allow="fullscreen"
               sandbox="allow-scripts allow-same-origin"
+              onLoad={() => setIframeLoaded(true)}
             />
           </div>
 
