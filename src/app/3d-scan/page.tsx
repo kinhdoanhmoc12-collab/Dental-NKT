@@ -429,6 +429,11 @@ export default function Scan3DPage() {
                 <p className="text-white font-semibold text-lg">
                   {isVN ? "Đang tải mô hình 3D..." : "Loading 3D model..."}
                 </p>
+                <p className="text-slate-400 text-sm max-w-xs text-center leading-relaxed">
+                  {isVN
+                    ? "Mô hình 3D chất lượng cao cần khoảng 30 giây để hiển thị chi tiết nhất cho bạn ✨"
+                    : "High-quality 3D models need about 30 seconds to render the finest details for you ✨"}
+                </p>
               </div>
             )}
 
