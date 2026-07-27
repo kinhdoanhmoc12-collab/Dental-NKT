@@ -689,7 +689,7 @@ export default function HomePage() {
                   roleEN: "Head of Implantology",
                   descVN: "Đào tạo Chỉnh nha tại Đại học Cologne - Đức. Chuyên môn cao về Chỉnh nha, Implant, Răng thẩm mỹ & Khớp thái dương hàm.",
                   descEN: "Orthodontic training at Cologne University – Germany. Specialist in Orthodontics, Implants, Aesthetic Dentistry & TMJ Disorders.",
-                  image: "/dr_phong.png"
+                  image: "/dr_hoang.jpg"
                 },
                 {
                   id: "d3",
