@@ -136,8 +136,8 @@ export default function WarrantyPage() {
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold leading-tight text-white">
             {lang === "VN"
-              ? "Chính Sách Bảo Hành DentalNTK"
-              : "DentalNTK Official Warranty Policy"}
+              ? "Chính Sách Bảo Hành Dental NTK"
+              : "Dental NTK Official Warranty Policy"}
           </h1>
           
           <p className="text-lg sm:text-xl font-medium text-teal-brand">
@@ -148,17 +148,24 @@ export default function WarrantyPage() {
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-light">
             {lang === "VN"
-              ? "DentalNTK hiểu rằng khi bạn bay về Úc, khoảng cách địa lý không có nghĩa là trách nhiệm của chúng tôi kết thúc. Chính sách này quy định rõ: ai chịu trách nhiệm, xử lý trong bao lâu, khi nào được hỗ trợ toàn bộ chi phí quay lại Việt Nam, và điều gì sẽ không được bảo hành — để bạn không phải đoán khi có vấn đề phát sinh."
-              : "DentalNTK understands that when you fly back to Australia, geographical distance does not mean our responsibility ends. This policy clearly defines responsibilities, turnaround times, flight coverage eligibility back to Vietnam, and non-covered exclusions."}
+              ? "Dental NTK hiểu rằng khi bạn bay về Úc, khoảng cách địa lý không có nghĩa là trách nhiệm của chúng tôi kết thúc. Chính sách này quy định rõ: ai chịu trách nhiệm, xử lý trong bao lâu, khi nào được hỗ trợ toàn bộ chi phí quay lại Việt Nam, và điều gì sẽ không được bảo hành — để bạn không phải đoán khi có vấn đề phát sinh."
+              : "Dental NTK understands that when you fly back to Australia, geographical distance does not mean our responsibility ends. This policy clearly defines responsibilities, turnaround times, flight coverage eligibility back to Vietnam, and non-covered exclusions."}
           </p>
 
-          <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 text-xs sm:text-sm text-slate-200 flex items-start gap-3">
-            <FileText className="w-5 h-5 text-teal-brand shrink-0 mt-0.5" />
-            <span className="leading-relaxed">
+          <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 text-xs sm:text-sm text-slate-200 flex flex-col gap-3">
+            <div className="flex items-start gap-3">
+              <FileText className="w-5 h-5 text-teal-brand shrink-0 mt-0.5" />
+              <span className="leading-relaxed">
+                {lang === "VN"
+                  ? "Văn bản chính thức, ràng buộc pháp lý cho từng ca cụ thể là Hồ sơ bàn giao điều trị (Treatment Handover Pack) bạn nhận khi hoàn tất điều trị tại phòng khám. Trang này là bản tóm tắt để bạn hiểu trước khi quyết định điều trị."
+                  : "The official legally binding document for each case is your Treatment Handover Pack provided upon treatment completion. This page serves as a clear policy overview."}
+              </span>
+            </div>
+            <div className="pt-2.5 border-t border-white/10 text-slate-300">
               {lang === "VN"
-                ? "Văn bản chính thức, ràng buộc pháp lý cho từng ca cụ thể là Hồ sơ bàn giao điều trị (Treatment Handover Pack) bạn nhận khi hoàn tất điều trị tại phòng khám. Trang này là bản tóm tắt để bạn hiểu trước khi quyết định điều trị."
-                : "The official legally binding document for each case is your Treatment Handover Pack provided upon treatment completion. This page serves as a clear policy overview."}
-            </span>
+                ? "💡 Lưu ý pháp lý: Dental NTK là thương hiệu đại diện quốc tế chính thức của Phòng khám Nha Khoa Trẻ (hoạt động trên tên miền nhakhoatre.vn)."
+                : "💡 Legal Notice: Dental NTK is the registered international division of Nha Khoa Tre Clinic (operating on the official nhakhoatre.vn domain)."}
+            </div>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-700/80">
