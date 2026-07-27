@@ -7,7 +7,7 @@ import { Search, Calendar, Clock, ArrowRight, BookOpen, Compass, ShieldCheck, He
 
 export interface BlogPost {
   slug: string;
-  category: "guide" | "implants" | "veneers" | "warranty";
+  category: "guide" | "handbook" | "warranty";
   date: string;
   readTime: string;
   titleEN: string;
@@ -31,7 +31,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "implants-vietnam-vs-australia",
-    category: "implants",
+    category: "handbook",
     date: "2026-07-02",
     readTime: "10 min",
     titleEN: "Dental Implants in Vietnam vs Australia: Price & Quality Analysis",
@@ -42,7 +42,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "minimal-prep-veneers",
-    category: "veneers",
+    category: "handbook",
     date: "2026-06-25",
     readTime: "6 min",
     titleEN: "Minimal Prep Veneers: Preserving Your Natural Tooth Enamel",
@@ -96,8 +96,7 @@ export default function BlogIndex() {
   const categories = [
     { id: "all", labelEN: "All Articles", labelVN: "Tất cả bài viết" },
     { id: "guide", labelEN: "Travel Guide", labelVN: "Hướng dẫn du lịch" },
-    { id: "implants", labelEN: "Implant Guide", labelVN: "Cẩm nang Implant" },
-    { id: "veneers", labelEN: "Veneers Guide", labelVN: "Cẩm nang Răng sứ" },
+    { id: "handbook", labelEN: "Dental Handbook", labelVN: "Cẩm nang nha khoa" },
     { id: "warranty", labelEN: "Warranty & Safety", labelVN: "Bảo hành & An toàn" }
   ];
 
