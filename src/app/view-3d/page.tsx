@@ -23,8 +23,8 @@ const cases = [
     id: 1,
     file: "/scans/case-1.html",
     avatar: "/images/cases/case_veneers.jpg",
-    nameVN: "Tạ Vân Anh — Răng sứ thẩm mỹ",
-    nameEN: "Ta Van Anh — Aesthetic Porcelain Teeth",
+    nameVN: "Bệnh nhân Vân Anh T. — Răng sứ thẩm mỹ",
+    nameEN: "Patient A. T. — Aesthetic Veneers",
     descVN:
       "Thiết kế nụ cười thẩm mỹ với 16 răng sứ E.max cao cấp, phục hình hoàn hảo về màu sắc và hình dáng tự nhiên.",
     descEN:
@@ -37,8 +37,8 @@ const cases = [
     id: 2,
     file: "/scans/case-2.html",
     avatar: "/images/cases/case_implant.jpg",
-    nameVN: "Hoàng Thị Hồng — Phục hình toàn hàm",
-    nameEN: "Hoang Thi Hong — Full Arch Restoration",
+    nameVN: "Bệnh nhân Hồng H. T. — Phục hình toàn hàm",
+    nameEN: "Patient H. T. — Full Arch Restoration",
     descVN:
       "Phục hình toàn diện hàm răng bị mất và suy yếu bằng hàm lai kim loại Titan và cầu răng sứ cao cấp.",
     descEN:
@@ -51,8 +51,8 @@ const cases = [
     id: 3,
     file: "/scans/case-3.html",
     avatar: "/scans/case-3-avatar.jpg",
-    nameVN: "Nguyễn Thị Thu Hòa — Smile Makeover",
-    nameEN: "Nguyen Thi Thu Hoa — Full Smile Makeover",
+    nameVN: "Bệnh nhân Thu Hòa N. — Smile Makeover",
+    nameEN: "Patient T. H. — Full Smile Makeover",
     descVN:
       "Thiết kế lại toàn bộ nụ cười kết hợp điều chỉnh nướu và bọc răng sứ thẩm mỹ, mang lại nụ cười rạng rỡ tự tin.",
     descEN:
