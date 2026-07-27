@@ -553,6 +553,124 @@ export default function HomePage() {
       </section>
 
       {/* ========================================================
+          SECTION 5.5: THE PATIENT JOURNEY (INQUIRY TO SMILE)
+          ======================================================== */}
+      <section className="py-16 md:py-20 bg-slate-50 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          {/* Section Header */}
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold tracking-widest text-teal-brand uppercase block">
+              {lang === "VN" ? "QUY TRÌNH HỖ TRỢ TRỌN GÓI" : "END-TO-END PATIENT PROCESS"}
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
+              {lang === "VN" ? "Lộ Trình Điều Trị Cho Khách Hàng Quốc Tế" : "Your Journey: From Inquiry to Smile Completion"}
+            </h2>
+            <p className="text-sm sm:text-base text-slate-550 font-normal leading-relaxed">
+              {lang === "VN" 
+                ? "Lộ trình 5 bước được chuẩn hóa và khép kín giúp bạn hoàn toàn an tâm khi bay sang Việt Nam điều trị nha khoa:"
+                : "A standardized, step-by-step process designed to give international patients complete clarity and peace of mind:"}
+            </p>
+          </div>
+
+          {/* Timeline Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+            
+            {/* Connecting line for desktop view */}
+            <div className="hidden md:block absolute top-1/2 left-4 right-4 h-0.5 border-t-2 border-dashed border-slate-200/80 -translate-y-10 z-0" />
+
+            {/* Step 1 */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm relative z-10 flex flex-col justify-between space-y-4 hover:border-teal-brand/35 transition-all text-center">
+              <div className="space-y-3">
+                <div className="w-12 h-12 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">
+                  01
+                </div>
+                <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
+                  {lang === "VN" ? "1. Gửi thông tin tư vấn" : "1. Submit Inquiry"}
+                </h3>
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                  {lang === "VN"
+                    ? "Đăng ký tư vấn trực tuyến và gửi ảnh chụp răng, phim X-quang sẵn có qua website."
+                    : "Submit your basic information and upload any existing dental X-rays or CBCT scans online."}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm relative z-10 flex flex-col justify-between space-y-4 hover:border-teal-brand/35 transition-all text-center">
+              <div className="space-y-3">
+                <div className="w-12 h-12 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">
+                  02
+                </div>
+                <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
+                  {lang === "VN" ? "2. Nhận phác đồ từ xa" : "2. Remote Diagnostic"}
+                </h3>
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                  {lang === "VN"
+                    ? "Hội đồng bác sĩ chẩn đoán và gửi lại phác đồ điều trị kèm báo giá trọn gói bằng tiền AUD."
+                    : "Receive a personalized digital treatment scope and a fixed, itemised AUD cost statement."}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm relative z-10 flex flex-col justify-between space-y-4 hover:border-teal-brand/35 transition-all text-center">
+              <div className="space-y-3">
+                <div className="w-12 h-12 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">
+                  03
+                </div>
+                <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
+                  {lang === "VN" ? "3. Đón tiếp sân bay" : "3. Arrival & Pickup"}
+                </h3>
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                  {lang === "VN"
+                    ? "Bạn đặt vé máy bay sang Hà Nội. Xe riêng của phòng khám sẽ đón bạn miễn phí tại sân bay."
+                    : "Confirm your appointment and book flights. Our private car picks you up from Hanoi Airport."}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm relative z-10 flex flex-col justify-between space-y-4 hover:border-teal-brand/35 transition-all text-center">
+              <div className="space-y-3">
+                <div className="w-12 h-12 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">
+                  04
+                </div>
+                <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
+                  {lang === "VN" ? "4. Tiến hành điều trị" : "4. In-Clinic Treatment"}
+                </h3>
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                  {lang === "VN"
+                    ? "Thăm khám lâm sàng và thực hiện cấy ghép/thẩm mỹ bởi bác sĩ chuyên khoa với công nghệ Đức."
+                    : "Complete in-clinic CBCT scans, receive treatment by clinical leads using state-of-the-art tech."}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 5 */}
+            <div className="bg-white rounded-2xl p-5 border border-slate-200/60 shadow-sm relative z-10 flex flex-col justify-between space-y-4 hover:border-teal-brand/35 transition-all text-center">
+              <div className="space-y-3">
+                <div className="w-12 h-12 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-lg mx-auto shadow-sm">
+                  05
+                </div>
+                <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
+                  {lang === "VN" ? "5. Bàn giao & Bảo hành" : "5. Smile & Warranty"}
+                </h3>
+                <p className="text-xs text-slate-500 font-light leading-relaxed">
+                  {lang === "VN"
+                    ? "Lắp răng hoàn tất, chụp phim kiểm tra và bàn giao hồ sơ bảo hành toàn cầu trước khi về nước."
+                    : "Final smile check, receive your Treatment Handover Pack and global warranty card."}
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================
+
+      {/* ========================================================
           SECTION 6: CLINICAL COMPARISON (vs. Turkey Teeth)
           ======================================================== */}
       <section className="py-16 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
