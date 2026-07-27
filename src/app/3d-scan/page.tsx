@@ -20,27 +20,27 @@ const cases = [
   {
     id: 1,
     file: "/scans/case-1.html",
-    nameVN: "Case 1 — Dán sứ Veneer 16 răng",
-    nameEN: "Case 1 — 16 Porcelain Veneers",
+    nameVN: "Case 1 — Răng sứ thẩm mỹ",
+    nameEN: "Case 1 — Aesthetic Porcelain Teeth",
     descVN:
-      "Thiết kế nụ cười hoàn hảo với 16 mặt dán sứ siêu mỏng E.max, cải thiện màu sắc và hình dáng răng.",
+      "Thiết kế nụ cười thẩm mỹ với răng sứ cao cấp, phục hình hoàn hảo về màu sắc và hình dáng tự nhiên.",
     descEN:
-      "Perfect smile design with 16 ultra-thin E.max porcelain veneers, enhancing color and tooth shape.",
-    tagVN: "Veneer E.max",
-    tagEN: "E.max Veneers",
+      "Aesthetic smile design with premium porcelain, perfectly restoring natural color and shape.",
+    tagVN: "Răng sứ thẩm mỹ",
+    tagEN: "Aesthetic Porcelain",
     color: "from-teal-400 to-cyan-500",
   },
   {
     id: 2,
     file: "/scans/case-2.html",
-    nameVN: "Case 2 — Cấy ghép Implant & Phục hình sứ",
-    nameEN: "Case 2 — Dental Implant & Porcelain Restoration",
+    nameVN: "Case 2 — Phục hình toàn hàm",
+    nameEN: "Case 2 — Full Arch Restoration",
     descVN:
-      "Phục hồi răng mất bằng trụ Implant Straumann kết hợp mão sứ Zirconia, phục hình thẩm mỹ tự nhiên.",
+      "Phục hình toàn diện toàn bộ hàm răng, kết hợp công nghệ Smile Design và vật liệu sứ cao cấp.",
     descEN:
-      "Restoring missing teeth with Straumann Implants combined with Zirconia crowns for natural aesthetics.",
-    tagVN: "Implant",
-    tagEN: "Implant",
+      "Comprehensive full arch restoration combining Smile Design technology with premium porcelain materials.",
+    tagVN: "Phục hình toàn hàm",
+    tagEN: "Full Arch",
     color: "from-blue-400 to-indigo-500",
   },
   {
@@ -49,38 +49,12 @@ const cases = [
     nameVN: "Case 3 — Smile Makeover toàn diện",
     nameEN: "Case 3 — Full Smile Makeover",
     descVN:
-      "Thiết kế lại toàn bộ nụ cười kết hợp chỉnh nha, tẩy trắng và dán sứ Veneer, mang lại diện mạo hoàn toàn mới.",
+      "Thiết kế lại toàn bộ nụ cười với công nghệ scan 3D, mang lại diện mạo hoàn toàn mới và tự tin hơn.",
     descEN:
-      "Complete smile redesign combining orthodontics, whitening and Veneers for a brand-new look.",
+      "Complete smile redesign with 3D scanning technology, delivering a brand-new confident look.",
     tagVN: "Smile Makeover",
     tagEN: "Smile Makeover",
     color: "from-purple-400 to-pink-500",
-  },
-  {
-    id: 4,
-    file: "/scans/case-4.html",
-    nameVN: "Case 4 — All-on-4 phục hình toàn hàm",
-    nameEN: "Case 4 — All-on-4 Full Arch Restoration",
-    descVN:
-      "Phục hình toàn bộ hàm trên bằng kỹ thuật All-on-4, chỉ cần 4 trụ Implant cho một hàm răng hoàn chỉnh.",
-    descEN:
-      "Full upper arch restoration with All-on-4 technique — just 4 implants for a complete set of teeth.",
-    tagVN: "All-on-4",
-    tagEN: "All-on-4",
-    color: "from-amber-400 to-orange-500",
-  },
-  {
-    id: 5,
-    file: "/scans/case-5.html",
-    nameVN: "Case 5 — Mão sứ Zirconia 12 răng",
-    nameEN: "Case 5 — 12 Zirconia Crowns",
-    descVN:
-      "Phục hình thẩm mỹ 12 răng bằng mão sứ Zirconia cao cấp, bền đẹp tự nhiên và tương thích sinh học.",
-    descEN:
-      "Aesthetic restoration of 12 teeth with premium Zirconia crowns — durable, natural, and biocompatible.",
-    tagVN: "Mão sứ Zirconia",
-    tagEN: "Zirconia Crowns",
-    color: "from-emerald-400 to-teal-500",
   },
 ];
 
