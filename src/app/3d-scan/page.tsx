@@ -152,126 +152,90 @@ export default function Scan3DPage() {
 
   return (
     <>
-      {/* ── HERO ── */}
+      {/* ── SLIM HERO BANNER ── */}
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3d] to-[#0b1e2c] text-white">
-        {/* Decorative elements */}
+        {/* Decorative */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-teal-brand/10 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-[400px] h-[400px] rounded-full bg-cyan-500/8 blur-3xl" />
-          {/* 3D grid pattern */}
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
+          <div className="absolute -top-32 -right-32 w-[400px] h-[400px] rounded-full bg-teal-brand/10 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] rounded-full bg-cyan-500/8 blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-14 lg:py-20">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6">
-              <Box className="w-4 h-4 text-teal-brand" />
-              <span className="text-sm font-medium text-teal-brand/90">
+        <div className="relative max-w-7xl mx-auto px-6 py-10 lg:py-14">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Left: title + description */}
+            <div className="text-center lg:text-left max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-4">
+                <Box className="w-3.5 h-3.5 text-teal-brand" />
+                <span className="text-xs font-medium text-teal-brand/90">
+                  {isVN ? "Exocad Smile Design" : "Exocad Smile Design"}
+                </span>
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+                {isVN ? (
+                  <>
+                    Trải nghiệm{" "}
+                    <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
+                      Smile Design 3D
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    Experience{" "}
+                    <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
+                      3D Smile Design
+                    </span>
+                  </>
+                )}
+              </h1>
+              <p className="mt-3 text-base text-slate-300 leading-relaxed max-w-lg">
                 {isVN
-                  ? "Công nghệ Exocad Smile Design"
-                  : "Exocad Smile Design Technology"}
-              </span>
+                  ? "Xem trước kết quả điều trị qua mô hình 3D tương tác — xoay, phóng to và khám phá từng chi tiết."
+                  : "Preview treatment results with interactive 3D models — rotate, zoom, and explore every detail."}
+              </p>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-              {isVN ? (
-                <>
-                  Trải nghiệm{" "}
-                  <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
-                    Smile Design 3D
-                  </span>
-                </>
-              ) : (
-                <>
-                  Experience{" "}
-                  <span className="bg-gradient-to-r from-teal-brand to-cyan-400 bg-clip-text text-transparent">
-                    3D Smile Design
-                  </span>
-                </>
-              )}
-            </h1>
-
-            <p className="mt-5 text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl">
-              {isVN
-                ? "Xem trước kết quả điều trị qua mô hình 3D tương tác. Xoay, phóng to và khám phá từng chi tiết trên hàm răng đã được thiết kế bởi đội ngũ bác sĩ Nha Khoa Trẻ."
-                : "Preview treatment results with interactive 3D models. Rotate, zoom, and explore every detail of smile designs crafted by our expert dental team."}
-            </p>
-
-            {/* Feature pills */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+            {/* Right: quick tips */}
+            <div className="flex flex-row lg:flex-col gap-3">
               {[
-                {
-                  icon: RotateCcw,
-                  textVN: "Xoay 360°",
-                  textEN: "360° Rotation",
-                },
-                {
-                  icon: ZoomIn,
-                  textVN: "Phóng to chi tiết",
-                  textEN: "Zoom In Details",
-                },
-                {
-                  icon: Eye,
-                  textVN: "Nhiều góc nhìn",
-                  textEN: "Multiple Views",
-                },
-              ].map((feat, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
-                >
-                  <feat.icon className="w-4 h-4 text-teal-brand" />
-                  <span className="text-sm font-medium text-slate-200">
-                    {isVN ? feat.textVN : feat.textEN}
-                  </span>
+                { icon: Move, textVN: "Kéo để xoay", textEN: "Drag to rotate" },
+                { icon: ZoomIn, textVN: "Scroll để zoom", textEN: "Scroll to zoom" },
+                { icon: Eye, textVN: "Bật/tắt lớp", textEN: "Toggle layers" },
+              ].map((t, i) => (
+                <div key={i} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10">
+                  <t.icon className="w-4 h-4 text-teal-brand shrink-0" />
+                  <span className="text-xs text-slate-300 whitespace-nowrap">{isVN ? t.textVN : t.textEN}</span>
                 </div>
               ))}
-            </div>
-
-            {/* Scroll prompt */}
-            <div className="mt-8 flex flex-col items-center gap-2 animate-bounce">
-              <span className="text-xs text-slate-400 uppercase tracking-widest">
-                {isVN ? "Khám phá bên dưới" : "Explore below"}
-              </span>
-              <ChevronRight className="w-5 h-5 text-teal-brand rotate-90" />
             </div>
           </div>
         </div>
       </section>
 
       {/* ── CASES GALLERY ── */}
-      <section className="relative bg-gradient-to-b from-slate-50 to-white py-10 lg:py-14">
+      <section className="bg-gradient-to-b from-slate-50 to-white py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section header */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-brand/10 mb-4">
-              <Sparkles className="w-3.5 h-3.5 text-teal-brand" />
-              <span className="text-xs font-semibold text-teal-brand uppercase tracking-wider">
-                {isVN ? "Ca điều trị thực tế" : "Real Treatment Cases"}
-              </span>
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-brand/10 mb-2">
+                <Sparkles className="w-3 h-3 text-teal-brand" />
+                <span className="text-xs font-semibold text-teal-brand uppercase tracking-wider">
+                  {isVN ? "Ca điều trị thực tế" : "Real Treatment Cases"}
+                </span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#0b1e2c]">
+                {isVN ? "Các ca điều trị tiêu biểu" : "Featured Treatment Cases"}
+              </h2>
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1e2c]">
+            <p className="hidden md:block text-sm text-slate-500 max-w-xs text-right">
               {isVN
-                ? "Các ca điều trị tiêu biểu"
-                : "Featured Treatment Cases"}
-            </h2>
-            <p className="mt-3 text-slate-500 max-w-xl mx-auto">
-              {isVN
-                ? "Click vào từng case để xem mô hình 3D chi tiết — xoay, phóng to, bật tắt các lớp tuỳ ý."
-                : "Click on each case to view detailed 3D models — rotate, zoom, and toggle layers freely."}
+                ? "Click vào từng case để xem mô hình 3D chi tiết"
+                : "Click each case to view detailed 3D models"}
             </p>
           </div>
 
           {/* Cards grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cases.map((c, index) => (
               <button
                 key={c.id}
@@ -285,7 +249,7 @@ export default function Scan3DPage() {
               >
                 {/* Avatar image header */}
                 <div
-                  className={`relative h-52 bg-gradient-to-br ${c.color} overflow-hidden`}
+                  className={`relative h-48 bg-gradient-to-br ${c.color} overflow-hidden`}
                 >
                   <Image
                     src={c.avatar}
@@ -311,7 +275,7 @@ export default function Scan3DPage() {
                 {/* Card body */}
                 <div className="p-5">
                   {/* Tag */}
-                  <span className="inline-block text-xs font-semibold text-teal-brand bg-teal-brand/10 px-2.5 py-1 rounded-full mb-3">
+                  <span className="inline-block text-xs font-semibold text-teal-brand bg-teal-brand/10 px-2.5 py-1 rounded-full mb-2">
                     {isVN ? c.tagVN : c.tagEN}
                   </span>
 
@@ -319,42 +283,17 @@ export default function Scan3DPage() {
                     {isVN ? c.nameVN : c.nameEN}
                   </h3>
 
-                  <p className="mt-2 text-sm text-slate-500 leading-relaxed line-clamp-2">
+                  <p className="mt-1.5 text-sm text-slate-500 leading-relaxed line-clamp-2">
                     {isVN ? c.descVN : c.descEN}
                   </p>
 
                   {/* CTA */}
-                  <div className="mt-4 flex items-center gap-1.5 text-sm font-semibold text-teal-brand group-hover:gap-3 transition-all">
+                  <div className="mt-3 flex items-center gap-1.5 text-sm font-semibold text-teal-brand group-hover:gap-3 transition-all">
                     <span>{isVN ? "Xem mô hình 3D" : "View 3D Model"}</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>
                 </div>
               </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── HOW IT WORKS (compact) ── */}
-      <section className="bg-slate-50 py-8 lg:py-10 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-lg md:text-xl font-bold text-center text-[#0b1e2c] mb-6">
-            {isVN ? "Hướng dẫn thao tác" : "How to Interact"}
-          </h2>
-          <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
-            {[
-              { icon: Move, textVN: "Kéo chuột để xoay 360°", textEN: "Drag to rotate 360°" },
-              { icon: ZoomIn, textVN: "Scroll để phóng to/thu nhỏ", textEN: "Scroll to zoom in/out" },
-              { icon: Eye, textVN: "Bảng bên trái để bật/tắt lớp", textEN: "Left panel to toggle layers" },
-            ].map((step, i) => (
-              <div key={i} className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 border border-slate-100 flex-1">
-                <div className="w-10 h-10 rounded-xl bg-teal-brand/10 flex items-center justify-center shrink-0">
-                  <step.icon className="w-5 h-5 text-teal-brand" />
-                </div>
-                <span className="text-sm font-medium text-[#0b1e2c]">
-                  {isVN ? step.textVN : step.textEN}
-                </span>
-              </div>
             ))}
           </div>
         </div>
