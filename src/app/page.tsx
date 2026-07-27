@@ -751,76 +751,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ========================================================
-          SECTION 8: CLINICAL CERTIFICATIONS & ACCREDITATIONS
-          ======================================================== */}
-      <section className="py-12 bg-slate-50 border-t border-b border-slate-200/60">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
-          <div className="text-center max-w-2xl mx-auto space-y-2">
-            
-            <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
-              {lang === "VN" ? "Minh bạch chứng chỉ y khoa quốc tế" : "Verified International Accreditations"}
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-550 font-normal leading-relaxed">
-              {lang === "VN" 
-                ? "Mọi bằng cấp chuyên môn, chứng chỉ đào tạo chuyên sâu và thẻ thành viên hiệp hội của đội ngũ bác sĩ đều được công khai để bệnh nhân dễ dàng kiểm chứng:"
-                : "All specialist training degrees and international board memberships are fully documented and verified for your peace of mind:"}
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {/* Cert 1: Loma Linda */}
-            <div 
-              onClick={() => setSelectedCert("/cert_loma_linda.png")}
-              className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all cursor-pointer group text-center space-y-4"
-            >
-              <div className="relative w-full h-56 bg-slate-100 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-2">
-                <Image 
-                  src="/cert_loma_linda.png" 
-                  alt="Loma Linda University Training Certificate" 
-                  fill 
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-[#0b1e2c] text-sm group-hover:text-teal-brand transition-colors">
-                  {lang === "VN" ? "Chứng chỉ cấy ghép Implant - Đại học Loma Linda (Hoa Kỳ)" : "Implantology Certificate - Loma Linda University (USA)"}
-                </h3>
-                <p className="text-xs text-slate-500 font-light">
-                  {lang === "VN" 
-                    ? "Chứng nhận hoàn thành chương trình đào tạo cấy ghép Implant nâng cao của Giám đốc chuyên môn." 
-                    : "Official completion of advanced clinical implantology training curriculum by our clinical director."}
-                </p>
-              </div>
-            </div>
-
-            {/* Cert 2: ITI Member */}
-            <div 
-              onClick={() => setSelectedCert("/cert_iti.png")}
-              className="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-sm hover:shadow-md transition-all cursor-pointer group text-center space-y-4"
-            >
-              <div className="relative w-full h-56 bg-slate-100 rounded-xl overflow-hidden border border-slate-100 flex items-center justify-center p-2">
-                <Image 
-                  src="/cert_iti.png" 
-                  alt="ITI Member Certificate" 
-                  fill 
-                  className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="space-y-1">
-                <h3 className="font-bold text-[#0b1e2c] text-sm group-hover:text-teal-brand transition-colors">
-                  {lang === "VN" ? "Chứng nhận Thành viên Hiệp hội Implant Quốc tế (ITI)" : "ITI (International Team for Implantology) Active Member"}
-                </h3>
-                <p className="text-xs text-slate-500 font-light">
-                  {lang === "VN"
-                    ? "Chứng nhận thành viên hoạt động chính thức của tổ chức Implant học hàng đầu thế giới."
-                    : "Official active membership credential from the world's most prestigious implantology board."}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ========================================================
           SECTION 9: REAL AUSTRALIAN PATIENT CASES
