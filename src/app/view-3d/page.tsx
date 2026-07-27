@@ -265,7 +265,7 @@ export default function Scan3DPage() {
               <button
                 key={c.id}
                 onClick={() => openViewer(c.id)}
-                className="group relative text-left bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-teal-brand/30 transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,175,199,0.15)] cursor-pointer"
+                className="group relative flex flex-col text-left bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-teal-brand/30 transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(0,175,199,0.15)] cursor-pointer"
                 style={{
                   animationDelay: `${index * 100}ms`,
                   animation: "fadeIn 0.5s ease-out forwards",
@@ -274,7 +274,7 @@ export default function Scan3DPage() {
               >
                 {/* Avatar image header */}
                  <div
-                  className="relative h-48 bg-[#0b1e2c] overflow-hidden"
+                  className="relative w-full h-48 bg-[#0b1e2c] overflow-hidden shrink-0"
                 >
                   <Image
                     src={c.avatar}
