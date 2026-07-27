@@ -643,15 +643,6 @@ export default function HomePage() {
                 ? "Đội ngũ bác sĩ được đào tạo chính quy chuyên khoa Răng Hàm Mặt Đại học Y Hà Nội và các trường đại học hàng đầu thế giới."
                 : "Our clinical leads bring over 15+ years of experience, supported by university-trained dental specialists."}
             </p>
-            <div className="pt-2">
-              <Link 
-                href="/dentists" 
-                className="inline-flex items-center gap-1.5 bg-[#0b1e2c] hover:bg-teal-brand text-white px-6 py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer shadow-sm"
-              >
-                <span>{lang === "VN" ? "Xem tất cả Bác sĩ" : "Meet All Doctors"}</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
 
           {/* Cards Carousel Container with Flank Navigation Buttons */}
