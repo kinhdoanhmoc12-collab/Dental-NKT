@@ -700,7 +700,7 @@ export default function HomePage() {
                   roleEN: "Lead Implant Surgeon",
                   descVN: "Đào tạo Chỉnh nha tại Đại học Y Hà Nội. Chuyên môn cao về chỉnh nha người lớn, chỉnh nha sớm trẻ em, nội nha vi phẫu & tiểu phẫu.",
                   descEN: "Orthodontic training at Hanoi Medical University. Specialist in adult orthodontics, early pediatric orthodontics & endodontics.",
-                  image: "/dr_hung.png"
+                  image: "/dr_dang.jpg"
                 },
                 {
                   id: "d4",
@@ -711,7 +711,7 @@ export default function HomePage() {
                   roleEN: "Orthodontic Specialist",
                   descVN: "Bác sĩ được đào tạo chuyên sâu về chỉnh nha tại Đại học Y Hà Nội. Chuyên môn cao về chỉnh nha mắc cài, khay trong suốt Invisalign & niềng răng trẻ em.",
                   descEN: "Specialized postgraduate orthodontic training at Hanoi Medical University. Expert in aesthetic braces, Invisalign aligners & pediatric orthodontics.",
-                  image: "/dr_minh.png"
+                  image: "/dr_minh.jpg"
                 },
                 {
                   id: "d5",
@@ -722,7 +722,7 @@ export default function HomePage() {
                   roleEN: "Pediatric Orthodontic Specialist",
                   descVN: "Tốt nghiệp Đại học Y Hà Nội năm 2020. Bác sĩ chuyên sâu về chỉnh nha trẻ em, chỉnh nha người lớn, hệ thống Invisalign, nha khoa tổng quát & hàn thẩm mỹ.",
                   descEN: "Graduated Hanoi Medical University 2020. Specialist in pediatric orthodontics, adult Invisalign aligners, general care & aesthetic restorations.",
-                  image: "/dr_hoai.png"
+                  image: "/dr_hoai.jpg"
                 }
               ]
                 .slice(homeDocSlide, homeDocSlide + 3)
