@@ -279,7 +279,7 @@ export default function HomePage() {
           {/* Hero Image (5 cols) */}
           <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[420px] rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <Image 
-              src="/hero_dentist.jpg" 
+              src="/hero_dentist.png" 
               alt="Dental NTK Boutique Clinic" 
               fill 
               className="object-cover" 
