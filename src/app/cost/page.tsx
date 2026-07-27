@@ -222,7 +222,7 @@ export default function CostPage() {
             </span>
             <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
               {lang === "VN" 
-                ? `Bảng giá dịch vụ Nha Khoa Trẻ chi tiết (Đơn vị ${currency})` 
+                ? `Bảng giá dịch vụ Dental NTK chi tiết (Đơn vị ${currency})` 
                 : `Detailed 10-Category Service Price List (${currency})`}
             </h2>
             <p className="text-sm text-slate-600 font-normal leading-relaxed">

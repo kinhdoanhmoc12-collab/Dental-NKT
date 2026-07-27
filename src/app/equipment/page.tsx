@@ -223,8 +223,8 @@ export default function EquipmentPage() {
             </h1>
             <p className="mt-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
               {isVN
-                ? "Nha Khoa Trẻ đầu tư hệ thống thiết bị hiện đại và sử dụng vật liệu nhập khẩu chính hãng từ các thương hiệu hàng đầu thế giới — vì nụ cười của bạn xứng đáng được chăm sóc bằng những điều tốt nhất."
-                : "Nha Khoa Trẻ invests in state-of-the-art equipment and genuine imported materials from world-leading brands — because your smile deserves nothing but the best."}
+                ? "Dental NTK đầu tư hệ thống thiết bị hiện đại và sử dụng vật liệu nhập khẩu chính hãng từ các thương hiệu hàng đầu thế giới — vì nụ cười của bạn xứng đáng được chăm sóc bằng những điều tốt nhất."
+                : "Dental NTK invests in state-of-the-art equipment and genuine imported materials from world-leading brands — because your smile deserves nothing but the best."}
             </p>
           </div>
         </div>
