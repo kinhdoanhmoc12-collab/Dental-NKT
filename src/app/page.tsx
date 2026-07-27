@@ -693,18 +693,18 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Day 1 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 1" : "Day 1"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Đến Hà Nội" : "Arrival"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Đến Hà Nội" : "Arrival"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Đặt chân đến Hà Nội & Đón sân bay" : "Arrival & Private Airport Transfer"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Xe riêng của phòng khám đón bạn từ sân bay Nội Bài đưa về khách sạn ở trung tâm Phố Cổ Hà Nội để nhận phòng và nghỉ ngơi sau chuyến bay."
                     : "Our private car greets you at Hanoi Airport and transfers you to your boutique Old Quarter hotel. Rest and recover from your flight."}
@@ -713,18 +713,18 @@ export default function HomePage() {
             </div>
 
             {/* Day 2 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 2" : "Day 2"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Điều trị (Lần 1)" : "Clinical Visit 1"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Điều trị (Lần 1)" : "Clinical Visit 1"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Thăm khám lâm sàng & Chuẩn bị răng" : "3D Diagnostics & Dental Preparation"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Chụp phim 3D CBCT tại phòng khám, bác sĩ chuyên khoa tiến hành chuẩn bị răng hoặc đặt trụ implant. Toàn bộ thông số được gửi về Labo kỹ thuật số."
                     : "In-clinic 3D CBCT diagnostics, preparation of target teeth or implant placement. High-resolution digital impressions are sent to our lab."}
@@ -733,18 +733,18 @@ export default function HomePage() {
             </div>
 
             {/* Day 3-5 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 3 - 5" : "Days 3 - 5"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Chế tác & Du lịch" : "Lab Crafting & Leisure"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Chế tác & Du lịch" : "Lab Crafting & Leisure"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Labo chế tác răng sứ & Khám phá Hà Nội" : "CAD/CAM Crafting & Local Touring"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Trong khi Labo chế tác răng sứ tinh xảo, bạn tự do dạo chơi Phố Cổ, thưởng thức ẩm thực đường phố hoặc tham gia tour du thuyền Vịnh Hạ Long."
                     : "While our lab custom-mills your restorations, you are free to explore. Enjoy a Hanoi street food tour, visit temples, or take a Halong Bay cruise."}
@@ -753,18 +753,18 @@ export default function HomePage() {
             </div>
 
             {/* Day 6 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 6" : "Day 6"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Điều trị (Lần 2)" : "Clinical Visit 2"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Điều trị (Lần 2)" : "Clinical Visit 2"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Thử răng & Tinh chỉnh khớp cắn" : "Restoration Try-in & Aesthetics Check"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Bác sĩ tiến hành thử răng sứ/veneer trên cung hàm, kiểm tra độ khít sát, màu sắc thẩm mỹ và tinh chỉnh khớp cắn nhai đạt độ tự nhiên cao nhất."
                     : "We try in your new crowns or veneers. The clinical director checks margins, color shades, bite alignment, and makes micro-adjustments."}
@@ -773,18 +773,18 @@ export default function HomePage() {
             </div>
 
             {/* Day 7-8 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 7 - 8" : "Days 7 - 8"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Điều trị (Lần 3)" : "Finalisation"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Điều trị (Lần 3)" : "Finalisation"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Gắn răng cố định & Bàn giao bảo hành" : "Permanent Bonding & Handover Pack"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Gắn xi-măng vĩnh viễn răng sứ/veneer. Chụp phim kiểm tra chất lượng lần cuối và bàn giao Treatment Handover Pack cùng thẻ bảo hành toàn cầu."
                     : "Permanent bonding of your restorations. Final diagnostic scans for confirmation, and receipt of your warranty certificate and clinical report."}
@@ -793,18 +793,18 @@ export default function HomePage() {
             </div>
 
             {/* Day 9 */}
-            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100/80 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
+            <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200/60 shadow-sm space-y-4 hover:border-teal-brand/20 transition-all flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-bold text-teal-brand bg-teal-brand-light px-3 py-1 rounded-full uppercase tracking-wider">
                     {lang === "VN" ? "Ngày 9" : "Day 9"}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">{lang === "VN" ? "Về nước" : "Departure"}</span>
+                  <span className="text-xs text-slate-500 font-semibold">{lang === "VN" ? "Về nước" : "Departure"}</span>
                 </div>
                 <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
                   {lang === "VN" ? "Tạm biệt Hà Nội & Đón tiễn sân bay" : "Departure & Free Airport Transfer"}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-700 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Xe riêng của phòng khám đón bạn từ khách sạn đưa ra sân bay Nội Bài để bạn thực hiện chuyến bay về nước an toàn với nụ cười hoàn mỹ mới."
                     : "Enjoy a final Vietnamese coffee before our private car transfers you from hotel back to Hanoi Airport for your flight back home."}
