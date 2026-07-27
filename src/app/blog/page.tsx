@@ -58,8 +58,8 @@ export const blogPosts: BlogPost[] = [
     readTime: "5 min",
     titleEN: "Understanding the SmileCare Global Warranty: Safe Travels",
     titleVN: "Tìm hiểu chi tiết về chính sách Bảo hành Toàn cầu SmileCare",
-    excerptEN: "How remote clinical assessments work, what is covered under our 7-to-10 year manufacturer warranty, and how to verify batch serial numbers.",
-    excerptVN: "Quy trình đánh giá lâm sàng từ xa, quyền lợi được hưởng trong gói bảo hành chính hãng 7-10 năm và cách kiểm tra thẻ truy xuất nguồn gốc vật liệu.",
+    excerptEN: "How remote clinical assessments work, what is covered under our 10-year manufacturer warranty, and how to verify batch serial numbers.",
+    excerptVN: "Quy trình đánh giá lâm sàng từ xa, quyền lợi được hưởng trong gói bảo hành chính hãng 10 năm và cách kiểm tra thẻ truy xuất nguồn gốc vật liệu.",
     icon: ShieldCheck
   }
 ];
@@ -124,17 +124,17 @@ export default function BlogIndex() {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-2 bg-teal-brand/20 text-teal-brand border border-teal-brand/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
               <Compass className="w-4 h-4" />
-              <span>{lang === "VN" ? "CẨM NANG DU LỊCH NHA KHOA" : "DENTAL TOURISM KNOWLEDGE HUB"}</span>
+              <span>{lang === "VN" ? "CẨM NANG NHA KHOA" : "DENTAL HANDBOOK"}</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-white leading-tight">
-              {lang === "VN" ? "Kiến Thức & Cẩm Nang Du Lịch Nha Khoa" : "Dental Tourism Guide & Clinical Resources"}
+              {lang === "VN" ? "Kiến Thức & Cẩm Nang Nha Khoa" : "Dental Handbook & Clinical Resources"}
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
               {lang === "VN"
                 ? "Cung cấp các thông tin chuyên sâu, bài viết hướng dẫn lâm sàng và cẩm nang hành trình để bạn chuẩn bị chu đáo nhất cho chuyến đi làm răng tại Hà Nội."
-                : "Read our comprehensive clinical insights, preparation checklists, and travel guides designed to make your dental journey in Hanoi seamless and worry-free."}
+                : "Read our comprehensive clinical insights, preparation checklists, and handbooks designed to make your dental journey in Hanoi seamless and worry-free."}
             </p>
           </div>
 

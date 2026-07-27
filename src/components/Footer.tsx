@@ -49,7 +49,7 @@ export default function Footer() {
             <li><Link href="/cost" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Đưa đón sân bay miễn phí" : "Free Airport Pickup"}</Link></li>
             <li><Link href="/cost" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Liên kết khách sạn Boutique" : "Partner Boutique Hotels"}</Link></li>
             <li><Link href="/cost" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Hướng dẫn visa & đi lại" : "Visa & Travel Guide"}</Link></li>
-            <li><Link href="/blog" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Cẩm nang du lịch nha khoa" : "Dental Tourism Blog"}</Link></li>
+            <li><Link href="/blog" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Cẩm nang nha khoa" : "Dental Handbook"}</Link></li>
             <li><Link href="/equipment" className="hover:text-teal-brand transition-colors">{lang === "VN" ? "Thiết bị & Vật liệu" : "Equipment & Materials"}</Link></li>
           </ul>
         </div>

@@ -46,7 +46,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const menuItems = [
     { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
     { name: "Leads (Tư vấn)", href: "/admin/leads", icon: Users },
-    { name: "Cẩm nang (Blog)", href: "/admin/blog", icon: BookOpen },
+    { name: "Cẩm nang nha khoa", href: "/admin/blog", icon: BookOpen },
     { name: "Reviews", href: "/admin/reviews", icon: Star },
     { name: "Bảo hành", href: "/admin/warranty", icon: ShieldCheck },
   ];
