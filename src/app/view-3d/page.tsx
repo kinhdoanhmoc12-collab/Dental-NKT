@@ -273,14 +273,14 @@ export default function Scan3DPage() {
                 }}
               >
                 {/* Avatar image header */}
-                <div
-                  className={`relative h-48 bg-gradient-to-br ${c.color} overflow-hidden`}
+                 <div
+                  className="relative h-48 bg-[#0b1e2c] overflow-hidden"
                 >
                   <Image
                     src={c.avatar}
                     alt={isVN ? c.nameVN : c.nameEN}
                     fill
-                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover w-full h-full scale-[1.01] group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Gradient overlay at bottom */}
