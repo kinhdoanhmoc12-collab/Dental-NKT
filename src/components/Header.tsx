@@ -17,8 +17,8 @@ import {
 } from "lucide-react";
 
 const servicesList = [
-  { nameVN: "Mặt dán sứ Veneers", nameAU: "Veneers", href: "/services/veneers" },
   { nameVN: "Cấy ghép răng Implant", nameAU: "Dental Implants", href: "/services/implants" },
+  { nameVN: "Mặt dán sứ Veneers", nameAU: "Veneers", href: "/services/veneers" },
   { nameVN: "Hàm All-on-4", nameAU: "All-on-4", href: "/services/allon4" },
   { nameVN: "Hàm All-on-6", nameAU: "All-on-6", href: "/services/allon6" },
   { nameVN: "Mão răng sứ (Crowns)", nameAU: "Crowns", href: "/services/crowns" },
