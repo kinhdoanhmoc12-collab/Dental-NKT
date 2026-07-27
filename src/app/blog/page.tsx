@@ -96,8 +96,8 @@ export default function BlogIndex() {
   const categories = [
     { id: "all", labelEN: "All Articles", labelVN: "Tất cả bài viết" },
     { id: "guide", labelEN: "Travel Guide", labelVN: "Hướng dẫn du lịch" },
-    { id: "implants", labelEN: "Dental Implants", labelVN: "Cấy ghép Implant" },
-    { id: "veneers", labelEN: "Veneers & Aesthetics", labelVN: "Thẩm mỹ Răng sứ" },
+    { id: "implants", labelEN: "Implant Guide", labelVN: "Cẩm nang Implant" },
+    { id: "veneers", labelEN: "Veneers Guide", labelVN: "Cẩm nang Răng sứ" },
     { id: "warranty", labelEN: "Warranty & Safety", labelVN: "Bảo hành & An toàn" }
   ];
 
