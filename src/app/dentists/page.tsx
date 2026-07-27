@@ -21,7 +21,7 @@ export default function DentistsPage() {
       roleEN: "Cosmetic Smile Lead & Oral Surgery Specialist",
       descVN: "Tốt nghiệp ĐH Y Hà Nội 2018. Chuyên môn cao về Implant, nhổ răng khôn, điều trị tụt lợi, cười lộ nướu, các ca viêm quanh răng nặng. Ứng dụng kỹ thuật số từ 2020.",
       descEN: "Extensive expertise in Implants, wisdom teeth, gum recession, gummy smile & severe periodontitis. Digital dentistry pioneer since 2020.",
-      image: "/dr_emily.png"
+      image: "/dr_hang.jpg"
     },
     {
       id: "d2",

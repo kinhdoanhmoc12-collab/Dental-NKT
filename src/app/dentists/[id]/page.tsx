@@ -73,7 +73,7 @@ const DOCTORS_DATA: Record<string, DoctorDetail> = {
     roleEN: "Cosmetic Smile Lead & Oral Surgery Specialist",
     badgeVN: "Chuyên gia Phẫu thuật Trong miệng & Nha chu",
     badgeEN: "Oral Surgery & Periodontal Specialist",
-    image: "/dr_emily.png",
+    image: "/dr_hang.jpg",
     experienceYears: 8,
     bioVN: [
       "Tốt nghiệp Đại học Y Hà Nội năm 2018.",

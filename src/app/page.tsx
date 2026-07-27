@@ -678,7 +678,7 @@ export default function HomePage() {
                   roleEN: "Cosmetic Smile Lead",
                   descVN: "Tốt nghiệp ĐH Y Hà Nội 2018. Chuyên môn cao về Implant, nhổ răng khôn, điều trị tụt lợi, cười lộ nướu, các ca viêm quanh răng nặng.",
                   descEN: "Extensive expertise in Implants, wisdom tooth extraction, gum recession, gummy smile correction & severe periodontitis.",
-                  image: "/dr_emily.png"
+                  image: "/dr_hang.jpg"
                 },
                 {
                   id: "d2",
