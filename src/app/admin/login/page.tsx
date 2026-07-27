@@ -9,8 +9,18 @@ export default function AdminLoginPage() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+
+  React.useEffect(() => {
+    const savedUser = localStorage.getItem("remembered_username");
+    const savedPass = localStorage.getItem("remembered_password");
+    if (savedUser && savedPass) {
+      setUsername(savedUser);
+      setPassword(savedPass);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,8 +41,16 @@ export default function AdminLoginPage() {
 
       if (response.ok && resData.success) {
         setAuthToken(resData.data.access_token);
-        // Save user info
         localStorage.setItem("crm_user", JSON.stringify(resData.data.user));
+        
+        if (rememberMe) {
+          localStorage.setItem("remembered_username", username);
+          localStorage.setItem("remembered_password", password);
+        } else {
+          localStorage.removeItem("remembered_username");
+          localStorage.removeItem("remembered_password");
+        }
+        
         router.push("/admin/dashboard");
       } else {
         setError(resData.message || "Tài khoản hoặc mật khẩu không chính xác.");
@@ -80,7 +98,7 @@ export default function AdminLoginPage() {
                 required
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="Nhập tài khoản (e.g. lananh_sale)"
+                placeholder="Nhập tài khoản"
                 className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 focus:border-teal-brand focus:bg-white/10 focus:outline-none rounded-xl text-sm transition-colors text-white"
               />
             </div>
@@ -101,6 +119,18 @@ export default function AdminLoginPage() {
                 className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 focus:border-teal-brand focus:bg-white/10 focus:outline-none rounded-xl text-sm transition-colors text-white"
               />
             </div>
+          </div>
+
+          <div className="flex items-center justify-between pt-1">
+            <label className="flex items-center gap-2 text-xs text-slate-300 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                className="w-4 h-4 rounded border-slate-700 bg-white/5 text-teal-brand focus:ring-0 focus:ring-offset-0 cursor-pointer accent-teal-brand"
+              />
+              <span>Ghi nhớ mật khẩu</span>
+            </label>
           </div>
 
           <button
