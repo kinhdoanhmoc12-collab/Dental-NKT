@@ -422,53 +422,13 @@ export default function Scan3DPage() {
 
           {/* Iframe container */}
           <div className="flex-1 relative bg-[#1a1a2e]">
-            {/* Progress bar overlay */}
+            {/* Loading overlay */}
             {!iframeReady && (
-              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-6">
-                {/* Circular progress */}
-                <div className="relative w-28 h-28">
-                  <svg className="w-28 h-28 -rotate-90" viewBox="0 0 120 120">
-                    <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="8" />
-                    <circle
-                      cx="60" cy="60" r="52" fill="none"
-                      stroke="url(#progressGradient)" strokeWidth="8"
-                      strokeLinecap="round"
-                      strokeDasharray={`${2 * Math.PI * 52}`}
-                      strokeDashoffset={`${2 * Math.PI * 52 * (1 - progress / 100)}`}
-                      style={{ transition: "stroke-dashoffset 0.3s ease" }}
-                    />
-                    <defs>
-                      <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#00afc7" />
-                        <stop offset="100%" stopColor="#06b6d4" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-white font-bold text-2xl">{progress}%</span>
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <p className="text-white font-semibold text-lg">
-                    {progress < 100
-                      ? (isVN ? "Đang tải mô hình 3D..." : "Loading 3D model...")
-                      : (isVN ? "Đang khởi tạo viewer..." : "Initializing viewer...")}
-                  </p>
-                  {totalMB > 0 && (
-                    <p className="text-slate-400 text-sm mt-1">
-                      {downloadedMB} / {totalMB} MB
-                    </p>
-                  )}
-                </div>
-
-                {/* Progress bar */}
-                <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-teal-brand to-cyan-400 rounded-full"
-                    style={{ width: `${progress}%`, transition: "width 0.3s ease" }}
-                  />
-                </div>
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-4">
+                <Loader2 className="w-12 h-12 text-teal-brand animate-spin" />
+                <p className="text-white font-semibold text-lg">
+                  {isVN ? "Đang tải mô hình 3D..." : "Loading 3D model..."}
+                </p>
               </div>
             )}
 
