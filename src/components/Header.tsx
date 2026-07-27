@@ -149,10 +149,10 @@ export default function Header() {
               onClick={(e) => handleLinkClick("/", e)}
               className="h-full flex items-center"
             >
-              <div className="bg-teal-brand text-white px-6 xl:px-10 flex items-center relative [clip-path:polygon(0_0,100%_0,82%_100%,0_100%)] select-none h-16 md:h-20">
-                <div className="flex items-center gap-2 pr-6">
-                  <Sparkles className="w-6 h-6 text-white animate-pulse" />
-                  <span className="font-serif text-3xl font-extrabold tracking-tight">Dental NTK</span>
+              <div className="bg-teal-brand text-white px-5 pr-10 md:px-8 md:pr-16 flex items-center relative [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] select-none h-16 md:h-20 whitespace-nowrap">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white animate-pulse shrink-0" />
+                  <span className="font-serif text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">Dental NTK</span>
                 </div>
               </div>
             </Link>
