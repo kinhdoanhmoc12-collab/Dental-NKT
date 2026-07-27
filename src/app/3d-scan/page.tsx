@@ -169,7 +169,7 @@ export default function Scan3DPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28">
+        <div className="relative max-w-7xl mx-auto px-6 py-14 lg:py-20">
           <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-6">
@@ -237,7 +237,7 @@ export default function Scan3DPage() {
             </div>
 
             {/* Scroll prompt */}
-            <div className="mt-12 flex flex-col items-center gap-2 animate-bounce">
+            <div className="mt-8 flex flex-col items-center gap-2 animate-bounce">
               <span className="text-xs text-slate-400 uppercase tracking-widest">
                 {isVN ? "Khám phá bên dưới" : "Explore below"}
               </span>
@@ -248,10 +248,10 @@ export default function Scan3DPage() {
       </section>
 
       {/* ── CASES GALLERY ── */}
-      <section className="relative bg-gradient-to-b from-slate-50 to-white py-16 lg:py-24">
+      <section className="relative bg-gradient-to-b from-slate-50 to-white py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section header */}
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-brand/10 mb-4">
               <Sparkles className="w-3.5 h-3.5 text-teal-brand" />
               <span className="text-xs font-semibold text-teal-brand uppercase tracking-wider">
@@ -335,53 +335,25 @@ export default function Scan3DPage() {
         </div>
       </section>
 
-      {/* ── HOW IT WORKS ── */}
-      <section className="bg-white py-16 lg:py-20 border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-[#0b1e2c] mb-10">
-            {isVN ? "Hướng dẫn sử dụng" : "How to Interact"}
+      {/* ── HOW IT WORKS (compact) ── */}
+      <section className="bg-slate-50 py-8 lg:py-10 border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-lg md:text-xl font-bold text-center text-[#0b1e2c] mb-6">
+            {isVN ? "Hướng dẫn thao tác" : "How to Interact"}
           </h2>
-
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4">
             {[
-              {
-                icon: Move,
-                titleVN: "Kéo để xoay",
-                titleEN: "Drag to Rotate",
-                descVN:
-                  "Giữ chuột trái và kéo để xoay mô hình 3D theo mọi hướng.",
-                descEN:
-                  "Hold left mouse button and drag to rotate the 3D model in any direction.",
-              },
-              {
-                icon: ZoomIn,
-                titleVN: "Scroll để zoom",
-                titleEN: "Scroll to Zoom",
-                descVN:
-                  "Cuộn chuột lên/xuống để phóng to hoặc thu nhỏ mô hình.",
-                descEN:
-                  "Scroll up/down to zoom in or out of the model.",
-              },
-              {
-                icon: Eye,
-                titleVN: "Bật/tắt lớp hiển thị",
-                titleEN: "Toggle Layers",
-                descVN:
-                  "Sử dụng bảng điều khiển bên trái để ẩn/hiện các lớp: hàm, mô giải phẫu, ảnh mặt...",
-                descEN:
-                  "Use the left panel to show/hide layers: jaw scans, anatomic shapes, face scan...",
-              },
+              { icon: Move, textVN: "Kéo chuột để xoay 360°", textEN: "Drag to rotate 360°" },
+              { icon: ZoomIn, textVN: "Scroll để phóng to/thu nhỏ", textEN: "Scroll to zoom in/out" },
+              { icon: Eye, textVN: "Bảng bên trái để bật/tắt lớp", textEN: "Left panel to toggle layers" },
             ].map((step, i) => (
-              <div key={i} className="text-center">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-brand/10 to-cyan-500/10 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-teal-brand" />
+              <div key={i} className="flex items-center gap-3 bg-white rounded-xl px-5 py-3 border border-slate-100 flex-1">
+                <div className="w-10 h-10 rounded-xl bg-teal-brand/10 flex items-center justify-center shrink-0">
+                  <step.icon className="w-5 h-5 text-teal-brand" />
                 </div>
-                <h3 className="font-bold text-[#0b1e2c] mb-2">
-                  {isVN ? step.titleVN : step.titleEN}
-                </h3>
-                <p className="text-sm text-slate-500 leading-relaxed">
-                  {isVN ? step.descVN : step.descEN}
-                </p>
+                <span className="text-sm font-medium text-[#0b1e2c]">
+                  {isVN ? step.textVN : step.textEN}
+                </span>
               </div>
             ))}
           </div>
