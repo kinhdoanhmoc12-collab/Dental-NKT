@@ -90,7 +90,7 @@ export default function Scan3DPage() {
     abortRef.current = controller;
 
     try {
-      const response = await fetch(url, { signal: controller.signal });
+      const response = await fetch(`${url}?t=${Date.now()}`, { signal: controller.signal });
       
       // Nếu file không tồn tại (trả về 404 hoặc bị redirect về trang chủ)
       const contentType = response.headers.get("content-type");
