@@ -23,8 +23,8 @@ export default function Footer() {
           </p>
           <div className="pt-2 text-xs text-slate-400 border-t border-slate-800/85">
             {lang === "VN" 
-              ? "Dental NTK là thương hiệu quốc tế chính thức của Nha Khoa Trẻ (nhakhoatre.vn) tại Hà Nội." 
-              : "Dental NTK is the registered international division of Nha Khoa Tre Clinic (nhakhoatre.vn) in Hanoi."}
+              ? "Dental NTK (dentalntk.com) là thương hiệu quốc tế chính thức của Nha Khoa Trẻ (nhakhoatre.vn) tại Hà Nội." 
+              : "Dental NTK (dentalntk.com) is the registered international division of Nha Khoa Tre Clinic (nhakhoatre.vn) in Hanoi."}
           </div>
         </div>
 

@@ -163,8 +163,8 @@ export default function WarrantyPage() {
             </div>
             <div className="pt-2.5 border-t border-white/10 text-slate-300">
               {lang === "VN"
-                ? "💡 Lưu ý pháp lý: Dental NTK là thương hiệu đại diện quốc tế chính thức của Phòng khám Nha Khoa Trẻ (hoạt động trên tên miền nhakhoatre.vn)."
-                : "💡 Legal Notice: Dental NTK is the registered international division of Nha Khoa Tre Clinic (operating on the official nhakhoatre.vn domain)."}
+                ? "💡 Lưu ý pháp lý: Dental NTK (dentalntk.com) là thương hiệu đại diện quốc tế chính thức của Phòng khám Nha Khoa Trẻ (nhakhoatre.vn)."
+                : "💡 Legal Notice: Dental NTK (dentalntk.com) is the registered international division of Nha Khoa Tre Clinic (nhakhoatre.vn)."}
             </div>
           </div>
 
