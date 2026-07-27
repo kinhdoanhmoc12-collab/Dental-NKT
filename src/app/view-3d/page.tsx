@@ -280,7 +280,7 @@ export default function Scan3DPage() {
                     src={c.avatar}
                     alt={isVN ? c.nameVN : c.nameEN}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Gradient overlay at bottom */}
