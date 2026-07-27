@@ -228,7 +228,7 @@ export default function Header() {
               </button>
               
               {/* Dropdown Panel */}
-              <div className="absolute top-full right-0 bg-white shadow-xl border border-slate-100 rounded-2xl py-2 w-48 mt-1 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50 before:content-[''] before:absolute before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute top-full right-0 bg-white shadow-xl border border-slate-100 rounded-2xl py-2 w-48 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto translate-y-2 group-hover:translate-y-0 transition-all duration-200 z-50 before:content-[''] before:absolute before:-top-6 before:left-0 before:right-0 before:h-6">
                 <button 
                   onClick={() => selectLanguage("AU")} 
                   className="w-[calc(100%-16px)] mx-2 text-left px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-5 transition-all duration-200 rounded-lg flex items-center gap-2 cursor-pointer border-none outline-none"
