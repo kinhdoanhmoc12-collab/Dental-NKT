@@ -934,7 +934,7 @@ export default function DoctorDetailPage() {
             {lang === "VN" ? "Đăng ký tư vấn miễn phí" : "Request Free Treatment Plan"}
           </Link>
           <Link
-            href="/cost"
+            href="/dental-costs"
             className="w-full text-center bg-slate-800 hover:bg-slate-700 text-[#0b1e2c] py-4 px-6 font-bold text-sm rounded-full transition-all border border-slate-700 block cursor-pointer text-white"
           >
             {lang === "VN" ? "Xem bảng giá chi tiết" : "View Full Price List"}

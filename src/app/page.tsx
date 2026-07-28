@@ -256,7 +256,7 @@ export default function HomePage() {
                 <span>{lang === "VN" ? "Nhận báo giá văn bản miễn phí" : "Get Free Written Quote"}</span>
               </a>
               <Link 
-                href="/cost" 
+                href="/dental-costs" 
                 className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3.5 font-bold text-sm rounded-full transition-all text-center flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>{lang === "VN" ? "Xem bảng giá chi tiết" : "See AUD Price Index"}</span>
