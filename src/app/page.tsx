@@ -559,14 +559,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="text-center max-w-5xl mx-auto space-y-3">
             <span className="text-xs font-bold tracking-widest text-teal-brand uppercase block">
               {lang === "VN" ? "QUY TRÌNH HỖ TRỢ TRỌN GÓI" : "END-TO-END PATIENT PROCESS"}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Lộ Trình Điều Trị Cho Khách Hàng Quốc Tế" : "Your Journey: From Inquiry to Smile Completion"}
             </h2>
-            <p className="text-sm sm:text-base text-slate-550 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
               {lang === "VN" 
                 ? "Lộ trình 5 bước được chuẩn hóa và khép kín giúp bạn hoàn toàn an tâm khi bay sang Việt Nam điều trị nha khoa:"
                 : "A standardized, step-by-step process designed to give international patients complete clarity and peace of mind:"}
