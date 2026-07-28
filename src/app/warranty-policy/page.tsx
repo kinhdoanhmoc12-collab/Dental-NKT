@@ -150,7 +150,7 @@ export default function WarrantyPage() {
               : "Benchmarked against 20+ leading dental tourism clinics across Thailand, Vietnam, Malaysia, Indonesia and the Philippines"}
           </p>
 
-          <p className="text-xs sm:text-sm text-slate-350 leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
             {lang === "VN" ? (
               <>
                 💡 <strong>Lưu ý pháp lý:</strong> Dental NTK là thương hiệu đại diện quốc tế chính thức của{" "}
@@ -204,7 +204,7 @@ export default function WarrantyPage() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
           {lang === "VN" ? "1. Tại Sao Chính Sách Này Khác Biệt" : "1. Why This Policy Is Different"}
         </h2>
-        <div className="text-sm sm:text-base text-slate-600 leading-relaxed space-y-4 font-light">
+        <div className="text-sm sm:text-base text-slate-800 leading-relaxed space-y-4 font-normal">
           <p>
             {lang === "VN" ? (
               "Chúng tôi đã xem xét các điều khoản bảo hành được công bố của hơn 20 phòng khám du lịch nha khoa hàng đầu trên khắp Đông Nam Á trước khi viết chính sách này. Hầu hết mọi phòng khám trong khu vực đều đưa ra một số loại bảo hành — nhưng ba vấn đề lớn lặp đi lặp lại nhiều lần: thời gian bảo hành nghe có vẻ hào phóng nhưng lại ẩn chứa các điều kiện mơ hồ, danh sách loại trừ ẩn trong phần chữ nhỏ hoặc hoàn toàn không được công bố, và không có kế hoạch thực tế nào cho những bệnh nhân thực sự không thể bay trở lại Việt Nam. Chính sách này được xây dựng để lấp đầy cả ba khoảng trống đó. Mọi thời hạn dưới đây đều là thời hạn chúng tôi thực sự cam kết thực hiện, mọi trường hợp loại trừ đều được nêu rõ ràng ngay từ đầu, và chúng tôi có phương án hỗ trợ bạn ngay cả khi bạn không thể quay lại Việt Nam."
@@ -223,7 +223,7 @@ export default function WarrantyPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {lang === "VN" ? "2. Tóm Tắt Phạm Vi Bảo Hành" : "2. Coverage Summary — All Treatment Categories"}
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-light">
+          <p className="text-sm sm:text-base text-slate-800 font-normal">
             {lang === "VN" 
               ? "Thời hạn bảo hành bắt đầu tính từ ngày hoàn tất điều trị (ngày gắn phục hình cuối cùng, lắp khay duy trì, v.v.), không tính từ ngày bắt đầu phẫu thuật."
               : "Warranty periods begin on the date treatment is completed (final crown seated, final retainer fitted, etc.), not the date of first surgery."}
@@ -231,7 +231,7 @@ export default function WarrantyPage() {
         </div>
 
         <div className="overflow-x-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm md:text-base">
+          <table className="w-full text-left border-collapse text-sm sm:text-base">
             <thead>
               <tr className="bg-[#0b1e2c] text-white">
                 <th className="p-4.5 sm:p-5 font-bold uppercase tracking-wider">{lang === "VN" ? "Nhóm điều trị" : "Treatment Category"}</th>
@@ -239,61 +239,61 @@ export default function WarrantyPage() {
                 <th className="p-4.5 sm:p-5 font-bold uppercase tracking-wider">{lang === "VN" ? "Phạm vi" : "Scope"}</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
+            <tbody className="divide-y divide-slate-100 text-slate-850">
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Cấy ghép Implant — Trụ" : "Dental Implants — fixture"}</td>
                 <td className="p-4 font-bold text-teal-brand">{lang === "VN" ? "10 năm (Trọn đời với Straumann / Nobel)" : "10 years (Lifetime on Straumann / Nobel Biocare)"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Miễn phí thay thế trụ implant bị hỏng" : "Free replacement of the implant post itself"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Miễn phí thay thế trụ implant bị hỏng" : "Free replacement of the implant post itself"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Mão / Phục hình trên Implant" : "Implant Crown / Restoration"}</td>
                 <td className="p-4 font-bold text-teal-brand">7 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Mão sứ hoặc Zirconia lắp trên Implant" : "Porcelain or zirconia crown fitted on implant"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Mão sứ hoặc Zirconia lắp trên Implant" : "Porcelain or zirconia crown fitted on implant"}</td>
               </tr>
               <tr className="hover:bg-slate-50 bg-teal-brand/5">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Phục hình toàn hàm All-on-4 / All-on-6" : "All-on-4 / All-on-6 Full Arch"}</td>
                 <td className="p-4 font-bold text-teal-brand">{lang === "VN" ? "10 năm (Trụ) / 5 năm (Hàm phục hình)" : "10 years (fixtures) / 5 years (prosthesis)"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Thời hạn riêng cho khung sườn và phục hình răng" : "Framework and prosthetic teeth separate terms"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Thời hạn riêng cho khung sườn và phục hình răng" : "Framework and prosthetic teeth separate terms"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Mặt dán sứ Veneer" : "Porcelain Veneers"}</td>
                 <td className="p-4 font-bold text-teal-brand">5 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Bong tróc, mẻ sứ trong điều kiện sử dụng bình thường" : "Debonding/chipping under normal use"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Bong tróc, mẻ sứ trong điều kiện sử dụng bình thường" : "Debonding/chipping under normal use"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Mão & Cầu răng sứ (E.max/Zirconia)" : "Crowns & Bridges (E.max/Zirconia)"}</td>
                 <td className="p-4 font-bold text-teal-brand">7 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Nứt vỡ, sứt mẻ do lỗi vật liệu hoặc kỹ thuật chế tác" : "Fracture/debonding from defect"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Nứt vỡ, sứt mẻ do lỗi vật liệu hoặc kỹ thuật chế tác" : "Fracture/debonding from defect"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Điều trị nội nha (Tủy răng)" : "Root Canal Treatment"}</td>
                 <td className="p-4 font-bold text-teal-brand">2 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Điều trị lại nếu nhiễm trùng tái phát" : "Re-treatment if infection recurs"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Điều trị lại nếu nhiễm trùng tái phát" : "Re-treatment if infection recurs"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Trám răng Composite" : "Composite Fillings"}</td>
                 <td className="p-4 font-bold text-teal-brand">2 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Trám lại nếu miếng trám bị nứt hoặc rơi ra ngoài" : "Replacement if filling fractures/falls out"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Trám lại nếu miếng trám bị nứt hoặc rơi ra ngoài" : "Replacement if filling fractures/falls out"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Hàm giả tháo lắp" : "Removable Dentures"}</td>
                 <td className="p-4 font-bold text-teal-brand">2 {lang === "VN" ? "năm" : "years"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Lỗi cấu trúc từ nhà sản xuất, không bảo hành hao mòn" : "Structural defect, not normal wear"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Lỗi cấu trúc từ nhà sản xuất, không bảo hành hao mòn" : "Structural defect, not normal wear"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Chỉnh nha (Niềng răng / Invisalign)" : "Orthodontics (Braces/Invisalign)"}</td>
                 <td className="p-4 font-bold text-teal-brand">{lang === "VN" ? "12 tháng sau tháo niềng + hỗ trợ khay duy trì trọn đời" : "12 months post-treatment + lifetime retainer support"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Chỉ bảo hành tái phát khi đeo khay duy trì đúng hướng dẫn" : "Relapse only if retainer worn as directed"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Chỉ bảo hành tái phát khi đeo khay duy trì đúng hướng dẫn" : "Relapse only if retainer worn as directed"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Tẩy trắng răng" : "Teeth Whitening"}</td>
                 <td className="p-4 font-bold text-slate-400">{lang === "VN" ? "Không bảo hành cấu trúc" : "No structural warranty"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Hỗ trợ tư vấn màu sắc trong 30 ngày. Kết quả phụ thuộc chế độ ăn uống" : "30-day shade consultation. Result depends on diet/lifestyle"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Hỗ trợ tư vấn màu sắc trong 30 ngày. Kết quả phụ thuộc chế độ ăn uống" : "30-day shade consultation. Result depends on diet/lifestyle"}</td>
               </tr>
               <tr className="hover:bg-slate-50">
                 <td className="p-4 font-bold text-[#0b1e2c]">{lang === "VN" ? "Điều trị nướu / Nhổ răng khôn" : "Gum Treatment / Wisdom Tooth"}</td>
                 <td className="p-4 font-bold text-teal-brand">{lang === "VN" ? "Đánh giá biến chứng trong 90 ngày" : "90-day complication review"}</td>
-                <td className="p-4 text-slate-500">{lang === "VN" ? "Thủ thuật thực hiện một lần, theo dõi các biến chứng" : "One-time procedures, reviewed for complications only"}</td>
+                <td className="p-4 text-slate-850">{lang === "VN" ? "Thủ thuật thực hiện một lần, theo dõi các biến chứng" : "One-time procedures, reviewed for complications only"}</td>
               </tr>
             </tbody>
           </table>
@@ -308,7 +308,7 @@ export default function WarrantyPage() {
           <ThumbsUp className="w-7 h-7 text-teal-brand shrink-0" />
           <span>{lang === "VN" ? "3. Những Gì Được Bảo Hành" : "3. What Is Covered"}</span>
         </h2>
-        <ul className="space-y-3 text-sm sm:text-base text-slate-700 leading-relaxed list-disc pl-5 font-light">
+        <ul className="space-y-3 text-sm sm:text-base text-slate-850 leading-relaxed list-disc pl-5 font-normal">
           <li>
             {lang === "VN"
               ? "Trụ Implant bị đào thải hoặc mất tích hợp xương do lỗi sản xuất hoặc kỹ thuật phẫu thuật."
@@ -355,12 +355,12 @@ export default function WarrantyPage() {
           <XCircle className="w-7 h-7 text-rose-500 shrink-0" />
           <span>{lang === "VN" ? "4. Những Gì KHÔNG Được Bảo Hành" : "4. What Is Not Covered"}</span>
         </h2>
-        <p className="text-xs sm:text-sm text-slate-500 italic">
+        <p className="text-sm sm:text-base text-slate-850 italic">
           {lang === "VN"
             ? "Các trường hợp loại trừ tiêu chuẩn trong ngành nha khoa quốc tế — áp dụng tại Dental NTK:"
             : "Standard exclusions across the industry — and at Dental NTK:"}
         </p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-light">
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm sm:text-base text-slate-850 leading-relaxed font-normal">
           <li className="flex items-start gap-2">
             <span className="text-rose-500 font-bold">•</span>
             <span>{lang === "VN" ? "Hỏng hóc do chấn thương, tai nạn, va đập mạnh hoặc dùng răng làm công cụ (mở nắp chai, nhai đá, nhai đồ quá cứng)." : "Damage from trauma, accidents, or using teeth as tools (opening bottles, chewing ice)"}</span>
@@ -412,7 +412,7 @@ export default function WarrantyPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {lang === "VN" ? "5. Quyền Lợi & Trách Nhiệm Rõ Ràng" : "5. Rights & Responsibilities — Clearly Divided"}
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 font-light">
+          <p className="text-sm sm:text-base text-slate-800 font-normal">
             {lang === "VN"
               ? "Bảo hành chỉ bền vững khi cả hai bên hiểu rõ nghĩa vụ của mình. Mọi cam kết của chúng tôi và nghĩa vụ của bạn đều được quy định minh bạch."
               : "A warranty only works if both sides know exactly what they owe each other. This is the core of what makes our policy different."}
@@ -426,7 +426,7 @@ export default function WarrantyPage() {
               <ShieldCheck className="w-5 h-5" />
               <span>DENTAL NTK — {lang === "VN" ? "Trách nhiệm của chúng tôi" : "Our Responsibilities"}</span>
             </h3>
-            <ul className="space-y-3 text-xs sm:text-sm text-slate-650 leading-relaxed font-light">
+            <ul className="space-y-3 text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
               <li className="flex items-start gap-2">
                 <span className="text-emerald-500 font-bold">✓</span>
                 <span>{lang === "VN" ? "Cung cấp chứng nhận bảo hành bằng văn bản bằng tiếng Anh trước khi bạn hoàn tất điều trị rời phòng khám." : "Provide a written, signed warranty certificate in English before you leave the clinic"}</span>
@@ -460,7 +460,7 @@ export default function WarrantyPage() {
               <FileText className="w-5 h-5 text-[#0b1e2c]" />
               <span>{lang === "VN" ? "BỆNH NHÂN — Trách nhiệm của bạn" : "Patient — Your Responsibilities"}</span>
             </h3>
-            <ul className="space-y-3 text-xs sm:text-sm text-slate-650 leading-relaxed font-light">
+            <ul className="space-y-3 text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
               <li className="flex items-start gap-2">
                 <span className="text-amber-500 font-bold">✓</span>
                 <span>{lang === "VN" ? "Khai báo thành thật, đầy đủ lịch sử bệnh lý và các loại thuốc đang sử dụng trước khi bắt đầu điều trị." : "Disclose full medical history and medications accurately before treatment begins"}</span>
@@ -497,25 +497,25 @@ export default function WarrantyPage() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
           {lang === "VN" ? "6. Cách Thức Yêu Cầu Bảo Hành" : "6. How to Make a Claim"}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-sm sm:text-base text-slate-850 leading-relaxed">
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">1</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Báo cáo" : "Report"}</strong>
-            <p className="text-[11px] text-slate-500">{lang === "VN" ? "Gửi thông tin trong vòng 14 ngày qua Email/WhatsApp" : "Notify us within 14 days with photos and details"}</p>
+            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Gửi thông tin trong vòng 14 ngày qua Email/WhatsApp" : "Notify us within 14 days with photos and details"}</p>
           </div>
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">2</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Đánh giá" : "Evaluate"}</strong>
-            <p className="text-[11px] text-slate-500">{lang === "VN" ? "Bác sĩ phản hồi trong vòng 2 ngày làm việc" : "Clinical review and response within 2 business days"}</p>
+            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Bác sĩ phản hồi trong vòng 2 ngày làm việc" : "Clinical review and response within 2 business days"}</p>
           </div>
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">3</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Xác nhận" : "Confirm"}</strong>
-            <p className="text-[11px] text-slate-500">{lang === "VN" ? "Nhận xác nhận phương án bằng văn bản trước khi bay" : "Written approval of repair scope before travel"}</p>
+            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Nhận xác nhận phương án bằng văn bản trước khi bay" : "Written approval of repair scope before travel"}</p>
           </div>
           <div className="md:col-span-2 bg-teal-brand/5 p-4 rounded-xl border border-teal-brand/10 flex flex-col justify-center space-y-1">
             <strong className="text-[#0b1e2c] block font-bold">{lang === "VN" ? "Lưu ý quan trọng:" : "Important note:"}</strong>
-            <p className="text-[11px] text-slate-600 font-light">
+            <p className="text-[11px] text-slate-800 font-normal">
               {lang === "VN" 
                 ? "Mọi sửa chữa theo chính sách sẽ hoàn toàn miễn phí. Riêng các trường hợp cần ghép thêm xương hoặc nâng xoang lần thứ hai (nếu trước đó thất bại) sẽ tính phí vật liệu ghép xương thực tế phát sinh."
                 : "Approved repairs are at no cost. Additional bone grafting or sinus lift materials required for a second attempt are billed separately."}
@@ -532,7 +532,7 @@ export default function WarrantyPage() {
           <Calendar className="w-7 h-7 text-teal-brand shrink-0" />
           <span>{lang === "VN" ? "7. Tái Khám Định Kỳ — Không Bắt Buộc Bay Về Việt Nam" : "7. Annual Reviews — Without the Forced Return Trip"}</span>
         </h2>
-        <div className="text-sm sm:text-base text-slate-600 leading-relaxed font-light">
+        <div className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
           <p>
             {lang === "VN" ? (
               "Nhiều phòng khám nha khoa nước ngoài thường ngầm yêu cầu bệnh nhân phải bay quay lại trực tiếp mỗi năm để giữ hiệu lực bảo hành — đây là một cái bẫy chi phí rất lớn với bệnh nhân sống tại Úc. Dental NTK không áp đặt điều khoản này. Việc tái khám định kỳ hàng năm của bạn hoàn toàn có thể thực hiện từ xa: Bạn chỉ cần gửi ảnh chụp răng, hoặc một đoạn video ngắn quay rõ nướu và khớp cắn qua WhatsApp/Email cho chúng tôi. Bác sĩ sẽ đánh giá từ xa và thông báo nếu có vấn đề thực sự cần can thiệp trực tiếp. Bạn chỉ cần bay sang khi có yêu cầu lâm sàng thực tế, hoàn toàn không có việc bắt buộc quay lại định kỳ mỗi năm một cách máy móc."
@@ -555,7 +555,7 @@ export default function WarrantyPage() {
             <span>{lang === "VN" ? "8. Hỗ Trợ Cho Bệnh Nhân Không Thể Quay Lại Việt Nam" : "8. Support for Patients Who Cannot Return to Vietnam"}</span>
           </h2>
 
-          <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-light">
+          <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-normal">
             <p>
               {lang === "VN" ? (
                 "Đây là khoảng trống lớn nhất mà chúng tôi tìm thấy ở hơn 20 phòng khám được khảo sát — hầu như không có nơi nào có kế hoạch cho bệnh nhân thực sự không thể bay quay lại. Chúng tôi có:"
@@ -594,7 +594,7 @@ export default function WarrantyPage() {
             <Scale className="w-5 h-5 text-teal-brand" />
             <span>{lang === "VN" ? "9. Giải Quyết Tranh Chấp" : "9. If We Disagree — Dispute Resolution"}</span>
           </h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
             {lang === "VN" ? (
               "Nếu bạn tin rằng yêu cầu bảo hành bị từ chối không công bằng, bạn có thể gửi yêu cầu bằng văn bản lên Giám đốc lâm sàng của chúng tôi trong vòng 14 ngày để xem xét lại. Nếu bất đồng vẫn không được giải quyết, hai bên đồng ý thương lượng hòa giải trước khi thực hiện bất kỳ hành động nào khác, thông qua một bên hòa giải độc lập được cả hai thống nhất. Chính sách này được điều chỉnh bởi luật pháp Việt Nam, không giới hạn bất kỳ quyền lợi bảo vệ người tiêu dùng nào được áp dụng cho bạn theo Luật Người tiêu dùng Úc (Australian Consumer Law)."
             ) : (
@@ -609,7 +609,7 @@ export default function WarrantyPage() {
             <AlertTriangle className="w-5 h-5 text-amber-500" />
             <span>{lang === "VN" ? "10. Bảo Hiểm Du Lịch" : "10. Travel Insurance — Please Read"}</span>
           </h3>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
             {lang === "VN" ? (
               "Bảo hành này chi trả hoàn toàn cho chất lượng điều trị nha khoa của bạn tại Dental NTK. Tuy nhiên, nó không thay thế cho bảo hiểm du lịch. Bảo hiểm du lịch giúp bạn chi trả cho các trường hợp cấp cứu y tế thực sự, cứu hộ y tế, mất hành lý hoặc gián đoạn chuyến bay — chứ không phải việc điều trị nha khoa theo kế hoạch. Chúng tôi cực kỳ khuyến nghị bạn mua bảo hiểm du lịch phù hợp trước khi khởi hành từ Úc."
             ) : (
@@ -647,7 +647,7 @@ export default function WarrantyPage() {
             <strong className="block text-[#0b1e2c]">
               {lang === "VN" ? "Cam Kết Phản Hồi" : "Response SLA"}
             </strong>
-            <span className="text-slate-650">
+            <span className="text-slate-800">
               {lang === "VN" ? "Trong vòng 2 ngày làm việc" : "Within 2 business days"}
             </span>
           </div>
@@ -657,7 +657,7 @@ export default function WarrantyPage() {
             <strong className="block text-[#0b1e2c]">
               {lang === "VN" ? "Văn Bản Pháp Lý" : "Governing Policy"}
             </strong>
-            <span className="text-slate-650">
+            <span className="text-slate-800">
               {lang === "VN" ? "Hồ sơ bàn giao khi hoàn tất" : "Treatment Handover Pack"}
             </span>
           </div>
@@ -681,13 +681,13 @@ export default function WarrantyPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {lang === "VN" ? "Cần Hỗ Trợ Bảo Hành Hoặc Kiểm Tra?" : "Need Warranty Support or Repairs?"}
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-slate-850 leading-relaxed font-normal">
             {lang === "VN"
               ? "Điền thông tin vào form dưới đây. Đội ngũ bác sĩ và chuyên viên chăm sóc bệnh nhân Việt kiều sẽ liên hệ phản hồi lại bạn trong vòng 2 ngày làm việc."
               : "Fill out the form below. Our clinical team and expat care specialists will contact you within 2 business days."}
           </p>
 
-          <div className="pt-4 space-y-3 border-t border-slate-100 text-xs sm:text-sm text-slate-700">
+          <div className="pt-4 space-y-3 border-t border-slate-100 text-sm sm:text-base text-slate-850">
             <div className="flex items-center gap-3">
               <Phone className="w-4 h-4 text-teal-brand" />
               <a 
@@ -713,7 +713,7 @@ export default function WarrantyPage() {
               <h3 className="text-lg font-bold text-slate-800">
                 {lang === "VN" ? "Đã Gửi Yêu Cầu Bảo Hành Thành Công!" : "Warranty Claim Submitted Successfully!"}
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600">
+              <p className="text-sm sm:text-base text-slate-900">
                 {lang === "VN"
                   ? "Cảm ơn bạn. Chuyên viên chăm sóc khách hàng sẽ xem xét mã bảo hành và gọi điện hỗ trợ bạn ngay lập tức."
                   : "Thank you. Our patient care team will review your warranty serial and contact you immediately."}
@@ -735,7 +735,7 @@ export default function WarrantyPage() {
               <fieldset disabled={submitting} className="space-y-4 border-none p-0 m-0">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">{lang === "VN" ? "Họ và tên *" : "Full Name *"}</label>
+                    <label className="block text-xs font-bold text-slate-850 mb-1">{lang === "VN" ? "Họ và tên *" : "Full Name *"}</label>
                     <input 
                       type="text" 
                       required 
@@ -746,7 +746,7 @@ export default function WarrantyPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">{lang === "VN" ? "Số điện thoại / WhatsApp *" : "Phone / WhatsApp *"}</label>
+                    <label className="block text-xs font-bold text-slate-850 mb-1">{lang === "VN" ? "Số điện thoại / WhatsApp *" : "Phone / WhatsApp *"}</label>
                     <input 
                       type="tel" 
                       required 
@@ -760,7 +760,7 @@ export default function WarrantyPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">{lang === "VN" ? "Email nhận phản hồi" : "Email Address"}</label>
+                    <label className="block text-xs font-bold text-slate-850 mb-1">{lang === "VN" ? "Email nhận phản hồi" : "Email Address"}</label>
                     <input 
                       type="email" 
                       value={claimForm.email}
@@ -770,7 +770,7 @@ export default function WarrantyPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">{lang === "VN" ? "Mã Thẻ Bảo Hành (Serial)" : "Warranty Serial Code"}</label>
+                    <label className="block text-xs font-bold text-slate-850 mb-1">{lang === "VN" ? "Mã Thẻ Bảo Hành (Serial)" : "Warranty Serial Code"}</label>
                     <input 
                       type="text" 
                       value={claimForm.serial}
@@ -782,7 +782,7 @@ export default function WarrantyPage() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">{lang === "VN" ? "Mô tả tình trạng răng cần bảo hành *" : "Description of Issue *"}</label>
+                  <label className="block text-xs font-bold text-slate-850 mb-1">{lang === "VN" ? "Mô tả tình trạng răng cần bảo hành *" : "Description of Issue *"}</label>
                   <textarea 
                     rows={3} 
                     required 
