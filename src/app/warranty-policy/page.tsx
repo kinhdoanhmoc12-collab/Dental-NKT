@@ -304,10 +304,7 @@ export default function WarrantyPage() {
           SECTION 3: WHAT IS COVERED
           ========================================================== */}
       <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c] flex items-center gap-3">
-          <ThumbsUp className="w-7 h-7 text-teal-brand shrink-0" />
-          <span>{lang === "VN" ? "3. Những Gì Được Bảo Hành" : "3. What Is Covered"}</span>
-        </h2>
+        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">{lang === "VN" ? "3. Những Gì Được Bảo Hành" : "3. What Is Covered"}</h2>
         <ul className="space-y-3 text-sm sm:text-base text-slate-850 leading-relaxed list-disc pl-5 font-normal">
           <li>
             {lang === "VN"
@@ -351,10 +348,7 @@ export default function WarrantyPage() {
           SECTION 4: WHAT IS NOT COVERED
           ========================================================== */}
       <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c] flex items-center gap-3">
-          <XCircle className="w-7 h-7 text-rose-500 shrink-0" />
-          <span>{lang === "VN" ? "4. Những Gì KHÔNG Được Bảo Hành" : "4. What Is Not Covered"}</span>
-        </h2>
+        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">{lang === "VN" ? "4. Những Gì KHÔNG Được Bảo Hành" : "4. What Is Not Covered"}</h2>
         <p className="text-sm sm:text-base text-slate-850 italic">
           {lang === "VN"
             ? "Các trường hợp loại trừ tiêu chuẩn trong ngành nha khoa quốc tế — áp dụng tại Dental NTK:"
@@ -528,10 +522,7 @@ export default function WarrantyPage() {
           SECTION 7: ANNUAL REVIEWS
           ========================================================== */}
       <section className="bg-slate-50 p-6 sm:p-10 rounded-3xl border border-slate-200/80 space-y-4">
-        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c] flex items-center gap-3">
-          <Calendar className="w-7 h-7 text-teal-brand shrink-0" />
-          <span>{lang === "VN" ? "7. Tái Khám Định Kỳ — Không Bắt Buộc Bay Về Việt Nam" : "7. Annual Reviews — Without the Forced Return Trip"}</span>
-        </h2>
+        <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">{lang === "VN" ? "7. Tái Khám Định Kỳ — Không Bắt Buộc Bay Về Việt Nam" : "7. Annual Reviews — Without the Forced Return Trip"}</h2>
         <div className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
           <p>
             {lang === "VN" ? (
@@ -550,10 +541,7 @@ export default function WarrantyPage() {
         <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative z-10 space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white flex items-center gap-3">
-            <Plane className="w-7 h-7 text-teal-brand shrink-0" />
-            <span>{lang === "VN" ? "8. Hỗ Trợ Cho Bệnh Nhân Không Thể Quay Lại Việt Nam" : "8. Support for Patients Who Cannot Return to Vietnam"}</span>
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white">{lang === "VN" ? "8. Hỗ Trợ Cho Bệnh Nhân Không Thể Quay Lại Việt Nam" : "8. Support for Patients Who Cannot Return to Vietnam"}</h2>
 
           <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-normal">
             <p>
@@ -590,10 +578,7 @@ export default function WarrantyPage() {
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Section 9: Dispute Resolution */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
-          <h3 className="font-serif font-extrabold text-[#0b1e2c] text-lg flex items-center gap-2">
-            <Scale className="w-5 h-5 text-teal-brand" />
-            <span>{lang === "VN" ? "9. Giải Quyết Tranh Chấp" : "9. If We Disagree — Dispute Resolution"}</span>
-          </h3>
+          <h3 className="font-serif font-extrabold text-[#0b1e2c] text-lg">{lang === "VN" ? "9. Giải Quyết Tranh Chấp" : "9. If We Disagree — Dispute Resolution"}</h3>
           <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
             {lang === "VN" ? (
               "Nếu bạn tin rằng yêu cầu bảo hành bị từ chối không công bằng, bạn có thể gửi yêu cầu bằng văn bản lên Giám đốc lâm sàng của chúng tôi trong vòng 14 ngày để xem xét lại. Nếu bất đồng vẫn không được giải quyết, hai bên đồng ý thương lượng hòa giải trước khi thực hiện bất kỳ hành động nào khác, thông qua một bên hòa giải độc lập được cả hai thống nhất. Chính sách này được điều chỉnh bởi luật pháp Việt Nam, không giới hạn bất kỳ quyền lợi bảo vệ người tiêu dùng nào được áp dụng cho bạn theo Luật Người tiêu dùng Úc (Australian Consumer Law)."
@@ -605,10 +590,7 @@ export default function WarrantyPage() {
 
         {/* Section 10: Travel Insurance */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
-          <h3 className="font-serif font-extrabold text-[#0b1e2c] text-lg flex items-center gap-2">
-            <AlertTriangle className="w-5 h-5 text-amber-500" />
-            <span>{lang === "VN" ? "10. Bảo Hiểm Du Lịch" : "10. Travel Insurance — Please Read"}</span>
-          </h3>
+          <h3 className="font-serif font-extrabold text-[#0b1e2c] text-lg">{lang === "VN" ? "10. Bảo Hiểm Du Lịch" : "10. Travel Insurance — Please Read"}</h3>
           <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-normal">
             {lang === "VN" ? (
               "Bảo hành này chi trả hoàn toàn cho chất lượng điều trị nha khoa của bạn tại Dental NTK. Tuy nhiên, nó không thay thế cho bảo hiểm du lịch. Bảo hiểm du lịch giúp bạn chi trả cho các trường hợp cấp cứu y tế thực sự, cứu hộ y tế, mất hành lý hoặc gián đoạn chuyến bay — chứ không phải việc điều trị nha khoa theo kế hoạch. Chúng tôi cực kỳ khuyến nghị bạn mua bảo hiểm du lịch phù hợp trước khi khởi hành từ Úc."
