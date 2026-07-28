@@ -34,7 +34,7 @@ export default function NotFound() {
             <span>Về Trang Chủ</span>
           </Link>
           <Link
-            href="/warranty"
+            href="/warranty-policy"
             className="w-full sm:w-auto bg-slate-100 hover:bg-slate-200 text-slate-800 px-6 py-3 rounded-full font-bold text-sm transition-all flex items-center justify-center gap-2"
           >
             <Search className="w-4 h-4" />

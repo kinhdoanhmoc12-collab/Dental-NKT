@@ -555,7 +555,7 @@ export default function VeneersPage() {
           </a>
 
           <Link
-            href="/warranty"
+            href="/warranty-policy"
             className="text-teal-brand hover:text-white font-semibold text-xs sm:text-sm underline underline-offset-4 transition-colors px-4 py-4"
           >
             {isVN ? "Xem Chính Sách Bảo Hành" : "View Warranty Policy"}

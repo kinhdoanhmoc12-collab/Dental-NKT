@@ -143,7 +143,7 @@ export default function Footer() {
           {t.footCopyright}
         </p>
         <div className="flex flex-wrap justify-center sm:justify-end gap-5 text-slate-300">
-          <Link href="/warranty" className="hover:text-teal-brand transition-colors font-bold text-teal-brand text-base">
+          <Link href="/warranty-policy" className="hover:text-teal-brand transition-colors font-bold text-teal-brand text-base">
             {lang === "VN" ? "Chính sách bảo hành" : "Warranty Policy"}
           </Link>
           <span className="text-slate-700">|</span>

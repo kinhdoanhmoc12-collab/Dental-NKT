@@ -749,7 +749,7 @@ export default function AllOn4Page() {
               WhatsApp Chat
             </a>
             <Link 
-              href="/warranty" 
+              href="/warranty-policy" 
               className="text-slate-300 hover:text-white px-4 py-3.5 text-xs sm:text-sm transition-all flex items-center gap-1.5 font-medium underline"
             >
               {isVN ? "Xem Chính sách Bảo hành" : "Read Warranty Terms"}

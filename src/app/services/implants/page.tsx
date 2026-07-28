@@ -743,7 +743,7 @@ export default function ImplantsPage() {
               <span>{isVN ? "Gửi Phim qua WhatsApp" : "Send Scans via WhatsApp"}</span>
             </a>
             <Link 
-              href="/warranty" 
+              href="/warranty-policy" 
               className="bg-transparent hover:text-teal-brand text-slate-300 px-6 py-3.5 font-bold text-xs rounded-full transition-colors underline"
             >
               {isVN ? "Xem Chính Sách Bảo Hành" : "View Warranty Policy"}

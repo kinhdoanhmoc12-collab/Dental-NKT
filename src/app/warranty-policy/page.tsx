@@ -81,7 +81,7 @@ export default function WarrantyPage() {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
     "name": "Dental NTK Hanoi",
-    "url": "https://dentalntk.com/warranty",
+    "url": "https://dentalntk.com/warranty-policy",
     "logo": "https://dentalntk.com/logo.png",
     "description": "Official 11-section Dental Warranty Policy for Australian patients. Up to 10-year warranty on Emax Veneers & Implants with 100% round-trip flight ticket coverage.",
     "telephone": "+84963333844",

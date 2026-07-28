@@ -689,7 +689,7 @@ export default function SmileMakeoverClient() {
               <span>WhatsApp (+84 963 333 844)</span>
             </a>
             <Link 
-              href="/warranty" 
+              href="/warranty-policy" 
               className="text-slate-300 hover:text-white px-4 py-3.5 text-xs sm:text-sm transition-all flex items-center gap-1.5 font-medium"
             >
               {isVN ? "Xem Chính sách Bảo hành" : "Read Warranty Terms"}
