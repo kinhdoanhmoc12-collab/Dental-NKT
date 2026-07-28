@@ -210,7 +210,7 @@ export default function BlogIndex() {
             const categoryLabel = categories.find((c) => c.id === post.category)?.[lang === "VN" ? "labelVN" : "labelEN"];
 
             return (
-              <Link href={`/blog/${post.slug}`} key={post.slug} className="block group">
+              <Link href={`/dental-handbook/${post.slug}`} key={post.slug} className="block group">
                 <article className="bg-white border border-slate-100 shadow-premium p-6 sm:p-8 rounded-3xl hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 relative overflow-hidden h-full">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 group-hover:bg-teal-brand/5 transition-colors" />
                   <div className="space-y-4">

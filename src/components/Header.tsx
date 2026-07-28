@@ -74,7 +74,7 @@ export default function Header() {
     { name: lang === "VN" ? "Điều trị" : "Treatments", href: "/services" },
     { name: lang === "VN" ? "View 3D" : "View 3D", href: "/view-3d" },
     { name: t.navCost, href: "/dental-costs" },
-    { name: lang === "VN" ? "Cẩm nang nha khoa" : "Dental Handbook", href: "/blog" },
+    { name: lang === "VN" ? "Cẩm nang nha khoa" : "Dental Handbook", href: "/dental-handbook" },
     { name: lang === "VN" ? "Thiết bị" : "Equipment", href: "/equipment" },
     { name: lang === "VN" ? "Chính sách bảo hành" : "Warranty Policy", href: "/warranty" }
   ];

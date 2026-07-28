@@ -57,7 +57,7 @@ export default function BlogPostDetail() {
         <p className="text-xs text-slate-500 font-light">
           {lang === "VN" ? "Bài viết bạn yêu cầu không tồn tại hoặc đã bị xóa." : "The requested blog post could not be located."}
         </p>
-        <Link href="/blog" className="inline-block bg-[#0b1e2c] text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-teal-brand transition-colors">
+        <Link href="/dental-handbook" className="inline-block bg-[#0b1e2c] text-white px-6 py-2.5 rounded-full text-xs font-bold hover:bg-teal-brand transition-colors">
           {lang === "VN" ? "Quay lại Cẩm nang" : "Back to Blog"}
         </Link>
       </div>
@@ -227,7 +227,7 @@ export default function BlogPostDetail() {
       
       {/* Back Button */}
       <div className="mb-4">
-        <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-teal-brand transition-colors">
+        <Link href="/dental-handbook" className="inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-teal-brand transition-colors">
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>{lang === "VN" ? "Quay lại danh mục cẩm nang" : "Back to Blog"}</span>
         </Link>
