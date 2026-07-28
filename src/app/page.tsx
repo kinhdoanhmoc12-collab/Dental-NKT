@@ -1025,7 +1025,7 @@ export default function HomePage() {
       <section className="py-10 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Hồ sơ ca lâm sàng thực tế của bệnh nhân Úc" : "Real Australian Patient Cases — Details & Savings"}
             </h2>
