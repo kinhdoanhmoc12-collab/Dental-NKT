@@ -196,9 +196,9 @@ export default function EquipmentPage() {
           <div className="absolute -bottom-32 -left-32 w-[300px] h-[300px] rounded-full bg-cyan-500/8 blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-12 lg:py-16">
+        <div className="relative max-w-7xl mx-auto px-6 py-6 lg:py-8">
           <div className="text-center max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-5">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 mb-3">
               <Award className="w-3.5 h-3.5 text-teal-brand" />
               <span className="text-xs font-medium text-teal-brand/90">
                 {isVN ? "Chuẩn quốc tế" : "International Standards"}
@@ -221,7 +221,7 @@ export default function EquipmentPage() {
                 </>
               )}
             </h1>
-            <p className="mt-4 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-2 text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
               {isVN
                 ? "Dental NTK đầu tư hệ thống thiết bị hiện đại và sử dụng vật liệu nhập khẩu chính hãng từ các thương hiệu hàng đầu thế giới — vì nụ cười của bạn xứng đáng được chăm sóc bằng những điều tốt nhất."
                 : "Dental NTK invests in state-of-the-art equipment and genuine imported materials from world-leading brands — because your smile deserves nothing but the best."}
