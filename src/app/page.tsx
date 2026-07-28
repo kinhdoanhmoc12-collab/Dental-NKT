@@ -328,7 +328,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 3: DENTAL SERVICES AND PRICE INDEX
           ======================================================== */}
-      <section className="py-10 md:py-20 bg-white">
+      <section className="pt-10 pb-0 md:pt-20 md:pb-0 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -387,7 +387,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 4: INTERACTIVE SAVINGS ESTIMATOR
           ======================================================== */}
-      <section id="savings-estimator" className="pt-12 pb-4 bg-white scroll-mt-24">
+      <section id="savings-estimator" className="pt-2 pb-4 md:pt-4 md:pb-4 bg-white scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-3xl border border-slate-100 shadow-premium p-6 sm:p-10 space-y-8">
             
