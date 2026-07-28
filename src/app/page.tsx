@@ -347,7 +347,7 @@ export default function HomePage() {
                   <Stethoscope className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-[#0b1e2c]">{t.treat1Title}</h3>
-                <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat1Desc}</p>
+                <p className="text-sm text-slate-700 font-normal leading-relaxed line-clamp-3">{t.treat1Desc}</p>
               </div>
               <Link href="/services/implants" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
                 <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
@@ -360,7 +360,7 @@ export default function HomePage() {
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-[#0b1e2c]">{t.treat2Title}</h3>
-                <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat2Desc}</p>
+                <p className="text-sm text-slate-700 font-normal leading-relaxed line-clamp-3">{t.treat2Desc}</p>
               </div>
               <Link href="/services/veneers" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
                 <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
@@ -373,7 +373,7 @@ export default function HomePage() {
                   <Shield className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-[#0b1e2c]">{t.treat3Title}</h3>
-                <p className="text-sm text-slate-500 font-normal leading-relaxed line-clamp-3">{t.treat3Desc}</p>
+                <p className="text-sm text-slate-700 font-normal leading-relaxed line-clamp-3">{t.treat3Desc}</p>
               </div>
               <Link href="/services/allon4" className="text-sm font-bold text-teal-brand hover:text-teal-brand-hover inline-flex items-center gap-1 mt-6">
                 <span>{lang === "VN" ? "Tìm hiểu chi tiết" : "Learn details"}</span> <ArrowRight className="w-3.5 h-3.5" />
@@ -394,7 +394,7 @@ export default function HomePage() {
             <div className="text-center max-w-2xl mx-auto space-y-2">
               
               <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">{lang === "VN" ? "So sánh Chi phí điều trị Úc vs Việt Nam" : "Australia vs Vietnam Dental Cost Comparison"}</h2>
-              <p className="text-xs text-slate-400 font-light leading-relaxed">
+              <p className="text-xs text-slate-700 font-normal leading-relaxed">
                 {lang === "VN"
                   ? "So sánh giá của DentalNTK Hà Nội với chi phí nha khoa tư nhân trung bình tại Úc/Mỹ. Chọn dịch vụ và điều chỉnh số lượng để xem mức tiết kiệm dự kiến."
                   : "Compare DentalNTK Hanoi's prices against average Australian private dentistry costs. Select a treatment and adjust the quantity to see your estimated saving."}
