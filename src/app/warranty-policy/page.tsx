@@ -146,8 +146,8 @@ export default function WarrantyPage() {
           
           <p className="text-base sm:text-lg lg:text-xl font-medium text-teal-brand">
             {lang === "VN"
-              ? "Được đối sánh và tối ưu hóa vượt trội so với 20+ phòng khám du lịch nha khoa hàng đầu Đông Nam Á"
-              : "Benchmarked against 20+ leading dental tourism clinics across Thailand, Vietnam, Malaysia, Indonesia and the Philippines"}
+              ? "Chính sách bảo hành minh bạch, tối ưu hóa quyền lợi và sự an tâm tối đa cho bệnh nhân quốc tế"
+              : "Transparent warranty policy optimized for the maximum benefit and peace of mind of international patients"}
           </p>
 
           <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
@@ -213,9 +213,9 @@ export default function WarrantyPage() {
         <div className="text-sm sm:text-base text-slate-800 leading-relaxed space-y-4 font-normal">
           <p>
             {lang === "VN" ? (
-              "Chúng tôi đã xem xét các điều khoản bảo hành được công bố của hơn 20 phòng khám du lịch nha khoa hàng đầu trên khắp Đông Nam Á trước khi viết chính sách này. Hầu hết mọi phòng khám trong khu vực đều đưa ra một số loại bảo hành — nhưng ba vấn đề lớn lặp đi lặp lại nhiều lần: thời gian bảo hành nghe có vẻ hào phóng nhưng lại ẩn chứa các điều kiện mơ hồ, danh sách loại trừ ẩn trong phần chữ nhỏ hoặc hoàn toàn không được công bố, và không có kế hoạch thực tế nào cho những bệnh nhân thực sự không thể bay trở lại Việt Nam. Chính sách này được xây dựng để lấp đầy cả ba khoảng trống đó. Mọi thời hạn dưới đây đều là thời hạn chúng tôi thực sự cam kết thực hiện, mọi trường hợp loại trừ đều được nêu rõ ràng ngay từ đầu, và chúng tôi có phương án hỗ trợ bạn ngay cả khi bạn không thể quay lại Việt Nam."
+              "Chúng tôi xây dựng chính sách bảo hành này với mục tiêu cao nhất là sự minh bạch và bảo vệ quyền lợi thực tế của bệnh nhân quốc tế. Thông thường, các chính sách bảo hành nha khoa quốc tế dễ gặp phải các rào cản như: điều kiện áp dụng không rõ ràng, danh sách loại trừ phức tạp ẩn dưới phần chữ nhỏ, hoặc thiếu phương án hỗ trợ khi bệnh nhân đã trở về nước và không thể quay lại Việt Nam. Chính sách của Dental NTK được thiết kế để giải quyết triệt để các vấn đề đó. Tất cả thời hạn bảo hành đều được cam kết rõ ràng, danh sách loại trừ được công bố minh bạch ngay từ đầu, và chúng tôi cung cấp giải pháp hỗ trợ thiết thực tại nước sở tại để bạn hoàn toàn yên tâm điều trị."
             ) : (
-              "We reviewed the published warranty terms of more than twenty leading dental tourism clinics across Southeast Asia before writing this policy. Almost every clinic in the region offers a warranty of some kind — but three problems show up again and again: warranty periods that sound generous but hide vague conditions, exclusion lists buried in fine print or not published at all, and no real plan for patients who genuinely cannot fly back to Asia. This policy is built to close all three gaps. Every period below is one we can actually stand behind, every exclusion is stated up front, and Section 8 gives you an option even if you can never return to Vietnam."
+              "We designed this warranty policy with the ultimate goal of transparency and protecting the practical rights of our international patients. Often, international dental warranties can be hindered by vague eligibility conditions, complex exclusions hidden in the fine print, or a lack of support once the patient has returned home and cannot travel back. Dental NTK's policy is built to address these challenges directly. Every warranty period is clearly defined, all exclusions are published transparently up front, and we provide practical support options in your home country so you can undergo treatment with complete peace of mind."
             )}
           </p>
         </div>
@@ -552,9 +552,9 @@ export default function WarrantyPage() {
           <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-normal">
             <p>
               {lang === "VN" ? (
-                "Đây là khoảng trống lớn nhất mà chúng tôi tìm thấy ở hơn 20 phòng khám được khảo sát — hầu như không có nơi nào có kế hoạch cho bệnh nhân thực sự không thể bay quay lại. Chúng tôi có:"
+                "Chúng tôi hiểu rằng việc quay trở lại Việt Nam để bảo hành không phải lúc nào cũng khả thi đối với bệnh nhân quốc tế vì lý do công việc hoặc sức khỏe. Để đảm bảo quyền lợi tốt nhất, chúng tôi áp dụng chính sách hỗ trợ linh hoạt sau:"
               ) : (
-                "This is the single biggest gap we found across the 20+ clinics we reviewed — almost none of them plan for a patient who simply cannot fly back. We do."
+                "We understand that traveling back to Vietnam for warranty repairs is not always feasible for international patients due to work or health reasons. To ensure your best interests, we offer the following flexible support options:"
               )}
             </p>
             <ul className="space-y-3 list-disc pl-5">
@@ -653,8 +653,8 @@ export default function WarrantyPage() {
 
         <p className="text-xs text-slate-400 italic leading-relaxed pt-4 border-t border-slate-200">
           {lang === "VN"
-            ? "*Tài liệu này là bản tóm tắt thông tin chính sách bảo hành dành cho bệnh nhân. Điều khoản chi tiết ràng buộc pháp lý sẽ được ghi rõ trong Giấy chứng nhận bảo hành và Kế hoạch điều trị cá nhân cấp cho bạn khi hoàn thành ca điều trị. Các số liệu đối sánh phản ánh thông tin công khai của các phòng khám nha khoa tại Đông Nam Á tính đến năm 2026."
-            : "*This document is a policy summary provided for patient information and does not constitute a legal contract. Full terms are confirmed in your individual Treatment Plan and Warranty Certificate issued at the completion of treatment. Benchmarking referenced reflects publicly published terms as of 2026."}
+            ? "*Tài liệu này là bản tóm tắt thông tin chính sách bảo hành dành cho bệnh nhân. Điều khoản chi tiết ràng buộc pháp lý sẽ được ghi rõ trong Giấy chứng nhận bảo hành và Kế hoạch điều trị cá nhân cấp cho bạn khi hoàn thành ca điều trị."
+            : "*This document is a policy summary provided for patient information and does not constitute a legal contract. Full terms are confirmed in your individual Treatment Plan and Warranty Certificate issued at the completion of treatment."}
         </p>
       </section>
 
