@@ -213,8 +213,52 @@ export default function HomePage() {
     }
   ];
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Dental Nha Khoa Trẻ",
+    "alternateName": "Dental NTK",
+    "url": "https://nhakhoatre.vn",
+    "logo": "https://nhakhoatre.vn/hero_dentist.png",
+    "image": "https://nhakhoatre.vn/boutique_clinic.png",
+    "description": "Nha khoa Dental NTK chuyên cấy ghép Implant và thẩm mỹ răng sứ chất lượng cao tại Hà Nội theo tiêu chuẩn Đức, tiết kiệm chi phí tối qua cho bệnh nhân quốc tế.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "38 Ngụy Như Kon Tum, Thanh Xuân",
+      "addressLocality": "Hà Nội",
+      "addressCountry": "VN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 21.0003,
+      "longitude": 105.8037
+    },
+    "telephone": "+84963333844",
+    "priceRange": "$$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ]
+  };
+
   return (
     <div className="w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
 
       {/* ========================================================
           SECTION 1: HERO (With Pre-Travel Case File Layout)
