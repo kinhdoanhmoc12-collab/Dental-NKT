@@ -675,14 +675,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="text-center max-w-5xl mx-auto space-y-3">
             <span className="text-xs font-bold tracking-widest text-teal-brand uppercase block">
               {lang === "VN" ? "LỊCH TRÌNH LƯU TRÚ GỢI Ý" : "SAMPLE TRAVEL ITINERARY"}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Lịch Trình 9 Ngày Kết Hợp Trị Liệu & Du Lịch" : "Your 9-Day Hanoi Treatment & Travel Schedule"}
             </h2>
-            <p className="text-sm sm:text-base text-slate-550 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
               {lang === "VN" 
                 ? "Gợi ý lịch trình 9 ngày chuẩn hóa giúp bạn hình dung chi tiết các hoạt động điều trị nha khoa kết hợp du lịch khám phá Hà Nội:"
                 : "A carefully balanced 9-day schedule combining clinical dental appointments with time to explore Hanoi and surrounding landmarks:"}
