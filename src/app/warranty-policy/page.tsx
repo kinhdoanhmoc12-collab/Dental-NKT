@@ -501,21 +501,21 @@ export default function WarrantyPage() {
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">1</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Báo cáo" : "Report"}</strong>
-            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Gửi thông tin trong vòng 14 ngày qua Email/WhatsApp" : "Notify us within 14 days with photos and details"}</p>
+            <p className="text-xs sm:text-sm text-slate-850">{lang === "VN" ? "Gửi thông tin trong vòng 14 ngày qua Email/WhatsApp" : "Notify us within 14 days with photos and details"}</p>
           </div>
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">2</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Đánh giá" : "Evaluate"}</strong>
-            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Bác sĩ phản hồi trong vòng 2 ngày làm việc" : "Clinical review and response within 2 business days"}</p>
+            <p className="text-xs sm:text-sm text-slate-850">{lang === "VN" ? "Bác sĩ phản hồi trong vòng 2 ngày làm việc" : "Clinical review and response within 2 business days"}</p>
           </div>
           <div className="md:col-span-1 bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col items-center text-center space-y-2">
             <span className="w-8 h-8 rounded-full bg-[#0b1e2c] text-white font-bold flex items-center justify-center">3</span>
             <strong className="text-[#0b1e2c] block">{lang === "VN" ? "Xác nhận" : "Confirm"}</strong>
-            <p className="text-[11px] text-slate-850">{lang === "VN" ? "Nhận xác nhận phương án bằng văn bản trước khi bay" : "Written approval of repair scope before travel"}</p>
+            <p className="text-xs sm:text-sm text-slate-850">{lang === "VN" ? "Nhận xác nhận phương án bằng văn bản trước khi bay" : "Written approval of repair scope before travel"}</p>
           </div>
           <div className="md:col-span-2 bg-teal-brand/5 p-4 rounded-xl border border-teal-brand/10 flex flex-col justify-center space-y-1">
             <strong className="text-[#0b1e2c] block font-bold">{lang === "VN" ? "Lưu ý quan trọng:" : "Important note:"}</strong>
-            <p className="text-[11px] text-slate-800 font-normal">
+            <p className="text-xs sm:text-sm text-slate-800 font-normal">
               {lang === "VN" 
                 ? "Mọi sửa chữa theo chính sách sẽ hoàn toàn miễn phí. Riêng các trường hợp cần ghép thêm xương hoặc nâng xoang lần thứ hai (nếu trước đó thất bại) sẽ tính phí vật liệu ghép xương thực tế phát sinh."
                 : "Approved repairs are at no cost. Additional bone grafting or sinus lift materials required for a second attempt are billed separately."}
