@@ -824,11 +824,11 @@ export default function HomePage() {
       <section className="py-10 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Nha khoa Thẩm mỹ Chuẩn y khoa vs Gói làm răng 'Turkey Teeth'" : "Vietnam Dental Treatment vs 'Turkey Teeth' Packages"}
             </h2>
-            <p className="text-sm sm:text-base text-slate-655 font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
               {lang === "VN"
                 ? "Làm răng là thủ thuật y tế can thiệp lâu dài, không phải chuyến du lịch trọn gói giá rẻ. Tìm hiểu sự khác biệt cốt lõi giữa quy trình chuẩn của DentalNTK và các dịch vụ giá rẻ phổ biến:"
                 : "Dental tourism is a clinical procedure, not a package holiday. This comparison explains why DentalNTK's protocols differ structurally from the low-cost package clinics."}
