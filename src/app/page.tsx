@@ -588,7 +588,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
                   {lang === "VN" ? "1. Gửi thông tin tư vấn" : "1. Submit Inquiry"}
                 </h3>
-                <p className="text-xs text-slate-700 font-normal leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Đăng ký tư vấn trực tuyến và gửi ảnh chụp răng, phim X-quang sẵn có qua website."
                     : "Submit your basic information and upload any existing dental X-rays or CBCT scans online."}
@@ -605,7 +605,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
                   {lang === "VN" ? "2. Nhận phác đồ từ xa" : "2. Remote Diagnostic"}
                 </h3>
-                <p className="text-xs text-slate-700 font-normal leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Hội đồng bác sĩ chẩn đoán và gửi lại phác đồ điều trị kèm báo giá trọn gói bằng tiền AUD."
                     : "Receive a personalized digital treatment scope and a fixed, itemised AUD cost statement."}
@@ -622,7 +622,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
                   {lang === "VN" ? "3. Đón tiếp sân bay" : "3. Arrival & Pickup"}
                 </h3>
-                <p className="text-xs text-slate-700 font-normal leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Bạn đặt vé máy bay sang Hà Nội. Xe riêng của phòng khám sẽ đón bạn miễn phí tại sân bay."
                     : "Confirm your appointment and book flights. Our private car picks you up from Hanoi Airport."}
@@ -639,7 +639,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
                   {lang === "VN" ? "4. Tiến hành điều trị" : "4. In-Clinic Treatment"}
                 </h3>
-                <p className="text-xs text-slate-700 font-normal leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Thăm khám lâm sàng và thực hiện cấy ghép/thẩm mỹ bởi bác sĩ chuyên khoa với công nghệ Đức."
                     : "Complete in-clinic CBCT scans, receive treatment by clinical leads using state-of-the-art tech."}
@@ -656,7 +656,7 @@ export default function HomePage() {
                 <h3 className="font-bold text-[#0b1e2c] text-sm leading-snug">
                   {lang === "VN" ? "5. Bàn giao & Bảo hành" : "5. Smile & Warranty"}
                 </h3>
-                <p className="text-xs text-slate-700 font-normal leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-800 font-normal leading-relaxed">
                   {lang === "VN"
                     ? "Lắp răng hoàn tất, chụp phim kiểm tra và bàn giao hồ sơ bảo hành toàn cầu trước khi về nước."
                     : "Final smile check, receive your Treatment Handover Pack and global warranty card."}
