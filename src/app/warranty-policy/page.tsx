@@ -170,7 +170,9 @@ export default function WarrantyPage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-700/80">
             <div className="space-y-1">
-              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">Lifetime</strong>
+              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">
+                {lang === "VN" ? "Trọn đời" : "Lifetime"}
+              </strong>
               <span className="text-xs sm:text-sm text-slate-300 block font-medium">
                 {lang === "VN" ? "Trụ Straumann / Nobel" : "Straumann / Nobel Fixtures"}
               </span>
@@ -182,13 +184,17 @@ export default function WarrantyPage() {
               </span>
             </div>
             <div className="space-y-1">
-              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">Remote</strong>
+              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">
+                {lang === "VN" ? "Từ xa" : "Remote"}
+              </strong>
               <span className="text-xs sm:text-sm text-slate-300 block font-medium">
                 {lang === "VN" ? "Tái khám từ xa tiện lợi" : "No Forced Return Checkups"}
               </span>
             </div>
             <div className="space-y-1">
-              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">Local</strong>
+              <strong className="text-2xl sm:text-3xl lg:text-4xl font-serif font-extrabold text-teal-brand block">
+                {lang === "VN" ? "Tại Úc" : "Local"}
+              </strong>
               <span className="text-xs sm:text-sm text-slate-300 block font-medium">
                 {lang === "VN" ? "Hỗ trợ sửa chữa tại Úc" : "Home Country Support"}
               </span>
