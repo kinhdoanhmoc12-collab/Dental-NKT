@@ -992,7 +992,7 @@ export default function HomePage() {
                       <div className="p-5 space-y-2">
                         <span className="text-xs font-bold text-teal-brand uppercase tracking-wider block">{lang === "VN" ? doc.roleVN : doc.roleEN}</span>
                         <h3 className="font-serif text-base font-bold text-[#0b1e2c] group-hover:text-teal-brand transition-colors">{lang === "VN" ? doc.nameVN : doc.nameEN}</h3>
-                        <p className="text-sm text-slate-600 leading-relaxed font-normal line-clamp-3">{lang === "VN" ? doc.descVN : doc.descEN}</p>
+                        <p className="text-sm text-slate-700 leading-relaxed font-normal line-clamp-3">{lang === "VN" ? doc.descVN : doc.descEN}</p>
                       </div>
                     </div>
                     <div className="px-5 pb-5 pt-0 flex items-center justify-between text-xs font-bold text-teal-brand group-hover:translate-x-1 transition-transform">
@@ -1029,7 +1029,7 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Hồ sơ ca lâm sàng thực tế của bệnh nhân Úc" : "Real Australian Patient Cases — Details & Savings"}
             </h2>
-            <p className="text-sm sm:text-base text-slate-500 font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
               {lang === "VN"
                 ? "Dưới đây là một số hồ sơ lâm sàng được lưu trữ thực tế, bao gồm thời gian điều trị, bác sĩ lâm sàng và mức giá quy đổi chi tiết:"
                 : "The following cases represent documented Australian patient treatments at DentalNTK Clinic, including clinical parameters and itemised final cost."}
@@ -1046,14 +1046,14 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-1.5">
                   <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Sydney • Mặt dán sứ Veneer" : "Sydney Patient · Emax Veneers"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Răng xỉn màu trung bình, răng xô lệch nhẹ cung thẩm mỹ. Điều trị thẩm mỹ không phẫu thuật." : "Diagnosis: Moderate discolouration, minor crowding in the aesthetic zone. Non-surgical cosmetic case."}</p>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Răng xỉn màu trung bình, răng xô lệch nhẹ cung thẩm mỹ. Điều trị thẩm mỹ không phẫu thuật." : "Diagnosis: Moderate discolouration, minor crowding in the aesthetic zone. Non-surgical cosmetic case."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
                   <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "16 mặt dán sứ Emax Zico" : "16 Emax Zico Veneers"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn lâm sàng)" : "8 Days (2 Clinic Appointments)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Thi Thuy Hang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "192.000.000đ" : "$10,400 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "545.000.000đ" : "~$29,600 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn lâm sàng)" : "8 Days (2 Clinic Appointments)"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Thi Thuy Hang</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "192.000.000đ" : "$10,400 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "545.000.000đ" : "~$29,600 AUD"}</strong></li>
                 </ul>
               </div>
               <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
@@ -1070,14 +1070,14 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-1.5">
                   <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Melbourne • Cấy Implant All-on-4" : "Melbourne Patient · All-on-4"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Cầu răng hàm trên cũ hỏng hóc nặng, tiêu xương ổ răng phức tạp. Cần phẫu thuật All-on-4." : "Diagnosis: Failing upper bridges, periodontal bone deterioration. Required full-arch fixed reconstruction."}</p>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Cầu răng hàm trên cũ hỏng hóc nặng, tiêu xương ổ răng phức tạp. Cần phẫu thuật All-on-4." : "Diagnosis: Failing upper bridges, periodontal bone deterioration. Required full-arch fixed reconstruction."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
                   <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "All-on-4 Hàm trên Nobel Biocare" : "Upper All-on-4 Nobel Biocare"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "10 Ngày (Giai đoạn 1)" : "10 Days (Phase 1 Placement)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Huy Hoang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "160.000.000đ" : "$8,675 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "645.000.000đ" : "~$35,000 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "10 Ngày (Giai đoạn 1)" : "10 Days (Phase 1 Placement)"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Huy Hoang</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "160.000.000đ" : "$8,675 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "645.000.000đ" : "~$35,000 AUD"}</strong></li>
                 </ul>
               </div>
               <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
@@ -1094,14 +1094,14 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-1.5">
                   <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Brisbane • Implant Đơn Lẻ" : "Brisbane Patient · Single Implant"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-555 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Mất răng cối lớn hàm dưới, nướu co lại nhẹ. Xương hàm đủ điều kiện đặt trụ thẳng không ghép." : "Diagnosis: Missing single lower molar following extraction. Bone height sufficient without grafting."}</p>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Mất răng cối lớn hàm dưới, nướu co lại nhẹ. Xương hàm đủ điều kiện đặt trụ thẳng không ghép." : "Diagnosis: Missing single lower molar following extraction. Bone height sufficient without grafting."}</p>
                 </div>
                 <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
                   <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "Straumann® SLActive + Mão răng" : "Straumann® SLActive + Crown"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày (Lần 1 cấy trụ)" : "5 Days (Visit 1 Placement)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Pham Xuan Dang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-550">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "75.600.000đ" : "$4,100 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-555">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "129.000.000đ" : "~$7,000 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày (Lần 1 cấy trụ)" : "5 Days (Visit 1 Placement)"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Pham Xuan Dang</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "75.600.000đ" : "$4,100 AUD"}</strong></li>
+                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "129.000.000đ" : "~$7,000 AUD"}</strong></li>
                 </ul>
               </div>
               <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
