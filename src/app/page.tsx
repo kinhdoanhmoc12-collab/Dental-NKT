@@ -824,7 +824,7 @@ export default function HomePage() {
       <section className="py-10 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Nha khoa Thẩm mỹ Chuẩn y khoa vs Gói làm răng 'Turkey Teeth'" : "Vietnam Dental Treatment vs 'Turkey Teeth' Packages"}
             </h2>
@@ -846,17 +846,17 @@ export default function HomePage() {
               <div className="space-y-4 text-sm font-normal">
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "Mài cụt răng thành cọc nhọn" : "Aggressive Tooth Reduction to Pegs"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Mài mòn 60-70% men răng thật thành cọc nhỏ để bọc mão chụp sứ, dễ gây viêm tủy răng vĩnh viễn." : "Healthy enamel is ground to 1–2mm stubs to fit crowns over veneers, causing nerve damage and root canal dependency."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Mài mòn 60-70% men răng thật thành cọc nhỏ để bọc mão chụp sứ, dễ gây viêm tủy răng vĩnh viễn." : "Healthy enamel is ground to 1–2mm stubs to fit crowns over veneers, causing nerve damage and root canal dependency."}</p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "Ép tiến độ điều trị trong 3-5 ngày" : "Rushed 3-to-5 Day Full-Set Turnaround"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Không có thời gian cho mô nướu lành thương, dẫn đến hở kẽ răng, viêm lợi và rơi mặt dán sứ sớm." : "Inadequate time for gum healing, shade assessment, or trial smile reviews — leading to early ceramic failure."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Không có thời gian cho mô nướu lành thương, dẫn đến hở kẽ răng, viêm lợi và rơi mặt dán sứ sớm." : "Inadequate time for gum healing, shade assessment, or trial smile reviews — leading to early ceramic failure."}</p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "Vật liệu sứ trôi nổi không nhãn mác" : "Undisclosed Generic Materials"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Sử dụng phôi sứ gia công không có mã vạch (serial numbers) truy xuất nguồn gốc, gây cản trở khi điều trị tại nước sở tại." : "Unbranded ceramics used without batch numbers, making warranty claims and remedial work in Australia impossible."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Sử dụng phôi sứ gia công không có mã vạch (serial numbers) truy xuất nguồn gốc, gây cản trở khi điều trị tại nước sở tại." : "Unbranded ceramics used without batch numbers, making warranty claims and remedial work in Australia impossible."}</p>
                 </div>
               </div>
             </div>
@@ -872,17 +872,17 @@ export default function HomePage() {
               <div className="space-y-4 text-sm font-normal">
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "Bảo tồn men răng tối đa (prep-less)" : "Ultra-Conservative Enamel Prep"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Mài nhẹ bề mặt men răng (dưới 0.3mm) hoặc không mài răng đối với mặt dán sứ cao cấp, bảo tồn tủy răng tối đa." : "Minimal prep (under 0.3mm enamel touch) or no-prep Emax veneers, preserving maximum natural structure."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Mài nhẹ bề mặt men răng (dưới 0.3mm) hoặc không mài răng đối với mặt dán sứ cao cấp, bảo tồn tủy răng tối đa." : "Minimal prep (under 0.3mm enamel touch) or no-prep Emax veneers, preserving maximum natural structure."}</p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "Lộ trình lâm sàng 7-10 ngày" : "Paced 7–10 Day Clinical Workflow"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Có thời gian lành thương mô nướu, lấy dấu hàm quét kỹ thuật số iTero, và thử răng lắp tạm điều chỉnh khớp cắn." : "Allows adequate gum healing, digital impressions, master ceramist shade reviews, and trial smile fittings."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Có thời gian lành thương mô nướu, lấy dấu hàm quét kỹ thuật số iTero, và thử răng lắp tạm điều chỉnh khớp cắn." : "Allows adequate gum healing, digital impressions, master ceramist shade reviews, and trial smile fittings."}</p>
                 </div>
 
                 <div className="space-y-1">
                   <h4 className="font-bold text-[#0b1e2c] text-sm sm:text-base">{lang === "VN" ? "100% phôi sứ và trụ implant chính hãng" : "Certified Global Brand Materials Only"}</h4>
-                  <p className="text-slate-655 leading-relaxed">{lang === "VN" ? "Cung cấp thẻ bảo hành chính hãng, mã vạch (serial numbers) truy xuất nguồn gốc cho Emax Press, Straumann, Nobel." : "Official serial numbers, manufacturer batch certification stickers, and warranty registrations provided."}</p>
+                  <p className="text-slate-700 leading-relaxed">{lang === "VN" ? "Cung cấp thẻ bảo hành chính hãng, mã vạch (serial numbers) truy xuất nguồn gốc cho Emax Press, Straumann, Nobel." : "Official serial numbers, manufacturer batch certification stickers, and warranty registrations provided."}</p>
                 </div>
               </div>
             </div>
