@@ -149,17 +149,17 @@ export default function Header() {
               onClick={(e) => handleLinkClick("/", e)}
               className="h-full flex items-center"
             >
-              <div className="bg-teal-brand text-white px-5 pr-10 md:px-8 md:pr-16 flex items-center relative [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] select-none h-16 md:h-20 whitespace-nowrap">
+              <div className="bg-teal-brand text-white px-5 pr-10 md:px-6 md:pr-12 xl:px-4 xl:pr-10 2xl:px-8 2xl:pr-16 flex items-center relative [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] select-none h-16 md:h-20 whitespace-nowrap">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white animate-pulse shrink-0" />
-                  <span className="font-serif text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight">Dental NTK</span>
+                  <Sparkles className="w-5 h-5 md:w-6 xl:w-5 2xl:w-6 text-white animate-pulse shrink-0" />
+                  <span className="font-serif text-xl sm:text-2xl md:text-2.5xl xl:text-lg 2xl:text-3xl font-extrabold tracking-tight">Dental NTK</span>
                 </div>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-5 2xl:gap-8">
+          <nav className="hidden xl:flex items-center gap-3 2xl:gap-8">
             {navLinks.map((link) => {
               if (link.href === "/services") {
                 const isServicesActive = pathname.startsWith("/services");
@@ -171,14 +171,14 @@ export default function Header() {
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
                     <button
-                      className={`font-bold text-[0.88rem] 2xl:text-[0.92rem] transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none whitespace-nowrap nav-link-hover ${
+                      className={`font-bold text-[0.82rem] 2xl:text-[0.92rem] transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none outline-none whitespace-nowrap nav-link-hover ${
                         isServicesActive
                           ? "text-teal-brand nav-link-active font-black"
                           : "text-[#0b1e2c] hover:text-teal-brand"
                       }`}
                     >
                       <span>{link.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                      <ChevronDown className="w-3.5 h-3.5 transition-transform group-hover:rotate-180" />
                     </button>
                     
                     {/* Hover Dropdown Panel */}
@@ -207,7 +207,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleLinkClick(link.href, e)}
-                  className={`font-bold text-[0.88rem] 2xl:text-[0.92rem] transition-colors py-2 whitespace-nowrap nav-link-hover ${
+                  className={`font-bold text-[0.82rem] 2xl:text-[0.92rem] transition-colors py-2 whitespace-nowrap nav-link-hover ${
                     isActive 
                       ? "text-teal-brand nav-link-active font-black" 
                       : "text-[#0b1e2c] hover:text-teal-brand"
@@ -249,7 +249,7 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link 
               href="/contact" 
-              className="hidden sm:inline-flex items-center gap-2 bg-teal-brand hover:bg-teal-brand-hover text-white px-5 py-2.5 xl:px-6 xl:py-3 font-semibold text-xs xl:text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-teal-brand hover:bg-teal-brand-hover text-white px-4 py-2.5 xl:px-4 xl:py-2.5 2xl:px-6 2xl:py-3 font-semibold text-xs xl:text-xs 2xl:text-sm rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
             >
               <Calendar className="w-4 h-4" />
               <span>{t.navBook}</span>
