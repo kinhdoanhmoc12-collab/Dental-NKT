@@ -613,7 +613,7 @@ export default function DoctorDetailPage() {
             ) : (
               <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-1">
                 <span className="text-xs text-slate-400 font-medium block">{lang === "VN" ? "Chuyên khoa" : "Specialty"}</span>
-                <strong className="text-sm sm:text-base font-serif font-extrabold text-teal-brand block truncate">{role}</strong>
+                <strong className="text-sm sm:text-base font-serif font-extrabold text-teal-brand block">{role}</strong>
               </div>
             )}
 
