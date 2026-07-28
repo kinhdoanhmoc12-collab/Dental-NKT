@@ -85,7 +85,7 @@ export default function Header() {
           TOPBAR
           ======================================================== */}
       <div className="hidden md:block bg-[#0b1e2c] text-slate-300 px-4 sm:px-6 lg:px-8 border-b border-slate-800 text-xs py-2.5">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
+        <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
           <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 sm:gap-6">
             <a href="https://wa.me/84963333844" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-teal-brand transition-colors">
               <Phone className="w-3.5 h-3.5 text-teal-brand" />
@@ -140,7 +140,7 @@ export default function Header() {
           NAVBAR / HEADER
           ======================================================== */}
       <div className="bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-md">
-        <div className="max-w-7xl mx-auto flex items-center justify-between pr-4 sm:pr-6 lg:pr-8 h-16 md:h-20">
+        <div className="max-w-[90rem] mx-auto flex items-center justify-between pr-4 sm:pr-6 lg:pr-8 h-16 md:h-20">
           
           {/* Logo Slanted Accent */}
           <div className="h-full flex items-center">
@@ -159,7 +159,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-3 2xl:gap-8">
+          <nav className="hidden xl:flex items-center gap-2 2xl:gap-8">
             {navLinks.map((link) => {
               if (link.href === "/services") {
                 const isServicesActive = pathname.startsWith("/services");
