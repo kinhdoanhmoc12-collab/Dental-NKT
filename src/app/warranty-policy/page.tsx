@@ -84,7 +84,7 @@ export default function WarrantyPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Trẻ Dental Hanoi",
+    "name": "Dental NTK Hanoi",
     "url": "https://nhakhoatre.vn/warranty-policy",
     "logo": "https://nhakhoatre.vn/logo.png",
     "description": "Official 11-section Dental Warranty Policy for Australian patients. Up to 10-year warranty on Emax Veneers & Implants benchmarked against 20+ leading clinics in Southeast Asia.",
@@ -135,13 +135,13 @@ export default function WarrantyPage() {
         <div className="relative z-10 space-y-6">
           <div className="inline-flex items-center gap-2 bg-teal-brand/20 text-teal-brand border border-teal-brand/30 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
-            <span>THE TRẺ PROMISE</span>
+            <span>THE DENTAL NTK PROMISE</span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold leading-tight text-white">
             {lang === "VN"
-              ? "Chính Sách Bảo Hành Quốc Tế Trẻ Dental"
-              : "Trẻ Dental International Warranty Policy"}
+              ? "Chính Sách Bảo Hành Quốc Tế Dental NTK"
+              : "Dental NTK International Warranty Policy"}
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl font-medium text-teal-brand">
@@ -357,8 +357,8 @@ export default function WarrantyPage() {
         </h2>
         <p className="text-xs sm:text-sm text-slate-500 italic">
           {lang === "VN"
-            ? "Các trường hợp loại trừ tiêu chuẩn trong ngành nha khoa quốc tế — áp dụng tại Trẻ Dental:"
-            : "Standard exclusions across the industry — and at Trẻ Dental:"}
+            ? "Các trường hợp loại trừ tiêu chuẩn trong ngành nha khoa quốc tế — áp dụng tại Dental NTK:"
+            : "Standard exclusions across the industry — and at Dental NTK:"}
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-700 leading-relaxed font-light">
           <li className="flex items-start gap-2">
@@ -420,11 +420,11 @@ export default function WarrantyPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Trẻ Dental Responsibilities */}
+          {/* Dental NTK Responsibilities */}
           <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-100 shadow-sm space-y-4">
             <h3 className="font-bold text-teal-brand text-lg flex items-center gap-2">
               <ShieldCheck className="w-5 h-5" />
-              <span>TRẺ DENTAL — {lang === "VN" ? "Trách nhiệm của chúng tôi" : "Our Responsibilities"}</span>
+              <span>DENTAL NTK — {lang === "VN" ? "Trách nhiệm của chúng tôi" : "Our Responsibilities"}</span>
             </h3>
             <ul className="space-y-3 text-xs sm:text-sm text-slate-650 leading-relaxed font-light">
               <li className="flex items-start gap-2">
@@ -535,7 +535,7 @@ export default function WarrantyPage() {
         <div className="text-sm sm:text-base text-slate-600 leading-relaxed font-light">
           <p>
             {lang === "VN" ? (
-              "Nhiều phòng khám nha khoa nước ngoài thường ngầm yêu cầu bệnh nhân phải bay quay lại trực tiếp mỗi năm để giữ hiệu lực bảo hành — đây là một cái bẫy chi phí rất lớn với bệnh nhân sống tại Úc. Trẻ Dental không áp đặt điều khoản này. Việc tái khám định kỳ hàng năm của bạn hoàn toàn có thể thực hiện từ xa: Bạn chỉ cần gửi ảnh chụp răng, hoặc một đoạn video ngắn quay rõ nướu và khớp cắn qua WhatsApp/Email cho chúng tôi. Bác sĩ sẽ đánh giá từ xa và thông báo nếu có vấn đề thực sự cần can thiệp trực tiếp. Bạn chỉ cần bay sang khi có yêu cầu lâm sàng thực tế, hoàn toàn không có việc bắt buộc quay lại định kỳ mỗi năm một cách máy móc."
+              "Nhiều phòng khám nha khoa nước ngoài thường ngầm yêu cầu bệnh nhân phải bay quay lại trực tiếp mỗi năm để giữ hiệu lực bảo hành — đây là một cái bẫy chi phí rất lớn với bệnh nhân sống tại Úc. Dental NTK không áp đặt điều khoản này. Việc tái khám định kỳ hàng năm của bạn hoàn toàn có thể thực hiện từ xa: Bạn chỉ cần gửi ảnh chụp răng, hoặc một đoạn video ngắn quay rõ nướu và khớp cắn qua WhatsApp/Email cho chúng tôi. Bác sĩ sẽ đánh giá từ xa và thông báo nếu có vấn đề thực sự cần can thiệp trực tiếp. Bạn chỉ cần bay sang khi có yêu cầu lâm sàng thực tế, hoàn toàn không có việc bắt buộc quay lại định kỳ mỗi năm một cách máy móc."
             ) : (
               "Many overseas clinics quietly require an annual in-person visit to keep a warranty valid — an expensive trap for patients who live far away. We do not. Your annual review can be done remotely: send updated photos, or a short video of your bite and gums, through WhatsApp or email. We will tell you if something needs an in-person look. An in-person visit is only required when we can see a genuine reason for one, not as a default."
             )}
@@ -611,7 +611,7 @@ export default function WarrantyPage() {
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
             {lang === "VN" ? (
-              "Bảo hành này chi trả hoàn toàn cho chất lượng điều trị nha khoa của bạn tại Trẻ Dental. Tuy nhiên, nó không thay thế cho bảo hiểm du lịch. Bảo hiểm du lịch giúp bạn chi trả cho các trường hợp cấp cứu y tế thực sự, cứu hộ y tế, mất hành lý hoặc gián đoạn chuyến bay — chứ không phải việc điều trị nha khoa theo kế hoạch. Chúng tôi cực kỳ khuyến nghị bạn mua bảo hiểm du lịch phù hợp trước khi khởi hành từ Úc."
+              "Bảo hành này chi trả hoàn toàn cho chất lượng điều trị nha khoa của bạn tại Dental NTK. Tuy nhiên, nó không thay thế cho bảo hiểm du lịch. Bảo hiểm du lịch giúp bạn chi trả cho các trường hợp cấp cứu y tế thực sự, cứu hộ y tế, mất hành lý hoặc gián đoạn chuyến bay — chứ không phải việc điều trị nha khoa theo kế hoạch. Chúng tôi cực kỳ khuyến nghị bạn mua bảo hiểm du lịch phù hợp trước khi khởi hành từ Úc."
             ) : (
               "This warranty covers the quality of your dental treatment. It is not a substitute for travel insurance, which covers genuine emergencies, medical evacuation, and trip disruption — not planned dental work. We strongly recommend arranging appropriate travel insurance before you depart."
             )}
