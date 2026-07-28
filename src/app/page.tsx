@@ -328,7 +328,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 3: DENTAL SERVICES AND PRICE INDEX
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -555,7 +555,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 5.5: THE PATIENT JOURNEY (INQUIRY TO SMILE)
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-slate-50 border-t border-slate-100">
+      <section className="py-10 md:py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
@@ -671,7 +671,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 5.6: SAMPLE TRAVEL & TREATMENT ITINERARY (9 DAYS)
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-white border-b border-slate-100">
+      <section className="py-10 md:py-20 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           {/* Section Header */}
@@ -821,7 +821,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 6: CLINICAL COMPARISON (vs. Turkey Teeth)
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
+      <section className="py-10 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -894,7 +894,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 7: DOCTORS BOARD PREVIEW (CAROUSEL 3 AT A TIME)
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-10 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -1022,7 +1022,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 9: REAL AUSTRALIAN PATIENT CASES
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
+      <section className="py-10 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3">
@@ -1118,7 +1118,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 11: HOMEPAGE FORM INQUIRY
           ======================================================== */}
-      <section id="homepage-inquiry" className="py-16 md:py-20 bg-slate-50 border-t border-slate-100">
+      <section id="homepage-inquiry" className="py-10 md:py-20 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
@@ -1276,7 +1276,7 @@ export default function HomePage() {
       {/* ========================================================
           SECTION 12: FREQUENTLY ASKED QUESTIONS (FAQ)
           ======================================================== */}
-      <section className="py-16 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
+      <section className="py-10 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
