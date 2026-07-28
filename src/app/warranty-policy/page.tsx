@@ -552,26 +552,53 @@ export default function WarrantyPage() {
           <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-normal">
             <p>
               {lang === "VN" ? (
-                "Chúng tôi hiểu rằng việc quay trở lại Việt Nam để bảo hành không phải lúc nào cũng khả thi đối với bệnh nhân quốc tế vì lý do công việc hoặc sức khỏe. Để đảm bảo quyền lợi tốt nhất, chúng tôi áp dụng chính sách hỗ trợ linh hoạt sau:"
+                "Chúng tôi hiểu rằng đối với bệnh nhân quốc tế, việc quay trở lại Việt Nam để thực hiện các sửa chữa bảo hành có thể gặp nhiều khó khăn về mặt thời gian, sức khỏe hoặc công việc. Để bảo vệ tối đa quyền lợi của bạn, Dental NTK cung cấp giải pháp hỗ trợ khắc phục tại nước sở tại theo quy trình chi tiết dưới đây:"
               ) : (
-                "We understand that traveling back to Vietnam for warranty repairs is not always feasible for international patients due to work or health reasons. To ensure your best interests, we offer the following flexible support options:"
+                "We understand that traveling back to Vietnam for warranty repairs can be highly inconvenient for international patients due to work constraints, health conditions, or travel limitations. To guarantee your peace of mind and protect your investment, Dental NTK offers a comprehensive home-country support policy structured as follows:"
               )}
             </p>
-            <ul className="space-y-3 list-disc pl-5">
+            <ul className="space-y-4 list-disc pl-5 text-sm sm:text-base text-slate-850">
               <li>
-                {lang === "VN"
-                  ? "Trong trường hợp yêu cầu bảo hành được chấp thuận nhưng việc quay lại Việt Nam là hoàn toàn không khả thi, chúng tôi sẽ phối hợp với một nha sĩ có trình độ phù hợp tại nước sở tại của bạn để đánh giá và thực hiện sửa chữa nếu cần thiết."
-                  : "Where a claim is approved but travel is genuinely not feasible, we will coordinate with a suitably qualified dentist in your home country to assess and, where appropriate, carry out the repair."}
+                {lang === "VN" ? (
+                  <><strong>1. Điều kiện áp dụng hỗ trợ:</strong> Áp dụng cho các lỗi kỹ thuật hoặc vật liệu thuộc phạm vi bảo hành đã được Dental NTK phê duyệt qua đánh giá từ xa, và bệnh nhân có lý do bất khả kháng (sức khỏe không cho phép di chuyển bằng máy bay, ràng buộc công việc/visa hoặc lý do cá nhân chính đáng) không thể quay lại Việt Nam.</>
+                ) : (
+                  <><strong>1. Eligibility Conditions:</strong> Applies to covered technical or material faults approved by Dental NTK via remote assessment, where the patient has compelling reasons (medical unfitness to fly, visa restrictions, or professional/personal constraints) preventing them from traveling back to Vietnam.</>
+                )}
               </li>
               <li>
-                {lang === "VN"
-                  ? "Chúng tôi sẽ hoàn trả chi phí sửa chữa hợp lý đã được phê duyệt trước — tối đa bằng giá trị của đợt điều trị ban đầu — khi nhận được hóa đơn và hồ sơ lâm sàng."
-                  : "We will reimburse reasonable, pre-approved repair costs — up to the value of the original treatment — on receipt of invoices and clinical records."}
+                {lang === "VN" ? (
+                  <><strong>2. Quy trình liên hệ và đánh giá:</strong> Trước khi thực hiện bất kỳ can thiệp nào tại địa phương, bệnh nhân bắt buộc phải liên hệ với Dental NTK qua Email hoặc WhatsApp để gửi hình ảnh, phim X-quang (nếu có) và mô tả triệu chứng. Bác sĩ của chúng tôi sẽ tiến hành chẩn đoán lâm sàng từ xa trước khi đưa ra chỉ định tiếp theo.</>
+                ) : (
+                  <><strong>2. Initial Contact & Remote Assessment:</strong> Before undergoing any dental work locally, the patient must contact Dental NTK via Email or WhatsApp with clear photos, X-rays (if available), and a description of symptoms. Our clinical team will perform an initial remote diagnosis before authorizing next steps.</>
+                )}
               </li>
               <li>
-                {lang === "VN"
-                  ? "Việc này được đánh giá theo từng trường hợp cụ thể và không thay thế cho việc điều trị tại phòng khám của chúng tôi (vốn là con đường nhanh nhất và trực tiếp nhất để giải quyết vấn đề)."
-                  : "This is assessed case by case and does not replace treatment at our clinic, which remains the fastest and most direct path to resolution."}
+                {lang === "VN" ? (
+                  <><strong>3. Hợp tác với nha sĩ tại nước sở tại:</strong> Sau khi có sự đồng ý bằng văn bản của Dental NTK, bệnh nhân có thể đến khám tại một phòng khám nha khoa có chứng chỉ hành nghề hợp pháp tại địa phương (Úc). Nha sĩ địa phương sẽ kiểm tra trực tiếp và lập <strong>Phác đồ điều trị khắc phục kèm Báo giá chi tiết</strong>.</>
+                ) : (
+                  <><strong>3. Collaboration with a Local Dentist:</strong> Upon receiving prior written consent from Dental NTK, the patient may visit a certified, licensed dental clinic in their home country (e.g., Australia). The local dentist will perform an examination and provide a <strong>detailed treatment plan and cost estimate</strong>.</>
+                )}
+              </li>
+              <li>
+                {lang === "VN" ? (
+                  <><strong>4. Phê duyệt chi phí trước khi điều trị (Pre-approval):</strong> Bệnh nhân gửi phác đồ và báo giá của nha sĩ địa phương cho Dental NTK. Chúng tôi sẽ xem xét và <strong>xác nhận bằng văn bản (Email/WhatsApp) mức chi phí được phê duyệt chi trả</strong> trước khi nha sĩ địa phương tiến hành điều trị. Mọi chi phí tự phát sinh trước khi được Dental NTK phê duyệt bằng văn bản sẽ không được hoàn trả.</>
+                ) : (
+                  <><strong>4. Mandatory Pre-Approval of Costs:</strong> The patient must submit the local dentist's treatment plan and quote to Dental NTK. We will review and <strong>issue a written approval confirming the exact covered amount</strong> before any local treatment begins. Dental NTK cannot reimburse any unauthorized expenses incurred prior to this written approval.</>
+                )}
+              </li>
+              <li>
+                {lang === "VN" ? (
+                  <><strong>5. Hạn mức và phương thức hoàn trả:</strong> Dental NTK sẽ hoàn trả chi phí sửa chữa thực tế theo hóa đơn đã được phê duyệt trước, <strong>tối đa bằng 100% giá trị của dịch vụ điều trị ban đầu</strong> mà bệnh nhân đã thanh toán cho chúng tôi. Khoản tiền hoàn trả sẽ được chuyển khoản trực tiếp vào tài khoản ngân hàng của bệnh nhân sau khi nhận đầy đủ hóa đơn hợp pháp và hồ sơ điều trị từ nha sĩ địa phương.</>
+                ) : (
+                  <><strong>5. Reimbursement Limits & Process:</strong> Dental NTK will reimburse reasonable, pre-approved repair costs up to <strong>100% of the original treatment cost paid to us</strong> for that specific service. Reimbursements will be processed via bank transfer upon receiving official invoices and clinical records from the local practitioner.</>
+                )}
+              </li>
+              <li>
+                {lang === "VN" ? (
+                  <><strong>6. Giới hạn điều trị:</strong> Phương án sửa chữa tại nước sở tại chỉ áp dụng cho các ca khắc phục, điều chỉnh khớp cắn hoặc sửa chữa nhỏ để ổn định chức năng ăn nhai. Đối với các ca hỏng hóc lớn cần làm lại toàn bộ (như cấy lại trụ Implant hoặc làm lại cầu răng lớn), việc điều trị trực tiếp tại phòng khám của chúng tôi ở Hà Nội vẫn là phương án bắt buộc để đảm bảo chất lượng y khoa tốt nhất.</>
+                ) : (
+                  <><strong>6. Scope of Local Treatment:</strong> Home-country treatment is intended for minor adjustments, bite corrections, or stabilization repairs. Major re-treatments (such as replacing failed implant fixtures or fabricating new large bridges) must still be carried out directly at our clinic in Hanoi to ensure the highest standards of clinical success.</>
+                )}
               </li>
             </ul>
           </div>
