@@ -543,13 +543,13 @@ export default function WarrantyPage() {
       {/* ==========================================================
           SECTION 8: SUPPORT FOR PATIENTS WHO CANNOT RETURN TO VIETNAM
           ========================================================== */}
-      <section className="bg-gradient-to-br from-[#0b1e2c] to-[#16364d] text-white p-8 sm:p-12 rounded-3xl shadow-xl space-y-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm space-y-6">
+        <div className="space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
+            {lang === "VN" ? "8. Hỗ Trợ Cho Bệnh Nhân Không Thể Quay Lại Việt Nam" : "8. Support for Patients Who Cannot Return to Vietnam"}
+          </h2>
 
-        <div className="relative z-10 space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white">{lang === "VN" ? "8. Hỗ Trợ Cho Bệnh Nhân Không Thể Quay Lại Việt Nam" : "8. Support for Patients Who Cannot Return to Vietnam"}</h2>
-
-          <div className="text-sm sm:text-base text-slate-200 leading-relaxed space-y-4 font-normal">
+          <div className="text-sm sm:text-base text-slate-800 leading-relaxed space-y-4 font-normal">
             <p>
               {lang === "VN" ? (
                 "Chúng tôi hiểu rằng đối với bệnh nhân quốc tế, việc quay trở lại Việt Nam để thực hiện các sửa chữa bảo hành có thể gặp nhiều khó khăn về mặt thời gian, sức khỏe hoặc công việc. Để bảo vệ tối đa quyền lợi của bạn, Dental NTK cung cấp giải pháp hỗ trợ khắc phục tại nước sở tại theo quy trình chi tiết dưới đây:"
