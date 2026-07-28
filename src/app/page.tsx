@@ -477,7 +477,7 @@ export default function HomePage() {
                   </a>
                 </div>
 
-                <p className="text-[10px] text-slate-400 font-light text-center leading-relaxed mt-2">
+                <p className="text-[10px] text-slate-600 font-medium text-center leading-relaxed mt-2">
                   {lang === "VN"
                     ? "* Lưu ý: Con số trên là mức ước tính trung bình cho mục đích tham khảo. Chi phí thực tế sẽ được bác sĩ xác định dựa trên kết quả chụp phim X-quang răng và phác đồ điều trị cụ thể của bạn."
                     : "* Note: The calculation above is an average estimate for reference only. The actual cost will be determined by the specialist based on your dental X-ray and personalized treatment plan."}
