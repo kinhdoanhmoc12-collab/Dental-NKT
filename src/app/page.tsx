@@ -570,7 +570,7 @@ export default function HomePage() {
                   <div className="w-10 h-10 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-sm shrink-0">01</div>
                   <div className="space-y-1">
                     <h3 className="text-sm sm:text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Sơ đồ chi tiết từng chiếc răng" : "Tooth-by-Tooth Clinical Scope"}</h3>
-                    <p className="text-xs sm:text-sm text-slate-550 leading-relaxed font-normal">{lang === "VN" ? "Phác thảo rõ mục tiêu điều trị, số lượng răng veneer/implant và tùy chọn thẩm mỹ." : "A complete tooth chart detailing treatment goals, conditions, and cosmetic shade options."}</p>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Phác thảo rõ mục tiêu điều trị, số lượng răng veneer/implant và tùy chọn thẩm mỹ." : "A complete tooth chart detailing treatment goals, conditions, and cosmetic shade options."}</p>
                   </div>
                 </div>
 
@@ -578,7 +578,7 @@ export default function HomePage() {
                   <div className="w-10 h-10 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-sm shrink-0">02</div>
                   <div className="space-y-1">
                     <h3 className="text-sm sm:text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Khảo sát và Đánh giá mật độ xương" : "Bone and Grafting Risk Check"}</h3>
-                    <p className="text-xs sm:text-sm text-slate-550 leading-relaxed font-normal">{lang === "VN" ? "Khảo sát tình trạng xương hàm và đánh giá nguy cơ ghép xoang nâng xương." : "Bone height check and sinus proximity check — completed during consultation."}</p>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Khảo sát tình trạng xương hàm và đánh giá nguy cơ ghép xoang nâng xương." : "Bone height check and sinus proximity check — completed during consultation."}</p>
                   </div>
                 </div>
 
@@ -586,7 +586,7 @@ export default function HomePage() {
                   <div className="w-10 h-10 bg-teal-brand-light text-teal-brand rounded-full flex items-center justify-center font-bold text-sm shrink-0">03</div>
                   <div className="space-y-1">
                     <h3 className="text-sm sm:text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Cam kết báo giá trọn gói bằng văn bản" : "Itemised Financial Statement"}</h3>
-                    <p className="text-xs sm:text-sm text-slate-550 leading-relaxed font-normal">{lang === "VN" ? "Văn bản báo giá minh bạch theo đúng loại tiền tệ của bạn, cam kết không phát sinh phụ phí." : "Written pricing per tooth, selected material brand, warranty terms, and travel itinerary."}</p>
+                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Văn bản báo giá minh bạch theo đúng loại tiền tệ của bạn, cam kết không phát sinh phụ phí." : "Written pricing per tooth, selected material brand, warranty terms, and travel itinerary."}</p>
                   </div>
                 </div>
               </div>
