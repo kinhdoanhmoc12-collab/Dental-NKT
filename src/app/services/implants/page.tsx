@@ -499,7 +499,7 @@ export default function ImplantsPage() {
               titleEN: "Final Impression Taking",
               descVN: "Sau thời gian chờ tích hợp xương: Đối với ca cấy ghép bình thường (không ghép xương) là từ 6-12 tuần; đối với các ca có ghép xương ổ lớn là từ 3 - 6 - 9 tháng tùy thể tích xương. Bác sĩ sẽ lấy dấu răng sứ vĩnh viễn trên trụ.",
               descEN: "After osseointegration: For normal cases (no bone graft), wait 6-12 weeks; for cases with bone grafts, wait 3-6-9 months depending on bone density. The dentist will take impressions for the permanent crown.",
-              img: "/step8_impression.jpg"
+              img: "/step8_impression_v2.jpg"
             },
             {
               num: 9,
