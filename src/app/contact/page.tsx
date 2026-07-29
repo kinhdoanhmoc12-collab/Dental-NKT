@@ -96,9 +96,9 @@ export default function ContactPage() {
                   <div className="p-2.5 bg-teal-brand-light text-teal-brand rounded-lg shrink-0 h-10 w-10 flex items-center justify-center">
                     <Sparkles className="w-5 h-5" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust1Title}</h4>
-                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust1Desc}</p>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wide">{t.formTrust1Title}</h4>
+                    <p className="text-xs sm:text-sm text-slate-650 font-normal leading-relaxed">{t.formTrust1Desc}</p>
                   </div>
                 </div>
 
@@ -107,9 +107,9 @@ export default function ContactPage() {
                   <div className="p-2.5 bg-teal-brand-light text-teal-brand rounded-lg shrink-0 h-10 w-10 flex items-center justify-center">
                     <Check className="w-5 h-5" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust2Title}</h4>
-                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust2Desc}</p>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wide">{t.formTrust2Title}</h4>
+                    <p className="text-xs sm:text-sm text-slate-650 font-normal leading-relaxed">{t.formTrust2Desc}</p>
                   </div>
                 </div>
 
@@ -118,9 +118,9 @@ export default function ContactPage() {
                   <div className="p-2.5 bg-teal-brand-light text-teal-brand rounded-lg shrink-0 h-10 w-10 flex items-center justify-center">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div className="space-y-0.5">
-                    <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust3Title}</h4>
-                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust3Desc}</p>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wide">{t.formTrust3Title}</h4>
+                    <p className="text-xs sm:text-sm text-slate-650 font-normal leading-relaxed">{t.formTrust3Desc}</p>
                   </div>
                 </div>
 
