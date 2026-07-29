@@ -458,26 +458,26 @@ export default function VeneersPage() {
       {/* ==========================================
           7. ĐỘI NGU BÁC SĨ & LABO CHẾ TÁC
           ========================================== */}
-      <section className="bg-gradient-to-br from-slate-900 to-[#0b1e2c] text-white p-6 sm:p-10 rounded-3xl space-y-6">
-        <div className="space-y-2">
+      <section className="bg-white p-6 sm:p-10 border border-slate-200/80 rounded-3xl space-y-6">
+        <div className="space-y-2 text-center">
           <span className="text-teal-brand text-xs font-bold uppercase tracking-wider block">
-            {isVN ? "ĐỘI NGU LÂM SÀNG & TIÊU CHUẨN" : "CLINICAL TEAM & LAB STANDARDS"}
+            {isVN ? "ĐỘI NGŨ LÂM SÀNG & TIÊU CHUẨN" : "CLINICAL TEAM & LAB STANDARDS"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white text-center">
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "7. Labo Chế Tác CAD/CAM Nội Bộ" : "7. On-Site Lab Credentials"}
           </h2>
         </div>
 
         <div className="max-w-xl mx-auto pt-2">
-          <div className="bg-white/10 p-5 rounded-2xl border border-white/15 space-y-3 backdrop-blur-sm">
+          <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200/80 space-y-3">
             <div className="flex items-center gap-3">
               <Award className="w-6 h-6 text-teal-brand shrink-0" />
               <div>
-                <h3 className="font-bold text-base text-white">{isVN ? "Labo Chế Tác CAD/CAM Nội Bộ" : "On-Site CAD/CAM Digital Lab"}</h3>
+                <h3 className="font-bold text-base text-[#0b1e2c]">{isVN ? "Labo Chế Tác CAD/CAM Nội Bộ" : "On-Site CAD/CAM Digital Lab"}</h3>
                 <p className="text-xs text-teal-brand font-medium">{isVN ? "Nhập khẩu phôi sứ chính hãng Ivoclar (Đức)" : "Genuine Ivoclar Vivadent Ceramic Ingot Supply"}</p>
               </div>
             </div>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-light border-t border-white/10 pt-3">
+            <ul className="space-y-1.5 text-xs text-slate-700 font-medium border-t border-slate-200/85 pt-3">
               <li>• {isVN ? "Chứng nhận ISO 13485 & CE cho vật liệu y tế" : "ISO 13485 & CE certified bio-compatible materials"}</li>
               <li>• {isVN ? "Hệ thống máy đắp sứ và máy phay 5 trục Roland (Nhật)" : "Roland 5-axis precision milling & Ivoclar press furnace"}</li>
               <li>• {isVN ? "Nghệ nhân đắp sứ thủ công tinh xảo theo tông màu da" : "Master ceramists custom shade-matching each unit"}</li>
