@@ -24,7 +24,7 @@ async function main() {
   console.log(pullRes);
 
   console.log('\n--- Building application on VPS ---');
-  const buildRes = await sshExec('cd /var/www/dental-nkt && npm run build');
+  const buildRes = await sshExec('cd /var/www/dental-nkt && rm -rf .next && npm run build');
   console.log(buildRes);
 
   console.log('\n--- Restarting PM2 process ---');
