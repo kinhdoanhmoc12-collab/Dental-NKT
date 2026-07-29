@@ -468,7 +468,7 @@ export default function VeneersPage() {
           </h2>
         </div>
 
-        <div className="max-w-xl pt-2">
+        <div className="max-w-xl mx-auto pt-2">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <Award className="w-6 h-6 text-teal-brand shrink-0" />
