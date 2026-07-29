@@ -104,12 +104,9 @@ export default function ImplantsPage() {
       {/* 1. What is Implant */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
         <div className="md:col-span-7 space-y-6">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-gold-brand" />
-            <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-              {isVN ? "1. Implant là gì?" : "1. What is a Dental Implant?"}
-            </h2>
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
+            {isVN ? "1. Implant là gì?" : "1. What is a Dental Implant?"}
+          </h2>
           <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
             {isVN
               ? "Cấy ghép Implant (Dental Implant) là giải pháp phục hồi răng đã mất bằng cách đặt một trụ titan (hoặc vật liệu tương thích sinh học) vào xương hàm, đóng vai trò như chân răng thật. Sau khi trụ tích hợp ổn định với xương, bác sĩ gắn khớp nối (Abutment) và mão răng sứ lên trên để phục hồi hình dáng, chức năng ăn nhai như răng thật."
