@@ -285,7 +285,7 @@ export default function VeneersPage() {
           <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
             <div className="w-8 h-8 rounded-full bg-teal-brand/20 text-teal-brand font-bold flex items-center justify-center text-xs">01</div>
             <h3 className="font-bold text-sm text-[#0b1e2c]">{isVN ? "Digital Smile Design 3D" : "Digital 3D Simulation"}</h3>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-700 font-medium leading-relaxed">
               {isVN ? "Xem trước mô phỏng nụ cười trên máy tính để thống nhất đường nét trước khi mài răng." : "Review digital mockups on screen to align expectations prior to prepping."}
             </p>
           </div>
@@ -293,7 +293,7 @@ export default function VeneersPage() {
           <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
             <div className="w-8 h-8 rounded-full bg-teal-brand/20 text-teal-brand font-bold flex items-center justify-center text-xs">02</div>
             <h3 className="font-bold text-sm text-[#0b1e2c]">{isVN ? "Đeo Veneer Tạm Thời" : "Temporary Mockup Wear"}</h3>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-700 font-medium leading-relaxed">
               {isVN ? "Đeo răng tạm trong 2-3 ngày để trải nghiệm ăn nhai, soi gương và góp ý độ dài/màu sắc." : "Wear temporaries for 2-3 days to test phonetics, eating, and aesthetic shape."}
             </p>
           </div>
@@ -301,7 +301,7 @@ export default function VeneersPage() {
           <div className="p-5 bg-slate-50 rounded-2xl border border-slate-100 space-y-2">
             <div className="w-8 h-8 rounded-full bg-teal-brand/20 text-teal-brand font-bold flex items-center justify-center text-xs">03</div>
             <h3 className="font-bold text-sm text-[#0b1e2c]">{isVN ? "Thử Ướp Veneer Thật" : "Try-In Phase & Final Sign-Off"}</h3>
-            <p className="text-xs text-slate-500 font-light leading-relaxed">
+            <p className="text-xs text-slate-700 font-medium leading-relaxed">
               {isVN ? "Ướm veneer thật lên răng bằng keo thử, soi gương chỉnh sửa hài lòng 100% mới dán vĩnh viễn." : "Test-fit actual veneers with try-in paste. Permanent bonding occurs ONLY upon your sign-off."}
             </p>
           </div>
