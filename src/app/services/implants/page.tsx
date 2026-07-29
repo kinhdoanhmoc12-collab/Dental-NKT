@@ -120,21 +120,12 @@ export default function ImplantsPage() {
               ? "Đây là giải pháp phục hồi răng mất được đánh giá cao nhất hiện nay vì không xâm lấn răng kế cận (khác với cầu răng sứ phải mài răng bên cạnh), và giúp ngăn tiêu xương hàm — vấn đề thường gặp khi mất răng lâu ngày không phục hồi."
               : "Implantology is widely regarded as the best restoration method because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth."}
           </p>
-        </div>
-        <div className="md:col-span-5 space-y-6">
-          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-            <Image 
-              src="/implant_structure.jpg" 
-              alt="Premium Dental Implant Model Structure"
-              fill
-              className="object-cover"
-            />
-          </div>
+
           <div className="bg-teal-brand-light/30 border border-teal-brand-light p-6 sm:p-8 rounded-3xl space-y-4">
             <h3 className="text-base font-bold text-dark-brand">
               {isVN ? "Lợi ích vượt trội tại DentalNKT" : "Key Benefits at DentalNKT"}
             </h3>
-            <ul className="space-y-3.5">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5">
               {[
                 isVN ? "Phục hồi 99% thẩm mỹ & lực nhai như răng thật" : "Restores 99% of original chewing power & aesthetics",
                 isVN ? "Trụ tương thích sinh học cao, tích hợp xương nhanh" : "Highly biocompatible posts, rapid osseointegration",
@@ -149,6 +140,15 @@ export default function ImplantsPage() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="md:col-span-5 relative aspect-square w-full rounded-3xl overflow-hidden border border-slate-200 shadow-md">
+          <Image 
+            src="/implant_structure.jpg" 
+            alt="Premium Dental Implant Model Structure"
+            fill
+            className="object-cover"
+          />
         </div>
       </section>
 
