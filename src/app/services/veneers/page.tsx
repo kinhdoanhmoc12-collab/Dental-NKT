@@ -242,10 +242,10 @@ export default function VeneersPage() {
             {isVN ? "3. Minh Bạch Y Khoa: Rủi Ro & Điều Cần Biết Trước Khi Quyết Định" : "3. Clinical Transparency: Risks & Key Considerations"}
           </h2>
         </div>
-        <p className="text-xs sm:text-sm text-amber-900 leading-relaxed font-light">
+        <p className="text-xs sm:text-sm text-amber-900 leading-relaxed font-normal">
           {isVN 
-            ? "DentalNTK không cam kết 'hoàn hảo 100%' hay 'không rủi ro'. Mọi thủ thuật nha khoa thẩm mỹ đều có các đặc tính sinh học bạn cần hiểu rõ trước khi thực hiện:"
-            : "DentalNTK prioritizes full clinical transparency. Every cosmetic procedure carries biological considerations:"}
+            ? "Tại Dental NKT, chúng tôi đề cao sự minh bạch y khoa để bạn hoàn toàn an tâm khi đưa ra lựa chọn. Dưới đây là các phản ứng sinh học tự nhiên và cách chăm sóc tối ưu để đạt kết quả bền vững nhất:"
+            : "At Dental NKT, we believe in clear clinical transparency to ensure your peace of mind. Here are the natural biological adaptations and how we optimize them for your long-term success:"}
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs sm:text-sm text-amber-950 font-medium">
           <li className="bg-white/80 p-4 rounded-xl border border-amber-200/60 space-y-1">
