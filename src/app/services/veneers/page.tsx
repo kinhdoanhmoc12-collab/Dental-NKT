@@ -423,27 +423,12 @@ export default function VeneersPage() {
           <span className="text-teal-brand text-xs font-bold uppercase tracking-wider block">
             {isVN ? "ĐỘI NGU LÂM SÀNG & TIÊU CHUẨN" : "CLINICAL TEAM & LAB STANDARDS"}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white">
-            {isVN ? "7. Ai Sẽ Trực Tiếp Phụ Trách Ca Điều Trị Của Bạn?" : "7. Lead Clinician & On-Site Lab Credentials"}
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white text-center">
+            {isVN ? "7. Labo Chế Tác CAD/CAM Nội Bộ" : "7. On-Site Lab Credentials"}
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-          <div className="bg-white/10 p-5 rounded-2xl border border-white/15 space-y-3 backdrop-blur-sm">
-            <div className="flex items-center gap-3">
-              <UserCheck className="w-6 h-6 text-teal-brand shrink-0" />
-              <div>
-                <h3 className="font-bold text-base text-white">Dr. Nguyễn Huy Hoàng</h3>
-                <p className="text-xs text-teal-brand font-medium">{isVN ? "Giám đốc Chuyên môn Phục hình Thẩm mỹ DentalNTK" : "Chief Clinical Director - Aesthetic Prosthodontics"}</p>
-              </div>
-            </div>
-            <ul className="space-y-1.5 text-xs text-slate-300 font-light border-t border-white/10 pt-3">
-              <li>• {isVN ? "Chứng chỉ hành nghề: 001234/HNO-CCHN" : "License No: 001234/HNO-CCHN"}</li>
-              <li>• {isVN ? "Hơn 15 năm kinh nghiệm chuyên sâu thẩm mỹ nụ cười" : "15+ years experience in smile makeover prosthodontics"}</li>
-              <li>• {isVN ? "Trực tiếp thực hiện hơn 3.000 ca Veneer sứ thành công" : "Completed over 3,000 successful ceramic veneer units"}</li>
-            </ul>
-          </div>
-
+        <div className="max-w-xl mx-auto pt-2">
           <div className="bg-white/10 p-5 rounded-2xl border border-white/15 space-y-3 backdrop-blur-sm">
             <div className="flex items-center gap-3">
               <Award className="w-6 h-6 text-teal-brand shrink-0" />

@@ -563,39 +563,13 @@ export default function SmileMakeoverClient() {
         </div>
       </section>
 
-      {/* 8. Clinician Profile */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <div className="md:col-span-7 space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "8. Ai thực hiện Smile Makeover cho bạn?" : "8. Who Will Perform Your Smile Makeover?"}
-          </h2>
-          <div className="space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            <p>
-              {isVN
-                ? "Thiết kế nụ cười Smile Makeover đòi hỏi bác sĩ có khiếu thẩm mỹ cao kết hợp kiến thức khớp cắn học vững chắc để phục hình không bị cộm khớp, dắt thức ăn hay nứt mẻ. Tại DentalNKT, ca điều trị của bạn được trực tiếp đảm nhiệm bởi Dr. Nguyễn Huy Hoàng — Bác sĩ tốt nghiệp chính quy Đại học Y Hà Nội năm 2011, chuyên gia phục hình thẩm mỹ răng sứ và cấy ghép Implant."
-                : "Smile makeover planning requires both clinical artistry and a deep grasp of occlusion dynamics to avoid masticatory joint strain or mechanical ceramic failure. At DentalNKT, your treatment is managed 1-on-1 by our director, Dr. Nguyen Huy Hoang, specializing in dental aesthetics and implantology."}
-            </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Số chứng chỉ hành nghề CCHN: 009235/BYT-CCHN (Đã xác minh / Verified)." : "Practicing License No: 009235/BYT-CCHN (Verified)."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Hơn 15 năm kinh nghiệm lâm sàng về phục hình thẩm mỹ và khớp cắn học." : "Over 15+ years of clinical experience in cosmetic restorations and occlusal therapies."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Labo chế tác nội bộ sử dụng phôi sứ E.max chính hãng (Ivoclar Vivadent - Thụy Sĩ) và Ceramill (Áo)." : "In-house dental laboratory utilizing authentic E.max (Ivoclar - Switzerland) and Ceramill (Austria) blanks."}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:col-span-5 bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
-          <h3 className="text-base font-bold text-dark-brand">
+      {/* 8. Payment & Deposit Structure */}
+      <section className="max-w-3xl mx-auto">
+        <div className="bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
+          <h3 className="text-base font-bold text-dark-brand text-center">
             {isVN ? "Phương thức thanh toán" : "Payment & Deposit Structure"}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal text-center">
             {isVN
               ? "Chúng tôi hỗ trợ thanh toán linh hoạt bằng tiền mặt, chuyển khoản hoặc quẹt thẻ tín dụng quốc tế (VISA/Mastercard). Tổng chi phí điều trị được chia thành hai đợt (Đợt 1: Đặt cọc 70% sau khi mài răng và lấy dấu mẫu hàm; Đợt 2: Thanh toán 30% còn lại sau khi bạn hoàn toàn đồng ý gắn cố định vĩnh viễn răng sứ trên cung hàm)."
               : "We accept cash, bank transfers, and international credit cards (VISA/Mastercard). Fees are split into two stages (Stage 1: 70% paid after enamel prep and digital scans; Stage 2: 30% paid after you approve final smile aesthetics and before permanent cementation)."}

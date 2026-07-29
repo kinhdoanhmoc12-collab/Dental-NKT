@@ -541,47 +541,13 @@ export default function BridgesClient() {
 
       </section>
 
-      {/* 8. Clinician Profile */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <div className="md:col-span-7 space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "8. Ai phụ trách điều trị cầu răng cho bạn?" : "8. Who Will Perform Your Treatment?"}
-          </h2>
-          <div className="space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            <p>
-              {isVN
-                ? "Quy trình mài răng làm trụ nâng đỡ cầu răng đòi hỏi kỹ thuật cao để không phạm vào tủy răng thật và đảm bảo độ khít sát tuyệt đối viền cổ răng tránh tích tụ thức ăn. Tại DentalNKT, ca phục hình cầu răng sứ của bạn được trực tiếp lập phác đồ và điều trị bởi đội ngũ bác sĩ chuyên khoa dẫn đầu bởi Dr. Nguyễn Huy Hoàng — Trưởng khoa Cấy ghép Implant & Chỉnh nha của phòng khám."
-                : "Developing support anchors requires clinical precision to avoid vital pulpal exposure and ensure seamless margin fit. At DentalNKT, your bridge preparation and cementation are managed 1-on-1 by our clinical director, Dr. Nguyen Huy Hoang."}
-            </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Bác sĩ tốt nghiệp chính quy Đại học Y Hà Nội năm 2011." : "Graduated from Hanoi Medical University in 2011."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Số chứng chỉ hành nghề: 009235/BYT-CCHN (Đã xác minh / Verified)." : "Practicing License No: 009235/BYT-CCHN (Verified)."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Đào tạo và tu nghiệp chuyên sâu về Chỉnh nha & Implant tại Đại học Cologne (Đức)." : "Advanced training at Cologne University (Germany) specializing in Implantology."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Thực hiện thành công trên 15.000 ca cấy ghép và phục hình thẩm mỹ phức tạp." : "Over 15,000+ successful implant and cosmetic restorations completed."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Hệ thống Labo nội bộ sử dụng phôi sứ chính hãng từ: Ceramill (Amann Girrbach - Áo), IPS E.max (Ivoclar Vivadent - Thụy Sĩ), Lava Plus (3M - Mỹ)." : "In-house laboratory utilizing authentic premium ceramic blocks: Ceramill (Amann Girrbach - Austria), IPS E.max (Ivoclar Vivadent - Switzerland), Lava Plus (3M - USA)."}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:col-span-5 bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
-          <h3 className="text-base font-bold text-dark-brand">
+      {/* 8. Flexible Payment Structure */}
+      <section className="max-w-3xl mx-auto">
+        <div className="bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
+          <h3 className="text-base font-bold text-dark-brand text-center">
             {isVN ? "Phương thức thanh toán" : "Flexible Payment Structure"}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal text-center">
             {isVN
               ? "Chúng tôi hỗ trợ thanh toán linh hoạt bằng cả tiền mặt, chuyển khoản ngân hàng hoặc quẹt thẻ tín dụng quốc tế (VISA/Mastercard). Chi phí điều trị răng sứ được thanh toán thành hai đợt (Đợt 1: Đặt cọc 70% sau khi mài răng lấy mẫu cùi; Đợt 2: Thanh toán 30% còn lại sau khi gắn cố định mẫu cầu răng sứ hoàn thiện)."
               : "We accept multiple payment methods including cash, bank transfers, and international credit cards (VISA/Mastercard). Fees are split into two stages (Stage 1: 70% paid after teeth preparation and digital impressions; Stage 2: 30% paid after final bonding and calibration check)."}

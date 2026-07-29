@@ -441,35 +441,6 @@ export default function RootCanalClient() {
         </div>
       </section>
 
-      {/* 6. Doctor profile */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm">
-        <div className="md:col-span-8 space-y-4">
-          <span className="bg-teal-brand/10 text-teal-brand text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-            {isVN ? "BÁC SĨ PHỤ TRÁCH CHUYÊN MÔN" : "LEAD CLINICAL ENDODONTIST"}
-          </span>
-          <h3 className="font-serif text-2xl font-extrabold text-[#0b1e2c]">
-            Dr. Nguyễn Huy Hoàng
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-            {isVN
-              ? "Bác sĩ Nguyễn Huy Hoàng tốt nghiệp chính quy Đại học Y Hà Nội năm 2011, là Trưởng khoa Cấy ghép Implant & Phục hình tại DentalNKT với hơn 15 năm kinh nghiệm lâm sàng. Bác sĩ Hoàng chuyên sâu về các kỹ thuật nội nha vi phẫu phức tạp dưới sự hỗ trợ của kính hiển vi nha khoa phẫu thuật giúp bảo tồn tối đa ngà răng lành cho bệnh nhân."
-              : "Dr. Nguyen Huy Hoang graduated from Hanoi Medical University in 2011 and serves as the Head of Implantology & Oral Rehabilitation at DentalNKT with over 15 years of clinical experience. He specializes in advanced microscopic endodontics, utilizing high-precision surgical microscopes to preserve healthy tooth tissue."}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <span className="text-xs text-slate-600 font-bold">
-              {isVN ? "Số chứng chỉ hành nghề:" : "Practicing License No:"} <code className="text-teal-brand font-mono font-bold bg-teal-brand/5 px-2.5 py-1 rounded">009235/BYT-CCHN</code> (Đã xác minh / Verified)
-            </span>
-          </div>
-        </div>
-        <div className="md:col-span-4 bg-teal-brand-light/30 border border-teal-brand-light p-6 rounded-2xl space-y-2 text-center flex flex-col items-center justify-center">
-          <Stethoscope className="w-8 h-8 text-teal-brand" />
-          <h4 className="text-xs font-bold text-[#0b1e2c]">{isVN ? "Tiêu chuẩn vô trùng Bộ Y Tế" : "Sterile Clinical Standard"}</h4>
-          <p className="text-xs text-slate-600 font-semibold leading-relaxed">
-            {isVN ? "Phòng phẫu thuật nội nha luôn đạt kiểm soát nhiễm khuẩn vô trùng nghiêm ngặt." : "All endodontic treatments are conducted in sterile, class-B autoclave environments."}
-          </p>
-        </div>
-      </section>
-
       {/* 7. Payment methods & Warranty info */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-slate-50/50 border border-slate-100 p-6 sm:p-8 rounded-3xl space-y-4">

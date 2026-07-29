@@ -545,43 +545,13 @@ export default function FullMouthClient() {
 
       </section>
 
-      {/* 8. Clinician Profile */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <div className="md:col-span-7 space-y-6">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "8. Ai phụ trách ca phục hồi toàn hàm của bạn?" : "8. Who Will Perform Your Treatment?"}
-          </h2>
-          <div className="space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            <p>
-              {isVN
-                ? "Phục hồi toàn hàm là kỹ thuật phức tạp nhất trong nha khoa, đòi hỏi bác sĩ có tay nghề phẫu thuật và khớp cắn học xuất sắc. Ca điều trị của bạn tại DentalNKT sẽ được trực tiếp hội chẩn và thực hiện bởi đội ngũ bác sĩ chuyên khoa dẫn đầu bởi Dr. Nguyễn Huy Hoàng — Trưởng khoa Cấy ghép Implant & Chỉnh nha của phòng khám."
-                : "Full mouth reconstruction is the most challenging discipline in dentistry, demanding exceptional surgical competence and training in gnathological occlusion. At DentalNKT, your case is directed and executed 1-on-1 by our chief clinician, Dr. Nguyen Huy Hoang."}
-            </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Bác sĩ tốt nghiệp chính quy Đại học Y Hà Nội năm 2011." : "Graduated from Hanoi Medical University in 2011."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Số chứng chỉ hành nghề: 009235/BYT-CCHN (Đã xác minh / Verified)." : "Practicing License No: 009235/BYT-CCHN (Verified)."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Đào tạo chuyên sâu về cấy ghép Implant & phục hình khớp cắn tại Đại học Cologne (Đức)." : "Advanced postgraduate training in implant dentistry and occlusion at Cologne University (Germany)."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Thực hiện thành công trên 15.000 ca phục hình thẩm mỹ răng sứ và cấy ghép Implant." : "Over 15,000+ successful implant and full-arch rehabilitation surgeries completed."}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:col-span-5 bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
-          <h3 className="text-base font-bold text-dark-brand">
+      {/* 8. Flexible Phased Payments */}
+      <section className="max-w-3xl mx-auto">
+        <div className="bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
+          <h3 className="text-base font-bold text-dark-brand text-center">
             {isVN ? "Phương thức & Tiến độ thanh toán" : "Flexible Phased Payments"}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal text-center">
             {isVN
               ? "Chúng tôi nhận thanh toán bằng cả VNĐ hoặc AUD (tiền mặt, chuyển khoản ngân hàng hoặc quẹt thẻ tín dụng quốc tế). Chi phí được đóng theo tiến độ từng chuyến đi để giảm bớt gánh nặng tài chính: (Chuyến 1: Thanh toán 70% tổng chi phí sau khi hoàn thành phẫu thuật cấy ghép implant và lắp răng tạm; Chuyến 2: Thanh toán 30% còn lại sau khi gắn răng sứ vĩnh viễn hoàn thiện)."
               : "We accept cash, bank transfers, and credit cards (VISA/Mastercard) in VND or AUD. To ease your financial planning, fees are split between your trips: (Trip 1: 70% of total fees paid after surgical implant placement and temporaries fitting; Trip 2: 30% balance paid after final permanent restorations are fitted and bite check)."}

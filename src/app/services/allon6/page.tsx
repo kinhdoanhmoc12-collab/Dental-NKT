@@ -606,46 +606,13 @@ export default function AllOn6Page() {
         </p>
       </section>
 
-      {/* 10. Clinical Accountability */}
-      <section className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
-        <div className="md:col-span-7 space-y-6">
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-teal-brand" />
-            <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-              {isVN ? "10. Ai thực hiện All-on-6 cho bạn?" : "10. Who Will Perform Your Surgery?"}
-            </h2>
-          </div>
-          <div className="space-y-4 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            <p>
-              {isVN
-                ? "All-on-6 là kỹ thuật phẫu thuật cấy ghép toàn hàm phức tạp hơn All-on-4, đòi hỏi bác sĩ có kỹ năng tay nghề vững vàng cùng hệ thống vô trùng hiện đại nhất. Tại DentalNKT, ca phẫu thuật All-on-6 của bạn được thực hiện trực tiếp bởi Dr. Nguyễn Huy Hoàng — Giám đốc chuyên môn khoa Implant của phòng khám."
-                : "All-on-6 is an advanced full-arch implant procedure requiring exceptional clinical skills and experience. At DentalNKT, your All-on-6 surgery is directly performed by Dr. Nguyen Huy Hoang — our Clinical Director of Implantology."}
-            </p>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Bác sĩ tốt nghiệp chính quy Đại học Y Hà Nội năm 2011." : "Graduated from Hanoi Medical University in 2011."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Tu nghiệp chuyên sâu tại Đại học Cologne (Đức) chuyên ngành Chỉnh nha & Implant." : "Advanced training at Cologne University (Germany) specializing in Implantology."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Đã thực hiện thành công hơn 15.000 ca cấy ghép implant, bao gồm các ca toàn hàm phức tạp." : "Over 15,000+ successful implant placements, including complex full-arch reconstructions."}</span>
-              </li>
-              <li className="flex gap-2 items-center">
-                <Check className="w-4 h-4 text-teal-brand shrink-0" />
-                <span>{isVN ? "Phòng phẫu thuật đạt tiêu chuẩn vô trùng tuyệt đối, kiểm soát nhiễm khuẩn nghiêm ngặt." : "Operating theater fully certified for absolute sterile control by the Ministry of Health."}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="md:col-span-5 bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
-          <h3 className="text-base font-bold text-dark-brand">
+      {/* 10. Flexible Payment Structure */}
+      <section className="max-w-3xl mx-auto">
+        <div className="bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
+          <h3 className="text-base font-bold text-dark-brand text-center">
             {isVN ? "Phương thức thanh toán" : "Flexible Payment Structure"}
           </h3>
-          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-normal text-center">
             {isVN
               ? "Chúng tôi chấp nhận thanh toán linh hoạt bằng cả tiền mặt, chuyển khoản hoặc quẹt thẻ tín dụng quốc tế (VISA/Mastercard) bằng tiền VNĐ hoặc AUD. Chi phí được chia làm 2 đợt thanh toán tương ứng với 2 chuyến đi điều trị của quý khách (Đợt 1: 70% khi cấy trụ; Đợt 2: 30% khi lắp hàm chính thức)."
               : "We support multiple payment methods including cash, bank transfers, and international credit cards (VISA/Mastercard) in either VND or AUD. Fees are split across your 2 treatment trips (Stage 1: 70% paid during Trip 1 surgery; Stage 2: 30% paid during Trip 2 final bridge delivery)."}

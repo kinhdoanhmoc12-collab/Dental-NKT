@@ -416,61 +416,11 @@ export default function ImplantsPage() {
         </div>
       </section>
 
-      {/* 5. Surgeon Profile */}
-      <section className="space-y-8">
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "5. Ai Sẽ Thực Hiện Phẫu Thuật Cho Bạn?" : "5. Meet Your Implant Surgeon"}
-          </h2>
-          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-            {isVN ? "Phẫu thuật ngoại khoa cần được thực hiện bởi chuyên gia tay nghề cao" : "Implantology is surgical; your case is handled 1-on-1 by our Chief Surgeon"}
-          </p>
-        </div>
-
-        <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-10 shadow-premium flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-48 h-48 bg-slate-50 rounded-2xl shrink-0 overflow-hidden relative border border-slate-200">
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-teal-brand-light text-teal-brand p-4 text-center">
-              <User className="w-12 h-12 mb-2" />
-              <span className="text-xs font-bold font-serif leading-tight">Dr. Nguyễn Huy Hoàng</span>
-              <span className="text-[9px] font-sans opacity-80">{isVN ? "Giám đốc Lâm sàng" : "Clinical CCO"}</span>
-            </div>
-          </div>
-          <div className="space-y-4 flex-1">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="bg-teal-brand-light text-teal-brand text-[9px] font-bold py-1 px-3 rounded-full uppercase tracking-wider">
-                {isVN ? "Trưởng khoa Cấy ghép Implant" : "Chief of Implantology"}
-              </span>
-              <span className="bg-slate-100 text-slate-700 text-[9px] font-bold py-1 px-3 rounded-full uppercase tracking-wider">
-                {isVN ? "15+ Năm Kinh Nghiệm" : "15+ Years Experience"}
-              </span>
-            </div>
-            <h3 className="text-xl font-serif font-extrabold text-dark-brand">
-              {isVN ? "Bác sĩ Nguyễn Huy Hoàng" : "Dr. Nguyen Huy Hoang"}
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-              {isVN
-                ? "Tốt nghiệp Đại học Y Hà Nội năm 2011, đào tạo chỉnh nha và cấy ghép nâng cao tại Đại học Cologne (Đức). Là thành viên tích cực của Hiệp hội Implant Việt Nam, Bác sĩ Hoàng đã cấy ghép thành công trên 15.000 ca lâm sàng. Đặc biệt, Bác sĩ Hoàng là bác sĩ phẫu thuật tình nguyện của tổ chức Operation Smile (Phẫu thuật nụ cười) thực hiện gần 1.000 ca phẫu thuật khe hở môi nhân đạo."
-                : "Graduated from Hanoi Medical University in 2011, followed by advanced postgraduate clinical training at Cologne University (Germany). Dr. Hoang is a registered member of the Vietnam Implantology Association with over 15,000 implants placed. He also volunteers for Operation Smile, operating on nearly 1,000 cleft lip cases."}
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm font-semibold text-slate-800 border-t border-slate-150 pt-4">
-              <div>
-                <span className="font-bold text-dark-brand">{isVN ? "Số chứng chỉ hành nghề:" : "Practicing License No:"}</span>
-                <span className="ml-1 text-slate-700">009235/BYT-CCHN (Đã xác minh / Verified)</span>
-              </div>
-              <div>
-                <span className="font-bold text-dark-brand">{isVN ? "Vô trùng phòng mổ:" : "Operating Theater Sterility:"}</span>
-                <span className="ml-1 text-slate-500">{isVN ? "Tiêu chuẩn Autoclave Class B" : "Class B Autoclave Standards"}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Procedure Timeline & Tour Schedule */}
+      {/* 5. Procedure Timeline & Tour Schedule */}
       <section className="space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "6. Quy Trình & Lịch Trình Cho Khách Du Lịch" : "6. Procedure & Dental Tourism Timeline"}
+            {isVN ? "5. Quy Trình & Lịch Trình Cho Khách Du Lịch" : "5. Procedure & Dental Tourism Timeline"}
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {isVN ? "Implant là quy trình sinh học kéo dài, cần tối thiểu 2 chuyến đi để tích hợp xương" : "Implantology requires organic bone integration; treatments must be split into 2 separate visits"}
@@ -529,11 +479,11 @@ export default function ImplantsPage() {
         </div>
       </section>
 
-      {/* 7. Post-Op Care */}
+      {/* 6. Post-Op Care */}
       <section className="space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "7. Chăm Sóc Sau Phẫu Thuật Implant" : "7. Post-Op Care & Maintenance"}
+            {isVN ? "6. Chăm Sóc Sau Phẫu Thuật Implant" : "6. Post-Op Care & Maintenance"}
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {isVN ? "Tuân thủ chăm sóc quyết định 50% sự thành công và tuổi thọ của Implant" : "Patient post-op compliance determines 50% of the long-term success of the surgery"}
@@ -593,11 +543,11 @@ export default function ImplantsPage() {
         </div>
       </section>
 
-      {/* 8. Warranty & International Support */}
+      {/* 7. Warranty & International Support */}
       <section className="space-y-8 bg-slate-50/50 border border-slate-200 p-8 sm:p-12 rounded-3xl">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "8. Chính Sách Bảo Hành & Hỗ Trợ Quốc Tế" : "8. Global Warranty & Support Policy"}
+            {isVN ? "7. Chính Sách Bảo Hành & Hỗ Trợ Quốc Tế" : "7. Global Warranty & Support Policy"}
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {isVN ? "Đồng hành và bảo vệ quyền lợi của bạn ngay cả khi đã quay về Úc" : "Continuous clinical backing and coverage once you return home to Australia"}
@@ -645,11 +595,11 @@ export default function ImplantsPage() {
         </div>
       </section>
 
-      {/* 9. FAQ Section */}
+      {/* 8. FAQ Section */}
       <section className="space-y-8">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
-            {isVN ? "9. Câu Hỏi Thường Gặp" : "9. Frequently Asked Questions"}
+            {isVN ? "8. Câu Hỏi Thường Gặp" : "8. Frequently Asked Questions"}
           </h2>
           <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {isVN ? "Giải đáp thắc mắc phổ biến về dịch vụ cấy ghép Implant" : "Get expert answers to common queries regarding dental implants"}
