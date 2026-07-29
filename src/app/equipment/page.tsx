@@ -24,6 +24,17 @@ import {
 const equipment = [
   {
     icon: Scan,
+    nameVN: "Hệ thống ghi động học hàm MODJAW 3D",
+    nameEN: "MODJAW 3D Jaw Motion Tracker",
+    descVN:
+      "Công nghệ ghi động học hàm dưới 3D thời gian thực, tạo bản sao số khớp cắn của từng bệnh nhân giúp thiết kế răng sứ, Veneer và Implant toàn hàm khít sát tuyệt đối khi ăn nhai.",
+    descEN:
+      "Real-time 3D jaw movement tracking technology, creating a digital twin of patient occlusion for perfectly calibrated veneers, crowns, and implants.",
+    origin: "France",
+    image: "/modjaw_tracker.jpg",
+  },
+  {
+    icon: Scan,
     nameVN: "Máy quét 3D Exocad",
     nameEN: "Exocad 3D Scanner",
     descVN:
