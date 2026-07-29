@@ -373,45 +373,85 @@ export default function VeneersPage() {
       </section>
 
       {/* ==========================================
-          6. QUY TRÌNH & LỊCH TRÌNH 5 NGÀY MẪU
+          6. QUY TRÌNH & LỘ LÌNH VENEERS
           ========================================== */}
-      <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm space-y-6">
-        <div className="space-y-2">
+      <section className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-sm space-y-12">
+        <div className="space-y-2 text-center max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
-            {isVN ? "6. Lịch Trình Mẫu 5 Ngày Cho Bệnh Nhân Quốc Tế" : "6. Sample 5-Day Itinerary for International Patients"}
+            {isVN ? "6. Lộ Trình Quy Trình Dán Sứ Veneers Chuẩn" : "6. Step-by-Step Veneers Process"}
           </h2>
           <p className="text-sm text-slate-600 font-light">
-            {isVN ? "Lịch trình chuẩn bị cho ca làm 8–10 răng cửa tại Hà Nội (gồm thời gian du lịch nghỉ ngơi):" : "Optimized schedule for 8–10 anterior veneers in Hanoi:"}
+            {isVN ? "Quy trình điều trị được tối ưu hóa giúp mang lại nụ cười rạng rỡ, thoải mái và bền vững nhất:" : "Optimized veneers workflow for a radiant, comfortable, and long-lasting smile:"}
           </p>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead>
-              <tr className="bg-slate-100 text-[#0b1e2c]">
-                <th className="p-3.5 font-bold uppercase w-24">{isVN ? "Thời gian" : "Day"}</th>
-                <th className="p-3.5 font-bold uppercase">{isVN ? "Nội dung thực hiện" : "Clinical Clinical Actions"}</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100 text-slate-700">
-              <tr>
-                <td className="p-3.5 font-bold text-teal-brand">{isVN ? "Ngày 1" : "Day 1"}</td>
-                <td className="p-3.5">{isVN ? "Khám tổng quát, thiết kế nụ cười 3D, chụp ảnh studio và chốt phương án màu sắc/dáng răng." : "Comprehensive exam, 3D Smile Design, studio photography & shade selection."}</td>
-              </tr>
-              <tr className="bg-slate-50/50">
-                <td className="p-3.5 font-bold text-teal-brand">{isVN ? "Ngày 2" : "Day 2"}</td>
-                <td className="p-3.5">{isVN ? "Mài men răng tối thiểu, lấy dấu kỹ thuật số iTero và gắn veneer tạm thời." : "Micro-prep tooth reduction, iTero 3D digital scan & temporary mockup bonding."}</td>
-              </tr>
-              <tr>
-                <td className="p-3.5 font-bold text-teal-brand">{isVN ? "Ngày 3–4" : "Day 3–4"}</td>
-                <td className="p-3.5">{isVN ? "Labo CAD/CAM ép sứ tinh xảo (Khách tự do du lịch, tham quan Hà Nội/Hạ Long)." : "CAD/CAM lab fabrication & hand-characterization (Free time for Hanoi sightseeing)."}</td>
-              </tr>
-              <tr className="bg-[#0b1e2c]/5">
-                <td className="p-3.5 font-bold text-teal-brand">{isVN ? "Ngày 5" : "Day 5"}</td>
-                <td className="p-3.5 font-medium text-[#0b1e2c]">{isVN ? "Thử ướm veneer thật, tinh chỉnh theo ý muốn, dán cố định vĩnh viễn & hoàn tất." : "Try-in phase, aesthetic sign-off, permanent resin bonding & bite adjustment."}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-200">
+          {[
+            {
+              num: 1,
+              titleVN: "Thu thập dữ liệu nụ cười đa chiều",
+              titleEN: "Multi-Dimensional Data Collection",
+              descVN: "Bệnh nhân được chụp phim Cone Beam CT 3D khảo sát xương, quét kỹ thuật số (Oral Scan), quét khuôn mặt 3D bằng máy Rayface, chụp ảnh và quay video nói chuyện tự nhiên để phân tích chuyển động của môi má.",
+              descEN: "Receive a comprehensive diagnostic check: 3D Cone Beam CT scan, high-precision digital Oral Scan, Rayface 3D facial scanning, and portrait photos/speaking videos to analyze natural lip and cheek movements."
+            },
+            {
+              num: 2,
+              titleVN: "Thiết kế nụ cười & Lên kế hoạch",
+              titleEN: "Smile Design & Planning",
+              descVN: "Dựa trên dữ liệu thu thập được, bác sĩ lên kế hoạch điều trị chi tiết, thiết kế dáng răng và cung cười (Smile Design) cá nhân hóa phù hợp với cấu trúc khuôn mặt của bạn.",
+              descEN: "Based on your anatomical data, the clinical team designs a personalized 3D Smile Design blueprint tailored to your facial geometry and bite."
+            },
+            {
+              num: 3,
+              titleVN: "Sửa soạn răng & Gắn răng tạm",
+              titleEN: "Tooth Prep & Temporary Veneers",
+              descVN: "Tiến hành mài men răng tối thiểu (mài siêu ít) và úp răng tạm bằng nhựa. Răng tạm được thiết kế theo mẫu răng cuối cùng được dự kiến của bạn để trải nghiệm thẩm mỹ và ăn nhai thử trước.",
+              descEN: "Undergo minimal enamel preparation (micro-prep) and application of temporary acrylic veneers. These are designed based on your final planned teeth mockups, allowing you to preview aesthetics."
+            },
+            {
+              num: 4,
+              titleVN: "Lắp Veneer sứ & Chỉnh khớp cắn",
+              titleEN: "Veneer Delivery & Calibration",
+              descVN: "5 ngày sau khi sửa soạn răng (Labo chế tác sứ CAD/CAM), bạn quay lại phòng khám để bác sĩ lắp dán Veneer sứ vĩnh viễn và mài chỉnh khớp cắn tối ưu, bảo đảm không cộm vướng.",
+              descEN: "5 days after tooth prep (during which our in-house lab crafts your custom CAD/CAM veneers), you return to have the permanent veneers bonded and calibrated for a perfectly aligned bite."
+            },
+            {
+              num: 5,
+              titleVN: "Tái khám & Kiểm tra định kỳ",
+              titleEN: "Follow-up & Gum Check",
+              descVN: "Sau khi lắp răng, bác sĩ hẹn tái khám (thường là 1 buổi) để kiểm tra độ thích nghi của nướu răng, độ khít sát của rìa veneer và chức năng ăn nhai thực tế.",
+              descEN: "Schedule a brief follow-up session to inspect gum adaptation, verify margin sealing of your veneers, and ensure absolute chewing comfort."
+            },
+            {
+              num: 6,
+              titleVN: "Bảo trì & Xử lý phát sinh",
+              titleEN: "Maintenance & Support",
+              descVN: "Trong quá trình sử dụng lâu dài, nếu phát sinh bất kỳ vấn đề cộm vướng hay sứt mẻ ngoài ý muốn, phòng khám cam kết đồng hành hỗ trợ xử lý và bảo hành chu đáo.",
+              descEN: "For your long-term peace of mind: if any structural issues, chips, or bite changes arise over time, our dedicated clinical support team is always ready to assist."
+            }
+          ].map((step) => {
+            const isEven = step.num % 2 === 0;
+            return (
+              <div key={step.num} className={`relative flex flex-col md:flex-row items-start gap-8 md:gap-0 ${isEven ? "md:flex-row-reverse" : ""}`}>
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-teal-brand text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-4 border-white">
+                  {step.num}
+                </div>
+                <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${isEven ? "md:pl-8 text-left" : "md:pr-8 text-left md:text-right"} space-y-2`}>
+                  <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider block">
+                    {isVN ? `Bước ${step.num}` : `Step ${step.num}`}
+                  </span>
+                  <h3 className="font-serif text-lg font-extrabold text-dark-brand">
+                    {isVN ? step.titleVN : step.titleEN}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                    {isVN ? step.descVN : step.descEN}
+                  </p>
+                </div>
+                <div className="hidden md:block w-[10%]" />
+                <div className="w-full md:w-[45%] pl-12 md:pl-8 md:py-4" />
+              </div>
+            );
+          })}
         </div>
       </section>
 
