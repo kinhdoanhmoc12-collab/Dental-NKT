@@ -27,9 +27,9 @@ const equipment = [
     nameVN: "Hệ thống ghi động học hàm MODJAW 3D",
     nameEN: "MODJAW 3D Jaw Motion Tracker",
     descVN:
-      "Công nghệ đỉnh cao độc quyền ghi động học khớp cắn 3D thời gian thực. Giúp tạo lập bản sao số chuyển động hàm nhai sinh lý chính xác tuyệt đối cho từng bệnh nhân. Đây là chìa khóa vàng giúp chế tác răng sứ, mặt dán Veneer và phục hình Implant toàn hàm đạt độ khớp khít nhai tự nhiên lý tưởng nhất, loại bỏ hoàn toàn việc mài chỉnh sau khi gắn răng.",
+      "Hệ thống ghi động học khớp cắn 3D thời gian thực tiên tiến bậc nhất thế giới hiện nay từ Pháp. Thiết bị tối tân này tạo lập bản sao số chuyển động hàm nhai sinh lý chính xác tuyệt đối cho từng cá nhân, mở ra kỷ nguyên mới cho phục hình răng sứ, mặt dán Veneer và Implant toàn hàm. Răng được chế tác khớp khít nhai tự nhiên hoàn hảo, bảo vệ trụ Implant bền trọn đời và hoàn toàn không cần mài chỉnh sau khi gắn.",
     descEN:
-      "Cutting-edge technology capturing real-time 3D dynamic jaw movement. By creating a precise digital twin of the patient's physiological occlusion, it enables laboratory technicians to craft custom veneers, crowns, and full-arch implants with perfect functional harmony, eliminating the need for post-op biting adjustments.",
+      "The world's most advanced real-time 3D dynamic jaw tracking system from France. This state-of-the-art device creates a precise digital twin of the patient's physiological occlusion, pioneering a new era for custom crowns, veneers, and full-arch implants. Restorations achieve perfect functional harmony and lifelong implant protection, completely eliminating the need for post-operative biting adjustments.",
     origin: "France",
     image: "/modjaw_tracker.jpg",
   },
