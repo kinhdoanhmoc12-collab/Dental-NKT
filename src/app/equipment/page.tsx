@@ -259,52 +259,40 @@ export default function EquipmentPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {equipment.map((item, i) => {
-              const isModjaw = i === 0;
-              return (
-                <div
-                  key={i}
-                  className={`group bg-white rounded-2xl overflow-hidden border transition-all duration-300 ${
-                    isModjaw
-                      ? "sm:col-span-2 lg:col-span-2 border-teal-brand/40 bg-gradient-to-br from-teal-brand/[0.03] to-transparent shadow-[0_12px_40px_-8px_rgba(0,175,199,0.18)]"
-                      : "border-slate-100 hover:border-teal-brand/20 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
-                  }`}
-                  style={{
-                    animationDelay: `${i * 80}ms`,
-                    animation: "fadeIn 0.5s ease-out forwards",
-                    opacity: 0,
-                  }}
-                >
-                  <div className={`relative ${isModjaw ? "h-60 sm:h-80" : "h-44"} overflow-hidden`}>
-                    <Image
-                      src={item.image}
-                      alt={isVN ? item.nameVN : item.nameEN}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <div className="absolute top-3 left-3 flex gap-2">
-                      <span className="text-[10px] font-bold text-white bg-slate-800/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                        {item.origin}
-                      </span>
-                      {isModjaw && (
-                        <span className="text-[10px] font-bold text-white bg-teal-brand px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">
-                          {isVN ? "Công nghệ đột phá" : "Breakthrough Tech"}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className={`font-bold text-[#0b1e2c] leading-snug mb-2 ${isModjaw ? "text-lg md:text-xl font-extrabold text-teal-brand" : "text-base"}`}>
-                      {isVN ? item.nameVN : item.nameEN}
-                    </h3>
-                    <p className={`leading-relaxed ${isModjaw ? "text-sm sm:text-base text-slate-700 font-medium" : "text-sm text-slate-500"}`}>
-                      {isVN ? item.descVN : item.descEN}
-                    </p>
+            {equipment.map((item, i) => (
+              <div
+                key={i}
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-teal-brand/20 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
+                style={{
+                  animationDelay: `${i * 80}ms`,
+                  animation: "fadeIn 0.5s ease-out forwards",
+                  opacity: 0,
+                }}
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={isVN ? item.nameVN : item.nameEN}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-[10px] font-bold text-white bg-slate-800/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                      {item.origin}
+                    </span>
                   </div>
                 </div>
-              );
-            })}
+                <div className="p-5">
+                  <h3 className="font-bold text-[#0b1e2c] text-base leading-snug mb-2">
+                    {isVN ? item.nameVN : item.nameEN}
+                  </h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {isVN ? item.descVN : item.descEN}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
