@@ -428,45 +428,108 @@ export default function ImplantsPage() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
-            <span className="absolute -top-4 -right-4 text-7xl font-serif font-bold text-slate-50 select-none pointer-events-none">1</span>
-            <div className="space-y-3 relative z-10">
-              <span className="text-teal-brand font-bold text-xs uppercase tracking-wider block">{isVN ? "Đợt 1: Khám & Đặt Trụ" : "Visit 1: Anchor Placement"}</span>
-              <h3 className="font-bold text-sm text-dark-brand">{isVN ? "Chuyến đi 1 (4 - 7 ngày)" : "Trip 1 (4 - 7 days)"}</h3>
-              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                {isVN
-                  ? "Khám lâm sàng, chụp CT 3D chẩn đoán mật độ xương. Phẫu thuật đặt trụ Implant (30-60 phút) dưới gây tê cục bộ, lắp răng tạm ăn nhai nhẹ và khâu đóng vết thương."
-                  : "3D CT bone diagnostic scan. Pain-free computer-guided placement of titanium post (30-60 mins) under local anesthesia. Suture and temporary tooth attachment."}
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-slate-50/50 p-6 rounded-2xl border border-slate-100 relative overflow-hidden">
-            <span className="absolute -top-4 -right-4 text-7xl font-serif font-bold text-slate-100/50 select-none pointer-events-none">2</span>
-            <div className="space-y-3 relative z-10">
-              <span className="text-slate-400 font-bold text-xs uppercase tracking-wider block">{isVN ? "Giai đoạn ở nước nhà" : "Osseointegration at Home"}</span>
-              <h3 className="font-bold text-sm text-dark-brand">{isVN ? "Tích hợp xương (2 - 6 tháng)" : "Healing Phase (2 - 6 months)"}</h3>
-              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                {isVN
-                  ? "Trở về Úc sinh hoạt và làm việc bình thường. Xương hàm tự nhiên sẽ tích hợp sinh học chắc chắn xung quanh trụ titan. Theo dõi tiến trình từ xa với điều phối viên y khoa."
-                  : "Fly back home and resume daily routines. The titanium fixture will organically fuse with your jawbone. Remote patient support checks in monthly."}
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm relative overflow-hidden">
-            <span className="absolute -top-4 -right-4 text-7xl font-serif font-bold text-slate-50 select-none pointer-events-none">3</span>
-            <div className="space-y-3 relative z-10">
-              <span className="text-teal-brand font-bold text-xs uppercase tracking-wider block">{isVN ? "Đợt 2: Phục Hình Hoàn Tất" : "Visit 2: Final Crown"}</span>
-              <h3 className="font-bold text-sm text-dark-brand">{isVN ? "Chuyến đi 2 (3 - 5 ngày)" : "Trip 2 (3 - 5 days)"}</h3>
-              <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
-                {isVN
-                  ? "Chụp X-quang kiểm tra độ tích hợp trụ. Gắn khớp nối Abutment, lấy dấu răng và chế tác mão răng sứ CAD/CAM. Gắn mão sứ cố định vĩnh viễn và căn chỉnh khớp cắn."
-                  : "Diagnostic X-ray to confirm bone fusion. Attachment of custom Abutment, digital impression scan. Fabrication and bonding of final porcelain crown."}
-              </p>
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-200">
+          {[
+            {
+              num: 1,
+              titleVN: "Khám, tư vấn, lên kế hoạch",
+              titleEN: "Consultation & Planning",
+              descVN: "Bệnh nhân đến phòng khám để được bác sĩ khám lâm sàng, tư vấn trực tiếp và lập kế hoạch điều trị chi tiết.",
+              descEN: "Patient undergoes clinical examination, receives in-person consultation, and gets a detailed treatment plan."
+            },
+            {
+              num: 2,
+              titleVN: "Chụp phim, scan mẫu răng 3D",
+              titleEN: "3D CT Scan & Digital Impression",
+              descVN: "Chụp phim Cone Beam CT (CBCT) 3D để khảo sát cấu trúc xương hàm, quét mẫu răng kỹ thuật số lấy dữ liệu (đối với ca toàn hàm sẽ tiến hành thử răng để đảm bảo độ chính xác).",
+              descEN: "3D Cone Beam CT scan to inspect bone structure and digital mouth scanning (full-mouth cases undergo extra try-in steps to ensure accuracy)."
+            },
+            {
+              num: 3,
+              titleVN: "Chọn loại trụ & răng trên Implant",
+              titleEN: "Selecting Fixture & Crown Materials",
+              descVN: "Lựa chọn loại trụ và răng sứ phù hợp với tình trạng xương và ngân sách. Các loại trụ: Hiossen (Mỹ), SIC (Đức), Straumann (Thụy Sĩ - bảo hành 10 năm). Các loại răng sứ: Everest (Hàn Quốc - bảo hành 7 năm), Ceramill (Đức - bảo hành 10 năm), Emax Zirconia (Đức - bảo hành 10 năm).",
+              descEN: "Select implant post and crown materials based on bone condition and budget. Posts: Hiossen (USA), SIC (Germany), Straumann (Switzerland - 10-year warranty). Crowns: Everest (Korea - 7-year warranty), Ceramill (Germany - 10-year warranty), Emax Zirco (Germany - 10-year warranty)."
+            },
+            {
+              num: 4,
+              titleVN: "Lập máng hướng dẫn phẫu thuật",
+              titleEN: "Surgical Guide Fabrication",
+              descVN: "Dựa trên các thông số chính xác từ phim chụp 3D và dữ liệu scan mẫu hàm, bác sĩ thiết kế và in máng hướng dẫn phẫu thuật giúp định vị đặt trụ an toàn, chính xác tuyệt đối.",
+              descEN: "Based on precise parameters from 3D scans and digital impressions, we design and fabricate a surgical guide for safe, ultra-precise implant positioning."
+            },
+            {
+              num: 5,
+              titleVN: "Tiến hành cấy ghép Implant",
+              titleEN: "Implant Placement Surgery",
+              descVN: "Thực hiện phẫu thuật đặt trụ Implant dưới gây tê tại chỗ (quá trình cấy trụ chỉ mất khoảng 1 ngày/khoảng 30-60 phút mỗi trụ). Lưu ý: Thời gian thiết kế và làm máng hướng dẫn phẫu thuật mất từ 3-5 ngày tùy theo từng bệnh nhân.",
+              descEN: "Implant placement surgery under local anesthesia (the placement itself takes 1 day, about 30-60 minutes per fixture). Note: Fabrication of the surgical guide takes 3-5 days depending on the patient."
+            },
+            {
+              num: 6,
+              titleVN: "Hẹn tái khám sau 2 ngày",
+              titleEN: "Follow-up & Cleaning (Day 2)",
+              descVN: "Bệnh nhân quay lại phòng khám sau 2 ngày để bác sĩ kiểm tra vết thương, hướng dẫn chi tiết cách vệ sinh răng miệng và bơm rửa vết thương.",
+              descEN: "Patient returns to the clinic on Day 2 for wound check, professional cleaning, and detailed home hygiene guidance."
+            },
+            {
+              num: 7,
+              titleVN: "Cắt chỉ sau 7 ngày",
+              titleEN: "Suture Removal (Day 7)",
+              descVN: "Tiến hành cắt chỉ phẫu thuật và kiểm tra độ lành thương của mô nướu xung quanh vị trí đặt trụ.",
+              descEN: "Remove surgical sutures and inspect the healing progress of soft gum tissue around the implant site."
+            },
+            {
+              num: 8,
+              titleVN: "Lấy dấu phục hình trên trụ",
+              titleEN: "Final Impression Taking",
+              descVN: "Sau thời gian chờ tích hợp xương: Đối với ca cấy ghép bình thường (không ghép xương) là từ 6-12 tuần; đối với các ca có ghép xương bổ sung là từ 3 - 6 - 9 tháng tùy thể tích xương. Bác sĩ sẽ lấy dấu răng sứ vĩnh viễn trên trụ.",
+              descEN: "After osseointegration: For normal cases (no bone graft), wait 6-12 weeks; for cases with bone grafts, wait 3-6-9 months depending on bone density. The dentist will take impressions for the permanent crown."
+            },
+            {
+              num: 9,
+              titleVN: "Chế tác răng sứ tại phòng Lab",
+              titleEN: "In-House Lab Milling",
+              descVN: "Dữ liệu dấu răng được gửi xuống phòng Lab để tiến hành thiết kế và chế tác răng sứ bằng công nghệ CAD/CAM chính xác.",
+              descEN: "Impression data is sent to the lab for high-precision design and CAD/CAM milling of the custom porcelain crown."
+            },
+            {
+              num: 10,
+              titleVN: "Lắp răng sứ hoàn thiện",
+              titleEN: "Crown Delivery & Calibration",
+              descVN: "Sau 2-3 ngày chế tác, răng sứ sẽ được gắn cố định vĩnh viễn lên trụ Implant và tinh chỉnh khớp cắn hoàn hảo cho bệnh nhân.",
+              descEN: "After 2-3 days of milling, the final crown is bonded to the implant post and calibrated for a perfect, natural bite."
+            },
+            {
+              num: 11,
+              titleVN: "Kiểm tra định kỳ 6 tháng",
+              titleEN: "6-Month Follow-Up Check",
+              descVN: "Bệnh nhân tái khám định kỳ mỗi 6 tháng một lần để chụp phim kiểm tra độ ổn định của xương quanh trụ, vệ sinh răng miệng chuyên sâu bảo vệ Implant lâu dài.",
+              descEN: "Patient schedules routine clinical check-ups and diagnostic scans every 6 months to monitor bone levels and perform professional hygiene maintenance."
+            }
+          ].map((step) => {
+            const isEven = step.num % 2 === 0;
+            return (
+              <div key={step.num} className={`relative flex flex-col md:flex-row items-start gap-8 md:gap-0 ${isEven ? "md:flex-row-reverse" : ""}`}>
+                <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-teal-brand text-white flex items-center justify-center font-bold text-xs shadow-md z-10 border-4 border-white">
+                  {step.num}
+                </div>
+                <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${isEven ? "md:pl-8 text-left" : "md:pr-8 text-left md:text-right"} space-y-2`}>
+                  <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider block">
+                    {isVN ? `Bước ${step.num}` : `Step ${step.num}`}
+                  </span>
+                  <h3 className="font-serif text-lg font-extrabold text-dark-brand">
+                    {isVN ? step.titleVN : step.titleEN}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                    {isVN ? step.descVN : step.descEN}
+                  </p>
+                </div>
+                <div className="hidden md:block w-[10%]" />
+                <div className="w-full md:w-[45%] pl-12 md:pl-8 md:py-4" />
+              </div>
+            );
+          })}
         </div>
 
         <div className="bg-teal-brand/5 border border-teal-brand-light p-5 rounded-2xl flex gap-3 items-start">
