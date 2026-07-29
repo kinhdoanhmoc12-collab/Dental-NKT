@@ -121,24 +121,34 @@ export default function ImplantsPage() {
               : "Implantology is widely regarded as the best restoration method because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth."}
           </p>
         </div>
-        <div className="md:col-span-5 bg-teal-brand-light/30 border border-teal-brand-light p-8 rounded-3xl space-y-4">
-          <h3 className="text-base font-bold text-dark-brand">
-            {isVN ? "Lợi ích vượt trội tại DentalNKT" : "Key Benefits at DentalNKT"}
-          </h3>
-          <ul className="space-y-3.5">
-            {[
-              isVN ? "Phục hồi 99% thẩm mỹ & lực nhai như răng thật" : "Restores 99% of original chewing power & aesthetics",
-              isVN ? "Trụ tương thích sinh học cao, tích hợp xương nhanh" : "Highly biocompatible posts, rapid osseointegration",
-              isVN ? "Bảo tồn tối đa răng thật xung quanh" : "Preserves adjacent natural teeth structure entirely",
-              isVN ? "Ngăn ngừa tình trạng tiêu xương hàm hiệu quả" : "Stops progressive jawbone resorption",
-              isVN ? "Độ bền lâu dài lên tới trọn đời nếu chăm sóc tốt" : "Can last a lifetime with proper oral hygiene"
-            ].map((benefit, idx) => (
-              <li key={idx} className="flex gap-2 items-start text-xs sm:text-sm text-slate-800">
-                <Check className="w-4.5 h-4.5 text-teal-brand shrink-0 mt-0.5" />
-                <span className="font-semibold">{benefit}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="md:col-span-5 space-y-6">
+          <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+            <Image 
+              src="/implant_structure.jpg" 
+              alt="Premium Dental Implant Model Structure"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="bg-teal-brand-light/30 border border-teal-brand-light p-6 sm:p-8 rounded-3xl space-y-4">
+            <h3 className="text-base font-bold text-dark-brand">
+              {isVN ? "Lợi ích vượt trội tại DentalNKT" : "Key Benefits at DentalNKT"}
+            </h3>
+            <ul className="space-y-3.5">
+              {[
+                isVN ? "Phục hồi 99% thẩm mỹ & lực nhai như răng thật" : "Restores 99% of original chewing power & aesthetics",
+                isVN ? "Trụ tương thích sinh học cao, tích hợp xương nhanh" : "Highly biocompatible posts, rapid osseointegration",
+                isVN ? "Bảo tồn tối đa răng thật xung quanh" : "Preserves adjacent natural teeth structure entirely",
+                isVN ? "Ngăn ngừa tình trạng tiêu xương hàm hiệu quả" : "Stops progressive jawbone resorption",
+                isVN ? "Độ bền lâu dài lên tới trọn đời nếu chăm sóc tốt" : "Can last a lifetime with proper oral hygiene"
+              ].map((benefit, idx) => (
+                <li key={idx} className="flex gap-2 items-start text-xs sm:text-sm text-slate-800">
+                  <Check className="w-4.5 h-4.5 text-teal-brand shrink-0 mt-0.5" />
+                  <span className="font-semibold">{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -442,7 +452,8 @@ export default function ImplantsPage() {
               titleVN: "Chụp phim, scan mẫu răng 3D",
               titleEN: "3D CT Scan & Digital Impression",
               descVN: "Chụp phim Cone Beam CT (CBCT) 3D để khảo sát cấu trúc xương hàm, quét mẫu răng kỹ thuật số lấy dữ liệu (đối với ca toàn hàm sẽ tiến hành thử răng để đảm bảo độ chính xác).",
-              descEN: "3D Cone Beam CT scan to inspect bone structure and digital mouth scanning (full-mouth cases undergo extra try-in steps to ensure accuracy)."
+              descEN: "3D Cone Beam CT scan to inspect bone structure and digital mouth scanning (full-mouth cases undergo extra try-in steps to ensure accuracy).",
+              img: "/ct_cone_beam_scan.jpg"
             },
             {
               num: 3,
@@ -463,7 +474,8 @@ export default function ImplantsPage() {
               titleVN: "Tiến hành cấy ghép Implant",
               titleEN: "Implant Placement Surgery",
               descVN: "Thực hiện phẫu thuật đặt trụ Implant dưới gây tê tại chỗ (quá trình cấy trụ chỉ mất khoảng 1 ngày/khoảng 30-60 phút mỗi trụ). Lưu ý: Thời gian thiết kế và làm máng hướng dẫn phẫu thuật mất từ 3-5 ngày tùy theo từng bệnh nhân.",
-              descEN: "Implant placement surgery under local anesthesia (the placement itself takes 1 day, about 30-60 minutes per fixture). Note: Fabrication of the surgical guide takes 3-5 days depending on the patient."
+              descEN: "Implant placement surgery under local anesthesia (the placement itself takes 1 day, about 30-60 minutes per fixture). Note: Fabrication of the surgical guide takes 3-5 days depending on the patient.",
+              img: "/sterile_surgery_room.jpg"
             },
             {
               num: 6,
@@ -483,7 +495,7 @@ export default function ImplantsPage() {
               num: 8,
               titleVN: "Lấy dấu phục hình trên trụ",
               titleEN: "Final Impression Taking",
-              descVN: "Sau thời gian chờ tích hợp xương: Đối với ca cấy ghép bình thường (không ghép xương) là từ 6-12 tuần; đối với các ca có ghép xương bổ sung là từ 3 - 6 - 9 tháng tùy thể tích xương. Bác sĩ sẽ lấy dấu răng sứ vĩnh viễn trên trụ.",
+              descVN: "Sau thời gian chờ tích hợp xương: Đối với ca cấy ghép bình thường (không ghép xương) là từ 6-12 tuần; đối với các ca có ghép xương ổ lớn là từ 3 - 6 - 9 tháng tùy thể tích xương. Bác sĩ sẽ lấy dấu răng sứ vĩnh viễn trên trụ.",
               descEN: "After osseointegration: For normal cases (no bone graft), wait 6-12 weeks; for cases with bone grafts, wait 3-6-9 months depending on bone density. The dentist will take impressions for the permanent crown."
             },
             {
@@ -526,7 +538,18 @@ export default function ImplantsPage() {
                   </p>
                 </div>
                 <div className="hidden md:block w-[10%]" />
-                <div className="w-full md:w-[45%] pl-12 md:pl-8 md:py-4" />
+                <div className="w-full md:w-[45%] pl-12 md:pl-8 md:py-4">
+                  {step.img && (
+                    <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-slate-200 shadow-sm max-w-sm">
+                      <Image 
+                        src={step.img} 
+                        alt={isVN ? step.titleVN : step.titleEN}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             );
           })}
