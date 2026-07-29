@@ -443,7 +443,7 @@ export default function ImplantsPage() {
               titleEN: "Consultation & Planning",
               descVN: "Bệnh nhân đến phòng khám để được bác sĩ khám lâm sàng, tư vấn trực tiếp và lập kế hoạch điều trị chi tiết.",
               descEN: "Patient undergoes clinical examination, receives in-person consultation, and gets a detailed treatment plan.",
-              img: "/step1_consultation.jpg"
+              img: "/step1_consultation_v2.jpg"
             },
             {
               num: 2,
