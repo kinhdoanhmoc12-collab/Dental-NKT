@@ -291,8 +291,8 @@ export default function CrownsPage() {
                   warranty: "7 " + (isVN ? "Năm" : "Years")
                 },
                 {
-                  material: isVN ? "Sứ cao cấp (Lava / Ceramill)" : "Premium Ceramic (Lava/Ceramill)",
-                  features: isVN ? "Liên kết thẩm mỹ của Emax với độ bền Zirconia cao hơn." : "Combines Emax aesthetics with superior framework durability.",
+                  material: isVN ? "Sứ cao cấp Lava (Mỹ)" : "Premium Lava Ceramic (USA)",
+                  features: isVN ? "Liên kết thẩm mỹ xuất sắc với độ bền Zirconia cao hơn." : "Combines exceptional aesthetics with superior framework durability.",
                   bestFor: isVN ? "Phù hợp cho cả răng trước và răng sau." : "Both anterior and posterior dental restorations.",
                   warranty: "10 " + (isVN ? "Năm" : "Years")
                 },

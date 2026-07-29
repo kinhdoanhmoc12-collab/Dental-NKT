@@ -295,7 +295,7 @@ export default function BridgesClient() {
                   warranty: "7 " + (isVN ? "Năm" : "Years")
                 },
                 {
-                  material: isVN ? "Sứ cao cấp (Lava / Ceramill)" : "Premium Ceramic (Lava/Ceramill)",
+                  material: isVN ? "Sứ cao cấp Lava (Mỹ)" : "Premium Lava Ceramic (USA)",
                   features: isVN ? "Khung sườn chịu lực siêu bền kết hợp lớp phủ thẩm mỹ cao." : "Combines high-density structured cores with beautiful shading overlay.",
                   bestFor: isVN ? "Cầu răng sau hoặc ca phục hình đòi hỏi cả độ bền lẫn thẩm mỹ." : "High-demand cases requiring both durability and lifelike aesthetics.",
                   warranty: "10 " + (isVN ? "Năm" : "Years")
