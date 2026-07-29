@@ -442,7 +442,8 @@ export default function ImplantsPage() {
               titleVN: "Khám, tư vấn, lên kế hoạch",
               titleEN: "Consultation & Planning",
               descVN: "Bệnh nhân đến phòng khám để được bác sĩ khám lâm sàng, tư vấn trực tiếp và lập kế hoạch điều trị chi tiết.",
-              descEN: "Patient undergoes clinical examination, receives in-person consultation, and gets a detailed treatment plan."
+              descEN: "Patient undergoes clinical examination, receives in-person consultation, and gets a detailed treatment plan.",
+              img: "/step1_consultation.jpg"
             },
             {
               num: 2,
@@ -457,14 +458,16 @@ export default function ImplantsPage() {
               titleVN: "Chọn loại trụ & răng trên Implant",
               titleEN: "Selecting Fixture & Crown Materials",
               descVN: "Lựa chọn loại trụ và răng sứ phù hợp với tình trạng xương và ngân sách. Các loại trụ (đều bảo hành 10 năm): Hiossen (Mỹ), SIC (Đức), Straumann (Thụy Sĩ). Các loại răng sứ: Everest (Hàn Quốc - bảo hành 7 năm), Ceramill (Đức - bảo hành 7 năm), Emax Zirconia (Đức - bảo hành 10 năm).",
-              descEN: "Select implant post and crown materials based on bone condition and budget. Posts (all with 10-year warranty): Hiossen (USA), SIC (Germany), Straumann (Switzerland). Crowns: Everest (Korea - 7-year warranty), Ceramill (Germany - 7-year warranty), Emax Zirco (Germany - 10-year warranty)."
+              descEN: "Select implant post and crown materials based on bone condition and budget. Posts (all with 10-year warranty): Hiossen (USA), SIC (Germany), Straumann (Switzerland). Crowns: Everest (Korea - 7-year warranty), Ceramill (Germany - 7-year warranty), Emax Zirco (Germany - 10-year warranty).",
+              img: "/step3_materials.jpg"
             },
             {
               num: 4,
               titleVN: "Lập máng hướng dẫn phẫu thuật",
               titleEN: "Surgical Guide Fabrication",
               descVN: "Dựa trên các thông số chính xác từ phim chụp 3D và dữ liệu scan mẫu hàm, bác sĩ thiết kế và in máng hướng dẫn phẫu thuật giúp định vị đặt trụ an toàn, chính xác tuyệt đối.",
-              descEN: "Based on precise parameters from 3D scans and digital impressions, we design and fabricate a surgical guide for safe, ultra-precise implant positioning."
+              descEN: "Based on precise parameters from 3D scans and digital impressions, we design and fabricate a surgical guide for safe, ultra-precise implant positioning.",
+              img: "/step4_surgical_guide.jpg"
             },
             {
               num: 5,
@@ -479,42 +482,48 @@ export default function ImplantsPage() {
               titleVN: "Hẹn tái khám sau 2 ngày",
               titleEN: "Follow-up & Cleaning (Day 2)",
               descVN: "Bệnh nhân quay lại phòng khám sau 2 ngày để bác sĩ kiểm tra vết thương, hướng dẫn chi tiết cách vệ sinh răng miệng và bơm rửa vết thương.",
-              descEN: "Patient returns to the clinic on Day 2 for wound check, professional cleaning, and detailed home hygiene guidance."
+              descEN: "Patient returns to the clinic on Day 2 for wound check, professional cleaning, and detailed home hygiene guidance.",
+              img: "/step6_followup.jpg"
             },
             {
               num: 7,
               titleVN: "Cắt chỉ sau 7 ngày",
               titleEN: "Suture Removal (Day 7)",
               descVN: "Tiến hành cắt chỉ phẫu thuật và kiểm tra độ lành thương của mô nướu xung quanh vị trí đặt trụ.",
-              descEN: "Remove surgical sutures and inspect the healing progress of soft gum tissue around the implant site."
+              descEN: "Remove surgical sutures and inspect the healing progress of soft gum tissue around the implant site.",
+              img: "/step7_suture_removal.jpg"
             },
             {
               num: 8,
               titleVN: "Lấy dấu phục hình trên trụ",
               titleEN: "Final Impression Taking",
               descVN: "Sau thời gian chờ tích hợp xương: Đối với ca cấy ghép bình thường (không ghép xương) là từ 6-12 tuần; đối với các ca có ghép xương ổ lớn là từ 3 - 6 - 9 tháng tùy thể tích xương. Bác sĩ sẽ lấy dấu răng sứ vĩnh viễn trên trụ.",
-              descEN: "After osseointegration: For normal cases (no bone graft), wait 6-12 weeks; for cases with bone grafts, wait 3-6-9 months depending on bone density. The dentist will take impressions for the permanent crown."
+              descEN: "After osseointegration: For normal cases (no bone graft), wait 6-12 weeks; for cases with bone grafts, wait 3-6-9 months depending on bone density. The dentist will take impressions for the permanent crown.",
+              img: "/step8_impression.jpg"
             },
             {
               num: 9,
               titleVN: "Chế tác răng sứ tại phòng Lab",
               titleEN: "In-House Lab Milling",
               descVN: "Dữ liệu dấu răng được gửi xuống phòng Lab để tiến hành thiết kế và chế tác răng sứ bằng công nghệ CAD/CAM chính xác.",
-              descEN: "Impression data is sent to the lab for high-precision design and CAD/CAM milling of the custom porcelain crown."
+              descEN: "Impression data is sent to the lab for high-precision design and CAD/CAM milling of the custom porcelain crown.",
+              img: "/step9_lab_milling.jpg"
             },
             {
               num: 10,
               titleVN: "Lắp răng sứ hoàn thiện",
               titleEN: "Crown Delivery & Calibration",
               descVN: "Sau 2-3 ngày chế tác, răng sứ sẽ được gắn cố định vĩnh viễn lên trụ Implant và tinh chỉnh khớp cắn hoàn hảo cho bệnh nhân.",
-              descEN: "After 2-3 days of milling, the final crown is bonded to the implant post and calibrated for a perfect, natural bite."
+              descEN: "After 2-3 days of milling, the final crown is bonded to the implant post and calibrated for a perfect, natural bite.",
+              img: "/step10_delivery.jpg"
             },
             {
               num: 11,
               titleVN: "Kiểm tra định kỳ 6 tháng",
               titleEN: "6-Month Follow-Up Check",
               descVN: "Bệnh nhân tái khám định kỳ mỗi 6 tháng một lần để chụp phim kiểm tra độ ổn định của xương quanh trụ, vệ sinh răng miệng chuyên sâu bảo vệ Implant lâu dài.",
-              descEN: "Patient schedules routine clinical check-ups and diagnostic scans every 6 months to monitor bone levels and perform professional hygiene maintenance."
+              descEN: "Patient schedules routine clinical check-ups and diagnostic scans every 6 months to monitor bone levels and perform professional hygiene maintenance.",
+              img: "/step11_checkup.jpg"
             }
           ].map((step) => {
             const isEven = step.num % 2 === 0;
