@@ -475,7 +475,7 @@ export default function ImplantsPage() {
               titleEN: "Implant Placement Surgery",
               descVN: "Thực hiện phẫu thuật đặt trụ Implant dưới gây tê tại chỗ (quá trình cấy trụ chỉ mất khoảng 1 ngày/khoảng 30-60 phút mỗi trụ). Lưu ý: Thời gian thiết kế và làm máng hướng dẫn phẫu thuật mất từ 3-5 ngày tùy theo từng bệnh nhân.",
               descEN: "Implant placement surgery under local anesthesia (the placement itself takes 1 day, about 30-60 minutes per fixture). Note: Fabrication of the surgical guide takes 3-5 days depending on the patient.",
-              img: "/sterile_surgery_room_v4.jpg"
+              img: "/sterile_surgery_room_v5.jpg"
             },
             {
               num: 6,
