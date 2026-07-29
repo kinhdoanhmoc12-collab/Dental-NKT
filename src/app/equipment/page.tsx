@@ -88,17 +88,6 @@ const equipment = [
     origin: "Italy",
     image: "/images/equipment/autoclave.jpg",
   },
-  {
-    icon: Heart,
-    nameVN: "Ghế nha khoa cao cấp",
-    nameEN: "Premium Dental Chairs",
-    descVN:
-      "Ghế điều trị thế hệ mới tích hợp đèn LED, hệ thống hút chân không và cảm biến tự động, mang lại trải nghiệm thoải mái nhất cho bệnh nhân.",
-    descEN:
-      "Next-generation treatment chairs with integrated LED lighting, vacuum system, and auto sensors for maximum patient comfort.",
-    origin: "Germany",
-    image: "/images/equipment/dental_chair.jpg",
-  },
 ];
 
 const materials = [
