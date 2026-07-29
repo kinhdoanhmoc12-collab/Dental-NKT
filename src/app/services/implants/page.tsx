@@ -628,7 +628,7 @@ export default function ImplantsPage() {
               </div>
               <div className="py-2.5 flex justify-between">
                 <span className="text-slate-600 font-semibold">{isVN ? "Mão sứ trên Implant" : "Ceramic Crown (on Implant)"}</span>
-                <span className="font-bold text-teal-brand">{isVN ? "5 Năm (Tính riêng biệt)" : "5 Years (Crown Only)"}</span>
+                <span className="font-bold text-teal-brand">{isVN ? "7 đến 10 Năm (Tính riêng biệt)" : "7 to 10 Years (Crown Only)"}</span>
               </div>
             </div>
             <p className="text-xs text-slate-500 font-medium leading-relaxed">
