@@ -27,9 +27,9 @@ const equipment = [
     nameVN: "Hệ thống ghi động học hàm MODJAW 3D",
     nameEN: "MODJAW 3D Jaw Motion Tracker",
     descVN:
-      "Công nghệ ghi động học hàm dưới 3D thời gian thực, tạo bản sao số khớp cắn của từng bệnh nhân giúp thiết kế răng sứ, Veneer và Implant toàn hàm khít sát tuyệt đối khi ăn nhai.",
+      "Công nghệ đỉnh cao độc quyền ghi động học khớp cắn 3D thời gian thực. Giúp tạo lập bản sao số chuyển động hàm nhai sinh lý chính xác tuyệt đối cho từng bệnh nhân. Đây là chìa khóa vàng giúp chế tác răng sứ, mặt dán Veneer và phục hình Implant toàn hàm đạt độ khớp khít nhai tự nhiên lý tưởng nhất, loại bỏ hoàn toàn việc mài chỉnh sau khi gắn răng.",
     descEN:
-      "Real-time 3D jaw movement tracking technology, creating a digital twin of patient occlusion for perfectly calibrated veneers, crowns, and implants.",
+      "Cutting-edge technology capturing real-time 3D dynamic jaw movement. By creating a precise digital twin of the patient's physiological occlusion, it enables laboratory technicians to craft custom veneers, crowns, and full-arch implants with perfect functional harmony, eliminating the need for post-op biting adjustments.",
     origin: "France",
     image: "/modjaw_tracker.jpg",
   },
@@ -259,40 +259,52 @@ export default function EquipmentPage() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {equipment.map((item, i) => (
-              <div
-                key={i}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-teal-brand/20 transition-all duration-300 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
-                style={{
-                  animationDelay: `${i * 80}ms`,
-                  animation: "fadeIn 0.5s ease-out forwards",
-                  opacity: 0,
-                }}
-              >
-                <div className="relative h-44 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={isVN ? item.nameVN : item.nameEN}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute top-3 left-3">
-                    <span className="text-[10px] font-bold text-white bg-slate-800/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                      {item.origin}
-                    </span>
+            {equipment.map((item, i) => {
+              const isModjaw = i === 0;
+              return (
+                <div
+                  key={i}
+                  className={`group bg-white rounded-2xl overflow-hidden border transition-all duration-300 ${
+                    isModjaw
+                      ? "sm:col-span-2 lg:col-span-2 border-teal-brand/40 bg-gradient-to-br from-teal-brand/[0.03] to-transparent shadow-[0_12px_40px_-8px_rgba(0,175,199,0.18)]"
+                      : "border-slate-100 hover:border-teal-brand/20 hover:shadow-[0_8px_30px_-10px_rgba(0,175,199,0.12)]"
+                  }`}
+                  style={{
+                    animationDelay: `${i * 80}ms`,
+                    animation: "fadeIn 0.5s ease-out forwards",
+                    opacity: 0,
+                  }}
+                >
+                  <div className={`relative ${isModjaw ? "h-60 sm:h-80" : "h-44"} overflow-hidden`}>
+                    <Image
+                      src={item.image}
+                      alt={isVN ? item.nameVN : item.nameEN}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute top-3 left-3 flex gap-2">
+                      <span className="text-[10px] font-bold text-white bg-slate-800/80 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        {item.origin}
+                      </span>
+                      {isModjaw && (
+                        <span className="text-[10px] font-bold text-white bg-teal-brand px-2.5 py-1 rounded-full uppercase tracking-wider animate-pulse">
+                          {isVN ? "Công nghệ đột phá" : "Breakthrough Tech"}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className={`font-bold text-[#0b1e2c] leading-snug mb-2 ${isModjaw ? "text-lg md:text-xl font-extrabold text-teal-brand" : "text-base"}`}>
+                      {isVN ? item.nameVN : item.nameEN}
+                    </h3>
+                    <p className={`leading-relaxed ${isModjaw ? "text-sm sm:text-base text-slate-700 font-medium" : "text-sm text-slate-500"}`}>
+                      {isVN ? item.descVN : item.descEN}
+                    </p>
                   </div>
                 </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-[#0b1e2c] text-base leading-snug mb-2">
-                    {isVN ? item.nameVN : item.nameEN}
-                  </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
-                    {isVN ? item.descVN : item.descEN}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
