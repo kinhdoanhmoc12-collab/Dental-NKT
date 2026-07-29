@@ -259,7 +259,7 @@ export default function ImplantsPage() {
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Độ bền tham khảo" : "Average Lifespan"}</td>
                   <td className="p-4 bg-teal-brand-light/10 text-slate-800 font-semibold">{isVN ? "Trụ từ 10 năm đến TRỌN ĐỜI; Mão sứ từ 7 đến 10 năm" : "Fixture: 10 years to LIFETIME; Crown: 7 to 10 years"}</td>
-                  <td className="p-4 text-slate-800 font-medium">{isVN ? "5 năm (cần thay thế định kỳ)" : "5 years (requires eventual replacement)"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "5 đến 10 năm (cần thay thế định kỳ)" : "5 to 10 years (requires eventual replacement)"}</td>
                   <td className="p-4 text-slate-800 font-medium">{isVN ? "3 - 5 năm (cần đệm hàm do tiêu nướu)" : "3 - 5 years (requires adjustments)"}</td>
                 </tr>
                 <tr>
