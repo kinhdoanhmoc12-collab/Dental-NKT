@@ -236,9 +236,11 @@ export default function VeneersPage() {
           3. RỦI RO & MINH BẠCH Y KHOA
           ========================================== */}
       <section className="bg-amber-50/70 border border-amber-200/80 p-6 sm:p-8 rounded-3xl space-y-4">
-        <div className="flex items-center gap-3 text-amber-900 font-bold text-lg font-serif">
-          <AlertCircle className="w-6 h-6 text-amber-600 shrink-0" />
-          <h2>{isVN ? "3. Minh Bạch Y Khoa: Rủi Ro & Điều Cần Biết Trước Khi Quyết Định" : "3. Clinical Transparency: Risks & Key Considerations"}</h2>
+        <div className="flex items-center gap-3 text-amber-950">
+          <AlertCircle className="w-6.5 h-6.5 text-amber-600 shrink-0 mt-0.5" />
+          <h2 className="text-2xl sm:text-3xl font-serif font-extrabold">
+            {isVN ? "3. Minh Bạch Y Khoa: Rủi Ro & Điều Cần Biết Trước Khi Quyết Định" : "3. Clinical Transparency: Risks & Key Considerations"}
+          </h2>
         </div>
         <p className="text-xs sm:text-sm text-amber-900 leading-relaxed font-light">
           {isVN 
