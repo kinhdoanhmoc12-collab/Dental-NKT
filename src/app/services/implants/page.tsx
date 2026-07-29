@@ -235,8 +235,8 @@ export default function ImplantsPage() {
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Ảnh hưởng răng kế cận" : "Impact on neighbor teeth"}</td>
                   <td className="p-4 bg-teal-brand-light/10 font-semibold text-slate-800">{isVN ? "Không, bảo tồn nguyên vẹn răng bên" : "None, neighbor teeth left completely intact"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Bắt buộc mài răng thật bên cạnh làm trụ" : "Must grind down healthy adjacent teeth"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Không mài, nhưng móc tì lên nướu & răng" : "Clips and base plates put pressure on gums"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Bắt buộc mài răng thật bên cạnh làm trụ" : "Must grind down healthy adjacent teeth"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Không mài, nhưng móc tì lên nướu & răng" : "Clips and base plates put pressure on gums"}</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Ngăn ngừa tiêu xương hàm" : "Prevents bone resorption"}</td>
@@ -247,26 +247,26 @@ export default function ImplantsPage() {
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Cảm giác & Lực ăn nhai" : "Chewing comfort & force"}</td>
                   <td className="p-4 bg-teal-brand-light/10 font-semibold text-slate-800">{isVN ? "Gần giống răng thật nhất (99%)" : "Like natural teeth (99% force)"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Tốt (khoảng 70% lực nhai răng thật)" : "Good (approx 70% chew force)"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Kém, lỏng lẻo, dễ bị tuột rơi" : "Poor, unstable, prone to slipping"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Tốt (khoảng 70% lực nhai răng thật)" : "Good (approx 70% chew force)"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Kém, lỏng lẻo, dễ bị tuột rơi" : "Poor, unstable, prone to slipping"}</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Thời gian điều trị" : "Treatment timeframe"}</td>
                   <td className="p-4 bg-teal-brand-light/10 text-slate-800 font-medium">{isVN ? "2 - 6 tháng (chờ tích hợp xương)" : "2 - 6 months (bone integration phase)"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "1 - 2 tuần" : "1 - 2 weeks"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Nhanh nhất (chỉ vài ngày)" : "Fastest (few days)"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "1 - 2 tuần" : "1 - 2 weeks"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Nhanh nhất (chỉ vài ngày)" : "Fastest (few days)"}</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Độ bền tham khảo" : "Average Lifespan"}</td>
-                  <td className="p-4 bg-teal-brand-light/10 text-slate-800 font-semibold">{isVN ? "Trụ từ 10 năm đến TRỌN ĐỜI; Mão sứ ~5 năm" : "Fixture: 10 years to LIFETIME; Crown: ~5 years"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "5 năm (cần thay thế định kỳ)" : "5 years (requires eventual replacement)"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "3 - 5 năm (cần đệm hàm do tiêu nướu)" : "3 - 5 years (requires adjustments)"}</td>
+                  <td className="p-4 bg-teal-brand-light/10 text-slate-800 font-semibold">{isVN ? "Trụ từ 10 năm đến TRỌN ĐỜI; Mão sứ từ 7 đến 10 năm" : "Fixture: 10 years to LIFETIME; Crown: 7 to 10 years"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "5 năm (cần thay thế định kỳ)" : "5 years (requires eventual replacement)"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "3 - 5 năm (cần đệm hàm do tiêu nướu)" : "3 - 5 years (requires adjustments)"}</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold text-slate-900">{isVN ? "Tính xâm lấn lâm sàng" : "Clinical Invasiveness"}</td>
                   <td className="p-4 bg-teal-brand-light/10 text-slate-800 font-medium">{isVN ? "Cần phẫu thuật nhỏ đặt trụ" : "Requires minor surgical placement"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Không phẫu thuật nhưng mài cấu trúc răng" : "Non-surgical but destroys tooth enamel"}</td>
-                  <td className="p-4 text-slate-700 font-medium">{isVN ? "Hoàn toàn không xâm lấn" : "Completely non-invasive"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Không phẫu thuật nhưng mài cấu trúc răng" : "Non-surgical but destroys tooth enamel"}</td>
+                  <td className="p-4 text-slate-800 font-medium">{isVN ? "Hoàn toàn không xâm lấn" : "Completely non-invasive"}</td>
                 </tr>
               </tbody>
             </table>
