@@ -64,8 +64,8 @@ export default function ServicesPage() {
                 className="bg-white rounded-2xl p-8 border border-slate-100 shadow-premium hover:shadow-premium-hover transition-luxury flex flex-col justify-between group scroll-mt-28"
               >
                 <div className="space-y-6">
-                  <div className="flex justify-between items-start">
-                    <div className="p-3.5 bg-teal-brand-light text-teal-brand rounded-xl">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 bg-teal-brand-light text-teal-brand rounded-xl shrink-0">
                       {treat.icon}
                     </div>
                     <span className="text-xs font-bold tracking-wider text-slate-600 uppercase">
