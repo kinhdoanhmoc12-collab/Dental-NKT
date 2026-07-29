@@ -76,7 +76,7 @@ export default function ImplantsPage() {
                 {isVN ? "Chi phí tham khảo chỉ từ:" : "Pricing starts from:"}
               </span>
               <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand">
-                {isVN ? "18.000.000 VNĐ / trụ" : "$975 AUD / post"}
+                {isVN ? "15.000.000 VNĐ / trụ" : "$975 AUD / post"}
               </span>
             </div>
 
