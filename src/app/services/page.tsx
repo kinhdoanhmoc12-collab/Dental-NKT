@@ -68,7 +68,7 @@ export default function ServicesPage() {
                     <div className="p-3.5 bg-teal-brand-light text-teal-brand rounded-xl">
                       {treat.icon}
                     </div>
-                    <span className="text-xs font-bold tracking-wider text-slate-400 uppercase">
+                    <span className="text-xs font-bold tracking-wider text-slate-600 uppercase">
                       {treat.sub}
                     </span>
                   </div>
@@ -77,14 +77,14 @@ export default function ServicesPage() {
                     <h3 className="font-serif text-xl font-bold text-[#0b1e2c] group-hover:text-teal-brand transition-colors">
                       {treat.title}
                     </h3>
-                    <p className="text-xs text-slate-500 font-normal leading-relaxed">
+                    <p className="text-xs text-slate-700 font-normal leading-relaxed">
                       {treat.desc}
                     </p>
                   </div>
 
                   <ul className="space-y-2.5 pt-2 border-t border-slate-50">
                     {treat.specs.map((spec, sIdx) => (
-                      <li key={sIdx} className="flex items-start gap-2.5 text-xs text-slate-600">
+                      <li key={sIdx} className="flex items-start gap-2.5 text-xs text-slate-750">
                         <Check className="w-4 h-4 text-teal-brand shrink-0 mt-0.5" />
                         <span className="font-medium">{spec}</span>
                       </li>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                 <Shield className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-base font-bold text-[#0b1e2c]">ISO 9001:2015 Clinic</h4>
-              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
                 Our clinic operates under international ISO quality management protocols, ensuring strict medical sterilization, data security, and service standards.
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                 <Check className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-base font-bold text-[#0b1e2c]">100% FDA-Approved</h4>
-              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
                 We import genuine dental supplies (Nobel Biocare, Straumann, E.max porcelain) which are fully FDA-cleared and come with verifiable serial codes.
               </p>
             </div>
@@ -143,7 +143,7 @@ export default function ServicesPage() {
                 <Award className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-base font-bold text-[#0b1e2c]">Global Warranty Coverage</h4>
-              <p className="text-xs text-slate-600 font-medium leading-relaxed">
+              <p className="text-xs text-slate-700 font-medium leading-relaxed">
                 Enjoy peace of mind with our extended warranty plan. If corrective care is required, we coordinates with our partner practices globally.
               </p>
             </div>
