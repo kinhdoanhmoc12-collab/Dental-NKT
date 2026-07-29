@@ -271,7 +271,7 @@ export default function ImplantsPage() {
               </tbody>
             </table>
           </div>
-          <div className="bg-slate-50 p-4 border-t border-slate-200 text-xs sm:text-sm text-slate-800 font-semibold">
+          <div className="p-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500 font-normal text-center">
             {isVN 
               ? "Với các trường hợp mất răng toàn hàm, bác sĩ sẽ tư vấn giải pháp All-on-4 / All-on-6 để tiết kiệm chi phí và số lượng trụ cần cấy." 
               : "For full arch cases, we recommend All-on-4/6 systems which utilize fewer implants to securely support a complete bridge."}
