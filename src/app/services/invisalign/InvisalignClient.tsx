@@ -154,7 +154,7 @@ export default function InvisalignClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
           {isVN ? "1. Bạn có phù hợp với niềng răng Invisalign?" : "1. Are You a Candidate for Invisalign?"}
         </h2>
-        <p className="text-sm sm:text-base text-slate-600 font-light leading-relaxed">
+        <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
           {isVN 
             ? "Mức độ dịch chuyển răng bằng khay niềng phụ thuộc lớn vào tình trạng xương hàm và răng của từng cá nhân. Dưới đây là bảng đánh giá tính phù hợp lâm sàng sơ bộ:"
             : "The efficiency of clear aligners depends on your specific dental and skeletal anatomy. Here is an initial suitability framework:"}

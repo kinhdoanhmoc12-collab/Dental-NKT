@@ -169,7 +169,7 @@ export default function RootCanalClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
           {isVN ? "1. Nên giữ răng (điều trị tủy) hay nhổ bỏ?" : "1. Save the Tooth (Root Canal) or Extract?"}
         </h2>
-        <p className="text-sm sm:text-base text-slate-700 font-light leading-relaxed">
+        <p className="text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
           {isVN 
             ? "Giữ răng thật luôn là ưu tiên hàng đầu trong nha khoa hiện đại vì không có răng giả nào thay thế hoàn hảo được cảm giác ăn nhai tự nhiên. Bảng dưới đây mô tả logic bác sĩ sẽ áp dụng để đánh giá tình trạng răng của bạn:"
             : "Preserving your natural teeth is always the gold standard in modern dentistry. No prosthetic can replicate the exact bite sensation and bone stimulation of natural tooth structure. Here is how our clinical team assesses your options:"}

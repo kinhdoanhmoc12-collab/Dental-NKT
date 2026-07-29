@@ -105,7 +105,7 @@ export default function VeneersPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "1. Veneer Là Gì & Phù Hợp Với Ai?" : "1. What Are Veneers & Who Are They For?"}
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-light">
+          <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
             {isVN ? (
               <>Mặt dán sứ Veneer (Porcelain Veneers) là lớp sứ siêu mỏng, dày khoảng <strong className="text-[#0b1e2c] font-bold">0.3–0.7mm</strong>, được chế tác riêng theo hình dáng răng của từng khách hàng và dán cố định lên bề mặt ngoài của răng thật. Veneer giúp cải thiện màu sắc, hình dáng, kích thước và sự đồng đều của hàm răng mà không cần mài cùi răng nhiều như bọc răng sứ toàn phần (Crown).</>
             ) : (
@@ -121,7 +121,7 @@ export default function VeneersPage() {
               <Check className="w-5 h-5 text-emerald-600 shrink-0" />
               <h3>{isVN ? "Trường hợp NÊN làm Veneer:" : "Ideal Candidates for Veneers:"}</h3>
             </div>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-light">
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
               <li className="flex items-start gap-2">
                 <span className="text-emerald-600 font-bold">•</span>
                 <span>{isVN ? "Răng bị ố vàng, nhiễm màu nặng (kháng sinh Tetracycline, nhiễm Fluor) không cải thiện bằng tẩy trắng." : "Teeth with severe staining or Tetracycline discoloration unresponsive to whitening."}</span>
@@ -151,7 +151,7 @@ export default function VeneersPage() {
               <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
               <h3>{isVN ? "Veneer KHÔNG phù hợp khi:" : "Veneers Are NOT Recommended For:"}</h3>
             </div>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-light">
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
               <li className="flex items-start gap-2">
                 <span className="text-rose-600 font-bold">•</span>
                 <span>{isVN ? "Răng bị sâu nặng, viêm tủy chưa được điều trị dứt điểm." : "Untreated deep decay or severe pulpal infection."}</span>
@@ -181,7 +181,7 @@ export default function VeneersPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "2. So Sánh Veneer, Bọc Sứ (Crown) & Tẩy Trắng" : "2. Comparison: Veneers vs Crowns vs Whitening"}
           </h2>
-          <p className="text-sm text-slate-600 font-light">
+          <p className="text-sm text-slate-700 font-normal">
             {isVN ? "Bảng so sánh chi tiết giúp bạn chọn đúng giải pháp tối ưu cho tình trạng răng hiện tại:" : "Side-by-side comparison to help you choose the ideal clinical solution:"}
           </p>
         </div>
@@ -274,7 +274,7 @@ export default function VeneersPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "4. Xem & Chỉnh Sửa Trực Tiếp Trước Khi Dán Cố Định" : "4. Try-In & Approval Process Before Final Bonding"}
           </h2>
-          <p className="text-sm text-slate-600 font-light leading-relaxed">
+          <p className="text-sm text-slate-700 font-normal leading-relaxed">
             {isVN 
               ? "Nhiều khách hàng lo lắng: 'Lỡ tôi không thích hình dáng hoặc độ trắng của răng thì sao?'. Tại DentalNTK, bạn hoàn toàn làm chủ nụ cười qua 3 bước kiểm duyệt:"
               : "Worried you won't like the final shade or shape? At DentalNTK, you approve your new smile in 3 stages before permanent bonding:"}
@@ -316,7 +316,7 @@ export default function VeneersPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "5. Bảng Giá & Vật Liệu Veneer Niêm Yết" : "5. Veneer Materials & Official Rates"}
           </h2>
-          <p className="text-sm text-slate-600 font-light">
+          <p className="text-sm text-slate-700 font-normal">
             {isVN ? "Bảng chi phí trọn gói minh bạch (đã bao gồm công thăm khám, thiết kế 3D và bảo hành):" : "Transparent all-inclusive rates (includes 3D design, lab fabrication & warranty):"}
           </p>
         </div>
@@ -381,7 +381,7 @@ export default function VeneersPage() {
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "6. Lộ Trình Quy Trình Dán Sứ Veneers Chuẩn" : "6. Step-by-Step Veneers Process"}
           </h2>
-          <p className="text-sm text-slate-600 font-light">
+          <p className="text-sm text-slate-700 font-normal">
             {isVN ? "Quy trình điều trị được tối ưu hóa giúp mang lại nụ cười rạng rỡ, thoải mái và bền vững nhất:" : "Optimized veneers workflow for a radiant, comfortable, and long-lasting smile:"}
           </p>
         </div>
