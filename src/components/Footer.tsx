@@ -16,9 +16,7 @@ export default function Footer() {
         <div className="space-y-4 md:col-span-3">
           <div className="flex items-center gap-2 text-white">
             <Sparkles className="w-6 h-6 text-teal-brand" />
-            <span className="font-serif text-2xl sm:text-3xl font-light tracking-tight text-slate-200">
-              Dental <strong className="font-extrabold text-white">NKT</strong>
-            </span>
+            <span className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight">Dental NKT</span>
           </div>
           <p className="text-sm leading-relaxed text-slate-300 font-light">
             {t.footDesc}
