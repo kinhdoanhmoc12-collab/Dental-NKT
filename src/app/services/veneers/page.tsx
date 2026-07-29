@@ -459,7 +459,7 @@ export default function VeneersPage() {
           7. ĐỘI NGU BÁC SĨ & LABO CHẾ TÁC
           ========================================== */}
       <section className="bg-white py-10 space-y-6">
-        <div className="space-y-2 text-center">
+        <div className="space-y-2">
           <span className="text-teal-brand text-xs font-bold uppercase tracking-wider block">
             {isVN ? "ĐỘI NGŨ LÂM SÀNG & TIÊU CHUẨN" : "CLINICAL TEAM & LAB STANDARDS"}
           </span>
@@ -468,16 +468,16 @@ export default function VeneersPage() {
           </h2>
         </div>
 
-        <div className="max-w-xl mx-auto pt-2">
+        <div className="max-w-xl pt-2">
           <div className="space-y-4">
-            <div className="flex items-center justify-center gap-3 text-center">
+            <div className="flex items-center gap-3">
               <Award className="w-6 h-6 text-teal-brand shrink-0" />
               <div>
                 <h3 className="font-bold text-base text-[#0b1e2c]">{isVN ? "Labo Chế Tác CAD/CAM Nội Bộ" : "On-Site CAD/CAM Digital Lab"}</h3>
                 <p className="text-xs text-teal-brand font-semibold">{isVN ? "Nhập khẩu phôi sứ chính hãng Ivoclar (Đức)" : "Genuine Ivoclar Vivadent Ceramic Ingot Supply"}</p>
               </div>
             </div>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium pt-3 text-center list-none">
+            <ul className="space-y-2 text-xs sm:text-sm text-slate-700 font-medium pt-3 list-none">
               <li>{isVN ? "• Chứng nhận ISO 13485 & CE cho vật liệu y tế" : "• ISO 13485 & CE certified bio-compatible materials"}</li>
               <li>{isVN ? "• Hệ thống máy đắp sứ và máy phay 5 trục Roland (Nhật)" : "• Roland 5-axis precision milling & Ivoclar press furnace"}</li>
               <li>{isVN ? "• Nghệ nhân đắp sứ thủ công tinh xảo theo tông màu da" : "• Master ceramists custom shade-matching each unit"}</li>
