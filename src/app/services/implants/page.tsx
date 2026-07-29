@@ -443,7 +443,7 @@ export default function ImplantsPage() {
               titleEN: "Consultation & Planning",
               descVN: "Bệnh nhân đến phòng khám để được bác sĩ khám lâm sàng, tư vấn trực tiếp và lập kế hoạch điều trị chi tiết.",
               descEN: "Patient undergoes clinical examination, receives in-person consultation, and gets a detailed treatment plan.",
-              img: "/step1_consultation_v2.jpg"
+              img: "/step1_consultation_v3.jpg"
             },
             {
               num: 2,
@@ -475,7 +475,7 @@ export default function ImplantsPage() {
               titleEN: "Implant Placement Surgery",
               descVN: "Thực hiện phẫu thuật đặt trụ Implant dưới gây tê tại chỗ (quá trình cấy trụ chỉ mất khoảng 1 ngày/khoảng 30-60 phút mỗi trụ). Lưu ý: Thời gian thiết kế và làm máng hướng dẫn phẫu thuật mất từ 3-5 ngày tùy theo từng bệnh nhân.",
               descEN: "Implant placement surgery under local anesthesia (the placement itself takes 1 day, about 30-60 minutes per fixture). Note: Fabrication of the surgical guide takes 3-5 days depending on the patient.",
-              img: "/sterile_surgery_room_v3.jpg"
+              img: "/sterile_surgery_room_v4.jpg"
             },
             {
               num: 6,
@@ -515,7 +515,7 @@ export default function ImplantsPage() {
               titleEN: "Crown Delivery & Calibration",
               descVN: "Sau 2-3 ngày chế tác, răng sứ sẽ được gắn cố định vĩnh viễn lên trụ Implant và tinh chỉnh khớp cắn hoàn hảo cho bệnh nhân.",
               descEN: "After 2-3 days of milling, the final crown is bonded to the implant post and calibrated for a perfect, natural bite.",
-              img: "/step10_delivery.jpg"
+              img: "/step10_delivery_v2.jpg"
             },
             {
               num: 11,
@@ -523,7 +523,7 @@ export default function ImplantsPage() {
               titleEN: "6-Month Follow-Up Check",
               descVN: "Bệnh nhân tái khám định kỳ mỗi 6 tháng một lần để chụp phim kiểm tra độ ổn định của xương quanh trụ, vệ sinh răng miệng chuyên sâu bảo vệ Implant lâu dài.",
               descEN: "Patient schedules routine clinical check-ups and diagnostic scans every 6 months to monitor bone levels and perform professional hygiene maintenance.",
-              img: "/step11_checkup.jpg"
+              img: "/step11_checkup_v2.jpg"
             }
           ].map((step) => {
             const isEven = step.num % 2 === 0;
