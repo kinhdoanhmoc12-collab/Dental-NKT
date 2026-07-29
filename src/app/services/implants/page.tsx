@@ -692,8 +692,8 @@ export default function ImplantsPage() {
             {
               qVN: "Quyền lợi bảo hành của tôi có hiệu lực khi tôi đã về nước Úc không?",
               qAU: "Is my warranty valid after I return to Australia?",
-              aVN: "Có, chính sách bảo hành 10 năm cho trụ và 5 năm cho mão răng tại DentalNKT là bảo hành quốc tế. Nếu có biến cố thuộc phạm vi trách nhiệm kỹ thuật/vật liệu của nha khoa, chúng tôi sẽ hỗ trợ toàn bộ chi phí vé máy bay khứ hồi để bạn quay lại Việt Nam khắc phục.",
-              aAU: "Yes, our warranty (10 years for implant posts, 5 years for crowns) is fully valid internationally. In case of issues caused by clinical or material failure under our responsibility, we will cover your return flight ticket back to Hanoi for corrective treatment."
+              aVN: "Có, chính sách bảo hành 10 năm cho trụ và từ 7 đến 10 năm cho mão răng (tùy thuộc vào loại răng sứ bạn chọn) tại Dental NKT là bảo hành quốc tế. Nếu có biến cố thuộc phạm vi trách nhiệm kỹ thuật/vật liệu của nha khoa, chúng tôi sẽ hỗ trợ toàn bộ chi phí vé máy bay khứ hồi để bạn quay lại Việt Nam khắc phục.",
+              aAU: "Yes, our warranty (10 years for implant posts, and 7 to 10 years for crowns depending on the material you select) is fully valid internationally. In case of issues caused by clinical or material failure under our responsibility, we will cover your return flight ticket back to Hanoi for corrective treatment."
             },
             {
               qVN: "Tôi có cần khám bác sĩ nha khoa tại Úc trong thời gian chờ cấy mão không?",
