@@ -523,7 +523,7 @@ export default function ImplantsPage() {
               titleEN: "6-Month Follow-Up Check",
               descVN: "Bệnh nhân tái khám định kỳ mỗi 6 tháng một lần để chụp phim kiểm tra độ ổn định của xương quanh trụ, vệ sinh răng miệng chuyên sâu bảo vệ Implant lâu dài.",
               descEN: "Patient schedules routine clinical check-ups and diagnostic scans every 6 months to monitor bone levels and perform professional hygiene maintenance.",
-              img: "/step11_checkup_v2.jpg"
+              img: "/step11_checkup_v3.jpg"
             }
           ].map((step) => {
             const isEven = step.num % 2 === 0;
