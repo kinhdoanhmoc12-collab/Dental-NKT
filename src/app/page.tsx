@@ -1308,7 +1308,7 @@ export default function HomePage() {
                     {t.formCta}
                   </button>
    
-                  <p className="text-xs text-center text-slate-400 max-w-sm mx-auto leading-relaxed">{t.formBottomNote}</p>
+                  <p className="text-xs text-center text-slate-400/80 max-w-sm mx-auto leading-relaxed font-normal">{t.formBottomNote}</p>
                 </form>
               )}
             </div>

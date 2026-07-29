@@ -295,7 +295,7 @@ export default function ContactPage() {
                       {t.formCta}
                     </button>
 
-                    <p className="text-[10px] text-center text-slate-400 max-w-sm mx-auto leading-relaxed">
+                    <p className="text-[11px] text-center text-slate-550 max-w-sm mx-auto leading-relaxed font-normal">
                       {t.formBottomNote}
                     </p>
                   </form>
