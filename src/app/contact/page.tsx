@@ -176,7 +176,7 @@ export default function ContactPage() {
                       <h3 className="font-serif text-2xl font-bold text-[#0b1e2c]">
                         {t.formCardTitle}
                       </h3>
-                      <p className="text-xs text-slate-400">{t.formCardSub}</p>
+                      <p className="text-xs text-slate-600 font-medium">{t.formCardSub}</p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
