@@ -448,8 +448,8 @@ export default function ImplantsPage() {
               num: 3,
               titleVN: "Chọn loại trụ & răng trên Implant",
               titleEN: "Selecting Fixture & Crown Materials",
-              descVN: "Lựa chọn loại trụ và răng sứ phù hợp với tình trạng xương và ngân sách. Các loại trụ: Hiossen (Mỹ), SIC (Đức), Straumann (Thụy Sĩ - bảo hành 10 năm). Các loại răng sứ: Everest (Hàn Quốc - bảo hành 7 năm), Ceramill (Đức - bảo hành 10 năm), Emax Zirconia (Đức - bảo hành 10 năm).",
-              descEN: "Select implant post and crown materials based on bone condition and budget. Posts: Hiossen (USA), SIC (Germany), Straumann (Switzerland - 10-year warranty). Crowns: Everest (Korea - 7-year warranty), Ceramill (Germany - 10-year warranty), Emax Zirco (Germany - 10-year warranty)."
+              descVN: "Lựa chọn loại trụ và răng sứ phù hợp với tình trạng xương và ngân sách. Các loại trụ (đều bảo hành 10 năm): Hiossen (Mỹ), SIC (Đức), Straumann (Thụy Sĩ). Các loại răng sứ: Everest (Hàn Quốc - bảo hành 7 năm), Ceramill (Đức - bảo hành 10 năm), Emax Zirconia (Đức - bảo hành 10 năm).",
+              descEN: "Select implant post and crown materials based on bone condition and budget. Posts (all with 10-year warranty): Hiossen (USA), SIC (Germany), Straumann (Switzerland). Crowns: Everest (Korea - 7-year warranty), Ceramill (Germany - 10-year warranty), Emax Zirco (Germany - 10-year warranty)."
             },
             {
               num: 4,
