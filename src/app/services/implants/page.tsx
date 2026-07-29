@@ -483,7 +483,7 @@ export default function ImplantsPage() {
               titleEN: "Follow-up & Cleaning (Day 2)",
               descVN: "Bệnh nhân quay lại phòng khám sau 2 ngày để bác sĩ kiểm tra vết thương, hướng dẫn chi tiết cách vệ sinh răng miệng và bơm rửa vết thương.",
               descEN: "Patient returns to the clinic on Day 2 for wound check, professional cleaning, and detailed home hygiene guidance.",
-              img: "/step6_followup.jpg"
+              img: "/step6_followup_v2.jpg"
             },
             {
               num: 7,
