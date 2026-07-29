@@ -235,33 +235,33 @@ export default function VeneersPage() {
       {/* ==========================================
           3. RỦI RO & MINH BẠCH Y KHOA
           ========================================== */}
-      <section className="bg-amber-50/70 border border-amber-200/80 p-6 sm:p-8 rounded-3xl space-y-4">
-        <div className="flex items-center gap-3 text-amber-950">
+      <section className="bg-slate-50 border border-slate-200/80 p-6 sm:p-8 rounded-3xl space-y-4 shadow-sm">
+        <div className="flex items-center gap-3 text-[#0b1e2c]">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold">
             {isVN ? "3. Minh Bạch Y Khoa: Rủi Ro & Điều Cần Biết Trước Khi Quyết Định" : "3. Clinical Transparency: Risks & Key Considerations"}
           </h2>
         </div>
-        <p className="text-xs sm:text-sm text-amber-900 leading-relaxed font-normal">
+        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
           {isVN 
             ? "Tại Dental NKT, chúng tôi đề cao sự minh bạch y khoa để bạn hoàn toàn an tâm khi đưa ra lựa chọn. Dưới đây là các phản ứng sinh học tự nhiên và cách chăm sóc tối ưu để đạt kết quả bền vững nhất:"
             : "At Dental NKT, we believe in clear clinical transparency to ensure your peace of mind. Here are the natural biological adaptations and how we optimize them for your long-term success:"}
         </p>
-        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs sm:text-sm text-amber-950 font-medium">
-          <li className="bg-white/80 p-4 rounded-xl border border-amber-200/60 space-y-1">
-            <strong className="text-amber-900 block">• {isVN ? "Ê buốt tạm thời:" : "Temporary Sensitivity:"}</strong>
-            <span className="font-light">{isVN ? "Có thể ê buốt nhẹ 2–5 ngày sau mài răng, thường tự hết theo hướng dẫn của bác sĩ." : "Mild sensitivity for 2-5 days post-prep is normal and resolves naturally."}</span>
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs sm:text-sm text-slate-800 font-medium">
+          <li className="bg-white p-4 rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
+            <strong className="text-teal-brand block">• {isVN ? "Ê buốt tạm thời:" : "Temporary Sensitivity:"}</strong>
+            <span className="font-medium text-slate-600">{isVN ? "Có thể ê buốt nhẹ 2–5 ngày sau mài răng, thường tự hết theo hướng dẫn của bác sĩ." : "Mild sensitivity for 2-5 days post-prep is normal and resolves naturally."}</span>
           </li>
-          <li className="bg-white/80 p-4 rounded-xl border border-amber-200/60 space-y-1">
-            <strong className="text-amber-900 block">• {isVN ? "Can thiệp không đảo ngược:" : "Irreversible Procedure:"}</strong>
-            <span className="font-light">{isVN ? "Mài men răng dán veneer là can thiệp không thể đảo ngược hoàn toàn về răng gốc." : "Enamel removal is permanent; teeth will always require a restoration."}</span>
+          <li className="bg-white p-4 rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
+            <strong className="text-teal-brand block">• {isVN ? "Can thiệp không đảo ngược:" : "Irreversible Procedure:"}</strong>
+            <span className="font-medium text-slate-600">{isVN ? "Mài men răng dán veneer là can thiệp không thể đảo ngược hoàn toàn về răng gốc." : "Enamel removal is permanent; teeth will always require a restoration."}</span>
           </li>
-          <li className="bg-white/80 p-4 rounded-xl border border-amber-200/60 space-y-1">
-            <strong className="text-amber-900 block">• {isVN ? "Tránh cắn vật quá cứng:" : "Avoid Extreme Hard Force:"}</strong>
-            <span className="font-light">{isVN ? "Veneer sứ rất chắc nhưng không nên cắn đá lạnh, mở nắp chai hay cắn móng tay." : "Avoid biting ice, cracking hard shells, or using teeth as tools."}</span>
+          <li className="bg-white p-4 rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
+            <strong className="text-teal-brand block">• {isVN ? "Tránh cắn vật quá cứng:" : "Avoid Extreme Hard Force:"}</strong>
+            <span className="font-medium text-slate-600">{isVN ? "Veneer sứ rất chắc nhưng không nên cắn đá lạnh, mở nắp chai hay cắn móng tay." : "Avoid biting ice, cracking hard shells, or using teeth as tools."}</span>
           </li>
-          <li className="bg-white/80 p-4 rounded-xl border border-amber-200/60 space-y-1">
-            <strong className="text-amber-900 block">• {isVN ? "Cần đeo máng nếu nghiến răng:" : "Nightguard Mandatory for Bruxism:"}</strong>
-            <span className="font-light">{isVN ? "Khách hàng có thói quen nghiến răng ban đêm bắt buộc đeo máng bảo vệ." : "Nightguard wear is strictly required for patients with nocturnal grinding."}</span>
+          <li className="bg-white p-4 rounded-xl border border-slate-200/60 space-y-1 shadow-sm">
+            <strong className="text-teal-brand block">• {isVN ? "Cần đeo máng nếu nghiến răng:" : "Nightguard Mandatory for Bruxism:"}</strong>
+            <span className="font-medium text-slate-600">{isVN ? "Khách hàng có thói quen nghiến răng ban đêm bắt buộc đeo máng bảo vệ." : "Nightguard wear is strictly required for patients with nocturnal grinding."}</span>
           </li>
         </ul>
       </section>
