@@ -460,9 +460,6 @@ export default function VeneersPage() {
           ========================================== */}
       <section className="bg-white py-10 space-y-6">
         <div className="space-y-2">
-          <span className="text-teal-brand text-xs font-bold uppercase tracking-wider block">
-            {isVN ? "ĐỘI NGŨ LÂM SÀNG & TIÊU CHUẨN" : "CLINICAL TEAM & LAB STANDARDS"}
-          </span>
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c]">
             {isVN ? "7. Labo Chế Tác CAD/CAM Nội Bộ" : "7. On-Site Lab Credentials"}
           </h2>
