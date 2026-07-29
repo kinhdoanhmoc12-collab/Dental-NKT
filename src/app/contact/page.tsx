@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <h1 className="text-3xl sm:text-4xl text-[#0b1e2c] font-serif font-extrabold leading-tight">
                   {t.formTitle}
                 </h1>
-                <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-750 font-normal leading-relaxed">
                   {t.formDesc}
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-0.5">
                     <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust1Title}</h4>
-                    <p className="text-[11px] text-slate-400 font-light leading-relaxed">{t.formTrust1Desc}</p>
+                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust1Desc}</p>
                   </div>
                 </div>
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-0.5">
                     <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust2Title}</h4>
-                    <p className="text-[11px] text-slate-400 font-light leading-relaxed">{t.formTrust2Desc}</p>
+                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust2Desc}</p>
                   </div>
                 </div>
 
@@ -120,7 +120,7 @@ export default function ContactPage() {
                   </div>
                   <div className="space-y-0.5">
                     <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wide">{t.formTrust3Title}</h4>
-                    <p className="text-[11px] text-slate-400 font-light leading-relaxed">{t.formTrust3Desc}</p>
+                    <p className="text-[11px] text-slate-650 font-normal leading-relaxed">{t.formTrust3Desc}</p>
                   </div>
                 </div>
 
