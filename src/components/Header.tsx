@@ -152,7 +152,9 @@ export default function Header() {
               <div className="bg-teal-brand text-white px-5 pr-10 md:px-6 md:pr-12 xl:px-4 xl:pr-10 2xl:px-6 2xl:pr-12 flex items-center relative [clip-path:polygon(0_0,100%_0,85%_100%,0_100%)] select-none h-16 md:h-20 whitespace-nowrap">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-5 h-5 md:w-6 xl:w-5 2xl:w-6 text-white animate-pulse shrink-0" />
-                  <span className="font-serif text-xl sm:text-2xl md:text-2.5xl xl:text-lg 2xl:text-2xl font-extrabold tracking-tight">Dental NTK</span>
+                  <span className="font-serif text-xl sm:text-2xl md:text-2.5xl xl:text-lg 2xl:text-2xl font-light tracking-tight text-teal-50">
+                    Dental <strong className="font-extrabold text-white">NKT</strong>
+                  </span>
                 </div>
               </div>
             </Link>

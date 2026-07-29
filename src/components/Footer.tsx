@@ -16,7 +16,9 @@ export default function Footer() {
         <div className="space-y-4 md:col-span-3">
           <div className="flex items-center gap-2 text-white">
             <Sparkles className="w-6 h-6 text-teal-brand" />
-            <span className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight">Dental NTK</span>
+            <span className="font-serif text-2xl sm:text-3xl font-light tracking-tight text-slate-200">
+              Dental <strong className="font-extrabold text-white">NKT</strong>
+            </span>
           </div>
           <p className="text-sm leading-relaxed text-slate-300 font-light">
             {t.footDesc}
@@ -24,7 +26,7 @@ export default function Footer() {
           <div className="pt-2 text-xs text-slate-400 border-t border-slate-800/85">
             {lang === "VN" ? (
               <>
-                Dental NTK là thương hiệu quốc tế chính thức của{" "}
+                Dental NKT là thương hiệu quốc tế chính thức của{" "}
                 <a href="https://nhakhoatre.com" target="_blank" rel="noopener noreferrer" className="text-teal-brand font-semibold hover:underline">
                   Nha Khoa Trẻ (nhakhoatre.com)
                 </a>{" "}
@@ -32,7 +34,7 @@ export default function Footer() {
               </>
             ) : (
               <>
-                Dental NTK is the registered international division of{" "}
+                Dental NKT is the registered international division of{" "}
                 <a href="https://nhakhoatre.com" target="_blank" rel="noopener noreferrer" className="text-teal-brand font-semibold hover:underline">
                   Nha Khoa Tre Clinic (nhakhoatre.com)
                 </a>{" "}
