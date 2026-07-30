@@ -129,7 +129,7 @@ export default function WarrantyPage() {
       {/* ========================================================
           HERO BANNER: THE TRÊ PROMISE
           ======================================================== */}
-      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#112a3d] to-[#0b1e2c] text-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#112a3d] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-brand/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
         
         <div className="relative z-10 space-y-6">
@@ -688,7 +688,7 @@ export default function WarrantyPage() {
       {/* ========================================================
           WARRANTY CLAIM REGISTRATION FORM
           ======================================================== */}
-      <section className="bg-white p-8 sm:p-12 rounded-3xl border border-slate-200/80 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <section className="bg-white p-5 sm:p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-md grid grid-cols-1 lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5 space-y-4">
           <span className="text-xs font-bold tracking-widest text-teal-brand uppercase">
             {lang === "VN" ? "GỬI YÊU CẦU BẢO HÀNH" : "SUBMIT WARRANTY CLAIM"}

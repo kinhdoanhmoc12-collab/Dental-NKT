@@ -114,7 +114,7 @@ export default function BlogIndex() {
     <div className="py-12 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       {/* Blog Hero Section */}
-      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#112a3d] to-[#0b1e2c] rounded-3xl border border-slate-800/80 p-8 sm:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#112a3d] to-[#0b1e2c] rounded-3xl border border-slate-800/80 p-5 sm:p-8 md:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-teal-brand/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
         
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

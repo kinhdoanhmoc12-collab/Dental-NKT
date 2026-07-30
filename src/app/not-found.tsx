@@ -6,7 +6,7 @@ import { ArrowLeft, Home, Search, Sparkles } from "lucide-react";
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
-      <div className="max-w-xl w-full text-center space-y-8 bg-white p-8 sm:p-12 rounded-3xl border border-slate-200/80 shadow-2xl relative overflow-hidden">
+      <div className="max-w-xl w-full text-center space-y-8 bg-white p-5 sm:p-8 md:p-12 rounded-3xl border border-slate-200/80 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-48 h-48 bg-teal-brand/10 rounded-full blur-2xl pointer-events-none" />
         
         <div className="space-y-3 relative z-10">

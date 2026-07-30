@@ -1182,6 +1182,7 @@ export default function HomePage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Dental NTK - 38 Ngụy Như Kon Tum"
+                    className="pointer-events-none md:pointer-events-auto"
                   />
                 </div>
               </div>

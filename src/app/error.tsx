@@ -18,7 +18,7 @@ export default function GlobalError({
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16">
-      <div className="max-w-xl w-full text-center space-y-8 bg-white p-8 sm:p-12 rounded-3xl border border-rose-200/80 shadow-2xl relative overflow-hidden">
+      <div className="max-w-xl w-full text-center space-y-8 bg-white p-5 sm:p-8 md:p-12 rounded-3xl border border-rose-200/80 shadow-2xl relative overflow-hidden">
         <div className="w-16 h-16 rounded-full bg-rose-50 text-rose-600 flex items-center justify-center mx-auto">
           <AlertTriangle className="w-8 h-8" />
         </div>

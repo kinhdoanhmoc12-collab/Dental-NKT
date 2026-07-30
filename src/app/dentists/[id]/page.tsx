@@ -909,7 +909,7 @@ export default function DoctorDetailPage() {
       {/* ========================================================
           SECTION 6: APPOINTMENT / CONSULTATION BOOKING CARD
           ======================================================== */}
-      <section className="bg-[#0b1e2c] text-white p-8 sm:p-12 rounded-3xl shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <section className="bg-[#0b1e2c] text-white p-5 sm:p-8 md:p-12 rounded-3xl shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div className="lg:col-span-8 space-y-4">
           <span className="text-xs font-bold tracking-widest text-teal-brand uppercase">
             {lang === "VN" ? "ĐẶT LỊCH KHÁM TRỰC TIẾP" : "DIRECT CLINICAL CONSULTATION"}

@@ -52,7 +52,7 @@ export default function ImplantsPage() {
         </div>
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-6 max-w-3xl">
           <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
@@ -297,7 +297,7 @@ export default function ImplantsPage() {
       </section>
 
       {/* 4. Pricing Section */}
-      <section className="space-y-8 bg-slate-50/50 border border-slate-200 p-8 sm:p-12 rounded-3xl">
+      <section className="space-y-8 bg-slate-50/50 border border-slate-200 p-5 sm:p-8 md:p-12 rounded-3xl">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
             {isVN ? "4. Bảng Giá Cấy Ghép Implant Chi Tiết" : "4. Detailed Implant Price List"}
@@ -661,7 +661,7 @@ export default function ImplantsPage() {
       </section>
 
       {/* 7. Warranty & International Support */}
-      <section className="space-y-8 bg-slate-50/50 border border-slate-200 p-8 sm:p-12 rounded-3xl">
+      <section className="space-y-8 bg-slate-50/50 border border-slate-200 p-5 sm:p-8 md:p-12 rounded-3xl">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand">
             {isVN ? "7. Chính Sách Bảo Hành & Hỗ Trợ Quốc Tế" : "7. Global Warranty & Support Policy"}
@@ -783,7 +783,7 @@ export default function ImplantsPage() {
       </section>
 
       {/* Booking and Contact Call-to-action */}
-      <section className="bg-dark-brand text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 relative overflow-hidden shadow-premium">
+      <section className="bg-dark-brand text-white rounded-3xl p-5 sm:p-8 md:p-12 text-center space-y-6 relative overflow-hidden shadow-premium">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-brand/10 to-transparent pointer-events-none" />
         <div className="relative z-10 max-w-2xl mx-auto space-y-6">
           <h2 className="text-2xl sm:text-4xl font-serif font-extrabold leading-tight">

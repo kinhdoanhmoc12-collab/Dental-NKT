@@ -100,7 +100,7 @@ export default function DenturesClient() {
         </div>
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 space-y-6 max-w-3xl">
             <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
@@ -559,7 +559,7 @@ export default function DenturesClient() {
       </section>
 
       {/* 10. Call to Action */}
-      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden text-center">
+      <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden text-center">
         <div className="absolute top-0 left-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-6 max-w-2xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-white">
