@@ -119,7 +119,7 @@ export default function WarrantyPage() {
   };
 
   return (
-    <div className="py-10 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-10 space-y-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       {/* Schema.org Structured Data for Google SEO Rich Snippets */}
       <script
         type="application/ld+json"

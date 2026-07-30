@@ -268,7 +268,7 @@ export default function HomePage() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-brand/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Hero Copy (7 cols) */}
           <div className="lg:col-span-7 space-y-4 lg:space-y-5 text-center lg:text-left">
@@ -339,7 +339,7 @@ export default function HomePage() {
           SECTION 2: PROOF STATS STRIP
           ======================================================== */}
       <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] border-t border-b border-slate-800 py-8 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
             <div className="space-y-1.5 py-3 md:py-1">
               <strong className="text-2xl sm:text-3xl font-serif font-black text-white block tracking-tight">18,000+</strong>
@@ -373,7 +373,7 @@ export default function HomePage() {
           SECTION 3: DENTAL SERVICES AND PRICE INDEX
           ======================================================== */}
       <section className="pt-10 pb-0 md:pt-20 md:pb-0 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
@@ -432,7 +432,7 @@ export default function HomePage() {
           SECTION 4: INTERACTIVE SAVINGS ESTIMATOR
           ======================================================== */}
       <section id="savings-estimator" className="pt-2 pb-4 md:pt-4 md:pb-4 bg-white scroll-mt-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
           <div className="bg-white rounded-3xl border border-slate-100 shadow-premium p-6 sm:p-10 space-y-8">
             
             <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -537,7 +537,7 @@ export default function HomePage() {
           SECTION 5: PRE-TRAVEL DIAGNOSTIC PROTOCOL
           ======================================================== */}
       <section className="pt-4 pb-16 md:pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             
             {/* Visual side */}
@@ -600,7 +600,7 @@ export default function HomePage() {
           SECTION 5.5: THE PATIENT JOURNEY (INQUIRY TO SMILE)
           ======================================================== */}
       <section className="py-10 md:py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           {/* Section Header */}
           <div className="text-center max-w-5xl mx-auto space-y-3">
@@ -716,7 +716,7 @@ export default function HomePage() {
           SECTION 5.6: SAMPLE TRAVEL & TREATMENT ITINERARY (9 DAYS)
           ======================================================== */}
       <section className="py-10 md:py-20 bg-white border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           {/* Section Header */}
           <div className="text-center max-w-5xl mx-auto space-y-3">
@@ -866,7 +866,7 @@ export default function HomePage() {
           SECTION 6: CLINICAL COMPARISON (vs. Turkey Teeth)
           ======================================================== */}
       <section className="py-10 md:py-20 bg-slate-200/70 border-t border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
@@ -939,7 +939,7 @@ export default function HomePage() {
           SECTION 7: DOCTORS BOARD PREVIEW (CAROUSEL 3 AT A TIME)
           ======================================================== */}
       <section className="py-10 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold tracking-widest text-teal-brand uppercase block">
@@ -1067,7 +1067,7 @@ export default function HomePage() {
           SECTION 9: REAL AUSTRALIAN PATIENT CASES
           ======================================================== */}
       <section className="py-10 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           
           <div className="text-center max-w-5xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
@@ -1163,7 +1163,7 @@ export default function HomePage() {
           SECTION 11: HOMEPAGE FORM INQUIRY
           ======================================================== */}
       <section id="homepage-inquiry" className="py-10 md:py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
             {/* Left Column: Interactive Google Map only (Expanded) */}
@@ -1322,7 +1322,7 @@ export default function HomePage() {
           SECTION 12: FREQUENTLY ASKED QUESTIONS (FAQ)
           ======================================================== */}
       <section className="py-10 md:py-20 bg-slate-200/50 border-t border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-12">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#0b1e2c] font-serif font-extrabold">
               {lang === "VN" ? "Câu hỏi thường gặp" : "Frequently asked questions"}

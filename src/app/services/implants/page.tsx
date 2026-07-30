@@ -37,7 +37,7 @@ export default function ImplantsPage() {
   const isVN = lang === "VN";
 
   return (
-    <div className="pt-6 pb-12 space-y-20 max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="pt-6 pb-12 space-y-20 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
       
       {/* Top Header & Hero Container */}
       <div className="space-y-6">

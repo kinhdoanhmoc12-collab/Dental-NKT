@@ -42,7 +42,7 @@ export default function ServicesPage() {
           SERVICES DETAILS
           ======================================================== */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -115,7 +115,7 @@ export default function ServicesPage() {
           SAFETY & MATERIALS STANDARDS
           ======================================================== */}
       <section className="py-16 bg-slate-200/50 border-t border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             
             <div className="space-y-3 bg-white p-6 rounded-xl border border-slate-100/80 shadow-sm">

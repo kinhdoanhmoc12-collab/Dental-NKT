@@ -88,7 +88,7 @@ export default function DentistsPage() {
           CLINICAL DIRECTOR BOARD SECTION (CAROUSEL 3 AT A TIME)
           ======================================================== */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden space-y-10">
           
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">

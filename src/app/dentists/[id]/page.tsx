@@ -543,7 +543,7 @@ export default function DoctorDetailPage() {
   const cases = lang === "VN" ? doctor.casesVN : doctor.casesEN;
 
   return (
-    <div className="py-10 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-10 space-y-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       
       {/* Back button link */}
       <div>

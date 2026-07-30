@@ -111,7 +111,7 @@ export default function BlogIndex() {
   });
 
   return (
-    <div className="py-12 space-y-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="py-12 space-y-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       
       {/* Blog Hero Section */}
       <section className="bg-gradient-to-br from-[#0b1e2c] via-[#112a3d] to-[#0b1e2c] rounded-3xl border border-slate-800/80 p-5 sm:p-8 md:p-12 lg:p-14 shadow-2xl relative overflow-hidden">
