@@ -201,7 +201,7 @@ export default function CrownsPage() {
         <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "2. Khi nào cần Mão sứ thay vì dán Veneer?" : "2. When Do You Need a Crown Instead of a Veneer?"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -254,7 +254,7 @@ export default function CrownsPage() {
         <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "3. Các loại vật liệu Mão sứ tại DentalNKT" : "3. Dental Crown Materials at DentalNKT"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -320,7 +320,7 @@ export default function CrownsPage() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "4. Quy trình thực hiện Mão sứ tại DentalNKT" : "4. Custom Crown Fabrication & Fitting Process"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -481,7 +481,7 @@ export default function CrownsPage() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "7. Chi phí bọc mão răng sứ chi tiết" : "7. Official Dental Crown Pricing"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

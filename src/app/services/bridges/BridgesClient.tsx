@@ -198,7 +198,7 @@ export default function BridgesClient() {
         <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "2. Cầu răng sứ hay Implant — Quyết định dựa trên yếu tố nào?" : "2. Dental Bridge vs. Implant: How to Choose?"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -270,7 +270,7 @@ export default function BridgesClient() {
           </p>
         </div>
         
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -323,7 +323,7 @@ export default function BridgesClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "4. Quy trình thực hiện Cầu răng sứ tại DentalNKT" : "4. Custom Bridge Fabrication & Fitting Process"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -491,7 +491,7 @@ export default function BridgesClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "7. Chi phí bọc cầu răng sứ tham khảo" : "7. Comprehensive Dental Bridge Pricing"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

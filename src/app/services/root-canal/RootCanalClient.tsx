@@ -175,7 +175,7 @@ export default function RootCanalClient() {
             : "Preserving your natural teeth is always the gold standard in modern dentistry. No prosthetic can replicate the exact bite sensation and bone stimulation of natural tooth structure. Here is how our clinical team assesses your options:"}
         </p>
 
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -266,7 +266,7 @@ export default function RootCanalClient() {
             : "To maximize your travel efficiency, our clinical board plans root canal cleaning and crown restoration within a single-trip window:"}
         </p>
 
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -379,7 +379,7 @@ export default function RootCanalClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c] text-center">
           {isVN ? "4. Chi phí điều trị tủy răng tại DentalNKT" : "4. Root Canal & Restoration Price Guide"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

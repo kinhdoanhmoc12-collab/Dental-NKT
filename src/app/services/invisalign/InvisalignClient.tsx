@@ -160,7 +160,7 @@ export default function InvisalignClient() {
             : "The efficiency of clear aligners depends on your specific dental and skeletal anatomy. Here is an initial suitability framework:"}
         </p>
 
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -333,7 +333,7 @@ export default function InvisalignClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0b1e2c] text-center">
           {isVN ? "4. Chi phí niềng răng Invisalign trọn gói" : "4. Aligner Packages & Pricing Guide"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

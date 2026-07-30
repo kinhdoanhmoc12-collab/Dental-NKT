@@ -203,7 +203,7 @@ export default function FullMouthClient() {
             ? "Không phải mọi bệnh nhân đều cần tất cả các dịch vụ dưới đây. Bác sĩ DentalNKT sẽ thiết lập phác đồ dựa trên phim X-quang 3D thực tế của bạn, cam kết chỉ chỉ định những hạng mục thực sự cần thiết."
             : "Not all procedures listed below are required for every patient. We construct your plan based on your 3D CBCT scan, itemizing only the elements essential to restore your oral health."}
         </p>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -495,7 +495,7 @@ export default function FullMouthClient() {
             : "Reconstruction cases vary significantly. The table below represents sample treatment scenarios based on common clinical combinations to illustrate the cost structure:"}
         </p>
         
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

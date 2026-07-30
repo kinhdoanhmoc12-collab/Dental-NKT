@@ -318,7 +318,7 @@ export default function TeethWhiteningClient() {
         <h2 className="text-xl sm:text-2xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "2. Khi nào nên và không nên bay riêng chỉ để tẩy trắng răng?" : "2. Whitening Travel Economics: When Is It Worth It?"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -480,7 +480,7 @@ export default function TeethWhiteningClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "6. Chi phí tẩy trắng răng tham khảo" : "6. Teeth Whitening Price Index"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

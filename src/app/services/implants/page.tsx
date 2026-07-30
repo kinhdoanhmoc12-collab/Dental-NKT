@@ -235,7 +235,7 @@ export default function ImplantsPage() {
 
         {/* Desktop Table View */}
         <div className="hidden md:block bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-premium">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto w-full max-w-full">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
@@ -430,7 +430,7 @@ export default function ImplantsPage() {
         </div>
 
         <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto w-full max-w-full">
             <table className="w-full text-left border-collapse text-xs sm:text-sm min-w-[600px]">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200 font-bold text-dark-brand">

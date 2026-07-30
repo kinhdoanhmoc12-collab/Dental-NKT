@@ -816,7 +816,7 @@ export default function AdminBlogPage() {
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-teal-brand"></div>
             </div>
           ) : posts.length > 0 ? (
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto w-full max-w-full">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-slate-50 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">

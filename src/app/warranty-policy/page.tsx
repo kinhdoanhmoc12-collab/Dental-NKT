@@ -236,7 +236,7 @@ export default function WarrantyPage() {
           </p>
         </div>
 
-        <div className="overflow-x-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm">
+        <div className="overflow-x-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm w-full max-w-full">
           <table className="w-full text-left border-collapse text-sm sm:text-base">
             <thead>
               <tr className="bg-[#0b1e2c] text-white">

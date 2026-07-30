@@ -296,7 +296,7 @@ export default function AllOn4Page() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "4. So sánh All-on-4 với các phương án khác" : "4. All-on-4 Comparison Index"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -404,7 +404,7 @@ export default function AllOn4Page() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "6. Lịch trình điều trị — Cần tối thiểu 2 chuyến đi" : "6. Step-by-Step Treatment Timeline — 2 Trips Required"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -535,7 +535,7 @@ export default function AllOn4Page() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "9. Chi phí cấy ghép All-on-4 trọn gói tại DentalNKT" : "9. Comprehensive All-on-4 Fee Schedule"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">

@@ -203,7 +203,7 @@ export default function SmileMakeoverClient() {
             ? "Mỗi ca điều trị đều được cá nhân hóa hoàn toàn. Chúng tôi chỉ đưa vào kế hoạch những hạng mục lâm sàng thực sự cần thiết cho tình trạng của bạn, cam kết không gộp chung mập mờ."
             : "No two makeovers are alike. We construct your plan dynamically. Our clinical team only includes procedures necessary to resolve your diagnosis, itemizing each cost separately."}
         </p>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -374,7 +374,7 @@ export default function SmileMakeoverClient() {
         <h2 className="text-2xl sm:text-3xl font-serif font-extrabold text-dark-brand text-center">
           {isVN ? "5. Lịch trình mẫu cho khách làm Smile Makeover" : "5. Recommended Smile Makeover Stay Itinerary"}
         </h2>
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
@@ -476,7 +476,7 @@ export default function SmileMakeoverClient() {
             : "We do not package costs into a single opaque lump sum. Every clinical module in your Smile Makeover plan is itemized transparently:"}
         </p>
         
-        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto">
+        <div className="border border-slate-200 rounded-3xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full">
           <table className="w-full text-left text-xs sm:text-sm border-collapse min-w-[700px]">
             <thead>
               <tr className="bg-[#0b1e2c] text-white font-serif text-xs uppercase tracking-wider">
