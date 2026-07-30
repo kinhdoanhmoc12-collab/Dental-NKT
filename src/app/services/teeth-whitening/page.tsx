@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Teeth Whitening Hanoi | Professional Laser Whitening Vietnam",
   description: "Experience professional laser teeth whitening in Hanoi, Vietnam. Safe, enamel-friendly, and instant brightness in 45-90 minutes. Optimal when combined with cosmetic veneers.",
   alternates: {
-    canonical: "https://dentalnhakhoatre.com/services/teeth-whitening",
+    canonical: "https://nhakhoatre.vn/services/teeth-whitening",
   },
   openGraph: {
     title: "Teeth Whitening Hanoi | Professional Laser Whitening Vietnam",
     description: "Experience professional laser teeth whitening in Hanoi, Vietnam. Safe, enamel-friendly, and instant brightness in 45-90 minutes. Optimal when combined with cosmetic veneers.",
-    url: "https://dentalnhakhoatre.com/services/teeth-whitening",
+    url: "https://nhakhoatre.vn/services/teeth-whitening",
     type: "website",
   }
 };

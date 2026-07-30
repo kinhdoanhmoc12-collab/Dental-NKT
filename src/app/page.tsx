@@ -1347,11 +1347,13 @@ export default function HomePage() {
                     <ChevronDown className="w-5 h-5 text-slate-400 shrink-0 ml-2" />
                   )}
                 </button>
-                {activeFaq === index && (
-                  <div className="px-5 pb-5 pt-1 border-t border-slate-100 text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
-                    {faq.a}
-                  </div>
-                )}
+                <div 
+                  className={`px-5 pb-5 pt-1 border-t border-slate-100 text-xs sm:text-sm text-slate-500 leading-relaxed font-normal ${
+                    activeFaq === index ? "block" : "hidden"
+                  }`}
+                >
+                  {faq.a}
+                </div>
               </div>
             ))}
           </div>

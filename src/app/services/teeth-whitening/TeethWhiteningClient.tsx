@@ -566,19 +566,19 @@ export default function TeethWhiteningClient() {
                 ) : (
                   <ChevronDown className="w-4 h-4 text-teal-brand shrink-0" />
                 )}
-              </button>
-              {activeFaq === idx && (
+                </button>
                 <div 
                   id={`faq-panel-${idx}`}
                   role="region"
                   aria-labelledby={`faq-btn-${idx}`}
-                  className="px-6 py-4 border-t border-slate-150 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal bg-white"
+                  className={`px-6 py-4 border-t border-slate-150 text-xs sm:text-sm text-slate-700 leading-relaxed font-normal bg-white ${
+                    activeFaq === idx ? "block" : "hidden"
+                  }`}
                 >
                   {item.a}
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            ))}
         </div>
       </section>
 

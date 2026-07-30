@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "../context/LanguageContext";
 import LayoutWrapper from "../components/LayoutWrapper";
+import WhatsAppWidget from "../components/WhatsAppWidget";
 import Script from "next/script";
 
 const inter = Inter({
@@ -12,9 +13,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nhakhoatre.vn"),
   title: "Dental NTK | World-Class Boutique Clinic Hanoi",
   description: "Experience world-class dental care & authentic Vietnamese hospitality in Hanoi. Save up to 70% on Dental Implants, Porcelain Veneers, and All-on-4 with international standards, global warranty, and 24/7 travel support.",
   keywords: ["Dental Tourism Vietnam", "Boutique Dental Clinic Hanoi", "Dental Implants Vietnam", "Porcelain Veneers Vietnam", "All-on-4 Vietnam", "Dentist in Hanoi"],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Dental NTK | World-Class Boutique Clinic Hanoi",
+    description: "Experience world-class dental care & authentic Vietnamese hospitality in Hanoi. Save up to 70% on Dental Implants, Porcelain Veneers, and All-on-4 with international standards, global warranty, and 24/7 travel support.",
+    url: "https://nhakhoatre.vn",
+    siteName: "Dental NKT",
+    images: [
+      {
+        url: "https://nhakhoatre.vn/boutique_clinic.png",
+        width: 1200,
+        height: 630,
+        alt: "Dental NKT Boutique Clinic Hanoi",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -74,6 +95,7 @@ export default function RootLayout({
           <LayoutWrapper>
             {children}
           </LayoutWrapper>
+          <WhatsAppWidget />
         </LanguageProvider>
       </body>
     </html>

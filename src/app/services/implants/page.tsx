@@ -110,12 +110,12 @@ export default function ImplantsPage() {
           <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
             {isVN
               ? "Cấy ghép Implant (Dental Implant) là giải pháp phục hồi răng đã mất bằng cách đặt một trụ titan (hoặc vật liệu tương thích sinh học) vào xương hàm, đóng vai trò như chân răng thật. Sau khi trụ tích hợp ổn định với xương, bác sĩ gắn khớp nối (Abutment) và mão răng sứ lên trên để phục hồi hình dáng, chức năng ăn nhai như răng thật."
-              : "A dental implant is a high-tech replacement for a missing tooth root. A medical-grade titanium screw is surgically anchored into the jawbone, acting as a structural anchor. Once integrated, a custom-milled abutment and a porcelain crown are secured on top, matching your natural teeth perfectly."}
+              : "A [dental implant](https://en.wikipedia.org/wiki/Dental_implant) is a high-tech replacement for a missing tooth root. A medical-grade titanium screw is surgically anchored into the jawbone, acting as a structural anchor. Once integrated, a custom-milled abutment and a porcelain crown are secured on top, matching your natural teeth perfectly."}
           </p>
           <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
             {isVN
               ? "Đây là giải pháp phục hồi răng mất được đánh giá cao nhất hiện nay vì không xâm lấn răng kế cận (khác với cầu răng sứ phải mài răng bên cạnh), và giúp ngăn tiêu xương hàm — vấn đề thường gặp khi mất răng lâu ngày không phục hồi."
-              : "Implantology is widely regarded as the best restoration method because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth."}
+              : "Implantology is widely regarded as the best restoration method (as supported by the [Australian Dental Association](https://www.ada.org.au) guidelines) because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth."}
           </p>
 
           <div className="bg-teal-brand-light/30 border border-teal-brand-light p-6 sm:p-8 rounded-3xl space-y-4">
@@ -136,6 +136,11 @@ export default function ImplantsPage() {
                 </li>
               ))}
             </ul>
+            <p className="text-xs sm:text-sm text-slate-500 italic mt-6 font-semibold text-left">
+              {isVN 
+                ? "➞ Bước tiếp theo: So sánh Implant với Cầu răng sứ và Hàm giả bên dưới." 
+                : "➞ Next Step: Compare dental implants with traditional bridges and dentures below."}
+            </p>
           </div>
         </div>
 
@@ -210,7 +215,7 @@ export default function ImplantsPage() {
             <p className="text-xs sm:text-sm text-amber-900 font-semibold pt-1.5 border-t border-amber-200">
               {isVN 
                 ? "* Bác sĩ sẽ đánh giá cụ thể qua phim CT/CBCT trước khi xác nhận bạn đủ điều kiện cấy ghép." 
-                : "* A comprehensive diagnostic check using CT/CBCT scans is required to confirm surgery eligibility."}
+                : "* A comprehensive diagnostic check using CT/<abbr title=\"Cone Beam Computed Tomography\">CBCT</abbr> scans is required to confirm surgery eligibility."}
             </p>
           </div>
         </div>
@@ -282,6 +287,11 @@ export default function ImplantsPage() {
             {isVN 
               ? "Với các trường hợp mất răng toàn hàm, bác sĩ sẽ tư vấn giải pháp All-on-4 / All-on-6 để tiết kiệm chi phí và số lượng trụ cần cấy." 
               : "For full arch cases, we recommend All-on-4/6 systems which utilize fewer implants to securely support a complete bridge."}
+          </div>
+          <div className="p-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500 italic mt-2 font-semibold text-center">
+            {isVN 
+              ? "➞ Bước tiếp theo: Xem bảng giá cấy ghép Implant chi tiết phía dưới." 
+              : "➞ Next Step: Review our detailed implant price list below."}
           </div>
         </div>
       </section>
@@ -421,6 +431,11 @@ export default function ImplantsPage() {
             </ul>
           </div>
         </div>
+        <p className="text-xs sm:text-sm text-slate-500 italic mt-6 font-semibold text-center">
+          {isVN 
+            ? "➞ Bước tiếp theo: Tìm hiểu lịch trình và quy trình du lịch cấy ghép răng." 
+            : "➞ Next Step: Learn about our procedure timeline and travel plan below."}
+        </p>
       </section>
 
       {/* 5. Procedure Timeline & Tour Schedule */}
@@ -569,6 +584,11 @@ export default function ImplantsPage() {
               : "Please note: Complex scenarios requiring extensive sinus lift or block bone grafts may involve extended healing times or an extra diagnostic visit."}
           </p>
         </div>
+        <p className="text-xs sm:text-sm text-slate-500 italic mt-6 font-semibold text-left">
+          {isVN 
+            ? "➞ Bước tiếp theo: Xem hướng dẫn chăm sóc sau phẫu thuật cấy ghép răng." 
+            : "➞ Next Step: Check out our post-op care and maintenance instructions below."}
+        </p>
       </section>
 
       {/* 6. Post-Op Care */}
@@ -633,6 +653,11 @@ export default function ImplantsPage() {
             </ul>
           </div>
         </div>
+        <p className="text-xs sm:text-sm text-slate-500 italic mt-6 font-semibold text-left">
+          {isVN 
+            ? "➞ Bước tiếp theo: Tìm hiểu chính sách bảo hành quốc tế của DentalNKT." 
+            : "➞ Next Step: Understand our global warranty and support policy below."}
+        </p>
       </section>
 
       {/* 7. Warranty & International Support */}
@@ -745,11 +770,13 @@ export default function ImplantsPage() {
                   <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />
                 )}
               </button>
-              {activeFaq === idx && (
-                <div className="p-5 pt-0 border-t border-slate-55 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed bg-slate-50/20">
-                  {isVN ? faq.aVN : faq.aAU}
-                </div>
-              )}
+              <div 
+                className={`p-5 pt-0 border-t border-slate-55 text-xs sm:text-sm text-slate-700 font-medium leading-relaxed bg-slate-50/20 ${
+                  activeFaq === idx ? "block" : "hidden"
+                }`}
+              >
+                {isVN ? faq.aVN : faq.aAU}
+              </div>
             </div>
           ))}
         </div>

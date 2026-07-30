@@ -17,6 +17,7 @@ export default function ContactPage() {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [file, setFile] = useState<File | null>(null);
 
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -49,6 +50,9 @@ export default function ContactPage() {
     data.append("country", formData.country);
     data.append("treatment_interest", formData.need);
     data.append("message", formData.message);
+    if (file) {
+      data.append("xray", file);
+    }
 
     try {
       const res = await fetch("/api/leads", {
@@ -162,6 +166,7 @@ export default function ContactPage() {
                       onClick={() => {
                         setFormSubmitted(false);
                         setFormData({ name: "", email: "", phone: "", country: "AU", need: "", message: "" });
+                        setFile(null);
                       }}
                       className="text-xs text-teal-brand hover:text-teal-brand-hover font-bold underline transition-colors"
                     >
@@ -268,6 +273,31 @@ export default function ContactPage() {
                           <option value="invisalign">{lang === "VN" ? "Niềng răng Invisalign" : "Invisalign Aligners"}</option>
                           <option value="dentures">{lang === "VN" ? "Hàm giả tháo lắp" : "Removable Dentures"}</option>
                         </select>
+                      </div>
+                    </div>
+
+                    {/* X-Ray / CBCT Scan Upload */}
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block">
+                        {lang === "VN" ? "Tải lên phim chụp X-quang hoặc CBCT (nếu có)" : "Upload X-ray or CBCT scans (Optional)"}
+                      </label>
+                      <div className="border-2 border-dashed border-slate-200 rounded-xl p-4 text-center hover:border-teal-brand transition-colors cursor-pointer relative bg-slate-50">
+                        <input 
+                          type="file" 
+                          name="xray" 
+                          accept="image/*,.pdf,.zip"
+                          onChange={(e) => setFile(e.target.files?.[0] || null)}
+                          className="absolute inset-0 opacity-0 cursor-pointer"
+                        />
+                        <div className="flex flex-col items-center gap-1.5">
+                          <Upload className="w-5 h-5 text-slate-400" />
+                          <span className="text-xs font-semibold text-slate-650">
+                            {file ? file.name : (lang === "VN" ? "Chọn tệp phim hoặc ảnh chụp răng" : "Drag and drop or browse files")}
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-normal">
+                            {lang === "VN" ? "Hỗ trợ định dạng: ZIP, PDF, JPG, PNG (tối đa 15MB)" : "Supported formats: ZIP, PDF, JPG, PNG (max 15MB)"}
+                          </span>
+                        </div>
                       </div>
                     </div>
 

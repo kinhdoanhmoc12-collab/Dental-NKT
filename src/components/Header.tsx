@@ -1,8 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "../context/LanguageContext";
 import {
@@ -224,7 +224,7 @@ export default function Header() {
                 className="flex items-center justify-center hover:scale-105 active:scale-95 transition-all select-none cursor-pointer p-1 bg-transparent border-none outline-none"
                 title="Select Country / Language"
               >
-                <img src={currentFlag} alt={lang} className="w-8 h-5.5 object-cover rounded shadow-sm border border-slate-200/60" />
+                <Image src={currentFlag} alt={lang} width={32} height={22} className="w-8 h-5.5 object-cover rounded shadow-sm border border-slate-200/60" />
               </button>
               
               {/* Dropdown Panel */}
@@ -233,13 +233,13 @@ export default function Header() {
                   onClick={() => selectLanguage("AU")} 
                   className="w-[calc(100%-16px)] mx-2 text-left px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-5 transition-all duration-200 rounded-lg flex items-center gap-2 cursor-pointer border-none outline-none"
                 >
-                  <img src="https://flagcdn.com/h40/au.png" alt="Australia" className="w-6 h-4 object-cover rounded-sm" /> Australia (AUD)
+                  <Image src="https://flagcdn.com/h40/au.png" alt="Australia" width={24} height={16} className="w-6 h-4 object-cover rounded-sm" /> Australia (AUD)
                 </button>
                 <button 
                   onClick={() => selectLanguage("VN")} 
                   className="w-[calc(100%-16px)] mx-2 text-left px-4 py-2.5 text-xs font-bold text-slate-700 hover:bg-teal-brand/5 hover:text-teal-brand hover:pl-5 transition-all duration-200 rounded-lg flex items-center gap-2 cursor-pointer border-none outline-none"
                 >
-                  <img src="https://flagcdn.com/h40/vn.png" alt="Vietnam" className="w-6 h-4 object-cover rounded-sm" /> Việt Nam (VND)
+                  <Image src="https://flagcdn.com/h40/vn.png" alt="Vietnam" width={24} height={16} className="w-6 h-4 object-cover rounded-sm" /> Việt Nam (VND)
                 </button>
               </div>
             </div>
@@ -339,7 +339,7 @@ export default function Header() {
                       : "border-slate-200 text-slate-600 hover:bg-slate-50"
                   }`}
                 >
-                  <img src="https://flagcdn.com/h40/au.png" alt="Australia" className="w-6 h-4 object-cover rounded-sm" />
+                  <Image src="https://flagcdn.com/h40/au.png" alt="Australia" width={24} height={16} className="w-6 h-4 object-cover rounded-sm" />
                   AU (AUD)
                 </button>
                 <button 
@@ -350,7 +350,7 @@ export default function Header() {
                       : "border-slate-200 text-slate-600 hover:bg-slate-50"
                   }`}
                 >
-                  <img src="https://flagcdn.com/h40/vn.png" alt="Vietnam" className="w-6 h-4 object-cover rounded-sm" />
+                  <Image src="https://flagcdn.com/h40/vn.png" alt="Vietnam" width={24} height={16} className="w-6 h-4 object-cover rounded-sm" />
                   VN (VND)
                 </button>
               </div>
