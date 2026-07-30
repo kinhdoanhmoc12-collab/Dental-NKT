@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} h-full overflow-x-hidden antialiased`}
     >
       <head>
         {/* Google Tag Manager */}
@@ -81,7 +81,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#fcfcfc] text-[#0f172a] font-sans">
+      <body className="min-h-full w-full overflow-x-hidden flex flex-col bg-[#fcfcfc] text-[#0f172a] font-sans">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
