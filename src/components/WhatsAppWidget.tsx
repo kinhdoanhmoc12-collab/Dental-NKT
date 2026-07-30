@@ -18,13 +18,10 @@ export default function WhatsAppWidget() {
         padding: '16px',
         borderRadius: '50%',
         boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
         transition: 'transform 0.2s ease',
         cursor: 'pointer',
       }}
-      className="hover:scale-110 active:scale-95 group"
+      className="hidden md:flex items-center justify-center hover:scale-110 active:scale-95 group"
       aria-label="Chat with us on WhatsApp"
       title="Chat with us on WhatsApp"
     >
