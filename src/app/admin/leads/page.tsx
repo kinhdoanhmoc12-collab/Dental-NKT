@@ -311,7 +311,7 @@ export default function AdminLeadsPage() {
                   <div className="space-y-1 pt-2">
                     <span className="text-slate-400 font-medium block">Phim chụp X-Quang:</span>
                     <a
-                      href={selectedLead.x_ray_file_url.startsWith("http") ? selectedLead.x_ray_file_url : `http://localhost:3000${selectedLead.x_ray_file_url}`}
+                      href={selectedLead.x_ray_file_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs text-teal-brand hover:underline font-bold"
