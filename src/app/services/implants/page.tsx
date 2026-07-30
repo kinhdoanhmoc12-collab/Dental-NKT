@@ -28,6 +28,7 @@ import {
 export default function ImplantsPage() {
   const { lang } = useLanguage();
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"implant" | "bridge" | "denture">("implant");
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -232,7 +233,8 @@ export default function ImplantsPage() {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-premium">
+        {/* Desktop Table View */}
+        <div className="hidden md:block bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-premium">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
@@ -289,6 +291,126 @@ export default function ImplantsPage() {
               : "For full arch cases, we recommend All-on-4/6 systems which utilize fewer implants to securely support a complete bridge."}
           </div>
           <div className="p-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500 italic mt-2 font-semibold text-center">
+            {isVN 
+              ? "➞ Bước tiếp theo: Xem bảng giá cấy ghép Implant chi tiết phía dưới." 
+              : "➞ Next Step: Review our detailed implant price list below."}
+          </div>
+        </div>
+
+        {/* Mobile Tab Switcher View */}
+        <div className="block md:hidden bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-5">
+          {/* Tab Selector Buttons */}
+          <div className="grid grid-cols-3 gap-2 p-1 bg-slate-100 rounded-xl">
+            {[
+              { id: "implant", labelVN: "Implant", labelEN: "Implant" },
+              { id: "bridge", labelVN: "Cầu răng", labelEN: "Bridge" },
+              { id: "denture", labelVN: "Hàm tháo lắp", labelEN: "Denture" }
+            ].map((t) => (
+              <button
+                key={t.id}
+                onClick={() => setActiveTab(t.id as any)}
+                className={`py-2 px-1 text-center text-xs font-bold rounded-lg cursor-pointer transition-all ${
+                  activeTab === t.id
+                    ? "bg-teal-brand text-white shadow-sm"
+                    : "text-slate-600 hover:text-slate-800"
+                }`}
+              >
+                {isVN ? t.labelVN : t.labelEN}
+              </button>
+            ))}
+          </div>
+
+          {/* Details list for the active tab */}
+          <div className="space-y-4 divide-y divide-slate-150">
+            {[
+              {
+                titleVN: "Ảnh hưởng răng kế cận",
+                titleEN: "Impact on neighbor teeth",
+                implantVN: "Không, bảo tồn nguyên vẹn răng bên",
+                implantEN: "None, neighbor teeth left completely intact",
+                bridgeVN: "Bắt buộc mài răng thật bên cạnh làm trụ",
+                bridgeEN: "Must grind down healthy adjacent teeth",
+                dentureVN: "Không mài, nhưng móc tì lên nướu & răng",
+                dentureEN: "Clips and base plates put pressure on gums",
+                styleClass: "text-slate-800 font-semibold"
+              },
+              {
+                titleVN: "Ngăn ngừa tiêu xương hàm",
+                titleEN: "Prevents bone resorption",
+                implantVN: "Có hiệu quả (kích thích xương phát triển)",
+                implantEN: "Yes (stimulates and preserves bone)",
+                bridgeVN: "Không ngăn được",
+                bridgeEN: "No, bone continues to shrink",
+                dentureVN: "Không ngăn được (gây tiêu xương nhanh hơn)",
+                dentureEN: "No, can accelerate bone loss",
+                styleClass: activeTab === "implant" ? "text-emerald-700 font-bold" : "text-rose-700 font-semibold"
+              },
+              {
+                titleVN: "Cảm giác & Lực ăn nhai",
+                titleEN: "Chewing comfort & force",
+                implantVN: "Gần giống răng thật nhất (99%)",
+                implantEN: "Like natural teeth (99% force)",
+                bridgeVN: "Tốt (khoảng 70% lực nhai răng thật)",
+                bridgeEN: "Good (approx 70% chew force)",
+                dentureVN: "Kém, lỏng lẻo, dễ bị tuột rơi",
+                dentureEN: "Poor, unstable, prone to slipping",
+                styleClass: "text-slate-800 font-semibold"
+              },
+              {
+                titleVN: "Thời gian điều trị",
+                titleEN: "Treatment timeframe",
+                implantVN: "2 - 6 tháng (chờ tích hợp xương)",
+                implantEN: "2 - 6 months (bone integration phase)",
+                bridgeVN: "1 - 2 tuần",
+                bridgeEN: "1 - 2 weeks",
+                dentureVN: "Nhanh nhất (chỉ vài ngày)",
+                dentureEN: "Fastest (few days)",
+                styleClass: "text-slate-700 font-normal"
+              },
+              {
+                titleVN: "Độ bền tham khảo",
+                titleEN: "Average Lifespan",
+                implantVN: "Trụ từ 10 năm đến TRỌN ĐỜI; Mão sứ từ 7 đến 10 năm",
+                implantEN: "Fixture: 10 years to LIFETIME; Crown: 7 to 10 years",
+                bridgeVN: "5 đến 10 năm (cần thay thế định kỳ)",
+                bridgeEN: "5 to 10 years (requires eventual replacement)",
+                dentureVN: "3 - 5 năm (cần đệm hàm do tiêu nướu)",
+                dentureEN: "3 - 5 years (requires adjustments)",
+                styleClass: "text-slate-850 font-semibold"
+              },
+              {
+                titleVN: "Tính xâm lấn lâm sàng",
+                titleEN: "Clinical Invasiveness",
+                implantVN: "Cần phẫu thuật nhỏ đặt trụ",
+                implantEN: "Requires minor surgical placement",
+                bridgeVN: "Không phẫu thuật nhưng mài cấu trúc răng",
+                bridgeEN: "Non-surgical but destroys tooth enamel",
+                dentureVN: "Hoàn toàn không xâm lấn",
+                dentureEN: "Completely non-invasive",
+                styleClass: "text-slate-700 font-normal"
+              }
+            ].map((c, i) => (
+              <div key={i} className="pt-4 first:pt-0 space-y-1">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                  {isVN ? c.titleVN : c.titleEN}
+                </span>
+                <p className={`text-xs sm:text-sm ${c.styleClass}`}>
+                  {activeTab === "implant"
+                    ? (isVN ? c.implantVN : c.implantEN)
+                    : activeTab === "bridge"
+                    ? (isVN ? c.bridgeVN : c.bridgeEN)
+                    : (isVN ? c.dentureVN : c.dentureEN)}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 text-xs sm:text-sm text-slate-500 font-normal text-center">
+            {isVN 
+              ? "Với các trường hợp mất răng toàn hàm, bác sĩ sẽ tư vấn giải pháp All-on-4 / All-on-6 để tiết kiệm chi phí và số lượng trụ cần cấy." 
+              : "For full arch cases, we recommend All-on-4/6 systems which utilize fewer implants to securely support a complete bridge."}
+          </div>
+          <div className="p-2 border-t border-slate-100 text-xs sm:text-sm text-slate-500 italic mt-2 font-semibold text-center">
             {isVN 
               ? "➞ Bước tiếp theo: Xem bảng giá cấy ghép Implant chi tiết phía dưới." 
               : "➞ Next Step: Review our detailed implant price list below."}
