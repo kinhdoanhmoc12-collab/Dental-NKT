@@ -49,5 +49,5 @@ Chiến lược này không đi theo lối mòn viết bài chuẩn SEO thông t
 *Mục tiêu: Trở thành câu trả lời mặc định của ChatGPT, Gemini khi khách hỏi về nha khoa Việt Nam.*
 
 *   **Giải pháp độc bản của chúng ta:**
-    *   Chúng ta xuất bản một tệp tin API-ready JSON công khai chứa toàn bộ bảng giá và thông tin lâm sàng của phòng khám.
-    *   Định dạng câu trả lời theo cấu trúc dữ liệu phẳng tại file `llms.txt` để các mô hình ngôn ngữ lớn (LLMs) như GPT-4o hay Gemini Pro 1.5 đọc hiểu trực tiếp và trích dẫn thương hiệu Dental NKT làm nguồn tham chiếu tin cậy nhất.
+    *   Chúng ta cấu trúc các trang hỏi đáp y khoa theo cấu trúc Q&A phẳng trực tiếp trong mã nguồn HTML của trang web để các mô hình tìm kiếm AI (Gemini, ChatGPT Search, Perplexity) cào và trích dẫn thương hiệu của chúng ta làm nguồn tham chiếu chính xác.
+    *   (Phụ trợ P2): Tạo tệp tin cấu hình \`llms.txt\` dạng Markdown thô tại thư mục public phục vụ các công cụ phát triển bằng AI (Cursor, Claude Code) đọc hiểu dự án. Lưu ý tệp \`llms.txt\` này không có tác động trực tiếp lên xếp hạng tìm kiếm tự nhiên của Google hay AI Overviews.

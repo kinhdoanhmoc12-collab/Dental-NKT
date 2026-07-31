@@ -65,9 +65,9 @@ Bản báo cáo này tổng hợp chi tiết toàn bộ các hạng mục kỹ t
 ### 3. TIÊU CHUẨN GEO (GENERATIVE ENGINE OPTIMIZATION - Tối ưu hóa Công cụ tìm kiếm AI)
 *Chuẩn bị website sẵn sàng đón đầu kỷ nguyên tìm kiếm AI (Google SGE, Perplexity, Gemini, ChatGPT Search).*
 
-*   **Tạo lập tệp tin `llms.txt` chuyên dụng:**
-    *   *Đã làm:* Tạo tệp tin [llms.txt](file:///c:/Users/Quang/Desktop/Dental%20Nha%20Khoa%20Tr%E1%BA%BB/public/llms.txt) nằm tại thư mục public của trang web. Tệp chứa cấu trúc tóm tắt ngắn gọn toàn bộ phòng khám bằng ngôn ngữ tối giản (Markdown) dành riêng cho các mô hình ngôn ngữ lớn (LLMs).
-    *   *Tiêu chuẩn đáp ứng:* Khi các AI Search đi quét web của bạn, chúng không cần đọc mã HTML phức tạp mà đọc trực tiếp tệp `llms.txt` để trả lời khách hàng nhanh chóng, chính xác, tăng cơ hội được AI đề xuất thương hiệu (Citation).
+*   **Tạo lập tệp tin `llms.txt` phụ trợ (Tiêu chí P2):**
+    *   *Đã làm:* Tạo tệp tin [llms.txt](file:///c:/Users/Quang/Desktop/Dental%20Nha%20Khoa%20Tr%E1%BA%BB/public/llms.txt) tại thư mục public. Tệp chứa cấu trúc tóm tắt ngắn gọn dự án bằng định dạng Markdown tối giản dành riêng cho các mô hình ngôn ngữ lớn (LLMs).
+    *   *Tiêu chuẩn đáp ứng:* Đây là tiêu chuẩn cộng đồng phục vụ cho các công cụ lập trình AI (Cursor, Claude Code, GitHub Copilot) đọc hiểu nhanh cấu trúc tài liệu của website. Cần lưu ý rằng Google Search/AI Overviews và OpenAI không dùng tệp này cho xếp hạng hay trích dẫn, nó được xếp vào nhóm kỹ thuật phụ trợ (P2).
 *   **Đồng bộ E-E-A-T Y tế (Kinh nghiệm, Chuyên môn, Thẩm quyền, Độ tin cậy):**
     *   *Đã làm:* Nhúng Schema JSON-LD định dạng **`Dentist`** trong các trang hồ sơ bác sĩ, khai báo các trường thông tin học vấn quốc tế, kinh nghiệm lâm sàng và chứng chỉ y khoa.
     *   *Tiêu chuẩn đáp ứng:* AI Search ưu tiên trích xuất các nguồn thông tin có định danh thực thể (Entity) rõ ràng và có tính chuyên môn y khoa được xác thực.

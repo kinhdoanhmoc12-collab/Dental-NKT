@@ -262,9 +262,9 @@ Tài liệu này là cẩm nang hướng dẫn và báo cáo chi tiết tận g�
 *   **Tại sao phải có nó:** Giao thức cũ HTTP/1.1 bắt trình duyệt phải xếp hàng tải từng file một, gây nghẽn tốc độ tải trang.
 *   **Kế hoạch tiếp theo:** Sếp chỉ đạo SysAdmin truy cập cấu hình Nginx trên VPS Úc sửa dòng nghe cổng mạng thành: `listen 443 ssl http2;`.
 
-### 34. Tệp cấu hình robots AI (llms.txt)
-*   **Nó là cái gì:** Tệp văn bản phẳng `llms.txt` lưu trữ tóm tắt thông tin trang web bằng định dạng Markdown đơn giản.
-*   **Vai trò của nó:** Giúp các công cụ tìm kiếm trí tuệ nhân tạo (Gemini, ChatGPT) cào thông tin nhanh chóng và ưu tiên trích dẫn thương hiệu.
-*   **Liên quan tới cái gì:** Liên kết với thư mục public của Next.js và robot quét dữ liệu AI (GEO).
-*   **Tại sao phải có nó:** Đón đầu kỷ nguyên tìm kiếm AI. Nếu không có file này, AI sẽ khó trích xuất được bảng giá và dịch vụ chính xác để đề xuất cho khách hàng.
-*   **Những gì đã làm để đạt tiêu chuẩn:** Tạo mới tệp tin `public/llms.txt` chứa tóm tắt y khoa phòng khám bằng Markdown.
+### 34. Tệp cấu hình robots AI (llms.txt) - Phân loại P2 (Helper file)
+*   **Nó là cái gì:** Tệp văn bản phẳng `llms.txt` (tiêu chuẩn cộng đồng đề xuất bởi fast.ai) lưu trữ tóm tắt thông tin trang web bằng định dạng Markdown tối giản dành riêng cho các mô hình ngôn ngữ lớn (LLMs).
+*   **Vai trò của nó:** Cung cấp dữ liệu dạng Markdown sạch cho các công cụ lập trình AI (Cursor, GitHub Copilot, Claude Code) hoặc các AI Agent (như Perplexity) đọc hiểu nhanh cấu trúc tài liệu của website. **Lưu ý: File này không ảnh hưởng đến xếp hạng Google Search hay Google AI Overviews và không được OpenAI chính thức hỗ trợ.**
+*   **Liên quan tới cái gì:** Liên kết với các công cụ phát triển bằng AI (AI Developer Tools) và các bot cào dữ liệu Markdown.
+*   **Tại sao phải có nó:** Đây là một tiêu chuẩn cộng đồng chi phí thấp (<30 phút triển khai) giúp các công cụ lập trình AI đọc hiểu mã nguồn và tài liệu của chúng ta nhanh hơn khi viết code, nhưng không kỳ vọng tác động trực tiếp đến xếp hạng SEO/AEO.
+*   **Những gì đã làm để đạt tiêu chuẩn:** Đã tạo mới tệp tin `public/llms.txt` chứa tóm tắt y khoa phòng khám bằng Markdown và phân loại vào nhóm kỹ thuật phụ trợ (P2).

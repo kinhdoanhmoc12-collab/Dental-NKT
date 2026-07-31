@@ -84,6 +84,6 @@ Em thiết lập 4 trang đích vệ tinh nhắm mục tiêu địa lý và mã 
 *Mục tiêu: Đạt điểm hiệu năng PageSpeed Insights di động >95 và tối ưu hóa cho công cụ tìm kiếm bằng AI.*
 
 *   **Định dạng Q&A cấu trúc phẳng:** Biên soạn các câu hỏi đáp y khoa và chi phí dài đúng **50-60 từ** chứa các con số định lượng cụ thể để bot AI (Gemini, ChatGPT) dễ cào dữ liệu và ưu tiên trích dẫn thương hiệu.
-*   **Tối ưu hóa file llms.txt:** Cấu hình bảng giá và thông tin pháp lý y tế vào file [public/llms.txt](file:///c:/Users/Quang/Desktop/Dental%20Nha%20Khoa%20Tr%E1%BA%BB/public/llms.txt) cho AI đọc hiểu trực tiếp.
+*   **Tối ưu hóa file llms.txt (Tiêu chuẩn phụ trợ P2):** Cấu hình bảng giá và thông tin dự án dạng Markdown tối giản vào file [public/llms.txt](file:///c:/Users/Quang/Desktop/Dental%20Nha%20Khoa%20Tr%E1%BA%BB/public/llms.txt) phục vụ các công cụ lập trình AI (Cursor, Claude Code, Copilot) fetch tài liệu. Lưu ý: Tiêu chí này không ảnh hưởng trực tiếp lên Google Search hay AI Overviews.
 *   **Trì hoãn tải tiện ích bên thứ 3 (Lazy Loading):** Tải chậm bản đồ Google Maps và cửa sổ chat cho đến khi người dùng cuộn xuống dưới cùng để tránh nghẽn luồng tải chính.
 *   **priority Image Banner:** Thêm thuộc tính `priority` vào ảnh Banner để máy chủ ưu tiên hiển thị ảnh này trước, giảm LCP xuống dưới **1.8 giây**.
