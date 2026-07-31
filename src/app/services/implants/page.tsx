@@ -111,14 +111,40 @@ export default function ImplantsPage() {
             {isVN ? "1. Implant là gì?" : "1. What is a Dental Implant?"}
           </h2>
           <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            {isVN
-              ? "Cấy ghép Implant (Dental Implant) là giải pháp phục hồi răng đã mất bằng cách đặt một trụ titan (hoặc vật liệu tương thích sinh học) vào xương hàm, đóng vai trò như chân răng thật. Sau khi trụ tích hợp ổn định với xương, bác sĩ gắn khớp nối (Abutment) và mão răng sứ lên trên để phục hồi hình dáng, chức năng ăn nhai như răng thật."
-              : "A [dental implant](https://en.wikipedia.org/wiki/Dental_implant) is a high-tech replacement for a missing tooth root. A medical-grade titanium screw is surgically anchored into the jawbone, acting as a structural anchor. Once integrated, a custom-milled abutment and a porcelain crown are secured on top, matching your natural teeth perfectly."}
+            {isVN ? (
+              "Cấy ghép Implant (Dental Implant) là giải pháp phục hồi răng đã mất bằng cách đặt một trụ titan (hoặc vật liệu tương thích sinh học) vào xương hàm, đóng vai trò như chân răng thật. Sau khi trụ tích hợp ổn định với xương, bác sĩ gắn khớp nối (Abutment) và mão răng sứ lên trên để phục hồi hình dáng, chức năng ăn nhai như răng thật."
+            ) : (
+              <>
+                A{" "}
+                <a 
+                  href="https://en.wikipedia.org/wiki/Dental_implant" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-teal-brand hover:underline font-bold"
+                >
+                  dental implant
+                </a>{" "}
+                is a high-tech replacement for a missing tooth root. A medical-grade titanium screw is surgically anchored into the jawbone, acting as a structural anchor. Once integrated, a custom-milled abutment and a porcelain crown are secured on top, matching your natural teeth perfectly.
+              </>
+            )}
           </p>
           <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-            {isVN
-              ? "Đây là giải pháp phục hồi răng mất được đánh giá cao nhất hiện nay vì không xâm lấn răng kế cận (khác với cầu răng sứ phải mài răng bên cạnh), và giúp ngăn tiêu xương hàm — vấn đề thường gặp khi mất răng lâu ngày không phục hồi."
-              : "Implantology is widely regarded as the best restoration method (as supported by the [Australian Dental Association](https://www.ada.org.au) guidelines) because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth."}
+            {isVN ? (
+              "Đây là giải pháp phục hồi răng mất được đánh giá cao nhất hiện nay vì không xâm lấn răng kế cận (khác với cầu răng sứ phải mài răng bên cạnh), và giúp ngăn tiêu xương hàm — vấn đề thường gặp khi mất răng lâu ngày không phục hồi."
+            ) : (
+              <>
+                Implantology is widely regarded as the best restoration method (as supported by the{" "}
+                <a 
+                  href="https://www.ada.org.au" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-teal-brand hover:underline font-bold"
+                >
+                  Australian Dental Association
+                </a>{" "}
+                guidelines) because it prevents jawbone resorption (a common consequence of missing teeth) and eliminates the need to grind down surrounding healthy teeth.
+              </>
+            )}
           </p>
 
           <div className="bg-teal-brand-light/30 border border-teal-brand-light p-6 sm:p-8 rounded-3xl space-y-4">
