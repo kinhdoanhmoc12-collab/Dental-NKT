@@ -83,10 +83,10 @@ export default function ImplantsPage() {
               </span>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
               <Link 
                 href="/contact" 
-                className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap"
+                className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap w-full sm:w-auto text-center block"
               >
                 {isVN ? "Đăng Ký Tư Vấn Nụ Cười" : "Book Free Smile Assessment"}
               </Link>
@@ -94,7 +94,7 @@ export default function ImplantsPage() {
                 href="https://wa.me/84963333844" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="border border-slate-600 hover:border-teal-brand text-slate-200 hover:text-white px-5 py-3.5 rounded-full text-xs sm:text-sm transition-all font-semibold inline-flex items-center justify-center bg-transparent whitespace-nowrap"
+                className="border border-slate-600 hover:border-teal-brand text-slate-200 hover:text-white px-5 py-3.5 rounded-full text-xs sm:text-sm transition-all font-semibold flex items-center justify-center bg-transparent whitespace-nowrap w-full sm:w-auto text-center"
               >
                 WhatsApp Chat
               </a>
