@@ -25,6 +25,7 @@ import {
 export default function VeneersPage() {
   const { lang, t } = useLanguage();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<"veneers" | "crowns" | "whitening">("veneers");
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
@@ -186,7 +187,7 @@ export default function VeneersPage() {
           </p>
         </div>
 
-        <div className="overflow-x-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm w-full max-w-full">
+        <div className="hidden md:block overflow-x-auto bg-white rounded-3xl border border-slate-200/80 shadow-sm w-full max-w-full">
           <table className="w-full text-left border-collapse text-xs sm:text-sm">
             <thead>
               <tr className="bg-[#0b1e2c] text-white">
@@ -229,6 +230,104 @@ export default function VeneersPage() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Tab Switcher view */}
+        <div className="block md:hidden space-y-4">
+          <div className="flex bg-slate-100 p-1.5 rounded-xl border border-slate-200">
+            <button
+              onClick={() => setActiveTab("veneers")}
+              className={`flex-1 py-3.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                activeTab === "veneers" ? "bg-[#0b1e2c] text-white shadow" : "text-slate-600"
+              }`}
+            >
+              {isVN ? "Veneers" : "Veneers"}
+            </button>
+            <button
+              onClick={() => setActiveTab("crowns")}
+              className={`flex-1 py-3.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                activeTab === "crowns" ? "bg-[#0b1e2c] text-white shadow" : "text-slate-600"
+              }`}
+            >
+              {isVN ? "Bọc Sứ" : "Crowns"}
+            </button>
+            <button
+              onClick={() => setActiveTab("whitening")}
+              className={`flex-1 py-3.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                activeTab === "whitening" ? "bg-[#0b1e2c] text-white shadow" : "text-slate-600"
+              }`}
+            >
+              {isVN ? "Tẩy Trắng" : "Whitening"}
+            </button>
+          </div>
+
+          <div className="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-4">
+            <div className="border-b border-slate-100 pb-3 flex justify-between items-center">
+              <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider">
+                {isVN ? "Phương Pháp So Sánh" : "Comparison Method"}
+              </span>
+              <span className="text-xs font-extrabold text-[#0b1e2c] bg-teal-brand/10 px-3 py-1 rounded-full uppercase">
+                {activeTab === "veneers" ? (isVN ? "Mặt dán sứ" : "Veneers") : activeTab === "crowns" ? (isVN ? "Bọc răng sứ" : "Crowns") : (isVN ? "Tẩy trắng" : "Whitening")}
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              <div className="space-y-1">
+                <span className="text-xs text-slate-400 font-bold block">{isVN ? "Mức độ mài răng" : "Tooth Reduction"}</span>
+                <span className="text-sm text-slate-800 font-bold">
+                  {activeTab === "veneers" 
+                    ? (isVN ? "Tối thiểu (chỉ mặt ngoài 0.3-0.7mm)" : "Minimal (0.3-0.7mm front facial)") 
+                    : activeTab === "crowns" 
+                      ? (isVN ? "Mài toàn bộ cùi răng (1.0-1.5mm)" : "Full 360° reduction (1.0-1.5mm)") 
+                      : (isVN ? "Không mài răng (0%)" : "None (0%)")}
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <span className="text-xs text-slate-400 font-bold block">{isVN ? "Cải thiện màu sắc" : "Shade Improvement"}</span>
+                <span className="text-sm text-slate-800 font-bold">
+                  {activeTab === "veneers" 
+                    ? (isVN ? "Rất cao (che nhiễm Tetracycline nặng)" : "Excellent (hides severe Tetracycline)") 
+                    : activeTab === "crowns" 
+                      ? (isVN ? "Rất cao" : "Excellent") 
+                      : (isVN ? "Trung bình, hạn chế với nhiễm chất hóa học" : "Moderate, limited on chemical stains")}
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <span className="text-xs text-slate-400 font-bold block">{isVN ? "Cải thiện hình dáng / khe thưa" : "Shape & Gap Correction"}</span>
+                <span className="text-sm text-slate-800 font-bold">
+                  {activeTab === "veneers" 
+                    ? (isVN ? "Có, hoàn hảo cho răng cửa" : "Yes, ideal for anterior teeth") 
+                    : activeTab === "crowns" 
+                      ? (isVN ? "Có" : "Yes") 
+                      : (isVN ? "Không hỗ trợ" : "No")}
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <span className="text-xs text-slate-400 font-bold block">{isVN ? "Ưu tiên khi răng khỏe" : "Best for Healthy Teeth"}</span>
+                <span className="text-sm text-slate-800 font-bold">
+                  {activeTab === "veneers" 
+                    ? (isVN ? "Ưu tiên hàng đầu (Bảo tồn răng)" : "Top Priority (Tooth preservation)") 
+                    : activeTab === "crowns" 
+                      ? (isVN ? "Chỉ dùng khi răng đã tổn thương nhiều" : "Used for heavily broken/treated teeth") 
+                      : (isVN ? "Dùng khi răng đều, chỉ ố nhẹ" : "Used when teeth shape is already good")}
+                </span>
+              </div>
+
+              <div className="space-y-1">
+                <span className="text-xs text-slate-400 font-bold block">{isVN ? "Thời hạn bảo hành" : "Warranty Period"}</span>
+                <span className="text-sm text-slate-800 font-bold">
+                  {activeTab === "veneers" 
+                    ? (isVN ? "5 – 7 Năm" : "5 – 7 Years") 
+                    : activeTab === "crowns" 
+                      ? (isVN ? "5 – 10 Năm" : "5 – 10 Years") 
+                      : (isVN ? "Không bảo hành (Cần làm lại)" : "No Warranty (Touch-ups needed)")}
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

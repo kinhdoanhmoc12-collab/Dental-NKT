@@ -542,9 +542,34 @@ export default function DoctorDetailPage() {
   const certifications = lang === "VN" ? doctor.certificationsVN : doctor.certificationsEN;
   const cases = lang === "VN" ? doctor.casesVN : doctor.casesEN;
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": name,
+    "jobTitle": role,
+    "description": tagline,
+    "image": `https://nhakhoatre.vn${doctor.image}`,
+    "worksFor": {
+      "@type": "DentalClinic",
+      "name": "Dental NKT",
+      "url": "https://nhakhoatre.vn"
+    },
+    "alumniOf": educations.map(edu => ({
+      "@type": "EducationalOrganization",
+      "name": edu
+    })),
+    "knowsAbout": specialties.map(spec => spec.title)
+  };
+
   return (
     <div className="py-10 space-y-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
       
+      {/* Schema.org Structured Data for Google E-E-A-T SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+
       {/* Back button link */}
       <div>
         <Link 
