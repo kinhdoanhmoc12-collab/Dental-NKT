@@ -103,7 +103,7 @@ export default function DenturesClient() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 space-y-6 max-w-3xl">
-            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
+            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{isVN ? "PHỤC HÌNH RĂNG THÁO LẮP" : "REMOVABLE DENTAL PROSTHETICS"}</span>
             </span>
@@ -125,12 +125,12 @@ export default function DenturesClient() {
                 <span className="text-xs text-slate-400 block font-medium">
                   {isVN ? "Chi phí điều trị trọn gói từ" : "Denture Packages Start at"}
                 </span>
-                <span className="text-2xl font-extrabold text-teal-brand">
+                <span className="text-2xl font-extrabold text-teal-brand whitespace-nowrap">
                   {isVN ? "$105 USD / hàm" : "$150 AUD / arch"}
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
               <Link 
                 href="/contact" 
                 className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap text-center w-full sm:w-auto text-center block"
@@ -243,7 +243,7 @@ export default function DenturesClient() {
           ].map((card, idx) => (
             <div key={idx} className="bg-white border border-slate-150 p-6 rounded-2xl space-y-3 shadow-sm flex flex-col justify-between">
               <div className="space-y-2">
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-brand/10 text-teal-brand uppercase tracking-wider inline-block">
+                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-teal-brand/10 text-teal-brand uppercase tracking-wider inline-block whitespace-nowrap">
                   {card.cost}
                 </span>
                 <h4 className="text-sm font-bold text-[#0b1e2c]">{card.title}</h4>
@@ -402,19 +402,19 @@ export default function DenturesClient() {
           </h3>
           <ul className="space-y-3.5 text-xs sm:text-sm text-slate-700">
             <li className="flex items-start gap-2">
-              <span className="text-teal-brand font-bold">•</span>
+              <span className="text-teal-brand font-bold whitespace-nowrap">•</span>
               <span>{isVN ? "Tháo ra vệ sinh sạch sẽ sau các bữa ăn lớn và chải kỹ 1 lần mỗi ngày bằng bàn chải mềm." : "Rinse your denture after meals and brush it once daily using a soft-bristle brush."}</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-brand font-bold">•</span>
+              <span className="text-teal-brand font-bold whitespace-nowrap">•</span>
               <span>{isVN ? "Ngâm hàm trong dung dịch vệ sinh chuyên dụng hoặc nước sạch qua đêm, không để hàm khô hoàn toàn gây biến dạng nhựa." : "Soak it in clean water or denture solution overnight; letting it dry completely can warp the shape."}</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-brand font-bold">•</span>
+              <span className="text-teal-brand font-bold whitespace-nowrap">•</span>
               <span>{isVN ? "Không dùng nước sôi hoặc nước quá nóng để ngâm/rửa hàm giả vì sẽ làm biến dạng nền hàm nhựa." : "Never use boiling or very hot water, as high temperatures will melt or warp the acrylic base."}</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-teal-brand font-bold">•</span>
+              <span className="text-teal-brand font-bold whitespace-nowrap">•</span>
               <span>{isVN ? "Nên tháo hàm khi ngủ để các mô nướu và niêm mạc miệng được nghỉ ngơi thoải mái." : "Remove your denture while sleeping to let gum tissues rest and prevent infections."}</span>
             </li>
           </ul>

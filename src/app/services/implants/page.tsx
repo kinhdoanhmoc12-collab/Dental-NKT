@@ -58,7 +58,7 @@ export default function ImplantsPage() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-6 max-w-3xl">
-          <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
+          <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{isVN ? "CẤY GHÉP IMPLANT KỸ THUẬT SỐ" : "DIGITAL IMPLANTOLOGY"}</span>
           </span>
@@ -73,17 +73,17 @@ export default function ImplantsPage() {
               : "The gold standard for tooth replacement. A biocompatible titanium post replaces your natural tooth root, restoring 99% of chew force, preventing bone loss, and leaving adjacent teeth untouched."}
           </p>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-6 border-t border-slate-700/80">
+          <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-slate-700/80 w-full">
             <div>
               <span className="text-xs text-slate-300 block font-medium">
                 {isVN ? "Chi phí tham khảo chỉ từ:" : "Pricing starts from:"}
               </span>
-              <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand">
+              <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand whitespace-nowrap">
                 {isVN ? "18.000.000 VNĐ / trụ" : "$975 AUD / post"}
               </span>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
               <Link 
                 href="/contact" 
                 className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap w-full sm:w-auto text-center block"
@@ -698,7 +698,7 @@ export default function ImplantsPage() {
                   {step.num}
                 </div>
                 <div className={`w-full md:w-[45%] pl-12 md:pl-0 ${isEven ? "md:pl-8 text-left" : "md:pr-8 text-left md:text-right"} space-y-2`}>
-                  <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider block">
+                  <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider block whitespace-nowrap">
                     {isVN ? `Bước ${step.num}` : `Step ${step.num}`}
                   </span>
                   <h3 className="font-serif text-lg font-extrabold text-dark-brand">
@@ -828,11 +828,11 @@ export default function ImplantsPage() {
             <div className="divide-y divide-slate-100 text-xs sm:text-sm">
               <div className="py-2.5 flex justify-between">
                 <span className="text-slate-600 font-semibold">{isVN ? "Trụ Implant (Sinh học)" : "Implant Post (Titanium)"}</span>
-                <span className="font-bold text-teal-brand">{isVN ? "10 Năm" : "10 Years"}</span>
+                <span className="font-bold text-teal-brand whitespace-nowrap">{isVN ? "10 Năm" : "10 Years"}</span>
               </div>
               <div className="py-2.5 flex justify-between">
                 <span className="text-slate-600 font-semibold">{isVN ? "Mão sứ trên Implant" : "Ceramic Crown (on Implant)"}</span>
-                <span className="font-bold text-teal-brand">{isVN ? "7 đến 10 Năm (Tính riêng biệt)" : "7 to 10 Years (Crown Only)"}</span>
+                <span className="font-bold text-teal-brand whitespace-nowrap">{isVN ? "7 đến 10 Năm (Tính riêng biệt)" : "7 to 10 Years (Crown Only)"}</span>
               </div>
             </div>
             <p className="text-xs text-slate-500 font-medium leading-relaxed">

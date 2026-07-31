@@ -106,7 +106,7 @@ export default function AllOn6Page() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 space-y-6 max-w-3xl">
-            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
+            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{isVN ? "PHỤC HỒI TOÀN HÀM CAO CẤP" : "PREMIUM FULL-ARCH RECONSTRUCTION"}</span>
             </span>
@@ -128,12 +128,12 @@ export default function AllOn6Page() {
                 <span className="text-xs text-slate-300 block font-medium">
                   {isVN ? "Trọn gói từ:" : "All-inclusive from:"}
                 </span>
-                <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand">
+                <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand whitespace-nowrap">
                   {isVN ? "175.000.000 VNĐ / hàm" : "$9,500 AUD / arch"}
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
               <Link 
                 href="/contact" 
                 className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap w-full sm:w-auto text-center block"
@@ -519,21 +519,21 @@ export default function AllOn6Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm sm:text-base text-slate-700 font-normal leading-relaxed">
           <ul className="space-y-3.5">
             <li className="flex gap-3 items-start">
-              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0">1</span>
+              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0 whitespace-nowrap">1</span>
               <span>{isVN ? "Ăn thức ăn mềm, cắt nhỏ trong 3-6 tháng đầu tiên để tránh áp lực nhai quá lớn lên hàm tạm." : "Eat soft, cut-up foods for the first 3-6 months. Avoid directly biting into hard food to prevent temporary bridge fractures."}</span>
             </li>
             <li className="flex gap-3 items-start">
-              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0">2</span>
+              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0 whitespace-nowrap">2</span>
               <span>{isVN ? "Ngưng hút thuốc lá hoàn toàn — chất nicotine ảnh hưởng trực tiếp đến sự tích hợp xương của cả 6 trụ." : "Quit smoking completely – nicotine constricts blood vessels, slows healing, and is the leading cause of early implant failures."}</span>
             </li>
           </ul>
           <ul className="space-y-3.5">
             <li className="flex gap-3 items-start">
-              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0">3</span>
+              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0 whitespace-nowrap">3</span>
               <span>{isVN ? "Vệ sinh răng miệng kỹ lưỡng, đặc biệt là các khe kẽ nướu giữa 6 trụ implant và hàm tạm." : "Maintain strict hygiene with soft-bristled brushes, water flossers on low pressure, and warm saline rinses after meals."}</span>
             </li>
             <li className="flex gap-3 items-start">
-              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0">4</span>
+              <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0 whitespace-nowrap">4</span>
               <span>{isVN ? "Khuyên khích bạn tái khám định kỳ tại nha sĩ ở Úc sau 6-8 tuần đầu tiên từ chuyến đi 1." : "We recommend visiting your local Australian dentist for a routine progress check after 6-8 weeks."}</span>
             </li>
           </ul>

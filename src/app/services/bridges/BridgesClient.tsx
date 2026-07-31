@@ -104,7 +104,7 @@ export default function BridgesClient() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 space-y-6 max-w-3xl">
-            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2">
+            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{isVN ? "PHỤC HỒI RĂNG MẤT KHÔNG CẦN PHẪU THUẬT" : "NON-SURGICAL TOOTH RESTORATION"}</span>
             </span>
@@ -126,12 +126,12 @@ export default function BridgesClient() {
                 <span className="text-xs text-slate-300 block font-medium">
                   {isVN ? "Đơn giá mỗi đơn vị (unit) từ:" : "Price per unit from:"}
                 </span>
-                <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand">
+                <span className="text-2xl sm:text-3xl font-extrabold text-teal-brand whitespace-nowrap">
                   {isVN ? "2.400.000 VNĐ" : "$130 AUD"}
                 </span>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto shrink-0">
               <Link 
                 href="/contact" 
                 className="bg-teal-brand hover:bg-teal-700 text-white font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-lg hover:scale-105 whitespace-nowrap w-full sm:w-auto text-center block"
@@ -459,7 +459,7 @@ export default function BridgesClient() {
           ].map((item, idx) => (
             <div key={idx} className="bg-white border border-slate-150 p-6 rounded-2xl space-y-2">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 flex items-center justify-center bg-teal-brand-light text-teal-brand rounded-full font-bold text-xs shrink-0">
+                <span className="w-6 h-6 flex items-center justify-center bg-teal-brand-light text-teal-brand rounded-full font-bold text-xs shrink-0 whitespace-nowrap">
                   {idx + 1}
                 </span>
                 <h4 className="text-xs sm:text-sm font-bold text-dark-brand">
