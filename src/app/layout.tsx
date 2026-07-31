@@ -15,8 +15,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://nhakhoatre.vn"),
   title: {
-    default: "Dental NKT - International Dental Clinic",
-    template: "%s | Dental NKT - International Dental Clinic",
+    default: "Dental NKT - International Dental Clinic in Vietnam",
+    template: "%s | Dental NKT - International Dental Clinic in Vietnam",
   },
   description: "Experience world-class dental care & authentic Vietnamese hospitality in Hanoi. Save up to 70% on Dental Implants, Porcelain Veneers, and All-on-4 with international standards, global warranty, and 24/7 travel support.",
   keywords: ["Dental Tourism Vietnam", "Boutique Dental Clinic Hanoi", "Dental Implants Vietnam", "Porcelain Veneers Vietnam", "All-on-4 Vietnam", "Dentist in Hanoi"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Dental NKT - International Dental Clinic",
+    title: "Dental NKT - International Dental Clinic in Vietnam",
     description: "Experience world-class dental care & authentic Vietnamese hospitality in Hanoi. Save up to 70% on Dental Implants, Porcelain Veneers, and All-on-4 with international standards, global warranty, and 24/7 travel support.",
     url: "https://nhakhoatre.vn",
     siteName: "Dental NKT",
