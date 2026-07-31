@@ -86,6 +86,8 @@ export default function CrownsPage() {
 
   return (
     <div className="pt-6 pb-12 space-y-20 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
+      <title>{isVN ? "Bọc Răng Sứ Thẩm Mỹ | Dental NKT" : "Porcelain Dental Crowns Hanoi | Dental NKT"}</title>
+      <meta name="description" content={isVN ? "Dịch vụ bọc răng sứ thẩm mỹ chất lượng cao. Khôi phục răng vỡ mẻ, bảo hành 10 năm." : "Restore broken or damaged teeth with premium porcelain dental crowns in Hanoi at Dental NKT. 10-year warranty, save 70%."} />
       
       {/* Top Header & Hero Container */}
       <div className="space-y-6">

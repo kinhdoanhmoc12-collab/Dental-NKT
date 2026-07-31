@@ -38,6 +38,8 @@ export default function ImplantsPage() {
 
   return (
     <div className="pt-6 pb-12 space-y-20 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
+      <title>{isVN ? "Cấy Ghép Implant Đơn lẻ Thẩm Mỹ | Dental NKT" : "Premium Dental Implants Hanoi | Dental NKT"}</title>
+      <meta name="description" content={isVN ? "Dịch vụ cấy ghép răng Implant đơn lẻ tại Hà Nội. Tiết kiệm 70% chi phí, bảo hành chính hãng toàn cầu." : "Get world-class single dental implants in Hanoi at Dental NKT. Save 70% compared to Sydney/Melbourne. Global lifetime warranty."} />
       
       {/* Top Header & Hero Container */}
       <div className="space-y-6">
