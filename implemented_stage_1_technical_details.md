@@ -94,7 +94,7 @@ Dưới đây là chi tiết mã nguồn, danh sách tập tin và giải pháp 
 
 ---
 
-### 9. Bản tóm tắt cho công cụ tìm kiếm AI (GEO llms.txt Directive)
-*   **Vấn đề:** Website cần cung cấp tài liệu cô đọng để các mô hình AI (Gemini, ChatGPT) cào thông tin nhanh chóng.
-*   **Giải pháp tận gốc:** Tạo file văn bản phẳng `llms.txt` ở thư mục public.
+### 9. Bản tóm tắt cho công cụ lập trình AI (Helper llms.txt File - Phân loại P2)
+*   **Vấn đề:** Các công cụ phát triển bằng AI (Cursor, Claude Code, GitHub Copilot) cần tài liệu tóm tắt dạng Markdown tối giản để đọc hiểu nhanh cấu trúc và thông tin dự án.
+*   **Giải pháp tận gốc:** Tạo file văn bản phẳng `llms.txt` ở thư mục public. Lưu ý rằng tệp này là tiêu chuẩn cộng đồng phụ trợ, không có tác dụng xếp hạng hay trích dẫn trong Google Search hoặc Google AI Overviews.
 *   **Tệp tin đã tạo:** `public/llms.txt` (Chứa tóm tắt cấu trúc phòng khám, bảng giá định dạng bằng markdown tối giản).
