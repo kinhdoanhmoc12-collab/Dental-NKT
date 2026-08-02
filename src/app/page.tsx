@@ -23,6 +23,94 @@ import {
   ChevronLeft
 } from "lucide-react";
 
+const patientCases = [
+  {
+    id: "Sarah T.",
+    locationVN: "Bệnh nhân Sydney • Mặt dán sứ Veneer",
+    locationEN: "Sydney Patient · Emax Veneers",
+    diagnosisVN: "Tình trạng: Răng xỉn màu trung bình, răng xô lệch nhẹ cung thẩm mỹ. Điều trị thẩm mỹ không phẫu thuật.",
+    diagnosisEN: "Diagnosis: Moderate discolouration, minor crowding in the aesthetic zone. Non-surgical cosmetic case.",
+    treatmentVN: "16 mặt dán sứ Emax Zico",
+    treatmentEN: "16 Emax Zico Veneers",
+    durationVN: "8 Ngày (2 Lần hẹn lâm sàng)",
+    durationEN: "8 Days (2 Clinic Appointments)",
+    clinicalLead: "Dr. Nguyen Thi Thuy Hang",
+    costVN: "192.000.000đ",
+    costEN: "$10,400 AUD",
+    equivalentVN: "545.000.000đ",
+    equivalentEN: "~$29,600 AUD",
+    image: "/images/cases/sarah_comparison.jpg"
+  },
+  {
+    id: "David M.",
+    locationVN: "Bệnh nhân Melbourne • Cấy Implant All-on-4",
+    locationEN: "Melbourne Patient · All-on-4",
+    diagnosisVN: "Tình trạng: Cầu răng hàm trên cũ hỏng hóc nặng, tiêu xương ổ răng phức tạp. Cần phẫu thuật All-on-4.",
+    diagnosisEN: "Diagnosis: Failing upper bridges, periodontal bone deterioration. Required full-arch fixed reconstruction.",
+    treatmentVN: "All-on-4 Hàm trên Nobel Biocare",
+    treatmentEN: "Upper All-on-4 Nobel Biocare",
+    durationVN: "10 Ngày (Giai đoạn 1)",
+    durationEN: "10 Days (Phase 1 Placement)",
+    clinicalLead: "Dr. Nguyen Huy Hoang",
+    costVN: "160.000.000đ",
+    costEN: "$8,675 AUD",
+    equivalentVN: "645.000.000đ",
+    equivalentEN: "~$35,000 AUD",
+    image: "/images/cases/david_comparison.jpg"
+  },
+  {
+    id: "Helen R.",
+    locationVN: "Bệnh nhân Brisbane • Implant Đơn Lẻ",
+    locationEN: "Brisbane Patient · Single Implant",
+    diagnosisVN: "Tình trạng: Mất răng cối lớn hàm dưới, nướu co lại nhẹ. Xương hàm đủ điều kiện đặt trụ thẳng không ghép.",
+    diagnosisEN: "Diagnosis: Missing single lower molar following extraction. Bone height sufficient without grafting.",
+    treatmentVN: "Straumann® SLActive + Mão răng",
+    treatmentEN: "Straumann® SLActive + Crown",
+    durationVN: "5 Ngày (Lần 1 cấy trụ)",
+    durationEN: "5 Days (Visit 1 Placement)",
+    clinicalLead: "Dr. Pham Xuan Dang",
+    costVN: "75.600.000đ",
+    costEN: "$4,100 AUD",
+    equivalentVN: "129.000.000đ",
+    equivalentEN: "~$7,000 AUD",
+    image: "/images/cases/helen_comparison.jpg"
+  },
+  {
+    id: "James L.",
+    locationVN: "Bệnh nhân Adelaide • Cầu Răng Sứ Toàn Hàm",
+    locationEN: "Adelaide Patient · Full Zirconia Bridge",
+    diagnosisVN: "Tình trạng: Nhiều răng bị sâu hỏng nặng và lung lay ở hàm trên. Phục hình phục hồi chức năng và thẩm mỹ.",
+    diagnosisEN: "Diagnosis: Severe decay and tooth loss in the upper jaw. Comprehensive functional and cosmetic restoration.",
+    treatmentVN: "10 Cầu răng & Mão sứ Zirconia",
+    treatmentEN: "10 Full Zirconia Crowns & Bridges",
+    durationVN: "7 Ngày (2 Lần hẹn lâm sàng)",
+    durationEN: "7 Days (2 Clinic Appointments)",
+    clinicalLead: "Dr. Le Thi Nhat Minh",
+    costVN: "96.000.000đ",
+    costEN: "$5,200 AUD",
+    equivalentVN: "287.000.000đ",
+    equivalentEN: "~$15,500 AUD",
+    image: "/images/cases/james_comparison.jpg"
+  },
+  {
+    id: "Sophie B.",
+    locationVN: "Bệnh nhân Perth • Mặt Dán Sứ Siêu Mỏng",
+    locationEN: "Perth Patient · Ultra-Thin Veneers",
+    diagnosisVN: "Tình trạng: Nhiễm màu kháng sinh (tetracycline) mức độ trung bình, rìa cắn không đều. Dán sứ bảo tồn tối đa.",
+    diagnosisEN: "Diagnosis: Moderate tetracycline staining and uneven tooth edges. Ultra-conservative smile design.",
+    treatmentVN: "20 Mặt dán sứ Emax Press siêu mỏng",
+    treatmentEN: "20 Emax Press Ultra-Thin Veneers",
+    durationVN: "9 Ngày (3 Lần hẹn lâm sàng)",
+    durationEN: "9 Days (3 Clinic Appointments)",
+    clinicalLead: "Dr. Nguyen Thu Hoai",
+    costVN: "250.000.000đ",
+    costEN: "$13,500 AUD",
+    equivalentVN: "703.000.000đ",
+    equivalentEN: "~$38,000 AUD",
+    image: "/images/cases/sophie_comparison.jpg"
+  }
+];
+
 export default function HomePage() {
   const { lang, t } = useLanguage();
   const [homeDocSlide, setHomeDocSlide] = useState(0);
@@ -1080,78 +1168,78 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Case 1 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/50 shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center text-xs font-bold">
-                  <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">{lang === "VN" ? "Đã xác thực" : "Verified Case"}</span>
-                  <span className="text-slate-500 font-mono">ID: Sarah T.</span>
+          <div className="flex flex-wrap justify-center gap-8">
+            {patientCases.map((c, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl border border-slate-200/50 shadow-sm flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-md group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm sm:max-w-md md:max-w-none"
+              >
+                {/* Image Container with Before/After */}
+                <div className="relative aspect-[3/2] overflow-hidden bg-slate-100 border-b border-slate-200/60">
+                  <img
+                    src={c.image}
+                    alt={lang === "VN" ? c.locationVN : c.locationEN}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute top-3 left-3 bg-[#0b1e2c]/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase">
+                    {lang === "VN" ? "Trước / Sau" : "Before / After"}
+                  </span>
                 </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Sydney • Mặt dán sứ Veneer" : "Sydney Patient · Emax Veneers"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Răng xỉn màu trung bình, răng xô lệch nhẹ cung thẩm mỹ. Điều trị thẩm mỹ không phẫu thuật." : "Diagnosis: Moderate discolouration, minor crowding in the aesthetic zone. Non-surgical cosmetic case."}</p>
-                </div>
-                <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "16 mặt dán sứ Emax Zico" : "16 Emax Zico Veneers"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "8 Ngày (2 Lần hẹn lâm sàng)" : "8 Days (2 Clinic Appointments)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Thi Thuy Hang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "192.000.000đ" : "$10,400 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "545.000.000đ" : "~$29,600 AUD"}</strong></li>
-                </ul>
-              </div>
-              <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
-                {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
-              </Link>
-            </div>
 
-            {/* Case 2 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/50 shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center text-xs font-bold">
-                  <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">{lang === "VN" ? "Đã xác thực" : "Verified Case"}</span>
-                  <span className="text-slate-500 font-mono">ID: David M.</span>
-                </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Melbourne • Cấy Implant All-on-4" : "Melbourne Patient · All-on-4"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Cầu răng hàm trên cũ hỏng hóc nặng, tiêu xương ổ răng phức tạp. Cần phẫu thuật All-on-4." : "Diagnosis: Failing upper bridges, periodontal bone deterioration. Required full-arch fixed reconstruction."}</p>
-                </div>
-                <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "All-on-4 Hàm trên Nobel Biocare" : "Upper All-on-4 Nobel Biocare"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "10 Ngày (Giai đoạn 1)" : "10 Days (Phase 1 Placement)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Nguyen Huy Hoang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "160.000.000đ" : "$8,675 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "645.000.000đ" : "~$35,000 AUD"}</strong></li>
-                </ul>
-              </div>
-              <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
-                {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
-              </Link>
-            </div>
+                {/* Case Info */}
+                <div className="p-6 flex-1 flex flex-col justify-between space-y-6">
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center text-xs font-bold">
+                      <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                        {lang === "VN" ? "Đã xác thực" : "Verified Case"}
+                      </span>
+                      <span className="text-slate-500 font-mono">ID: {c.id}</span>
+                    </div>
 
-            {/* Case 3 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200/50 shadow-sm flex flex-col justify-between space-y-6">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center text-xs font-bold">
-                  <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">{lang === "VN" ? "Đã xác thực" : "Verified Case"}</span>
-                  <span className="text-slate-500 font-mono">ID: Helen R.</span>
+                    <div className="space-y-1.5">
+                      <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
+                        {lang === "VN" ? c.locationVN : c.locationEN}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+                        {lang === "VN" ? c.diagnosisVN : c.diagnosisEN}
+                      </p>
+                    </div>
+
+                    <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
+                      <li className="flex justify-between py-1.5">
+                        <span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span>
+                        <strong className="text-slate-800">{lang === "VN" ? c.treatmentVN : c.treatmentEN}</strong>
+                      </li>
+                      <li className="flex justify-between py-1.5">
+                        <span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span>
+                        <strong className="text-slate-800">{lang === "VN" ? c.durationVN : c.durationEN}</strong>
+                      </li>
+                      <li className="flex justify-between py-1.5">
+                        <span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span>
+                        <strong className="text-slate-800">{c.clinicalLead}</strong>
+                      </li>
+                      <li className="flex justify-between py-1.5">
+                        <span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span>
+                        <strong className="text-teal-brand font-bold">{lang === "VN" ? c.costVN : c.costEN}</strong>
+                      </li>
+                      <li className="flex justify-between py-1.5">
+                        <span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span>
+                        <strong className="text-rose-600 line-through font-normal">
+                          {lang === "VN" ? c.equivalentVN : c.equivalentEN}
+                        </strong>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <Link
+                    href="/contact"
+                    className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors"
+                  >
+                    {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
+                  </Link>
                 </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-serif text-base font-bold text-[#0b1e2c]">{lang === "VN" ? "Bệnh nhân Brisbane • Implant Đơn Lẻ" : "Brisbane Patient · Single Implant"}</h3>
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">{lang === "VN" ? "Tình trạng: Mất răng cối lớn hàm dưới, nướu co lại nhẹ. Xương hàm đủ điều kiện đặt trụ thẳng không ghép." : "Diagnosis: Missing single lower molar following extraction. Bone height sufficient without grafting."}</p>
-                </div>
-                <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                  <li className="flex justify-between py-1.5"><span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span><strong className="text-slate-800">{lang === "VN" ? "Straumann® SLActive + Mão răng" : "Straumann® SLActive + Crown"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span><strong className="text-slate-800">{lang === "VN" ? "5 Ngày (Lần 1 cấy trụ)" : "5 Days (Visit 1 Placement)"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span><strong className="text-slate-800">Dr. Pham Xuan Dang</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span><strong className="text-teal-brand font-bold">{lang === "VN" ? "75.600.000đ" : "$4,100 AUD"}</strong></li>
-                  <li className="flex justify-between py-1.5"><span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span><strong className="text-rose-600 line-through font-normal">{lang === "VN" ? "129.000.000đ" : "~$7,000 AUD"}</strong></li>
-                </ul>
               </div>
-              <Link href="/contact" className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors">
-                {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
-              </Link>
-            </div>
+            ))}
           </div>
 
         </div>
