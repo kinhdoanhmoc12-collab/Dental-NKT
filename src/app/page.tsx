@@ -1192,7 +1192,7 @@ export default function HomePage() {
                     <img
                       src={c.image}
                       alt={lang === "VN" ? c.locationVN : c.locationEN}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      className="w-full h-full object-cover origin-top scale-[1.12] transition-transform duration-500 group-hover:scale-[1.16]"
                     />
                     {/* Floating "Before" Label on Left Side */}
                     <span className="absolute top-3 left-3 bg-[#0b1e2c]/85 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase shadow-sm">
