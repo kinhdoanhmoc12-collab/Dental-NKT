@@ -114,6 +114,7 @@ const patientCases = [
 export default function HomePage() {
   const { lang, t } = useLanguage();
   const [homeDocSlide, setHomeDocSlide] = useState(0);
+  const [homeCaseSlide, setHomeCaseSlide] = useState(0);
 
   // LEAD FORM STATE
   const [formData, setFormData] = useState({
@@ -1168,78 +1169,105 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8">
-            {patientCases.map((c, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl border border-slate-200/50 shadow-sm flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-md group w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm sm:max-w-md md:max-w-none"
-              >
-                {/* Image Container with Before/After */}
-                <div className="relative aspect-[3/2] overflow-hidden bg-slate-100 border-b border-slate-200/60">
-                  <img
-                    src={c.image}
-                    alt={lang === "VN" ? c.locationVN : c.locationEN}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                  <span className="absolute top-3 left-3 bg-[#0b1e2c]/80 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase">
-                    {lang === "VN" ? "Trước / Sau" : "Before / After"}
-                  </span>
-                </div>
+          <div className="relative px-6 sm:px-12 md:px-14">
+            
+            {/* Left Flank Navigation Button */}
+            <button
+              onClick={() => setHomeCaseSlide((prev) => (prev <= 0 ? 2 : prev - 1))}
+              aria-label="Previous Cases"
+              className="absolute left-0 sm:left-1 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center bg-white hover:bg-[#0b1e2c] text-[#0b1e2c] hover:text-white rounded-full border border-slate-200 shadow-md transition-all cursor-pointer hover:scale-105"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
 
-                {/* Case Info */}
-                <div className="p-6 flex-1 flex flex-col justify-between space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center text-xs font-bold">
-                      <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">
-                        {lang === "VN" ? "Đã xác thực" : "Verified Case"}
-                      </span>
-                      <span className="text-slate-500 font-mono">ID: {c.id}</span>
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
-                        {lang === "VN" ? c.locationVN : c.locationEN}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
-                        {lang === "VN" ? c.diagnosisVN : c.diagnosisEN}
-                      </p>
-                    </div>
-
-                    <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                      <li className="flex justify-between py-1.5">
-                        <span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span>
-                        <strong className="text-slate-800">{lang === "VN" ? c.treatmentVN : c.treatmentEN}</strong>
-                      </li>
-                      <li className="flex justify-between py-1.5">
-                        <span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span>
-                        <strong className="text-slate-800">{lang === "VN" ? c.durationVN : c.durationEN}</strong>
-                      </li>
-                      <li className="flex justify-between py-1.5">
-                        <span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span>
-                        <strong className="text-slate-800">{c.clinicalLead}</strong>
-                      </li>
-                      <li className="flex justify-between py-1.5">
-                        <span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span>
-                        <strong className="text-teal-brand font-bold">{lang === "VN" ? c.costVN : c.costEN}</strong>
-                      </li>
-                      <li className="flex justify-between py-1.5">
-                        <span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span>
-                        <strong className="text-rose-600 line-through font-normal">
-                          {lang === "VN" ? c.equivalentVN : c.equivalentEN}
-                        </strong>
-                      </li>
-                    </ul>
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 transition-all duration-500">
+              {patientCases.slice(homeCaseSlide, homeCaseSlide + 3).map((c, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl border border-slate-200/50 shadow-sm flex flex-col justify-between overflow-hidden transition-all duration-300 hover:shadow-md group w-full"
+                >
+                  {/* Image Container with Before/After */}
+                  <div className="relative aspect-[3/2] overflow-hidden bg-slate-100 border-b border-slate-200/60">
+                    <img
+                      src={c.image}
+                      alt={lang === "VN" ? c.locationVN : c.locationEN}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    {/* Floating "Before" Label on Left Side */}
+                    <span className="absolute top-3 left-3 bg-[#0b1e2c]/85 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase shadow-sm">
+                      {lang === "VN" ? "Trước" : "Before"}
+                    </span>
+                    {/* Floating "After" Label on Right Side */}
+                    <span className="absolute top-3 right-3 bg-teal-brand text-[#0b1e2c] text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase shadow-sm">
+                      {lang === "VN" ? "Sau" : "After"}
+                    </span>
                   </div>
 
-                  <Link
-                    href="/contact"
-                    className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors"
-                  >
-                    {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
-                  </Link>
+                  {/* Case Info */}
+                  <div className="p-6 flex-1 flex flex-col justify-between space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex justify-between items-center text-xs font-bold">
+                        <span className="text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase tracking-wider">
+                          {lang === "VN" ? "Đã xác thực" : "Verified Case"}
+                        </span>
+                        <span className="text-slate-500 font-mono">ID: {c.id}</span>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <h3 className="font-serif text-base font-bold text-[#0b1e2c]">
+                          {lang === "VN" ? c.locationVN : c.locationEN}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
+                          {lang === "VN" ? c.diagnosisVN : c.diagnosisEN}
+                        </p>
+                      </div>
+
+                      <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
+                        <li className="flex justify-between py-1.5">
+                          <span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span>
+                          <strong className="text-slate-800">{lang === "VN" ? c.treatmentVN : c.treatmentEN}</strong>
+                        </li>
+                        <li className="flex justify-between py-1.5">
+                          <span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span>
+                          <strong className="text-slate-800">{lang === "VN" ? c.durationVN : c.durationEN}</strong>
+                        </li>
+                        <li className="flex justify-between py-1.5">
+                          <span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span>
+                          <strong className="text-slate-800">{c.clinicalLead}</strong>
+                        </li>
+                        <li className="flex justify-between py-1.5">
+                          <span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span>
+                          <strong className="text-teal-brand font-bold">{lang === "VN" ? c.costVN : c.costEN}</strong>
+                        </li>
+                        <li className="flex justify-between py-1.5">
+                          <span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span>
+                          <strong className="text-rose-600 line-through font-normal">
+                            {lang === "VN" ? c.equivalentVN : c.equivalentEN}
+                          </strong>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <Link
+                      href="/contact"
+                      className="text-center w-full block py-2.5 bg-slate-50 border border-slate-200/60 rounded-xl text-sm font-bold text-slate-700 hover:bg-slate-100 transition-colors"
+                    >
+                      {lang === "VN" ? "Yêu cầu phác đồ tương tự" : "Request Similar Case Assessment"}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Right Flank Navigation Button */}
+            <button
+              onClick={() => setHomeCaseSlide((prev) => (prev >= 2 ? 0 : prev + 1))}
+              aria-label="Next Cases"
+              className="absolute right-0 sm:right-1 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center bg-[#0b1e2c] hover:bg-teal-brand text-white hover:text-[#0b1e2c] rounded-full shadow-md transition-all cursor-pointer hover:scale-105"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
           </div>
 
         </div>
