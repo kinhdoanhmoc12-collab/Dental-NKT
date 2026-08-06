@@ -39,7 +39,7 @@ const patientCases = [
     costEN: "$10,400 AUD",
     equivalentVN: "545.000.000đ",
     equivalentEN: "~$29,600 AUD",
-    image: "/images/cases/sarah_comparison.jpg"
+    image: "/images/cases/sarah_comparison.webp"
   },
   {
     id: "David M.",
@@ -56,7 +56,7 @@ const patientCases = [
     costEN: "$8,675 AUD",
     equivalentVN: "645.000.000đ",
     equivalentEN: "~$35,000 AUD",
-    image: "/images/cases/david_comparison.jpg"
+    image: "/images/cases/david_comparison.webp"
   },
   {
     id: "Helen R.",
@@ -73,7 +73,7 @@ const patientCases = [
     costEN: "$4,100 AUD",
     equivalentVN: "129.000.000đ",
     equivalentEN: "~$7,000 AUD",
-    image: "/images/cases/helen_comparison.jpg"
+    image: "/images/cases/helen_comparison.webp"
   },
   {
     id: "James L.",
@@ -90,7 +90,7 @@ const patientCases = [
     costEN: "$5,200 AUD",
     equivalentVN: "287.000.000đ",
     equivalentEN: "~$15,500 AUD",
-    image: "/images/cases/james_comparison.jpg"
+    image: "/images/cases/james_comparison.webp"
   },
   {
     id: "Sophie B.",
@@ -107,7 +107,7 @@ const patientCases = [
     costEN: "$13,500 AUD",
     equivalentVN: "703.000.000đ",
     equivalentEN: "~$38,000 AUD",
-    image: "/images/cases/sophie_comparison.jpg"
+    image: "/images/cases/sophie_comparison.webp"
   }
 ];
 
