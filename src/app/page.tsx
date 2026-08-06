@@ -1224,25 +1224,25 @@ export default function HomePage() {
                       </div>
 
                       <ul className="divide-y divide-slate-100 text-xs sm:text-sm space-y-1.5 pt-2">
-                        <li className="flex justify-between py-1.5">
+                        <li className="flex justify-between py-1.5 gap-4">
                           <span className="text-slate-500">{lang === "VN" ? "Chỉ định" : "Treatment"}</span>
-                          <strong className="text-slate-800">{lang === "VN" ? c.treatmentVN : c.treatmentEN}</strong>
+                          <strong className="text-slate-800 text-right">{lang === "VN" ? c.treatmentVN : c.treatmentEN}</strong>
                         </li>
-                        <li className="flex justify-between py-1.5">
+                        <li className="flex justify-between py-1.5 gap-4">
                           <span className="text-slate-700">{lang === "VN" ? "Thời gian" : "Duration"}</span>
-                          <strong className="text-slate-800">{lang === "VN" ? c.durationVN : c.durationEN}</strong>
+                          <strong className="text-slate-800 text-right">{lang === "VN" ? c.durationVN : c.durationEN}</strong>
                         </li>
-                        <li className="flex justify-between py-1.5">
+                        <li className="flex justify-between py-1.5 gap-4">
                           <span className="text-slate-700">{lang === "VN" ? "Bác sĩ lâm sàng" : "Clinical Lead"}</span>
-                          <strong className="text-slate-800">{c.clinicalLead}</strong>
+                          <strong className="text-slate-800 text-right">{c.clinicalLead}</strong>
                         </li>
-                        <li className="flex justify-between py-1.5">
+                        <li className="flex justify-between py-1.5 gap-4">
                           <span className="text-slate-700">{lang === "VN" ? "Tổng chi phí" : "Total Cost"}</span>
-                          <strong className="text-teal-brand font-bold">{lang === "VN" ? c.costVN : c.costEN}</strong>
+                          <strong className="text-teal-brand font-bold text-right">{lang === "VN" ? c.costVN : c.costEN}</strong>
                         </li>
-                        <li className="flex justify-between py-1.5">
+                        <li className="flex justify-between py-1.5 gap-4">
                           <span className="text-slate-700">{lang === "VN" ? "Giá tương đương tại Úc" : "Australian Equivalent"}</span>
-                          <strong className="text-rose-600 line-through font-normal">
+                          <strong className="text-rose-600 line-through font-normal text-right">
                             {lang === "VN" ? c.equivalentVN : c.equivalentEN}
                           </strong>
                         </li>
