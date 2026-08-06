@@ -4,6 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
+import AIDentalAssistant from "./AIDentalAssistant";
 
 export default function LayoutWrapper({
   children,
@@ -20,6 +21,7 @@ export default function LayoutWrapper({
         {children}
       </main>
       {!isAdminRoute && <Footer />}
+      {!isAdminRoute && <AIDentalAssistant />}
     </>
   );
 }
