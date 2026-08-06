@@ -1414,7 +1414,7 @@ export default function HomePage() {
                 {/* Map display box (Taller h-[550px] to match form card) */}
                 <div className="w-full h-[550px] rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-50 relative">
                   <iframe
-                    src="https://maps.google.com/maps?q=Nha%20Khoa%20Tr%E1%BA%BB%2038%20Nguy%20Nhu%20Kon%20Tum,%20Nhan%20Chinh,%20Thanh%20Xuan,%20Hanoi&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.819777977461!2d105.8015113759695!3d21.0003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac98a287a9bf%3A0xab723b72c9dfdfa8!2zTmhhdCBLaG9hIFRyw6ogMzggTmd1eeG7hW4gTmjGsCBLb24gVHVt!5e0!3m2!1svi!2svn!5m2!1svi!2svn"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
