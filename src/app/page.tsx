@@ -342,11 +342,60 @@ export default function HomePage() {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
+  const caseStudiesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": lang === "VN" ? "Hồ sơ ca lâm sàng thực tế" : "Real Patient Case Studies",
+    "numberOfItems": patientCases.length,
+    "itemListElement": patientCases.map((c, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "MedicalWebPage",
+        "name": lang === "VN" ? c.locationVN : c.locationEN,
+        "description": lang === "VN" ? c.diagnosisVN : c.diagnosisEN,
+        "mainEntity": {
+          "@type": "MedicalProcedure",
+          "name": lang === "VN" ? c.treatmentVN : c.treatmentEN,
+          "procedureType": {
+            "@type": "MedicalSpecialty",
+            "name": "Dentistry"
+          }
+        },
+        "author": {
+          "@type": "Person",
+          "name": c.clinicalLead
+        }
+      }
+    }))
+  };
+
   return (
     <div className="w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesSchema) }}
       />
 
       {/* ========================================================
