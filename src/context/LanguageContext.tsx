@@ -20,6 +20,19 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const savedLang = localStorage.getItem("dental_lang_v2");
     if (savedLang === "AU" || savedLang === "VN") {
       setLang(savedLang as Language);
+    } else {
+      // Auto-detect browser language and timezone offset
+      const browserLanguages = navigator.languages || [navigator.language];
+      const hasVietnameseLocale = browserLanguages.some(
+        (l) => l?.toLowerCase().startsWith("vi")
+      );
+      const timezoneOffset = new Date().getTimezoneOffset(); // -420 is UTC+7 (Vietnam)
+      
+      if (hasVietnameseLocale || timezoneOffset === -420) {
+        setLang("VN");
+      } else {
+        setLang("AU");
+      }
     }
   }, []);
 

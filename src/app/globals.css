@@ -6,6 +6,7 @@
 
 html {
   font-size: 125%; /* Increase all text and relative dimensions by 25% */
+  scroll-behavior: smooth;
 }
 
 :root {
