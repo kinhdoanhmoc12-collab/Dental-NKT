@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   keywords: ["Dental Tourism Vietnam", "Boutique Dental Clinic Hanoi", "Dental Implants Vietnam", "Porcelain Veneers Vietnam", "All-on-4 Vietnam", "Dentist in Hanoi"],
   alternates: {
     canonical: "/",
+    languages: {
+      "vi-VN": "/?lang=VN",
+      "en-AU": "/?lang=AU",
+      "x-default": "/",
+    },
   },
   openGraph: {
     title: "Dental NKT - International Dental Clinic in Vietnam",

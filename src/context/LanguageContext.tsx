@@ -17,11 +17,25 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [lang, setLang] = useState<Language>("AU");
 
   useEffect(() => {
+    // 1. Check URL query parameters first (supports search engine hreflang indexing)
+    const params = new URLSearchParams(window.location.search);
+    const queryLang = params.get("lang");
+    if (queryLang === "AU" || queryLang === "VN") {
+      setLang(queryLang as Language);
+      try {
+        localStorage.setItem("dental_lang_v2", queryLang);
+      } catch (e) {
+        console.warn("localStorage not available", e);
+      }
+      return;
+    }
+
+    // 2. Check localStorage
     const savedLang = localStorage.getItem("dental_lang_v2");
     if (savedLang === "AU" || savedLang === "VN") {
       setLang(savedLang as Language);
     } else {
-      // Auto-detect browser language and timezone offset
+      // 3. Auto-detect browser language and timezone offset
       const browserLanguages = navigator.languages || [navigator.language];
       const hasVietnameseLocale = browserLanguages.some(
         (l) => l?.toLowerCase().startsWith("vi")
