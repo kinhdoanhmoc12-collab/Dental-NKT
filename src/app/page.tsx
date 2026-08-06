@@ -404,7 +404,11 @@ export default function HomePage() {
       "longitude": 105.8037
     },
     "telephone": "+84963333844",
+    "email": "cskh.nhakhoatre@gmail.com",
+    "hasMap": "https://www.google.com/maps/place/Nha+Khoa+Tr%E1%BA%BB/@21.0003,105.8037,17z",
     "priceRange": "$$$",
+    "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+    "currenciesAccepted": "VND, AUD, USD",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
