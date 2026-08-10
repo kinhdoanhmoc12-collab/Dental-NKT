@@ -26,8 +26,7 @@ export default function AdminBlogPage() {
 
   // SEO Helper States
   const [primaryKeyword, setPrimaryKeyword] = useState("");
-  const [analyzerLang, setAnalyzerLang] = useState<"VN" | "EN">("VN");
-  const [showVN, setShowVN] = useState(false);
+  const [analyzerLang, setAnalyzerLang] = useState<"VN" | "EN">("EN");
 
   useEffect(() => {
     loadPosts();
@@ -639,79 +638,6 @@ export default function AdminBlogPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Left 8 columns: Editor Form */}
             <div className="lg:col-span-8 space-y-8">
-              {/* Language Toggle Button */}
-              <div className="flex justify-between items-center bg-slate-50 border border-slate-200/60 p-4 rounded-2xl">
-                <span className="text-xs font-bold text-slate-700">Ngôn ngữ hiển thị bài viết:</span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setShowVN(!showVN);
-                    if (analyzerLang === "VN") setAnalyzerLang("EN");
-                  }}
-                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer border ${
-                    showVN 
-                      ? "bg-teal-brand/10 border-teal-brand/20 text-teal-brand" 
-                      : "bg-slate-200 border-slate-300 text-slate-700 hover:bg-slate-300"
-                  }`}
-                >
-                  {showVN ? "✓ Đang hiện Tiếng Việt" : "+ Thêm Tiếng Việt (VN)"}
-                </button>
-              </div>
-
-              {/* Tiếng Việt */}
-              {showVN && (
-                <div className="space-y-5 bg-teal-brand/[0.02] border border-teal-brand/10 p-5 rounded-2xl">
-                  <div className="flex justify-between items-center pb-2 border-b border-teal-brand/10 mb-2">
-                    <span className="text-[10px] font-bold text-teal-brand uppercase tracking-wider block">Bản Tiếng Việt (VN)</span>
-                    <button
-                      type="button"
-                      disabled={translating}
-                      onClick={handleAutoTranslate}
-                      className="px-3 py-1.5 bg-teal-brand/10 hover:bg-teal-brand hover:text-white disabled:bg-slate-100 disabled:text-slate-400 text-teal-brand rounded-lg text-[10px] font-extrabold transition-all cursor-pointer flex items-center gap-1.5"
-                    >
-                      {translating ? (
-                        <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-current"></div>
-                      ) : (
-                        <span>⚡ Dịch tự động từ bản Anh (EN)</span>
-                      )}
-                    </button>
-                  </div>
-                  
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Tiêu đề bài viết (VN) <span className="text-slate-400 font-normal">(Không bắt buộc, tự động dùng Tiếng Anh nếu trống)</span></label>
-                    <input
-                      type="text"
-                      value={titleVN}
-                      onChange={(e) => setTitleVN(e.target.value)}
-                      placeholder="Tiêu đề bằng tiếng Việt"
-                      className="w-full bg-white border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-2.5 px-4 text-xs transition-colors font-bold"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Tóm tắt ngắn / Sapo (VN) <span className="text-slate-400 font-normal">(Không bắt buộc)</span></label>
-                    <textarea
-                      rows={2}
-                      value={excerptVN}
-                      onChange={(e) => setExcerptVN(e.target.value)}
-                      placeholder="Viết tóm tắt hiển thị ở danh mục tin tức"
-                      className="w-full bg-white border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-2.5 px-4 text-xs transition-colors resize-none font-light leading-relaxed"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Nội dung chi tiết HTML (VN) <span className="text-slate-400 font-normal">(Không bắt buộc)</span></label>
-                    <textarea
-                      rows={12}
-                      value={contentVN}
-                      onChange={(e) => setContentVN(e.target.value)}
-                      placeholder="Nhập mã HTML bài viết chi tiết..."
-                      className="w-full bg-white border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-3 px-4 text-xs font-mono transition-colors font-light leading-relaxed"
-                    />
-                  </div>
-                </div>
-              )}
-
               {/* Tiếng Anh */}
               <div className="space-y-5 bg-slate-100/50 border border-slate-200/80 p-5 rounded-2xl">
                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Bản Tiếng Anh (EN)</span>
