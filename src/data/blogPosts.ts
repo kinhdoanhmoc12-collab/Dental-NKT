@@ -15,6 +15,17 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "all-on-4-vs-all-on-6-upper-jaw",
+    category: "handbook",
+    date: "2026-08-10",
+    readTime: "8 min",
+    titleEN: "All on 4 vs All on 6 Upper Jaw: Which is Best?",
+    titleVN: "All-on-4 vs All-on-6 Hàm Trên: Lựa Chọn Nào Tốt Nhất?",
+    excerptEN: "Choosing between all on 4 vs all on 6 upper jaw procedures depends on bone density. Six implants offer superior biomechanical stability for soft upper jaws.",
+    excerptVN: "Lựa chọn giữa All-on-4 và All-on-6 cho hàm trên phụ thuộc vào mật độ xương. 6 trụ implant mang lại sự ổn định cơ sinh học vượt trội cho xương hàm trên mềm.",
+    icon: BookOpen
+  },
+  {
     slug: "hanoi-dental-tourism-guide",
     category: "guide",
     date: "2026-07-15",

@@ -66,6 +66,132 @@ export default function BlogPostDetail() {
 
   // Articles Detail Content
   const articleContent: Record<string, { en: React.ReactNode; vn: React.ReactNode }> = {
+    "all-on-4-vs-all-on-6-upper-jaw": {
+      en: (
+        <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">What is the biomechanical difference in upper jaw restoration?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">The primary difference between the two configurations lies in load distribution. Six implants disperse chewing pressure much more evenly than four across the softer upper jawbone.</p>
+          </div>
+          <p>Australian patients often wonder why their specialist suggests six titanium posts instead of just four. The upper maxilla resembles a porous sponge (Type 3 or 4 bone) rather than dense hardwood. When you bite down, the force transfers directly to these embedded fixtures.</p>
+          <p>A clinical study on occlusal forces indicates that distributing this load prevents micro-movements during the crucial osseointegration healing phase. You can read more about this scientific consensus on <a href="https://pubmed.ncbi.nlm.nih.gov/30678235/" target="_blank" rel="noopener noreferrer" className="text-teal-brand hover:underline font-bold">PubMed regarding biomechanics of implant-supported prostheses</a>. Using fewer posts in soft bone increases the risk of implant failure or prosthetic bridge fracture over time.</p>
+          <p>We always assess your specific bite force and jaw dimensions before recommending a definitive treatment plan. The structural benefits of adding two extra pillars to your restoration include:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Optimal anterior-posterior (A-P) spread: Creating a wider foundation for the final zirconia bridge.</li>
+            <li>Reduced cantilever length: Minimising leverage stress on the posterior implants when chewing.</li>
+            <li>Redundancy safety net: Higher clinical security if one implant encounters integration issues.</li>
+          </ul>
+          <p>Understanding these mechanics is a crucial step in your dental tourism journey. You can read more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">understanding implant biomechanics</Link></strong> in our patient library.</p>
+          
+          <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Why does upper jaw bone density require more implants?</h3>
+          <p>Upper jaw bone is naturally less dense and often affected by sinus cavities, requiring more anchorage points for a secure hold.</p>
+          <p>The upper jaw is categorised as Type 3 or Type 4 bone in dental science. This softer architecture means titanium threads have less solid mass to grip initially compared to the dense lower mandible. Placing six fixtures maximises the total bone-to-implant contact (BIC) area, accelerating healing.</p>
+          <p>It is similar to using more wall anchors when hanging a heavy shelf on plasterboard. Patients with a history of periodontal disease usually have even less bone volume available. You can learn more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">Type 3 bone density classifications</Link></strong> to understand your clinical profile.</p>
+          <p className="text-center my-6">
+            <img src="/images/cases/case_implant.jpg" alt="All-on-6 dental implants restoration before and after" className="max-w-full h-auto rounded-2xl mx-auto shadow-md" />
+          </p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">What are the bone grafting needs for all on 4 vs all on 6 upper jaw?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">All-on-4 implants typically bypass bone grafting via angled placement, whereas All-on-6 restorations often require sinus lifts to anchor the straight posterior posts.</p>
+          </div>
+          <p>Many Australians travel to Vietnam hoping to avoid invasive and costly bone grafts. The four-implant protocol was originally designed to bypass the maxillary sinus cavities entirely. By angulating the posterior implants at 45 degrees, surgeons utilise available anterior bone.</p>
+          <p>However, if you opt for six implants, the posterior ones are typically placed straight down. This often requires additional bone volume in the molar regions. Patients frequently need to undergo sinus lift procedures prior to placement.</p>
+          <p>According to guidelines from the <a href="https://www.ada.org.au" target="_blank" rel="noopener noreferrer" className="text-teal-brand hover:underline">Australian Dental Association (ADA)</a>, if you lack sufficient bone, adding synthetic grafting material adds healing time to your trip. Your surgeon must balance the need for extra structural strength against the desire for a graftless surgery. Some patients may even explore zygomatic implant alternatives for severe bone loss.</p>
+          <p>We evaluate these grafting requirements meticulously during your initial 3D CBCT scan review.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">How to choose based on your anatomical scan?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">The choice between four or six implants is decided by analyzing a 3D CBCT scan to evaluate remaining bone volume and sinus cavity proximity.</p>
+          </div>
+          <p>You should never feel pressured into a six-implant protocol without clear radiographic evidence. A 3D CBCT scan provides a comprehensive topographical map of your maxilla. It reveals exactly how much native bone you have left after tooth loss.</p>
+          <p>Learning about reading your dental CBCT scan empowers you as a patient. If your scan shows adequate bone volume in the posterior region, six implants are an excellent option. If the sinus cavities are heavily enlarged, four implants might be safer and more predictable.</p>
+          <p>We believe in transparent, evidence-based treatment planning for every international patient. Your anatomical reality dictates the optimal engineering solution for your smile. You can explore further details on understanding maxillary anatomy on our blog.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">Can an All-on-4 be upgraded to an All-on-6 later?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Upgrading from All-on-4 to All-on-6 is technically possible but financially inefficient, as it requires manufacturing a completely new bridge prosthesis.</p>
+          </div>
+          <p>Some patients ask if they can start with four and upgrade if issues arise in the future. While surgeons can place additional implants into the healed jawbone later on. The existing titanium framework embedded in your bridge cannot be easily altered or expanded.</p>
+          <p>You must understand zirconia bridge design limitations before choosing your initial protocol. You would need to pay for a brand new final prosthesis to fit the new six-post configuration. This makes upgrading a highly inefficient financial decision for dental tourists.</p>
+          <p>It is far better to get the biomechanical diagnosis right during the first surgical phase in Vietnam. We strongly recommend discussing long-term durability expectations with your specialist upfront. Proper planning ensures excellent long-term dental implant longevity without future structural upgrades.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">What are the long term success rates of full arch restorations?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Clinical data confirms ten year survival rates exceeding ninety-five percent for both configurations when paired with proper oral hygiene and regular checks.</p>
+          </div>
+          <p>Both All-on-4 and All-on-6 procedures demonstrate high success rates globally when performed by qualified specialists using premium materials. Clinical literature shows that implant survival rates remain exceptionally high even after ten years of functional load. However, maintaining these results requires strict adherence to post-operative hygiene protocols.</p>
+          <p>At Dental NKT, we ensure that every full arch procedure is backed by premium components. We utilize titanium fixtures from leading global manufacturers to ensure optimal biocompatibility. You can check our detailed <strong><Link href="/dental-costs" className="text-teal-brand hover:underline font-bold">dental implant price list</Link></strong> to plan your treatment budget.</p>
+          <p>Furthermore, our clinical team is trained in advanced European protocols to minimize the risk of peri-implantitis, which is the leading cause of late implant failure. Our specialists provide detailed care instructions to help you protect your investment. You can read more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">implant cleaning and hygiene care</Link></strong> in our patient resource section.</p>
+          <p>By choosing a clinic that prioritizes sterilization and precise placement, you significantly reduce the likelihood of long-term complications. Our goal is to provide restorations that function comfortably for decades.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">How does digital dentistry enhance implant precision?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Digital dentistry enhances precision through 3D CBCT scans, intraoral scans, and custom 3D-printed surgical guides that eliminate human placement error.</p>
+          </div>
+          <p>In the past, dentists relied on manual measurements and stone models to plan implant placement. Today, we utilize advanced digital dentistry tools to create a precise digital twin of your oral anatomy. This virtual planning stage allows us to select the optimal implant size, angle, and position before the surgery begins.</p>
+          <p>Our clinic is equipped with state-of-the-art diagnostic tools, including intraoral scanners and advanced imaging software. These technologies allow us to design custom surgical guides that direct the implant insertion with extreme accuracy. You can explore our <strong><Link href="/equipment" className="text-teal-brand hover:underline font-bold">advanced dental technology and equipment</Link></strong> page to see the tools we use.</p>
+          <p>By utilizing digital workflows, we minimize surgical trauma, reduce chair time, and accelerate the overall healing process for our patients. This digital precision is especially critical when planning complex All-on-6 cases.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">What is the role of the medical reviewer in dental tourism?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Medical reviewers guarantee patient safety by auditing travel guides and clinical statements to align with international healthcare standards.</p>
+          </div>
+          <p>When researching dental treatments abroad, patients are often overwhelmed by conflicting information online. To combat this, we ensure that all our clinical guides are reviewed by experienced practitioners. This guarantees that the information you read is accurate, up-to-date, and aligned with international standards.</p>
+          <p>Our medical content is reviewed by our lead specialists who hold advanced degrees from prestigious institutions. You can read more about <strong><Link href="/dentists" className="text-teal-brand hover:underline">our dentists and clinical specialists</Link></strong> to verify their credentials and experience. This clinical oversight is part of our commitment to transparent patient education.</p>
+          <p>We believe that informed patients make better health decisions. By providing accurate medical guides, we help you navigate your dental tourism journey with confidence.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">How to prepare for your dental trip to Hanoi?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Preparing for a dental holiday requires organizing medical visas, flight dates, accommodation near the clinic, and recovery timelines in advance.</p>
+          </div>
+          <p>Once you have finalized your treatment plan with our specialists, the next step is to plan your travel logistics. Traveling for major dental work requires careful coordination of flights, accommodation, and recovery timelines. We recommend arriving in Hanoi at least one day before your scheduled consultation.</p>
+          <p>Our patient coordinators are available to assist you with every aspect of your trip. We provide guidance on securing medical visas, booking flights, and selecting accommodations near our clinic. You can review our <strong><Link href="/dental-handbook" className="text-teal-brand hover:underline">complete dental tourism travel guide</Link></strong> to plan your stay.</p>
+          <p>We also partner with local boutique hotels to offer comfortable lodging options for our international patients during their recovery. Our team is dedicated to making your dental holiday as comfortable as possible.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">What are the warranty terms for full mouth restorations?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Every restoration is backed by a global warranty covering material defects on both implant fixtures and zirconia prosthetic bridges.</p>
+          </div>
+          <p>We stand behind the quality of our clinical work and the materials we use. Every full arch restoration at our clinic is backed by a comprehensive warranty policy. This warranty covers both the implant fixtures and the prosthetic components against structural defects.</p>
+          <p>We provide global warranty cards that allow you to verify the authenticity of your implants online. This ensures that you can access support even after returning to Australia. You can read our <strong><Link href="/warranty-policy" className="text-teal-brand hover:underline font-bold">global warranty policy and terms</Link></strong> to understand your coverage.</p>
+          <p>By combining premium materials with precise surgical techniques, we deliver restorations that you can rely on for a lifetime.</p>
+        </div>
+      ),
+      vn: (
+        <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">Sự khác biệt về cơ sinh học trong phục hình hàm trên là gì?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">Sự khác biệt chính giữa hai cấu hình nằm ở sự phân bổ lực nhai. 6 trụ implant phân tán lực đều hơn nhiều so với 4 trụ trên xương hàm trên mềm xốp.</p>
+          </div>
+          <p>Bệnh nhân Úc thường tự hỏi tại sao nha sĩ đề đề xuất 6 trụ implant thay vì chỉ 4 trụ. Xương hàm trên có cấu trúc xốp (xương Loại 3 hoặc Loại 4) giống như miếng bọt biển hơn là gỗ cứng. Khi nhai, lực sẽ truyền trực tiếp lên các trụ implant này.</p>
+          <p>Một nghiên cứu về lực cắn cho thấy phân bổ lực đều giúp ngăn ngừa vi dịch chuyển trong giai đoạn tích hợp xương. Việc sử dụng ít trụ implant hơn trên nền xương mềm làm tăng nguy cơ đào thải trụ hoặc gãy cầu răng theo thời gian.</p>
+          <p>Chúng tôi luôn đánh giá lực nhai và thể tích xương cụ thể của bạn trước khi đưa ra phác đồ. Lợi ích của việc thêm hai trụ chịu lực bao gồm: Nhịp cầu rộng hơn, giảm lực đòn bẩy phía sau, và có phương án dự phòng an toàn nếu một trụ gặp sự cố.</p>
+          
+          <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Tại sao mật độ xương hàm trên yêu cầu nhiều trụ implant hơn?</h3>
+          <p>Xương hàm trên tự nhiên mỏng hơn và thường bị ảnh hưởng bởi xoang hàm, đòi hỏi nhiều điểm neo giữ hơn để đảm bảo tính ổn định.</p>
+          <p>Đặt 6 trụ giúp tối đa hóa diện tích tiếp xúc giữa xương và implant (BIC), đẩy nhanh quá trình lành thương. Điều này tương tự như việc sử dụng nhiều neo vít hơn khi treo một kệ nặng trên tường thạch cao.</p>
+          <p className="text-center my-6">
+            <img src="/images/cases/case_implant.jpg" alt="Phục hình răng Implant All-on-6 trước và sau" className="max-w-full h-auto rounded-2xl mx-auto shadow-md" />
+          </p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">Nhu cầu ghép xương của All-on-4 vs All-on-6 hàm trên là gì?</h2>
+          <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
+            <p className="text-sm font-medium italic text-slate-600">All-on-4 thường tránh ghép xương bằng cách cấy nghiêng các trụ phía sau, trong khi All-on-6 thường yêu cầu nâng xoang để đặt các trụ thẳng ở vùng răng hàm.</p>
+          </div>
+          <p>Nhiều bệnh nhân Úc du lịch nha khoa mong muốn tránh ghép xương xâm lấn và tốn kém. Phương pháp All-on-4 ban đầu được thiết kế để đi xuyên qua và tránh các xoang hàm trên bằng cách cấy nghiêng 45 độ.</p>
+          <p>Tuy nhiên, nếu chọn All-on-6, các trụ phía sau thường được đặt thẳng đứng, đòi hỏi đủ thể tích xương ở vùng răng hàm. Do đó, nâng xoang và ghép xương nhân tạo là chỉ định thường gặp, kéo dài thời gian điều trị.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">Làm thế nào để lựa chọn dựa trên phim chụp cấu trúc của bạn?</h2>
+          <p>Bác sĩ phẫu thuật sẽ đánh giá dựa trên phim chụp CBCT 3D để đo chính xác chiều cao, chiều rộng xương và vị trí của xoang hàm.</p>
+          <p>Phim CBCT 3D cung cấp bản đồ địa hình toàn diện của hàm trên của bạn. Nếu phim chụp cho thấy đủ thể tích xương ở vùng răng hàm phía sau, All-on-6 là một lựa chọn tuyệt vời. Nếu xoang hàm quá rộng và xương tiêu nhiều, All-on-4 sẽ an toàn và dễ tiên lượng hơn.</p>
+
+          <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">All-on-4 có thể nâng cấp lên All-on-6 sau này không?</h2>
+          <p>Về kỹ thuật là có thể cấy thêm trụ sau này, nhưng quy trình này rất phức tạp, tốn kém và yêu cầu chế tác lại một cầu răng sứ hoàn toàn mới.</p>
+          <p>Cầu răng hiện có không thể sửa đổi hay nối thêm. Bạn sẽ phải trả tiền cho một hàm răng giả mới phù hợp với cấu hình 6 trụ mới. Vì vậy, tốt nhất là đưa ra chẩn đoán cơ sinh học chính xác ngay từ giai đoạn phẫu thuật đầu tiên tại Việt Nam.</p>
+        </div>
+      )
+    },
     "hanoi-dental-tourism-guide": {
       vn: (
         <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
