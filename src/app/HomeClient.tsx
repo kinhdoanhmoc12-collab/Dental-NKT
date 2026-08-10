@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
+import BeforeAfterSlider from "../components/BeforeAfterSlider";
 import {
   Phone,
   Star,
@@ -112,83 +113,13 @@ const patientCases = [
 ];
 
 function InteractiveCaseImage({ image, alt, lang }: { image: string; alt: string; lang: string }) {
-  const [viewMode, setViewMode] = useState<"before" | "after" | "compare">("compare");
-
   return (
-    <div className="relative aspect-[3/2] overflow-hidden bg-slate-100 border-b border-slate-200/60 group">
-      {/* Image Display */}
-      {viewMode === "compare" && (
-        <img
-          src={image}
-          alt={alt}
-          className="w-full h-full object-cover origin-top scale-[1.12] transition-transform duration-500 group-hover:scale-[1.16]"
-        />
-      )}
-      
-      {viewMode === "before" && (
-        <div className="w-full h-full overflow-hidden relative">
-          <img
-            src={image}
-            alt={`Before - ${alt}`}
-            className="absolute top-0 left-0 w-[200%] h-full max-w-none object-cover origin-top scale-[1.12]"
-          />
-        </div>
-      )}
-
-      {viewMode === "after" && (
-        <div className="w-full h-full overflow-hidden relative">
-          <img
-            src={image}
-            alt={`After - ${alt}`}
-            className="absolute top-0 right-0 w-[200%] h-full max-w-none object-cover origin-top scale-[1.12]"
-            style={{ right: 0 }}
-          />
-        </div>
-      )}
-
-      {/* Floating Mode Switcher (at the bottom center) */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-[#0b1e2c]/90 backdrop-blur-sm p-1 rounded-full flex gap-1 shadow-lg border border-white/10 z-20">
-        <button
-          type="button"
-          onClick={() => setViewMode("before")}
-          className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-            viewMode === "before" ? "bg-white text-[#0b1e2c]" : "text-slate-300 hover:text-white"
-          }`}
-        >
-          {lang === "VN" ? "Trước" : "Before"}
-        </button>
-        <button
-          type="button"
-          onClick={() => setViewMode("compare")}
-          className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-            viewMode === "compare" ? "bg-teal-brand text-[#0b1e2c]" : "text-slate-300 hover:text-white"
-          }`}
-        >
-          {lang === "VN" ? "So Sánh" : "Compare"}
-        </button>
-        <button
-          type="button"
-          onClick={() => setViewMode("after")}
-          className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-            viewMode === "after" ? "bg-white text-[#0b1e2c]" : "text-slate-300 hover:text-white"
-          }`}
-        >
-          {lang === "VN" ? "Sau" : "After"}
-        </button>
-      </div>
-
-      {/* Static corner indicators in Compare mode */}
-      {viewMode === "compare" && (
-        <>
-          <span className="absolute top-3 left-3 bg-[#0b1e2c]/85 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase shadow-sm">
-            {lang === "VN" ? "Trước" : "Before"}
-          </span>
-          <span className="absolute top-3 right-3 bg-teal-brand text-[#0b1e2c] text-[10px] font-bold px-2 py-0.5 rounded tracking-wider uppercase shadow-sm">
-            {lang === "VN" ? "Sau" : "After"}
-          </span>
-        </>
-      )}
-    </div>
+    <BeforeAfterSlider
+      image={image}
+      alt={alt}
+      beforeLabel={lang === "VN" ? "Trước" : "Before"}
+      afterLabel={lang === "VN" ? "Sau" : "After"}
+    />
   );
 }
 

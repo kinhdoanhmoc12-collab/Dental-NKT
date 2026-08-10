@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "../../context/LanguageContext";
+import PostalCodeCalculator from "../../components/PostalCodeCalculator";
 import { 
   Search, 
   Info, 
@@ -169,6 +170,13 @@ export default function CostPage() {
           </p>
         </div>
       </div>
+
+      {/* ========================================================
+          REGIONAL POSTCODE SAVINGS CALCULATOR
+          ======================================================== */}
+      <section className="w-full">
+        <PostalCodeCalculator lang={lang} />
+      </section>
 
       {/* ========================================================
           TABLE 1: 10 MOST COMMON PROCEDURES
