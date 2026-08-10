@@ -81,12 +81,12 @@ export default function BlogPostDetail() {
             <li>Reduced cantilever length: Minimising leverage stress on the posterior implants when chewing.</li>
             <li>Redundancy safety net: Higher clinical security if one implant encounters integration issues.</li>
           </ul>
-          <p>Understanding these mechanics is a crucial step in your dental tourism journey. You can read more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">understanding implant biomechanics</Link></strong> in our patient library.</p>
+          <p>Understanding these mechanics is a crucial step in your dental tourism journey to help you make an informed decision alongside your clinical team.</p>
           
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Why does upper jaw bone density require more implants?</h3>
           <p>Upper jaw bone is naturally less dense and often affected by sinus cavities, requiring more anchorage points for a secure hold.</p>
           <p>The upper jaw is categorised as Type 3 or Type 4 bone in dental science. This softer architecture means titanium threads have less solid mass to grip initially compared to the dense lower mandible. Placing six fixtures maximises the total bone-to-implant contact (BIC) area, accelerating healing.</p>
-          <p>It is similar to using more wall anchors when hanging a heavy shelf on plasterboard. Patients with a history of periodontal disease usually have even less bone volume available. You can learn more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">Type 3 bone density classifications</Link></strong> to understand your clinical profile.</p>
+          <p>It is similar to using more wall anchors when hanging a heavy shelf on plasterboard. Patients with a history of periodontal disease usually have even less bone volume available, making the assessment of Type 3 and Type 4 bone density classifications critical during your virtual review.</p>
           <p className="text-center my-6">
             <img src="/images/cases/case_implant.jpg" alt="All-on-6 dental implants restoration before and after" className="max-w-full h-auto rounded-2xl mx-auto shadow-md" />
           </p>
@@ -122,7 +122,7 @@ export default function BlogPostDetail() {
           </div>
           <p>Both All-on-4 and All-on-6 procedures demonstrate high success rates globally when performed by qualified specialists using premium materials. Clinical literature shows that implant survival rates remain exceptionally high even after ten years of functional load. However, maintaining these results requires strict adherence to post-operative hygiene protocols.</p>
           <p>At Dental NKT, we ensure that every full arch procedure is backed by premium components. We utilize titanium fixtures from leading global manufacturers to ensure optimal biocompatibility. You can check our detailed <strong><Link href="/dental-costs" className="text-teal-brand hover:underline font-bold">dental implant price list</Link></strong> to plan your treatment budget.</p>
-          <p>Furthermore, our clinical team is trained in advanced European protocols to minimize the risk of peri-implantitis, which is the leading cause of late implant failure. Our specialists provide detailed care instructions to help you protect your investment. You can read more about <strong><Link href="/services/implants" className="text-teal-brand hover:underline">implant cleaning and hygiene care</Link></strong> in our patient resource section.</p>
+          <p>Furthermore, our clinical team is trained in advanced European protocols to minimize the risk of peri-implantitis, which is the leading cause of late implant failure. Our specialists provide detailed care instructions to help you protect your investment with proper implant cleaning and hygiene care.</p>
           <p>By choosing a clinic that prioritizes sterilization and precise placement, you significantly reduce the likelihood of long-term complications. Our goal is to provide restorations that function comfortably for decades.</p>
 
           <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">How does digital dentistry enhance implant precision?</h2>
@@ -172,12 +172,12 @@ export default function BlogPostDetail() {
             <li>Giảm độ dài đòn bẩy: Giảm thiểu lực vặn xoắn gây hại lên các răng phía sau khi ăn nhai.</li>
             <li>Phương án dự phòng an toàn: Đảm bảo độ bền cho hàm răng ngay cả khi một trụ gặp sự cố tích hợp xương.</li>
           </ul>
-          <p>Hiểu rõ các nguyên lý cơ sinh học này là bước chuẩn bị quan trọng cho hành trình du lịch nha khoa của bạn. Bạn có thể đọc thêm về <strong><Link href="/services/implants" className="text-teal-brand hover:underline">hiểu biết chuyên sâu về cấy ghép implant</Link></strong> trong thư viện tài liệu của chúng tôi.</p>
+          <p>Hiểu rõ các nguyên lý cơ sinh học này là bước chuẩn bị quan trọng cho hành trình du lịch nha khoa của bạn để bạn có thể cùng bác sĩ đưa ra lựa chọn sáng suốt nhất.</p>
           
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Tại sao mật độ xương hàm trên yêu cầu nhiều trụ implant hơn?</h3>
           <p>Xương hàm trên tự nhiên mỏng hơn và thường bị ảnh hưởng bởi xoang hàm, đòi hỏi nhiều điểm neo giữ hơn để đảm bảo tính ổn định vững chắc.</p>
           <p>Trong khoa học nha khoa, xương hàm trên thường được phân loại là xương Loại 3 hoặc Loại 4. Cấu trúc mềm xốp này nghĩa là các vòng ren của trụ titanium có ít mật độ xương bám trụ hơn so với hàm dưới đặc chắc. Cấy ghép 6 trụ giúp tối đa hóa diện tích tiếp xúc giữa xương và implant (BIC - Bone-to-Implant Contact), từ đó thúc đẩy tốc độ tích hợp xương diễn ra nhanh hơn.</p>
-          <p>Điều này tương tự như việc sử dụng nhiều vít neo hơn khi treo một chiếc kệ nặng trên tấm tường thạch cao yếu. Những bệnh nhân có tiền sử viêm nha chu nặng thường bị tiêu xương nhiều hơn. Bạn có thể tìm hiểu thêm về <strong><Link href="/services/implants" className="text-teal-brand hover:underline">phân loại mật độ xương Loại 3 và Loại 4</Link></strong> để nắm rõ tình trạng lâm sàng của mình.</p>
+          <p>Điều này tương tự như việc sử dụng nhiều vít neo hơn khi treo một chiếc kệ nặng trên tấm tường thạch cao yếu. Những bệnh nhân có tiền sử viêm nha chu nặng thường bị tiêu xương nhiều hơn, khiến việc đánh giá phân loại mật độ xương Loại 3 và Loại 4 trở nên cực kỳ quan trọng.</p>
           <p className="text-center my-6">
             <img src="/images/cases/case_implant.jpg" alt="Phục hình răng Implant All-on-6 trước và sau" className="max-w-full h-auto rounded-2xl mx-auto shadow-md" />
           </p>
@@ -213,7 +213,7 @@ export default function BlogPostDetail() {
           </div>
           <p>Cả hai phương pháp All-on-4 và All-on-6 đều có tỷ lệ thành công rất cao trên toàn cầu khi được thực hiện bởi các chuyên gia có năng lực và sử dụng vật liệu cao cấp. Các nghiên cứu lâm sàng chỉ ra rằng tỷ lệ trụ implant tồn tại vững chắc sau 10 năm ăn nhai đạt mức rất cao. Tuy nhiên, duy trì kết quả này đòi hỏi chế độ vệ sinh răng miệng cực kỳ nghiêm ngặt.</p>
           <p>Tại Dental NKT, chúng tôi cam kết sử dụng các dòng trụ implant chính hãng từ các tập đoàn lớn toàn cầu để đảm bảo tính tích hợp sinh học tốt nhất. Bạn có thể tham khảo <strong><Link href="/dental-costs" className="text-teal-brand hover:underline font-bold">bảng giá cấy ghép implant chi tiết</Link></strong> để chuẩn bị tài chính cho ca điều trị của mình.</p>
-          <p>Hơn nữa, đội ngũ y tế của chúng tôi được đào tạo bài bản để kiểm soát tối đa nguy cơ viêm quanh implant (peri-implantitis) - nguyên nhân chính gây mất tích hợp xương muộn. Chuyên gia sẽ cung cấp bộ dụng cụ và hướng dẫn vệ sinh chi tiết sau phẫu thuật. Bạn có thể tìm hiểu thêm về <strong><Link href="/services/implants" className="text-teal-brand hover:underline">quy trình làm sạch và chăm sóc răng implant</Link></strong> trong mục tài liệu hướng dẫn của chúng tôi.</p>
+          <p>Hơn nữa, đội ngũ y tế của chúng tôi được đào tạo bài bản để kiểm soát tối đa nguy cơ viêm quanh implant (peri-implantitis) - nguyên nhân chính gây mất tích hợp xương muộn. Chuyên gia sẽ cung cấp bộ dụng cụ và hướng dẫn quy trình làm sạch và chăm sóc răng implant chi tiết sau phẫu thuật giúp bạn bảo vệ nụ cười trọn vẹn.</p>
 
           <h2 className="font-serif text-xl font-bold text-[#0b1e2c] pt-4">Nha khoa kỹ thuật số nâng cao độ chính xác của implant như thế nào?</h2>
           <div className="quote-box border-l-4 border-teal-brand bg-slate-50 p-4 my-4 rounded-r-xl">
