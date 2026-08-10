@@ -438,7 +438,13 @@ export default function AdminBlogPage() {
     });
 
     // 6. Excerpt Brand/Author check
-    const hasAuthor = excerpt.toLowerCase().includes("trang") || excerpt.toLowerCase().includes("author") || excerpt.toLowerCase().includes("bác sĩ") || excerpt.toLowerCase().includes("ntk");
+    const hasAuthor = excerpt.toLowerCase().includes("trang") || 
+                      excerpt.toLowerCase().includes("author") || 
+                      excerpt.toLowerCase().includes("bác sĩ") || 
+                      excerpt.toLowerCase().includes("ntk") ||
+                      excerpt.toLowerCase().includes("doctor") ||
+                      excerpt.toLowerCase().includes("dr.") ||
+                      excerpt.toLowerCase().includes("specialist");
     checks.push({
       id: "sapo-author",
       label: "Sapo chứa tên thương hiệu hoặc tác giả",
