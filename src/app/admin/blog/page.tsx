@@ -616,13 +616,6 @@ export default function AdminBlogPage() {
               <div className="flex gap-2">
                 <button
                   type="button"
-                  onClick={() => handleGenerateTemplate("VN")}
-                  className="px-4 py-2.5 bg-teal-brand/10 hover:bg-teal-brand text-teal-brand hover:text-white rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer"
-                >
-                  Tạo Mẫu SEO VN
-                </button>
-                <button
-                  type="button"
                   onClick={() => handleGenerateTemplate("EN")}
                   className="px-4 py-2.5 bg-slate-200 hover:bg-[#0b1e2c] text-[#0b1e2c] hover:text-white rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer"
                 >
