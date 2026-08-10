@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "Missing teeth replacement Hanoi",
     "Dental tourism Vietnam"
   ],
+  alternates: {
+    canonical: "https://nhakhoatre.vn/services/bridges",
+  },
 };
 
 export default function BridgesPage() {

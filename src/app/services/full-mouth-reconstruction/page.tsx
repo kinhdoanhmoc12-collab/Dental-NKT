@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "Bite rehabilitation cost Vietnam",
     "Dental tourism Hanoi"
   ],
+  alternates: {
+    canonical: "https://nhakhoatre.vn/services/full-mouth-reconstruction",
+  },
 };
 
 export default function FullMouthReconstructionPage() {

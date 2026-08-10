@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "Dental veneers and crowns Hanoi",
     "Gum lifting cost Vietnam"
   ],
+  alternates: {
+    canonical: "https://nhakhoatre.vn/services/smile-makeover",
+  },
 };
 
 export default function SmileMakeoverPage() {
