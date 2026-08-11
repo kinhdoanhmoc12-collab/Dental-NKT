@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import DoctorDetailPage from './DentistDetailClient';
 import { DOCTORS_DATA } from '../../../data/doctors';
 
@@ -17,7 +18,13 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   // Find doctor by id or slug
   const doctor = Object.values(DOCTORS_DATA).find(
     (d) => d.id === id || d.slugs.includes(id)
-  ) || DOCTORS_DATA.d1;
+  );
+
+  if (!doctor) {
+    return {
+      title: "Doctor Not Found | Dental NKT",
+    };
+  }
 
   const name = isVN ? doctor.nameVN : doctor.nameEN;
   const role = isVN ? doctor.roleVN : doctor.roleEN;
@@ -31,6 +38,18 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   };
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+  
+  // Find doctor by id or slug
+  const doctor = Object.values(DOCTORS_DATA).find(
+    (d) => d.id === id || d.slugs.includes(id)
+  );
+
+  if (!doctor) {
+    notFound();
+  }
+
   return <DoctorDetailPage />;
 }

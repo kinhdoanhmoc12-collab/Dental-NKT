@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import BlogPostDetail from './BlogPostDetailClient';
 import { blogPosts } from '../../../data/blogPosts';
 
@@ -7,6 +8,33 @@ type Props = {
   searchParams: Promise<{ lang?: string }>;
 };
 
+async function getPost(slug: string) {
+  // 1. Check static data
+  const staticPost = blogPosts.find((p) => p.slug === slug);
+  if (staticPost) {
+    return staticPost;
+  }
+
+  // 2. Check API
+  try {
+    const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
+    const res = await fetch(`${apiBaseUrl}/blog/${slug}`, {
+      next: { revalidate: 60 } // cache for 60 seconds
+    });
+    
+    if (res.ok) {
+      const data = await res.json();
+      if (data.success && data.data) {
+        return data.data;
+      }
+    }
+  } catch (error) {
+    console.error(`Failed to fetch dynamic post "${slug}" from backend API:`, error);
+  }
+
+  return null;
+}
+
 export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const resolvedParams = await params;
   const resolvedSearchParams = await searchParams;
@@ -14,8 +42,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const slug = resolvedParams.slug;
   const isVN = resolvedSearchParams.lang === "VN";
   
-  // Find post in static data
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
   
   if (!post) {
     return {
@@ -41,10 +68,10 @@ export default async function Page({ params, searchParams }: Props) {
   const slug = resolvedParams.slug;
   const isVN = resolvedSearchParams.lang === "VN";
   
-  const post = blogPosts.find((p) => p.slug === slug);
+  const post = await getPost(slug);
 
   if (!post) {
-    return <BlogPostDetail />;
+    notFound();
   }
 
   const title = isVN ? post.titleVN : post.titleEN;
