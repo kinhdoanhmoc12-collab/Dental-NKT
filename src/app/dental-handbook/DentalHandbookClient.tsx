@@ -57,8 +57,7 @@ export default function BlogIndex() {
     if (statusVal === "private") return false;
 
     // 2. Hide scheduled posts
-    const postDate = post.date;
-    const isScheduled = postDate ? new Date(postDate.endsWith("Z") ? postDate : postDate + "Z").getTime() > new Date().getTime() : false;
+    const isScheduled = post.date ? new Date(post.date).getTime() > new Date().getTime() : false;
     if (isScheduled) return false;
 
     // 3. Search and Category filters

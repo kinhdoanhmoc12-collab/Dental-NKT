@@ -61,7 +61,7 @@ export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogP
     );
   }
 
-  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
+  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
 
   if (!post || isScheduled) {
     return (

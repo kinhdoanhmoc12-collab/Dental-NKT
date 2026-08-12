@@ -876,7 +876,7 @@ export default function AdminBlogPage() {
                         {(() => {
                           const [_, statusVal = "public"] = (post.readTime || "5 min").split("|");
                           const postDate = post.date;
-                          const parsedDate = postDate ? new Date(postDate.endsWith("Z") ? postDate : postDate + "Z") : new Date();
+                          const parsedDate = postDate ? new Date(postDate) : new Date();
                           const isScheduled = parsedDate.getTime() > new Date().getTime();
                           if (statusVal === "private") {
                             return <span className="bg-rose-100 text-rose-700 px-2.5 py-1 rounded-full text-[10px] font-bold">Riêng tư</span>;

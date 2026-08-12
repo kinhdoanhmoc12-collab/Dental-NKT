@@ -42,7 +42,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const slug = resolvedParams.slug;
   const isVN = resolvedSearchParams.lang === "VN";
   const post = await getPost(slug);
-  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
+  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
   
   if (!post || isScheduled) {
     return {
@@ -69,7 +69,7 @@ export default async function Page({ params, searchParams }: Props) {
   const isVN = resolvedSearchParams.lang === "VN";
   
   const post = await getPost(slug);
-  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
+  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
 
   if (!post || isScheduled) {
     notFound();
