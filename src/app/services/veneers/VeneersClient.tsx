@@ -35,9 +35,7 @@ export default function VeneersPage() {
 
   return (
     <div className="pt-6 pb-12 space-y-16 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
-      <title>{isVN ? "Mặt Dán Sứ Veneer Thẩm Mỹ Cao Cấp | Dental NKT" : "Porcelain Veneers Hanoi | Premium Dental NKT"}</title>
-      <meta name="description" content={isVN ? "Mặt dán sứ Veneer bảo tồn răng tối đa tại Hà Nội. Đội ngũ chuyên khoa sâu, công nghệ Smile Design 3D hiện đại." : "Transform your smile with porcelain veneers in Hanoi at Dental NKT. Minimal tooth prep, custom 3D Smile Design, save up to 70%."} />
-      
+                  
       {/* Top Header & Hero Container */}
       <div className="space-y-6">
         {/* Back Button */}

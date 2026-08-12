@@ -86,9 +86,7 @@ export default function AllOn4Page() {
 
   return (
     <div className="pt-6 pb-12 space-y-20 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
-      <title>{isVN ? "Cấy Ghép Implant All-on-4 Toàn Hàm | Dental NKT" : "Premium Implant All-on-4 Hanoi | Dental NKT"}</title>
-      <meta name="description" content={isVN ? "Giải pháp cấy ghép Implant All-on-4 phục hình toàn hàm cho người mất răng. Tiết kiệm chi phí tối đa." : "Get premium All-on-4 dental implants in Hanoi at Dental NKT. Restore your smile, save 70% compared to Australia."} />
-      
+                  
       {/* Top Header & Hero Container */}
       <div className="space-y-6">
         {/* Back Button */}

@@ -86,9 +86,7 @@ export default function AllOn6Page() {
 
   return (
     <div className="pt-6 pb-12 space-y-20 w-full max-w-5xl mx-auto px-4 sm:px-6 overflow-x-hidden">
-      <title>{isVN ? "Cấy Ghép Implant All-on-6 Toàn Hàm | Dental NKT" : "All-on-6 Dental Implants Hanoi | Dental NKT"}</title>
-      <meta name="description" content={isVN ? "Cấy ghép răng All-on-6 phục hình toàn hàm vững chắc. Tiết kiệm chi phí, phục hình răng tức thì." : "Secure full-mouth teeth replacement with All-on-6 dental implants in Hanoi. Premium European materials, save up to 70%."} />
-      
+                  
       {/* Top Header & Hero Container */}
       <div className="space-y-6">
         {/* Back Button */}
