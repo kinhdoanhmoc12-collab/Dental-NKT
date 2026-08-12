@@ -106,7 +106,7 @@ export default function AllOn4Page() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 space-y-6 max-w-3xl">
-            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
+            <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-[10px] sm:text-xs font-bold py-1.5 px-3 sm:px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Sparkles className="w-3.5 h-3.5" />
               <span>{isVN ? "PHỤC HỒI TOÀN HÀM" : "FULL-ARCH RECONSTRUCTION"}</span>
             </span>
@@ -526,7 +526,7 @@ export default function AllOn4Page() {
             </li>
             <li className="flex gap-3 items-start">
               <span className="p-1 bg-teal-brand-light text-teal-brand rounded-md font-bold text-xs shrink-0 whitespace-nowrap">4</span>
-              <span>{isVN ? "Nếu xảy ra bất kỳ bất thường nào (sưng đau tăng dần, hàm tạm lỏng lẻo...), liên hệ ngay điều phối viên của chúng tôi để được bác sĩ hội chẩn từ xa." : "In case of concerns (progressive pain, fever, or loose temporary bridge), contact your DentalNTK coordinator for a remote consultation."}</span>
+              <span>{isVN ? "Nếu xảy ra bất kỳ bất thường nào (sưng đau tăng dần, hàm tạm lỏng lẻo...), liên hệ ngay điều phối viên của chúng tôi để được bác sĩ hội chẩn từ xa." : "In case of concerns (progressive pain, fever, or loose temporary bridge), contact your Dental NKT coordinator for a remote consultation."}</span>
             </li>
           </ul>
         </div>

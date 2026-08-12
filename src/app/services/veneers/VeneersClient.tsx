@@ -54,13 +54,13 @@ export default function VeneersPage() {
         <section className="bg-gradient-to-br from-[#0b1e2c] via-[#0f2a3f] to-[#0b1e2c] text-white rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-80 h-80 bg-teal-brand/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 space-y-6 max-w-3xl">
-          <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-xs font-bold py-1.5 px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-2 whitespace-nowrap">
+          <span className="bg-teal-brand/20 text-teal-brand border border-teal-brand/30 text-[10px] sm:text-xs font-bold py-1.5 px-3 sm:px-4 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5 sm:gap-2 flex-wrap">
             <Sparkles className="w-3.5 h-3.5" />
             <span>{isVN ? "THẨM MỸ NỤ CƯỜI BẢO TỒN NGUYÊN BẢN" : "MINIMALLY INVASIVE SMILE MAKEOVER"}</span>
           </span>
           
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-white leading-tight">
-            {isVN ? "Mặt Dán Sứ Veneers Tại DentalNTK" : "Porcelain Veneers at DentalNTK"}
+            {isVN ? "Mặt Dán Sứ Veneers Tại Dental NKT" : "Porcelain Veneers at Dental NKT"}
           </h1>
           
           <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
@@ -377,8 +377,8 @@ export default function VeneersPage() {
           </h2>
           <p className="text-sm text-slate-700 font-normal leading-relaxed">
             {isVN 
-              ? "Nhiều khách hàng lo lắng: 'Lỡ tôi không thích hình dáng hoặc độ trắng của răng thì sao?'. Tại DentalNTK, bạn hoàn toàn làm chủ nụ cười qua 3 bước kiểm duyệt:"
-              : "Worried you won't like the final shade or shape? At DentalNTK, you approve your new smile in 3 stages before permanent bonding:"}
+              ? "Nhiều khách hàng lo lắng: 'Lỡ tôi không thích hình dáng hoặc độ trắng của răng thì sao?'. Tại Dental NKT, bạn hoàn toàn làm chủ nụ cười qua 3 bước kiểm duyệt:"
+              : "Worried you won't like the final shade or shape? At Dental NKT, you approve your new smile in 3 stages before permanent bonding:"}
           </p>
         </div>
 
@@ -612,14 +612,14 @@ export default function VeneersPage() {
             {
               q: isVN ? "Cần ở lại Hà Nội bao nhiêu ngày để hoàn thành Veneers?" : "How many days in Hanoi are required for veneers?",
               a: isVN 
-                ? "Trung bình từ 3 đến 5 ngày cho ca tiêu chuẩn (8-10 răng). DentalNTK hỗ trợ xe đưa đón sân bay và xếp lịch linh hoạt cho du khách."
-                : "Typically 3 to 5 days for a standard case (8-10 teeth). DentalNTK provides airport transfers and flexible scheduling."
+                ? "Trung bình từ 3 đến 5 ngày cho ca tiêu chuẩn (8-10 răng). Dental NKT hỗ trợ xe đưa đón sân bay và xếp lịch linh hoạt cho du khách."
+                : "Typically 3 to 5 days for a standard case (8-10 teeth). Dental NKT provides airport transfers and flexible scheduling."
             },
             {
               q: isVN ? "Veneer có được bảo hành khi tôi đã quay về Úc không?" : "Is warranty covered after returning home to Australia?",
               a: isVN 
-                ? "Có. Chính sách bảo hành của DentalNTK được áp dụng từ xa. Nếu sự cố thuộc lỗi vật liệu/kỹ thuật, phòng khám hỗ trợ 100% vé máy bay khứ hồi cho bạn quay lại Việt Nam (xem Mục 5 trang Bảo Hành)."
-                : "Yes. DentalNTK provides remote warranty support. If technical fault occurs, we cover 100% round-trip economy airfare back to Vietnam."
+                ? "Có. Chính sách bảo hành của Dental NKT được áp dụng từ xa. Nếu sự cố thuộc lỗi vật liệu/kỹ thuật, phòng khám hỗ trợ 100% vé máy bay khứ hồi cho bạn quay lại Việt Nam (xem Mục 5 trang Bảo Hành)."
+                : "Yes. Dental NKT provides remote warranty support. If technical fault occurs, we cover 100% round-trip economy airfare back to Vietnam."
             }
           ].map((faq, idx) => (
             <div 
@@ -656,7 +656,7 @@ export default function VeneersPage() {
         </h2>
         <p className="text-sm text-slate-300 font-light max-w-xl mx-auto leading-relaxed">
           {isVN 
-            ? "Đăng ký tư vấn trực tuyến ngay hôm nay để nhận thiết kế phác đồ nụ cười 3D và báo giá AUD minh bạch từ bác sĩ chuyên khoa DentalNTK."
+            ? "Đăng ký tư vấn trực tuyến ngay hôm nay để nhận thiết kế phác đồ nụ cười 3D và báo giá AUD minh bạch từ bác sĩ chuyên khoa Dental NKT."
             : "Book your online consultation today to receive a 3D digital smile plan and transparent AUD quote."}
         </p>
 
