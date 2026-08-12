@@ -111,3 +111,27 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Responsive tables inside blog posts and articles on mobile */
+@media (max-w: 768px) {
+  article table,
+  .prose table {
+    display: block;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem; /* Make text slightly smaller on mobile for better fit */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  article table th,
+  article table td,
+  .prose table th,
+  .prose table td {
+    min-width: 130px; /* Prevent columns from shrinking too much */
+    padding: 8px 12px !important; /* Compact padding for mobile screens */
+    word-break: normal;
+  }
+}
+
+
