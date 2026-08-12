@@ -8,14 +8,27 @@ import { blogPosts, BlogPost as LocalBlogPost } from "../../../data/blogPosts";
 import { ArrowLeft, Calendar, Clock, ArrowRight } from "lucide-react";
 import { BlogPost as CrmBlogPost } from "../../../types/crm";
 
-export default function BlogPostDetail() {
+export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogPost | LocalBlogPost | null }) {
   const { lang } = useLanguage();
   const params = useParams();
   const slug = params?.slug as string;
-  const [post, setPost] = useState<CrmBlogPost | LocalBlogPost | null>(null);
-  const [loading, setLoading] = useState(true);
+
+  const formatHtmlContent = (html: string) => {
+    if (!html) return "";
+    let formatted = html;
+    formatted = formatted.replace(/<table([\s\S]*?)>/gi, '<div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full my-6"><table$1>');
+    formatted = formatted.replace(/<\/table>/gi, '</table></div>');
+    return formatted;
+  };
+  const [post, setPost] = useState<CrmBlogPost | LocalBlogPost | null>(initialPost || null);
+  const [loading, setLoading] = useState(!initialPost);
 
   useEffect(() => {
+    if (initialPost) {
+      setPost(initialPost);
+      setLoading(false);
+      return;
+    }
     if (!slug) return;
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
     fetch(`${baseUrl}/blog/${slug}`)
@@ -35,7 +48,7 @@ export default function BlogPostDetail() {
         setPost(staticPost || null);
         setLoading(false);
       });
-  }, [slug]);
+  }, [slug, initialPost]);
 
   if (loading) {
     return (
@@ -257,7 +270,7 @@ export default function BlogPostDetail() {
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">1. Đặt lịch và Tư vấn từ xa</h3>
           <p>
-            Trước khi mua vé máy bay, bạn nên hoàn tất quy trình tư vấn trực tuyến. Hãy liên hệ với bác sĩ của DentalNTK để lập phác đồ điều trị sơ bộ cùng báo giá bằng tiền tệ AUD/VND rõ ràng.
+            Trước khi mua vé máy bay, bạn nên hoàn tất quy trình tư vấn trực tuyến. Hãy liên hệ với bác sĩ của Dental NKT để lập phác đồ điều trị sơ bộ cùng báo giá bằng tiền tệ AUD/VND rõ ràng.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">2. Thời gian lưu trú dự kiến</h3>
@@ -269,7 +282,7 @@ export default function BlogPostDetail() {
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">3. Thủ tục Visa và Lưu trú</h3>
           <p>
-            Khách du lịch từ Úc, Mỹ và Châu Âu có thể dễ dàng xin E-visa trực tuyến có thời hạn 30 ngày. Về chỗ ở, DentalNTK tọa lạc tại Vinhomes Smart City Tây Mỗ - khu đô thị sinh thái hiện đại bậc nhất phía Tây Hà Nội. Bạn có thể thuê các căn hộ dịch vụ cao cấp ngay trong phân khu, rất tiện lợi cho việc di chuyển đến phòng khám chỉ trong vài phút đi bộ.
+            Khách du lịch từ Úc, Mỹ và Châu Âu có thể dễ dàng xin E-visa trực tuyến có thời hạn 30 ngày. Về chỗ ở, Dental NKT tọa lạc tại Vinhomes Smart City Tây Mỗ - khu đô thị sinh thái hiện đại bậc nhất phía Tây Hà Nội. Bạn có thể thuê các căn hộ dịch vụ cao cấp ngay trong phân khu, rất tiện lợi cho việc di chuyển đến phòng khám chỉ trong vài phút đi bộ.
           </p>
         </div>
       ),
@@ -302,7 +315,7 @@ export default function BlogPostDetail() {
       vn: (
         <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
           <p>
-            Cấy ghép răng Implant là giải pháp tối ưu nhất để thay thế răng đã mất. Tại Úc và các nước phương Tây, chi phí cho một răng implant đơn lẻ dao động từ $5,000 đến $8,000 AUD, khiến nhiều người không thể chi trả. Điều trị tại DentalNTK Hà Nội mở ra cơ hội phục hình chất lượng cao chỉ với một phần nhỏ chi phí.
+            Cấy ghép răng Implant là giải pháp tối ưu nhất để thay thế răng đã mất. Tại Úc và các nước phương Tây, chi phí cho một răng implant đơn lẻ dao động từ $5,000 đến $8,000 AUD, khiến nhiều người không thể chi trả. Điều trị tại Dental NKT Hà Nội mở ra cơ hội phục hình chất lượng cao chỉ với một phần nhỏ chi phí.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Tại sao có sự chênh lệch chi phí lớn như vậy?</h3>
@@ -319,7 +332,7 @@ export default function BlogPostDetail() {
       en: (
         <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
           <p>
-            A single implant fixture, abutment, and crown in Australia frequently costs between $5,000 and $8,000 AUD. At DentalNTK in Vietnam, the exact same brands and clinical standards are available starting at under $2,300 AUD, representing a massive saving.
+            A single implant fixture, abutment, and crown in Australia frequently costs between $5,000 and $8,000 AUD. At Dental NKT in Vietnam, the exact same brands and clinical standards are available starting at under $2,300 AUD, representing a massive saving.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Why is it so much more affordable?</h3>
@@ -329,7 +342,7 @@ export default function BlogPostDetail() {
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Traceable Brand Standards</h3>
           <p>
-            DentalNTK only uses implants from globally recognized manufacturers, including <strong>Straumann®</strong> (Switzerland) and <strong>Nobel Biocare®</strong> (USA/Sweden). Patients receive the original manufacturer serial batch sticker cards, allowing any dentist worldwide to verify the authenticity of the components.
+            Dental NKT only uses implants from globally recognized manufacturers, including <strong>Straumann®</strong> (Switzerland) and <strong>Nobel Biocare®</strong> (USA/Sweden). Patients receive the original manufacturer serial batch sticker cards, allowing any dentist worldwide to verify the authenticity of the components.
           </p>
         </div>
       )
@@ -374,7 +387,7 @@ export default function BlogPostDetail() {
       vn: (
         <div className="space-y-6 text-base text-slate-800 font-normal leading-relaxed">
           <p>
-            Lo ngại lớn nhất của bệnh nhân khi đi nước ngoài làm răng là chế độ bảo hành và xử lý rủi ro khi trở về nước. Tại DentalNTK, chúng tôi xóa bỏ rào cản này bằng chính sách Bảo hành Toàn cầu SmileCare minh bạch bằng văn bản pháp lý.
+            Lo ngại lớn nhất của bệnh nhân khi đi nước ngoài làm răng là chế độ bảo hành và xử lý rủi ro khi trở về nước. Tại Dental NKT, chúng tôi xóa bỏ rào cản này bằng chính sách Bảo hành Toàn cầu SmileCare minh bạch bằng văn bản pháp lý.
           </p>
 
           <h3 className="font-serif text-lg font-bold text-[#0b1e2c] pt-4">Quy trình Bảo hành rõ ràng</h3>
@@ -423,7 +436,7 @@ export default function BlogPostDetail() {
           </span>
           <div className="flex items-center gap-1">
             <Calendar className="w-3.5 h-3.5" />
-            <span>{post.date}</span>
+            <span>{post.date ? post.date.split("T")[0].split("-").reverse().join("/") : ""}</span>
           </div>
         </div>
 
@@ -439,7 +452,7 @@ export default function BlogPostDetail() {
         ) : (
           <div 
             className="space-y-6 text-base text-slate-800 font-normal leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: lang === "VN" ? (post as CrmBlogPost).contentVN : (post as CrmBlogPost).contentEN }}
+            dangerouslySetInnerHTML={{ __html: formatHtmlContent(lang === "VN" ? (post as CrmBlogPost).contentVN : (post as CrmBlogPost).contentEN) }}
           />
         )}
       </article>
@@ -452,8 +465,8 @@ export default function BlogPostDetail() {
           </h4>
           <p className="text-xs text-slate-500 font-light max-w-lg">
             {lang === "VN"
-              ? "Hãy liên hệ với DentalNTK để đội ngũ bác sĩ chuyên khoa phản hồi phác đồ chi tiết cùng báo giá trọn gói."
-              : "Contact DentalNTK for a free review and written price quote before planning your flight."}
+              ? "Hãy liên hệ với Dental NKT để đội ngũ bác sĩ chuyên khoa phản hồi phác đồ chi tiết cùng báo giá trọn gói."
+              : "Contact Dental NKT for a free review and written price quote before planning your flight."}
           </p>
         </div>
         <Link 

@@ -115,20 +115,15 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-w: 768px) {
   article table,
   .prose table {
-    display: block;
-    width: 100% !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
+    min-width: 650px !important; /* Force table to stretch inside the scrollable wrapper */
     font-size: 0.85rem; /* Make text slightly smaller on mobile for better fit */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    border-collapse: collapse;
   }
   
   article table th,
   article table td,
   .prose table th,
   .prose table td {
-    min-width: 130px; /* Prevent columns from shrinking too much */
     padding: 8px 12px !important; /* Compact padding for mobile screens */
     word-break: normal;
   }
