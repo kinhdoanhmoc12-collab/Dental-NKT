@@ -61,7 +61,14 @@ export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogP
     );
   }
 
-  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
+  const parseVietnamTime = (dateStr: string) => {
+    if (!dateStr) return new Date();
+    if (dateStr.endsWith("Z") || /[+-]\d{2}:\d{2}$/.test(dateStr)) {
+      return new Date(dateStr);
+    }
+    return new Date(`${dateStr}+07:00`);
+  };
+  const isScheduled = post?.date ? parseVietnamTime(post.date).getTime() > new Date().getTime() : false;
 
   if (!post || isScheduled) {
     return (

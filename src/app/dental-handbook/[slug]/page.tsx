@@ -42,7 +42,14 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const slug = resolvedParams.slug;
   const isVN = resolvedSearchParams.lang === "VN";
   const post = await getPost(slug);
-  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
+  const parseVietnamTime = (dateStr: string) => {
+    if (!dateStr) return new Date();
+    if (dateStr.endsWith("Z") || /[+-]\d{2}:\d{2}$/.test(dateStr)) {
+      return new Date(dateStr);
+    }
+    return new Date(`${dateStr}+07:00`);
+  };
+  const isScheduled = post?.date ? parseVietnamTime(post.date).getTime() > new Date().getTime() : false;
   
   if (!post || isScheduled) {
     return {
@@ -69,7 +76,14 @@ export default async function Page({ params, searchParams }: Props) {
   const isVN = resolvedSearchParams.lang === "VN";
   
   const post = await getPost(slug);
-  const isScheduled = post?.date ? new Date(post.date).getTime() > new Date().getTime() : false;
+  const parseVietnamTime = (dateStr: string) => {
+    if (!dateStr) return new Date();
+    if (dateStr.endsWith("Z") || /[+-]\d{2}:\d{2}$/.test(dateStr)) {
+      return new Date(dateStr);
+    }
+    return new Date(`${dateStr}+07:00`);
+  };
+  const isScheduled = post?.date ? parseVietnamTime(post.date).getTime() > new Date().getTime() : false;
 
   if (!post || isScheduled) {
     notFound();

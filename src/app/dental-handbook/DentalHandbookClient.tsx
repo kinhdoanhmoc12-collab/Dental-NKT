@@ -57,7 +57,14 @@ export default function BlogIndex() {
     if (statusVal === "private") return false;
 
     // 2. Hide scheduled posts
-    const isScheduled = post.date ? new Date(post.date).getTime() > new Date().getTime() : false;
+    const parseVietnamTime = (dateStr: string) => {
+      if (!dateStr) return new Date();
+      if (dateStr.endsWith("Z") || /[+-]\d{2}:\d{2}$/.test(dateStr)) {
+        return new Date(dateStr);
+      }
+      return new Date(`${dateStr}+07:00`);
+    };
+    const isScheduled = post.date ? parseVietnamTime(post.date).getTime() > new Date().getTime() : false;
     if (isScheduled) return false;
 
     // 3. Search and Category filters
