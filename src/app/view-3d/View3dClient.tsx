@@ -120,7 +120,7 @@ export default function Scan3DPage() {
       }
 
       const text = new TextDecoder().decode(chunks[0]?.slice(0, 500));
-      if (text.includes("<!DOCTYPE html>") && (text.includes("Dental NTK") || text.includes("DentalNTK"))) {
+      if (text.includes("<!DOCTYPE html>") && (text.includes("Dental NTK") || text.includes("Dental NKT"))) {
         // Đây là trang web chính bị load nhầm do 404
         throw new Error("404 page loaded instead of 3D file");
       }
@@ -220,7 +220,7 @@ export default function Scan3DPage() {
             </div>
 
             {/* Right: quick tips */}
-            <div className="flex flex-row lg:flex-col gap-3">
+            <div className="flex flex-wrap lg:flex-col justify-center lg:justify-start gap-2.5">
               {[
                 { icon: Move, textVN: "Kéo để xoay", textEN: "Drag to rotate" },
                 { icon: ZoomIn, textVN: "Scroll để zoom", textEN: "Scroll to zoom" },
