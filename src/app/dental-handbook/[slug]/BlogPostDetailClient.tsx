@@ -418,7 +418,7 @@ export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogP
   const title = lang === "VN" ? post.titleVN : post.titleEN;
 
   return (
-    <div className="pt-6 pb-12 max-w-4xl mx-auto px-4 sm:px-6">
+    <div className="pt-6 pb-12 max-w-4xl mx-auto px-4 sm:px-6 w-full">
       
       {/* Back Button */}
       <div className="mb-4">

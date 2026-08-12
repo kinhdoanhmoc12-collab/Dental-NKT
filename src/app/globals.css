@@ -113,6 +113,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive tables inside blog posts and articles on mobile */
 @media (max-w: 768px) {
+  article,
+  .prose {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden; /* Prevent text wrapping bounds from expanding past screen width */
+  }
+
   article table,
   .prose table {
     min-width: 650px !important; /* Force table to stretch inside the scrollable wrapper */
