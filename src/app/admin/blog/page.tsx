@@ -15,6 +15,8 @@ export default function AdminBlogPage() {
   const [slug, setSlug] = useState("");
   const [category, setCategory] = useState("handbook");
   const [readTime, setReadTime] = useState("5 min");
+  const [status, setStatus] = useState<"public" | "private">("public");
+  const [publishDate, setPublishDate] = useState("");
   const [titleEN, setTitleEN] = useState("");
   const [titleVN, setTitleVN] = useState("");
   const [excerptEN, setExcerptEN] = useState("");
@@ -50,14 +52,64 @@ export default function AdminBlogPage() {
     setCurrentPost(post);
     setSlug(post.slug);
     setCategory(post.category);
-    setReadTime(post.readTime);
+    
+    // Parse readTime and status
+    const [rTime, st] = (post.readTime || "5 min").split("|");
+    setReadTime(rTime || "5 min");
+    setStatus((st as "public" | "private") || "public");
+    
+    // Set publishDate (default to post.date)
+    setPublishDate(post.date || new Date().toISOString().split("T")[0]);
+
     setTitleEN(post.titleEN);
     setTitleVN(post.titleVN);
     setExcerptEN(post.excerptEN);
     setExcerptVN(post.excerptVN);
     setContentEN(post.contentEN || "");
     setContentVN(post.contentVN || "");
-    setPrimaryKeyword(post.slug.split("-").join(" ")); // Prepopulate guess keyword from slug
+    // Guess primary keyword from title or slug based on master 30 keyword lists
+    const masterKeywords = [
+      "all on 4 vs all on 6 upper jaw",
+      "all on 4 dental implants pros and cons",
+      "dental implant bone graft success rate",
+      "straumann vs nobel biocare implants",
+      "all on 4 pain recovery timeline",
+      "safe dental implants vietnam",
+      "all on 4 vs traditional dentures",
+      "immediate load dental implants cost",
+      "all on 4 implants lifetime",
+      "all on 6 without bone grafting",
+      "minimal prep veneers tooth shaved",
+      "composite bonding vs porcelain veneers durability",
+      "how to choose natural tooth shade for veneers",
+      "modjaw 3d bite tracking veneers",
+      "emax veneers warranty longevity",
+      "veneers vs crowns for cosmetic dentistry",
+      "are no prep veneers durable",
+      "veneers for gapped teeth cost",
+      "how to care for porcelain veneers",
+      "tooth sensitivity after veneers",
+      "release superannuation early for all on 4 dental implants",
+      "using superannuation for veneers treatment overseas",
+      "all on 4 cost sydney vs vietnam",
+      "all on 6 dental implants price melbourne vs hanoi",
+      "how many days in vietnam for porcelain veneers",
+      "all on 4 dental implant travel timeline hanoi",
+      "vietnam dental tourist visa requirements",
+      "best hotels near nha khoa tre hanoi",
+      "how to send dental x ray to vietnam dentist",
+      "dental clinic hanoi airport pick up service"
+    ];
+    let guessedKeyword = post.slug.split("-").join(" ");
+    const cleanTitle = (post.titleEN || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    for (const kw of masterKeywords) {
+      const cleanKw = kw.replace(/[^a-z0-9]/g, "");
+      if (cleanTitle.includes(cleanKw)) {
+        guessedKeyword = kw;
+        break;
+      }
+    }
+    setPrimaryKeyword(guessedKeyword);
     setIsEditing(true);
   };
 
@@ -66,6 +118,14 @@ export default function AdminBlogPage() {
     setSlug("");
     setCategory("guide");
     setReadTime("5 min");
+    setStatus("public");
+    
+    // Default to current local time in YYYY-MM-DDTHH:mm format
+    const now = new Date();
+    const tzOffset = now.getTimezoneOffset() * 60000;
+    const localISOTime = (new Date(now.getTime() - tzOffset)).toISOString().slice(0, 16);
+    setPublishDate(localISOTime);
+
     setTitleEN("");
     setTitleVN("");
     setExcerptEN("");
@@ -148,8 +208,8 @@ export default function AdminBlogPage() {
     const payload = {
       slug,
       category,
-      date: new Date().toISOString().split("T")[0],
-      readTime,
+      date: publishDate || new Date().toISOString().split("T")[0],
+      readTime: `${readTime.split("|")[0] || "5 min"}|${status}`,
       titleEN,
       titleVN: titleVN || titleEN,
       excerptEN,
@@ -199,12 +259,12 @@ export default function AdminBlogPage() {
 
     if (lang === "VN") {
       setTitleVN(`10 Lợi ích của việc điều trị ${primaryKeyword} năm 2026`);
-      setExcerptVN(`10 lợi ích vượt trội về ${primaryKeyword} an toàn, giảm ê buốt và hồi phục nhanh giúp bạn có nụ cười tự tin. Bác sĩ của DentalNTK hướng dẫn chi tiết cách chọn quy trình chuẩn y khoa mà không cần lo lắng.`);
+      setExcerptVN(`10 lợi ích vượt trội về ${primaryKeyword} an toàn, giảm ê buốt và hồi phục nhanh giúp bạn có nụ cười tự tin. Bác sĩ của Dental NKT hướng dẫn chi tiết cách chọn quy trình chuẩn y khoa mà không cần lo lắng.`);
       setContentVN(`<div class="article-container">
 
     <!-- ========== SAPO ========== -->
     <p class="sapo-paragraph">
-        10 lợi ích quan trọng về <a href="https://phamthiquynhtrang.com/${cleanSlug}" class="link-highlight">${primaryKeyword}</a>, an toàn sinh học và thẩm mỹ tối ưu giúp bạn hồi phục nụ cười tự nhiên. Bác sĩ DentalNTK sẽ hướng dẫn chi tiết từng bước giúp bạn hiểu rõ quy trình mà không cần nhịn ăn hay lo lắng. Dinh dưỡng nha khoa, phục hồi răng, nha khoa thẩm mỹ.
+        10 lợi ích quan trọng về <a href="https://phamthiquynhtrang.com/${cleanSlug}" class="link-highlight">${primaryKeyword}</a>, an toàn sinh học và thẩm mỹ tối ưu giúp bạn hồi phục nụ cười tự nhiên. Bác sĩ Dental NKT sẽ hướng dẫn chi tiết từng bước giúp bạn hiểu rõ quy trình mà không cần nhịn ăn hay lo lắng. Dinh dưỡng nha khoa, phục hồi răng, nha khoa thẩm mỹ.
     </p>
 
     <!-- ========== MỞ BÀI ========== -->
@@ -574,7 +634,7 @@ export default function AdminBlogPage() {
           </div>
 
           {/* URL & Categories */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Đường dẫn tĩnh (Slug)</label>
               <input
@@ -598,6 +658,29 @@ export default function AdminBlogPage() {
                 <option value="guide">Travel Guide (Hướng dẫn du lịch)</option>
                 <option value="warranty">Warranty Policy (Bảo hành)</option>
               </select>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Chế độ hiển thị</label>
+              <select
+                value={status}
+                onChange={(e) => setStatus(e.target.value as "public" | "private")}
+                className="w-full bg-slate-50 border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-2.5 px-4 text-xs transition-colors cursor-pointer"
+              >
+                <option value="public">Công khai (Public)</option>
+                <option value="private">Riêng tư (Private)</option>
+              </select>
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="text-xs font-bold text-slate-700 uppercase tracking-wider">Ngày/Giờ đăng bài</label>
+              <input
+                type="datetime-local"
+                required
+                value={publishDate}
+                onChange={(e) => setPublishDate(e.target.value)}
+                className="w-full bg-slate-50 border border-slate-200 focus:outline-none focus:border-teal-brand rounded-xl py-2.5 px-4 text-xs transition-colors cursor-pointer"
+              />
             </div>
           </div>
 
@@ -769,6 +852,7 @@ export default function AdminBlogPage() {
                   <tr className="bg-slate-50 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100">
                     <th className="py-4 px-6">Tiêu đề Việt / Anh</th>
                     <th className="py-4 px-6">Danh mục</th>
+                    <th className="py-4 px-6">Trạng thái</th>
                     <th className="py-4 px-6 text-right">Hành động</th>
                   </tr>
                 </thead>
@@ -787,6 +871,25 @@ export default function AdminBlogPage() {
                             ? "Du lịch (Guide)"
                             : "Bảo hành"}
                         </span>
+                      </td>
+                      <td className="py-4 px-6">
+                        {(() => {
+                          const [_, statusVal = "public"] = (post.readTime || "5 min").split("|");
+                          const postDate = post.date;
+                          const parsedDate = postDate ? new Date(postDate.endsWith("Z") ? postDate : postDate + "Z") : new Date();
+                          const isScheduled = parsedDate.getTime() > new Date().getTime();
+                          if (statusVal === "private") {
+                            return <span className="bg-rose-100 text-rose-700 px-2.5 py-1 rounded-full text-[10px] font-bold">Riêng tư</span>;
+                          }
+                          if (isScheduled) {
+                            return (
+                              <span className="bg-amber-100 text-amber-700 px-2.5 py-1 rounded-full text-[10px] font-bold" title={`Hẹn giờ lúc: ${post.date}`}>
+                                Hẹn giờ ({parsedDate.toLocaleString("vi-VN", { hour: "2-digit", minute: "2-digit", day: "2-digit", month: "2-digit" })})
+                              </span>
+                            );
+                          }
+                          return <span className="bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded-full text-[10px] font-bold">Công khai</span>;
+                        })()}
                       </td>
                       <td className="py-4 px-6 text-right" onClick={(e) => e.stopPropagation()}>
                         <div className="flex gap-2 justify-end">

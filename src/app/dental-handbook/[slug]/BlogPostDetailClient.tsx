@@ -61,7 +61,9 @@ export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogP
     );
   }
 
-  if (!post) {
+  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
+
+  if (!post || isScheduled) {
     return (
       <div className="py-24 text-center max-w-xl mx-auto space-y-4">
         <h1 className="text-2xl font-serif font-bold text-[#0b1e2c]">

@@ -14,6 +14,9 @@ export default function BlogIndex() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [posts, setPosts] = useState<BlogPost[]>(blogPosts);
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const POSTS_PER_PAGE = 4;
+
   useEffect(() => {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api/v1";
     fetch(`${baseUrl}/blog`)
@@ -37,6 +40,10 @@ export default function BlogIndex() {
       .catch((err) => console.error("Error loading dynamic blog posts:", err));
   }, []);
 
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
   const categories = [
     { id: "all", labelEN: "All Articles", labelVN: "Tất cả bài viết" },
     { id: "guide", labelEN: "Travel Guide", labelVN: "Hướng dẫn du lịch" },
@@ -45,6 +52,16 @@ export default function BlogIndex() {
   ];
 
   const filteredPosts = posts.filter((post) => {
+    // 1. Hide private posts
+    const [_, statusVal = "public"] = (post.readTime || "5 min").split("|");
+    if (statusVal === "private") return false;
+
+    // 2. Hide scheduled posts
+    const postDate = post.date;
+    const isScheduled = postDate ? new Date(postDate.endsWith("Z") ? postDate : postDate + "Z").getTime() > new Date().getTime() : false;
+    if (isScheduled) return false;
+
+    // 3. Search and Category filters
     const title = lang === "VN" ? post.titleVN : post.titleEN;
     const excerpt = lang === "VN" ? post.excerptVN : post.excerptEN;
     const matchesSearch = 
@@ -53,6 +70,11 @@ export default function BlogIndex() {
     const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
+
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const paginatedPosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
 
   return (
     <div className="py-12 space-y-16 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-x-hidden">
@@ -145,63 +167,109 @@ export default function BlogIndex() {
       </section>
 
       {/* Blog Cards Grid */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {filteredPosts.length > 0 ? (
-          filteredPosts.map((post) => {
-            const PostIcon = post.icon;
-            const title = lang === "VN" ? post.titleVN : post.titleEN;
-            const excerpt = lang === "VN" ? post.excerptVN : post.excerptEN;
-            const categoryLabel = categories.find((c) => c.id === post.category)?.[lang === "VN" ? "labelVN" : "labelEN"];
+      <section className="space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {paginatedPosts.length > 0 ? (
+            paginatedPosts.map((post) => {
+              const PostIcon = post.icon;
+              const title = lang === "VN" ? post.titleVN : post.titleEN;
+              const excerpt = lang === "VN" ? post.excerptVN : post.excerptEN;
+              const categoryLabel = categories.find((c) => c.id === post.category)?.[lang === "VN" ? "labelVN" : "labelEN"];
 
-            return (
-              <Link href={`/dental-handbook/${post.slug}`} key={post.slug} className="block group">
-                <article className="bg-white border border-slate-100 shadow-premium p-6 sm:p-8 rounded-3xl hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 relative overflow-hidden h-full">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 group-hover:bg-teal-brand/5 transition-colors" />
-                  <div className="space-y-4">
-                    
-                    {/* Card Header Info */}
-                    <div className="flex items-center gap-4 text-xs text-slate-400">
-                      <span className="bg-teal-brand-light text-teal-brand font-bold py-1 px-2.5 rounded-lg text-[10px] uppercase">
-                        {categoryLabel}
-                      </span>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5" />
-                        <span>{post.date}</span>
+              return (
+                <Link href={`/dental-handbook/${post.slug}`} key={post.slug} className="block group">
+                  <article className="bg-white border border-slate-100 shadow-premium p-6 sm:p-8 rounded-3xl hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6 relative overflow-hidden h-full">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-slate-50 rounded-bl-full -z-10 group-hover:bg-teal-brand/5 transition-colors" />
+                    <div className="space-y-4">
+                      
+                      {/* Card Header Info */}
+                      <div className="flex items-center gap-4 text-xs text-slate-400">
+                        <span className="bg-teal-brand-light text-teal-brand font-bold py-1 px-2.5 rounded-lg text-[10px] uppercase">
+                          {categoryLabel}
+                        </span>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-3.5 h-3.5" />
+                          <span>{post.date ? post.date.split("T")[0].split("-").reverse().join("/") : ""}</span>
+                        </div>
+                      </div>
+
+                      {/* Title & Excerpt */}
+                      <div className="space-y-2">
+                        <h3 className="font-serif text-lg sm:text-xl font-bold text-[#0b1e2c] group-hover:text-teal-brand transition-colors">
+                          {title}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed">
+                          {excerpt}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Title & Excerpt */}
-                    <div className="space-y-2">
-                      <h3 className="font-serif text-lg sm:text-xl font-bold text-[#0b1e2c] group-hover:text-teal-brand transition-colors">
-                        {title}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed">
-                        {excerpt}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Read More Link */}
-                  <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-[#0b1e2c] font-bold text-xs">
-                      <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-teal-brand group-hover:text-white transition-colors">
-                        <PostIcon className="w-4 h-4" />
+                    {/* Read More Link */}
+                    <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
+                      <div className="flex items-center gap-2 text-[#0b1e2c] font-bold text-xs">
+                        <div className="p-2 bg-slate-100 rounded-lg group-hover:bg-teal-brand group-hover:text-white transition-colors">
+                          <PostIcon className="w-4 h-4" />
+                        </div>
+                        <span className="group-hover:underline">{lang === "VN" ? "Đọc toàn bộ bài viết" : "Read Full Article"}</span>
                       </div>
-                      <span className="group-hover:underline">{lang === "VN" ? "Đọc toàn bộ bài viết" : "Read Full Article"}</span>
+                      <div className="text-teal-brand group-hover:translate-x-1.5 transition-transform">
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
                     </div>
-                    <div className="text-teal-brand group-hover:translate-x-1.5 transition-transform">
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </article>
-              </Link>
-            );
-          })
-        ) : (
-          <div className="col-span-full text-center py-16 bg-slate-50 rounded-3xl border border-slate-100 space-y-2">
-            <p className="text-sm text-slate-500 font-light">
-              {lang === "VN" ? "Không tìm thấy bài viết nào phù hợp." : "No articles found matching your criteria."}
-            </p>
+                  </article>
+                </Link>
+              );
+            })
+          ) : (
+            <div className="col-span-full text-center py-16 bg-slate-50 rounded-3xl border border-slate-100 space-y-2">
+              <p className="text-sm text-slate-500 font-light">
+                {lang === "VN" ? "Không tìm thấy bài viết nào phù hợp." : "No articles found matching your criteria."}
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Premium Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-center gap-2 pt-8 border-t border-slate-100">
+            <button
+              onClick={() => {
+                setCurrentPage((p) => Math.max(1, p - 1));
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+              }}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
+            >
+              {lang === "VN" ? "Trước" : "Previous"}
+            </button>
+            
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+              <button
+                key={pageNum}
+                onClick={() => {
+                  setCurrentPage(pageNum);
+                  window.scrollTo({ top: 300, behavior: 'smooth' });
+                }}
+                className={`w-10 h-10 rounded-xl border text-xs font-bold transition-all cursor-pointer ${
+                  currentPage === pageNum
+                    ? "bg-[#0b1e2c] border-[#0b1e2c] text-white shadow-md shadow-slate-900/10"
+                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                {pageNum}
+              </button>
+            ))}
+
+            <button
+              onClick={() => {
+                setCurrentPage((p) => Math.min(totalPages, p + 1));
+                window.scrollTo({ top: 300, behavior: 'smooth' });
+              }}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-xl border border-slate-200 text-xs font-bold text-slate-600 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all cursor-pointer"
+            >
+              {lang === "VN" ? "Sau" : "Next"}
+            </button>
           </div>
         )}
       </section>

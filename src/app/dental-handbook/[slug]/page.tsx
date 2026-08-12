@@ -41,10 +41,10 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   
   const slug = resolvedParams.slug;
   const isVN = resolvedSearchParams.lang === "VN";
-  
   const post = await getPost(slug);
+  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
   
-  if (!post) {
+  if (!post || isScheduled) {
     return {
       title: "Article Not Found | Dental NKT",
     };
@@ -69,8 +69,9 @@ export default async function Page({ params, searchParams }: Props) {
   const isVN = resolvedSearchParams.lang === "VN";
   
   const post = await getPost(slug);
+  const isScheduled = post?.date ? new Date(post.date.endsWith("Z") ? post.date : post.date + "Z").getTime() > new Date().getTime() : false;
 
-  if (!post) {
+  if (!post || isScheduled) {
     notFound();
   }
 
@@ -114,7 +115,7 @@ export default async function Page({ params, searchParams }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <BlogPostDetail />
+      <BlogPostDetail initialPost={post} />
     </>
   );
 }
