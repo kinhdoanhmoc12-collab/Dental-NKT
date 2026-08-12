@@ -16,7 +16,7 @@ export default function BlogPostDetail({ initialPost }: { initialPost?: CrmBlogP
   const formatHtmlContent = (html: string) => {
     if (!html) return "";
     let formatted = html;
-    formatted = formatted.replace(/<table([\s\S]*?)>/gi, '<div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full my-6"><table$1>');
+    formatted = formatted.replace(/<table([\s\S]*?)>/gi, '<div class="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-sm overflow-x-auto w-full max-w-full my-6"><table$1 style="min-width: 650px !important;">');
     formatted = formatted.replace(/<\/table>/gi, '</table></div>');
     return formatted;
   };
