@@ -120,6 +120,18 @@ h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden; /* Prevent text wrapping bounds from expanding past screen width */
   }
 
+  /* Prevent hero/banner badge clipping on mobile */
+  span.bg-teal-brand\/20.whitespace-nowrap {
+    white-space: normal !important;
+    display: inline-flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.72rem !important; /* Make it slightly smaller to fit better */
+    line-height: 1.2;
+    padding: 6px 12px !important;
+  }
+
   article table,
   .prose table {
     min-width: 650px !important; /* Force table to stretch inside the scrollable wrapper */
